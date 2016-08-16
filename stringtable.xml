@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project name="Operation Rising Sun">
+   <Package name="Funcs">
+       <Key ID="STR_FUNC_INF">
+         <Original>infantry</Original>
+         <German>Infanterie</German>
+       </Key>
+       <Key ID="STR_FUNC_SNIPER">
+         <Original>sniper</Original>
+         <German>Sniper</German>
+       </Key>
+       <Key ID="STR_FUNC_PILOT">
+         <Original>pilot</Original>
+         <German>Pilot</German>
+       </Key>
+       <Key ID="STR_FUNC_DIVER">
+         <Original>diver</Original>
+         <German>Taucher</German>
+       </Key>
+       <Key ID="STR_FUNC_MRAP">
+         <Original>MRAP</Original>
+         <German>MRAP</German>
+       </Key>
+       <Key ID="STR_FUNC_CAR">
+         <Original>car</Original>
+         <German>Auto</German>
+       </Key>
+       <Key ID="STR_FUNC_TRUCK">
+         <Original>truck</Original>
+         <German>LKW</German>
+       </Key>
+       <Key ID="STR_OPEN_SAT">
+         <Original>Show SatPhone</Original>
+         <German>Zeige SatPhone</German>
+       </Key>
+       <Key ID="STR_CLOSE_SAT">
+         <Original>Hide SatPhone</Original>
+         <German>SatPhone wegstecken</German>
+       </Key>
+       <Key ID="STR_PBAR_CANCELED">
+         <Original>Canceled...</Original>
+         <German>Abgebrochen...</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_WHATUWANT">
+         <Original>What do you want to do?</Original>
+         <German>Was willst du machen?</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_DIVING">
+         <Original>Diving</Original>
+         <German>Tauchen</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_PARA">
+         <Original>Parachute Jump</Original>
+         <German>Fallschirmsprung</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_NOTH">
+         <Original>Other Option</Original>
+         <German>Andere Option</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_CONFIRM">
+         <Original>CONFIRM</Original>
+         <German>BESTÄTIGEN</German>
+       </Key>
+       <Key ID="STR_DLG_CHOOSEMENUE_CLOSE">
+         <Original>CLOSE</Original>
+         <German>SCHLIESSEN</German>
+       </Key>
+   </Package>
+
+
+    <Package name="main">
+        <Key ID="STR_SUC_info">
+			<Original>Success!</Original>
+			<German>Erfolg!</German>
+		</Key>
+        <Key ID="STR_FAI_info">
+			<Original>Failed!</Original>
+			<German>Gescheitert!</German>
+		</Key>
+        <Key ID="STR_MSG_info">
+			<Original>Message:</Original>
+			<German>Nachricht:</German>
+		</Key>
+        <Key ID="STR_SUC_reserve_info">
+			<Original>Good Job!</Original>
+			<German>Gut gemacht!</German>
+		</Key>
+        <Key ID="STR_Mission_txt1">
+			<Original>\n\n\n\nNo Messages available!</Original>
+			<German>\n\n\n\nKeine Nachrichten verfügbar!</German>
+		</Key>
+		<Key ID="STR_Mission_txt2">
+			<Original>Connect Tablet with Base</Original>
+			<German>Gruppe Adler!\nIn Ihrem Gebiet befindet sich\neine Radaranlage die Sie\nunbedingt zerstören müssen!</German>
+		</Key>
+		<Key ID="STR_COA_Connect_settings">
+			<Original>Use Tablet for Settings</Original>
+			<German>Benutze Tablet für Einstellungen</German>
+		</Key>
+		<Key ID="STR_COA_Connect_private">
+			<Original>Use Tablet</Original>
+			<German>Benutze Tablet</German>
+		</Key>
+	</Package>
+</Project>
