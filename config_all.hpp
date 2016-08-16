@@ -5,8 +5,6 @@
 //Sounds
 #include "ga_system\sys_config\sound.hpp"
 
-//special settings
-#include "ga_system\sys_config\specparams.hpp"
 
 //Functions
 class CfgFunctions
