@@ -25,3 +25,6 @@ wreckManagerMode = 1; 					// Type of removed wrecks: 0 - none, 1 - all, 2 - onl
 wreckLimit = 20; 								// Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately.
 wreckRemovalMinTime = 300; 			// Minimal time in seconds a wreck stays in the scene (can't be removed sooner).
 wreckRemovalMaxTime = 1200;			// Maximal time in seconds after which a wreck is removed (can't stay longer)
+
+
+#include "config_all.hpp"
