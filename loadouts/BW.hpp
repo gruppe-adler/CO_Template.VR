@@ -46,6 +46,15 @@ class BWFleck {
         };
       };
 
+      //Asst. Gunner (HMG/GMG)
+      class B_support_AMG_F: B_Soldier_F {
+        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        addItemsToBackpack[] = {
+          LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
+          LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
+        };
+      };
+
       //Asst. Missile Specialist (AA)
       class B_soldier_AAA_F: B_Soldier_F {
         backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
@@ -119,6 +128,21 @@ class BWFleck {
           LIST_8("30Rnd_556x45_Stanag"),
           LIST_8("1Rnd_HE_Grenade_shell"),
           LIST_3("1Rnd_SmokeRed_Grenade_shell")
+        };
+      };
+
+      //Heavy Gunner
+      class B_HeavyGunner_F: B_Soldier_F {
+        primaryWeapon = "rhs_weap_m240G";
+        handgunWeapon = "";
+        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        addItemsToBackpack[] = {
+          LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
+          LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
+        };
+        addItemsToVest[] = {
+          LIST_2("HandGrenade"),
+          LIST_2("SmokeShell"),
         };
       };
 
@@ -212,6 +236,10 @@ class BWTrop: BWFleck {
         backpack = "ARC_GER_Kitbag_compact_Tropentarn";
       };
 
+      class B_support_AMG_F: B_support_AMG_F {
+        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+      };
+
       class B_soldier_AAA_F: B_soldier_AAA_F {
         backpack = "ARC_GER_Backpack_Carryall_Tropentarn";
       };
@@ -236,6 +264,10 @@ class BWTrop: BWFleck {
 
       class B_Soldier_GL_F: B_Soldier_GL_F {
         primaryWeapon = "arifle_SPAR_01_GL_snd_F";
+      };
+
+      class B_HeavyGunner_F: B_HeavyGunner_F {
+        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
       };
 
       class B_soldier_M_F: B_soldier_M_F {

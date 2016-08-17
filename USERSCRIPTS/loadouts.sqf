@@ -16,22 +16,24 @@ _loadoutFaction = "BWFleck";
 
 
 /*  Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout:
-*   Englisch:                                 Deutsch:
-*   Asst. Autorifleman                        Zweiter Automatik Schütze
-*   Asst. Missile Specialist (AA)             Zweiter Raketenspezialist (Luftabwehr)
-*   Asst. Missile Specialist (AT)             Zweiter Raketenspezialist (Panzerabwehr)
-*   Autorifleman                              Automatik-Schütze
-*   Combat Life Saver                         Sanitäter
-*   Explosive Specialist                      Sprengmeister
-*   Grenadier                                 Grenadier
-*   Marksman                                  Scharfschütze (nicht DLC)
-*   Missile Specialist (AA)                   Raketenspezialist (Luftabwehr)
-*   Missile Specialist (AT)                   Raketenspezialist (Panzerabwehr)
-*   Repair Specialist                         Reparaturspezialist
-*   Rifleman                                  Schütze
-*   Rifleman (AT)                             Schütze (Panzerabwehr)
-*   Squad Leader                              Truppführer
-*   Team Leader                               Teamleader
+*   Englisch:                                 Deutsch:                                          Funktion:
+*   Asst. Autorifleman                        Zweiter Automatik Schütze                         Munitionsträger für LMG
+*   Asst. Gunner (HMG/GMG)                    Zweiter Schütze (Mk30/GMG)                        Munitionsträger für MMG
+*   Asst. Missile Specialist (AA)             Zweiter Raketenspezialist (Luftabwehr)            Munitionsträger für Luftabwehrschütze
+*   Asst. Missile Specialist (AT)             Zweiter Raketenspezialist (Panzerabwehr)          Munitionsträger für Panzerabwehrschütze
+*   Autorifleman                              Automatik-Schütze                                 LMG Schütze
+*   Combat Life Saver                         Sanitäter                                         Sanitäter
+*   Explosive Specialist                      Sprengmeister                                     Sprengmeister
+*   Grenadier                                 Grenadier                                         Grenadier
+*   Heavy Gunner                              Schwerer Schütze                                  MMG Schütze
+*   Marksman                                  Scharfschütze (nicht DLC)                         Gruppenscharfschütze (DMR)
+*   Missile Specialist (AA)                   Raketenspezialist (Luftabwehr)                    Luftabwehrschütze
+*   Missile Specialist (AT)                   Raketenspezialist (Panzerabwehr)                  Panzerabwehrschütze
+*   Repair Specialist                         Reparaturspezialist                               Reparaturspezialist
+*   Rifleman                                  Schütze                                           Schütze
+*   Rifleman (AT)                             Schütze (Panzerabwehr)                            Schütze mit leichter AT-Waffe
+*   Squad Leader                              Truppführer                                       Truppführer
+*   Team Leader                               Teamleader                                        Gruppenführer und Zugführer
 */
 
 
