@@ -4,7 +4,8 @@
 //Sounds
 #include "ga_system\sys_config\sound.hpp"
 
-#include "ga_system\sys_config\loadouts.hpp"
+//Loadouts
+#include "loadouts\loadouts.hpp"
 
 //Functions
 class CfgFunctions

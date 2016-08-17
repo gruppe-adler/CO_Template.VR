@@ -1,8 +1,8 @@
 //Partei, dessen Standardloadout die Spieler bekommen - wenn _loadoutFaction == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
-_loadoutFaction = "";
+_loadoutFaction = "BWFleck";
 
 /*  Die folgenden Parteien sind verfügbar:
-*   DERZEIT KEINE
+*   "BWFleck"       Bundeswehr Flecktarn
 */
 
 
@@ -35,7 +35,7 @@ _loadoutFaction = "";
 
 
 /*  Eigene Loadouts für GRAD-Loadout definieren:
-*   Die Standardloadouts können in der Datei ga_system\sys_config\loadouts.hpp ergänzt werden.
+*   Die Standardloadouts können Ordner loadouts ergänzt werden.
 *   Die neuen Loadouts nehmen wir gerne ins Template mit auf, dann haben alle etwas davon :)
 *   https://github.com/gruppe-adler/CO_Template.Stratis
 */
