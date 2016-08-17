@@ -3282,6 +3282,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						rank="LIEUTENANT";
 						description="Zugführer";
 						isPlayable=1;
 					};
@@ -3360,6 +3361,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="SERGEANT";
 						description="Ass. Zugführer";
 						isPlayable=1;
 					};
@@ -3529,6 +3531,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						rank="SERGEANT";
 						description="Gruppenführer";
 						isPlayable=1;
 					};
@@ -3607,6 +3610,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="SERGEANT";
 						description="Ass. Gruppenführer";
 						isPlayable=1;
 					};
@@ -3698,7 +3702,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						description="Truppführer";
 						isPlayable=1;
 					};
@@ -3778,7 +3782,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.44999999;
-						rank="CORPORAL";
 						description="Schütze (MG)";
 						isPlayable=1;
 					};
@@ -4027,7 +4030,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						description="Truppführer";
 						isPlayable=1;
 					};
@@ -4107,7 +4110,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.44999999;
-						rank="CORPORAL";
 						description="Schütze (MG)";
 						isPlayable=1;
 					};
@@ -4357,6 +4359,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						rank="SERGEANT";
 						description="Ass. Gruppenführer";
 						isPlayable=1;
 					};
@@ -4435,6 +4438,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="SERGEANT";
 						description="Gruppenführer";
 						isPlayable=1;
 					};
@@ -4526,7 +4530,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						description="Truppführer";
 						isPlayable=1;
 					};
@@ -4606,7 +4610,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.44999999;
-						rank="CORPORAL";
 						description="Schütze (MG)";
 						isPlayable=1;
 					};
@@ -4856,7 +4859,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						description="Truppführer";
 						isPlayable=1;
 					};
@@ -4936,7 +4939,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.44999999;
-						rank="CORPORAL";
 						description="Schütze (MG)";
 						isPlayable=1;
 					};
