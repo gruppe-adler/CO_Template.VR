@@ -27,11 +27,11 @@ _timeMultiplication = 1;                                                        
 
 
 //AI CACHING ===================================================================
-_useCaching = true;                                                             //F3 Caching - wenn ausgeschaltet, können alle anderen Caching-Einstellungen vernachlässigt werden - mögliche Werte: true, false
+_useCaching = false;                                                            //F3 Caching - wenn ausgeschaltet, können alle anderen Caching-Einstellungen vernachlässigt werden - mögliche Werte: true, false
                                                                                 //Caching bringt bessere Performance bei vielen KI-Einheiten, die nicht in direktem Kontakt mit den Spielern stehen. Einheiten werden "ausgeblendet".
                                                                                 //Caching macht nur Sinn, wenn ohne Headless Client gespielt wird, da Einheiten auf dem HC nicht gecached werden können.
 
-_cachingDebug = 1;                                                              //Caching Debug Mode - mögliche Werte: 0,1 (0 - off, 1 - on)
+_cachingDebug = 0;                                                              //Caching Debug Mode - mögliche Werte: 0,1 (0 - off, 1 - on)
 
 _cachingRange = 1200;                                                           //Abstand zu Spielereinheiten, nach der KI-Einheiten gecached werden können - mögliche Werte: Zahl > 0
                                                                                 //Achtung: Gecachte Einheiten sind für die Spieler nicht sichtbar! chachingRange muss also größer als die übliche Sichtweite sein, aber klein genug für gute Performance.
