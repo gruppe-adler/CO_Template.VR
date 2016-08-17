@@ -211,6 +211,7 @@ If(_do_your_job)then
   If(count _grp_arr > 0)then
   {_output = _grp_arr;
    ["GROUPS",_main_pos,_grp_arr,_unit_counter] call FNC_SMC(system,addToSystem);
+   If(hasInterface || isDedicated)then{[_unit_counter] call FNC_SMC(hc,statusHClients);};
   };
 };
 _output
