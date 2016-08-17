@@ -5,4 +5,5 @@ class Loadouts {
     handleRadios = 1;
 
     #include "BW.hpp"
+    #include "US.hpp"
 };

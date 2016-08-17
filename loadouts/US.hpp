@@ -1,12 +1,12 @@
-class BWFleck {
+class USOCP {
   class AllPlayable {
-    uniform = "ARC_GER_Flecktarn_Uniform";
-    vest = "ARC_GER_Flecktarn_Plate_Carrier";
+    uniform = "rhs_uniform_cu_ocp";
+    vest = "rhsusf_iotv_ocp_Rifleman";
     backpack = "";
-    headgear = "ARC_GER_Flecktarn_Mich";
-    primaryWeapon = "arifle_SPAR_01_blk_F";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33"};
-    handgunWeapon = "hgun_ACPC2_F";
+    headgear = "rhsusf_ach_helmet_ocp";
+    primaryWeapon = "rhs_weap_m4a1_blockII_bk";
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", "acc_pointer_IR"};
+    handgunWeapon = "rhsusf_weap_m9";
     binoculars = "Binocular";
     map = "ItemMap";
     compass = "ItemCompass";
@@ -32,65 +32,66 @@ class BWFleck {
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
           LIST_2("SmokeShell"),
-          LIST_2("16Rnd_9x21_Mag"),
+          LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
           LIST_8("30Rnd_556x45_Stanag")
         };
       };
 
       //Asst. Autorifleman
       class B_soldier_AAR_F: B_Soldier_F {
-        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("150Rnd_556x45_Drum_Mag_F"),
-          LIST_4("150Rnd_556x45_Drum_Mag_Tracer_F")
+          LIST_2("rhs_200rnd_556x45_M_SAW"),
+          "rhsusf_100Rnd_556x45_M200_soft_pouch"
         };
       };
 
       //Asst. Gunner (HMG/GMG)
       class B_support_AMG_F: B_Soldier_F {
-        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
-          LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
+          LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
+          "rhsusf_100Rnd_762x51"
         };
       };
 
       //Asst. Missile Specialist (AA)
       class B_soldier_AAA_F: B_Soldier_F {
-        backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("rhs_fim92_mag")
+          "rhs_fim92_mag"
         };
       };
 
       //Asst. Missile Specialist (AT)
       class B_soldier_AAT_F: B_Soldier_F {
-        backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("rhs_fgm148_magazine_AT")
+          "rhs_mag_smaw_HEAA"
         };
       };
 
       //Autorifleman
       class B_soldier_AR_F: B_Soldier_F {
-        primaryWeapon = "arifle_SPAR_02_blk_F";
-        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", "bipod_01_F_blk"};
+        primaryWeapon = "rhs_weap_m249_pip_S";
         handgunWeapon = "";
-        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        vest = "rhsusf_iotv_ocp_SAW";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("150Rnd_556x45_Drum_Mag_F"),
-          LIST_4("150Rnd_556x45_Drum_Mag_Tracer_F")
+          LIST_2("rhs_200rnd_556x45_M_SAW"),
+          "rhsusf_100Rnd_556x45_M200_soft_pouch"
         };
         addItemsToVest[] = {
-          "150Rnd_556x45_Drum_Mag_F",
           LIST_2("HandGrenade"),
-          LIST_2("SmokeShell")
+          LIST_2("SmokeShell"),
+          "rhs_200rnd_556x45_M_SAW"
         };
       };
 
       //Combat Life Saver
       class B_medic_F: B_Soldier_F {
-        backpack = "ARC_GER_Backpack_Flecktarn";
+        vest = "rhsusf_iotv_ocp_Medic";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
           LIST_5("ACE_bloodIV"),
           LIST_15("ACE_epinephrine"),
@@ -102,65 +103,67 @@ class BWFleck {
           LIST_2("HandGrenade"),
           LIST_2("SmokeShellPurple"),
           LIST_8("SmokeShell"),
-          LIST_2("16Rnd_9x21_Mag"),
+          LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
           LIST_8("30Rnd_556x45_Stanag")
         };
       };
 
       //Explosive Specialist
       class B_soldier_exp_F: B_Soldier_F {
-        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
           "ACE_Clacker",
           "ACE_M26_Clacker",
           "SatchelCharge_Remote_Mag",
-          LIST_5("DemoCharge_Remote_Mag")
+          LIST_3("DemoCharge_Remote_Mag")
         };
       };
 
       //Grenadier
       class B_Soldier_GL_F: B_Soldier_F {
-        primaryWeapon = "arifle_SPAR_01_GL_blk_F";
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_bk";
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
           LIST_2("SmokeShell"),
-          LIST_2("16Rnd_9x21_Mag"),
+          LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
           LIST_8("30Rnd_556x45_Stanag"),
-          LIST_8("1Rnd_HE_Grenade_shell"),
-          LIST_3("1Rnd_SmokeRed_Grenade_shell")
+          LIST_6("rhs_mag_M441_HE"),
+          LIST_2("rhs_mag_m713_Red")
         };
       };
 
       //Heavy Gunner
       class B_HeavyGunner_F: B_Soldier_F {
-        primaryWeapon = "rhs_weap_m240G";
+        primaryWeapon = "rhs_weap_m240B";
         handgunWeapon = "";
-        backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
-          LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
-          LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
+          LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
+          "rhsusf_100Rnd_762x51"
         };
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
-          LIST_2("SmokeShell")
+          LIST_2("SmokeShell"),
+          "rhsusf_100Rnd_762x51"
         };
       };
 
       //Marksman
       class B_soldier_M_F: B_Soldier_F {
-        primaryWeapon = "arifle_SPAR_03_blk_F";
+        primaryWeapon = "rhs_weap_sr25_ec";
         primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk"};
         addItemsToVest[] = {
+          LIST_2("HandGrenade"),
           LIST_2("SmokeShell"),
-          LIST_2("16Rnd_9x21_Mag"),
-          LIST_9("20Rnd_762x51_Mag")
+          LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
+          LIST_8("rhsusf_20Rnd_762x51_m118_special_Mag")
         };
       };
 
       //Missile Specialist (AA)
       class B_soldier_AA_F: B_Soldier_F {
         secondaryWeapon = "rhs_weap_fim92";
-        backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
           LIST_2("rhs_fim92_mag")
         };
@@ -169,7 +172,7 @@ class BWFleck {
       //Missile Specialist (AT)
       class B_soldier_AT_F: B_Soldier_F {
         secondaryWeapon = "rhs_weap_fgm148";
-        backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
           LIST_2("rhs_fgm148_magazine_AT")
         };
@@ -177,7 +180,7 @@ class BWFleck {
 
       //Repair Specialist
       class B_soldier_repair_F: B_Soldier_F {
-        backpack = "ARC_GER_Backpack_compact_Flecktarn";
+        backpack = "rhsusf_assault_eagleaiii_ocp";
         addItemsToBackpack[] = {
           "ToolKit",
           "ACE_wirecutter"
@@ -191,29 +194,32 @@ class BWFleck {
 
       //Squad Leader
       class B_Soldier_SL_F: B_Soldier_F {
-        backpack = "tf_rt1523g_big_bwmod";
+        backpack = "tf_rt1523g_rhs";
+        headgear = "rhsusf_ach_helmet_headset_ocp";
+        vest = "rhsusf_iotv_ocp_Squadleader";
         addItemsToBackpack[] = {
           LIST_2("SmokeShellBlue"),
           LIST_2("SmokeShellGreen"),
           LIST_2("SmokeShellOrange"),
           LIST_2("SmokeShellPurple"),
           LIST_2("SmokeShellRed"),
-          LIST_2("SmokeShellYellow"),
           LIST_2("SmokeShell")
         };
       };
 
       //Team Leader
       class B_Soldier_TL_F: B_Soldier_F {
-        primaryWeapon = "arifle_SPAR_01_GL_blk_F";
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_bk";
+        headgear = "rhsusf_ach_helmet_headset_ocp";
+        vest = "rhsusf_iotv_ocp_Teamleader";
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
           LIST_2("SmokeShell"),
-          LIST_2("16Rnd_9x21_Mag"),
+          LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
           LIST_8("30Rnd_556x45_Stanag"),
           LIST_2("1Rnd_SmokeRed_Grenade_shell"),
           LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
-          LIST_2("1Rnd_SmokePurple_Grenade_shell"),
+          LIST_2("1Rnd_Smoke_Grenade_shell"),
           LIST_2("1Rnd_SmokeBlue_Grenade_shell")
         };
       };
@@ -221,80 +227,85 @@ class BWFleck {
   };
 };
 
-class BWTrop: BWFleck {
-  class AllPlayable: AllPlayable {
-    uniform = "ARC_GER_Tropentarn_Uniform";
-    vest = "ARC_GER_Tropentarn_Plate_Carrier";
-    headgear = "ARC_GER_Tropentarn_Mich";
-    primaryWeapon = "arifle_SPAR_01_snd_F";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan"};
 
+class USUCP: USOCP {
+  class AllPlayable: Allplayable {
+    uniform = "rhs_uniform_cu_ucp";
+    vest = "rhsusf_iotv_ocp_Rifleman";
+    backpack = "";
+    headgear = "rhsusf_ach_helmet_ucp";
+    primaryWeapon = "rhs_weap_m4a1_blockII_d";
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan", "acc_pointer_IR"};
     class Type: Type {
+
       class B_Soldier_F: B_Soldier_F {};
 
       class B_soldier_AAR_F: B_soldier_AAR_F {
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_support_AMG_F: B_support_AMG_F {
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_AAA_F: B_soldier_AAA_F {
-        backpack = "ARC_GER_Backpack_Carryall_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_AAT_F: B_soldier_AAT_F {
-        backpack = "ARC_GER_Backpack_Carryall_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_AR_F: B_soldier_AR_F {
-        primaryWeapon = "arifle_SPAR_02_snd_F";
-        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan", "bipod_01_F_snd"};
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        vest = "rhsusf_iotv_ucp_SAW";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_medic_F: B_medic_F {
-        backpack = "ARC_GER_Backpack_Tropentarn";
+        vest = "rhsusf_iotv_ucp_Medic";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_exp_F: B_soldier_exp_F {
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_Soldier_GL_F: B_Soldier_GL_F {
-        primaryWeapon = "arifle_SPAR_01_GL_snd_F";
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
       };
 
       class B_HeavyGunner_F: B_HeavyGunner_F {
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_M_F: B_soldier_M_F {
-        primaryWeapon = "arifle_SPAR_03_snd_F";
-        primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_snd"};
+        primaryWeapon = "rhs_weap_sr25_ec_d";
       };
 
       class B_soldier_AA_F: B_soldier_AA_F {
-        backpack = "ARC_GER_Backpack_Carryall_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_AT_F: B_soldier_AT_F {
-        backpack = "ARC_GER_Backpack_Carryall_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_repair_F: B_soldier_repair_F {
-        backpack = "ARC_GER_Kitbag_compact_Tropentarn";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
       };
 
       class B_soldier_LAT_F: B_soldier_LAT_F {};
 
       class B_Soldier_SL_F: B_Soldier_SL_F {
-        backpack = "tf_rt1523g_big_bwmod_tropen";
+        backpack = "tf_rt1523g_bwmod";
+        headgear = "rhsusf_ach_helmet_headset_ucp";
+        vest = "rhsusf_iotv_ucp_Squadleader";
       };
 
       class B_Soldier_TL_F: B_Soldier_TL_F {
-        primaryWeapon = "arifle_SPAR_01_GL_snd_F";
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
+        headgear = "rhsusf_ach_helmet_headset_ucp";
+        vest = "rhsusf_iotv_ucp_Teamleader";
       };
     };
   };

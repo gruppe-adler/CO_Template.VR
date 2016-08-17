@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1678.8663,57.36348,5437.2412};
-		dir[]={0.11647882,-0.68316102,0.72103274};
-		up[]={0.10895377,0.73023164,0.67444301};
-		aside[]={0.98727584,4.1926978e-007,-0.15949218};
+		pos[]={1852.0557,240.8018,5281.0479};
+		dir[]={-0.1283025,-0.60328853,0.78724682};
+		up[]={-0.097048134,0.79747963,0.59547824};
+		aside[]={0.9870615,-4.6537025e-008,0.16086547};
 	};
 };
 binarizationWanted=0;
@@ -270,7 +270,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=64;
 		class Item0
 		{
 			dataType="Logic";
@@ -1958,6 +1958,7 @@ class Mission
 			isPlayable=1;
 			id=30;
 			type="VirtualCurator_F";
+			atlOffset=-7.6293945e-006;
 		};
 		class Item22
 		{
@@ -1983,6 +1984,7 @@ class Mission
 			name="zeusModule_2";
 			id=32;
 			type="ModuleCurator_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3629,96 +3631,6 @@ class Mission
 		};
 		class Item45
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={1802.842,5.5014391,6014.355};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=180;
-					type="B_Soldier_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=179;
-		};
-		class Item46
-		{
 			dataType="Comment";
 			class PositionInfo
 			{
@@ -3727,7 +3639,7 @@ class Mission
 			title="Führungselement";
 			id=181;
 		};
-		class Item47
+		class Item46
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -3737,7 +3649,7 @@ class Mission
 			title="Schützengruppe";
 			id=183;
 		};
-		class Item48
+		class Item47
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -3747,7 +3659,7 @@ class Mission
 			title="Schützengruppe";
 			id=184;
 		};
-		class Item49
+		class Item48
 		{
 			dataType="Group";
 			side="West";
@@ -3918,7 +3830,7 @@ class Mission
 			};
 			id=263;
 		};
-		class Item50
+		class Item49
 		{
 			dataType="Group";
 			side="West";
@@ -4246,7 +4158,7 @@ class Mission
 			};
 			id=266;
 		};
-		class Item51
+		class Item50
 		{
 			dataType="Group";
 			side="West";
@@ -4575,7 +4487,7 @@ class Mission
 			};
 			id=271;
 		};
-		class Item52
+		class Item51
 		{
 			dataType="Group";
 			side="West";
@@ -4746,7 +4658,7 @@ class Mission
 			};
 			id=276;
 		};
-		class Item53
+		class Item52
 		{
 			dataType="Group";
 			side="West";
@@ -5074,7 +4986,7 @@ class Mission
 			};
 			id=279;
 		};
-		class Item54
+		class Item53
 		{
 			dataType="Group";
 			side="West";
@@ -5403,7 +5315,7 @@ class Mission
 			};
 			id=284;
 		};
-		class Item55
+		class Item54
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -5413,7 +5325,7 @@ class Mission
 			title="Panzerabwehrtrupp";
 			id=289;
 		};
-		class Item56
+		class Item55
 		{
 			dataType="Group";
 			side="West";
@@ -5661,7 +5573,7 @@ class Mission
 			};
 			id=290;
 		};
-		class Item57
+		class Item56
 		{
 			dataType="Group";
 			side="West";
@@ -5909,7 +5821,7 @@ class Mission
 			};
 			id=294;
 		};
-		class Item58
+		class Item57
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -5919,7 +5831,7 @@ class Mission
 			title="Luftabwehrtrupp";
 			id=298;
 		};
-		class Item59
+		class Item58
 		{
 			dataType="Group";
 			side="West";
@@ -6167,7 +6079,7 @@ class Mission
 			};
 			id=299;
 		};
-		class Item60
+		class Item59
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -6177,7 +6089,7 @@ class Mission
 			title="Demotrupp";
 			id=303;
 		};
-		class Item61
+		class Item60
 		{
 			dataType="Group";
 			side="West";
@@ -6347,7 +6259,7 @@ class Mission
 			};
 			id=304;
 		};
-		class Item62
+		class Item61
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -6357,7 +6269,7 @@ class Mission
 			title="MG-Trupp";
 			id=307;
 		};
-		class Item63
+		class Item62
 		{
 			dataType="Group";
 			side="West";
@@ -6527,7 +6439,7 @@ class Mission
 			};
 			id=308;
 		};
-		class Item64
+		class Item63
 		{
 			dataType="Comment";
 			class PositionInfo

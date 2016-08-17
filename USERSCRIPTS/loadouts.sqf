@@ -4,6 +4,8 @@ _loadoutFaction = "BWFleck";
 /*  Die folgenden Parteien sind verfügbar:
 *   "BWFleck"       Bundeswehr Flecktarn
 *   "BWTrop"        Bundeswehr Tropentarn
+*   "USOCP"         US Army OCP
+*   "USUCP"         US Army UCP
 */
 
 
