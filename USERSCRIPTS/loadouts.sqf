@@ -15,21 +15,22 @@ _loadoutFaction = "";
 
 
 /*  Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout:
-*   Englisch:                                Deutsch:
-*   Asst. Autorifleman
-*   Asst. Missile Specialist (AA)
-*   Asst. Missile Specialist (AT)
-*   Autorifleman
-*   Combat Life Saver
-*   Explosive Specialist
-*   Marksman
-*   Missile Specialist (AA)
-*   Missile Specialist (AT)
-*   Repair Specialist
-*   Rifleman
-*   Rifleman (AT)
-*   Squad Leader
-*   Team Leader
+*   Englisch:                                 Deutsch:
+*   Asst. Autorifleman                        Zweiter Automatik Schütze
+*   Asst. Missile Specialist (AA)             Zweiter Raketenspezialist (Luftabwehr)
+*   Asst. Missile Specialist (AT)             Zweiter Raketenspezialist (Panzerabwehr)
+*   Autorifleman                              Automatik-Schütze
+*   Combat Life Saver                         Sanitäter
+*   Explosive Specialist                      Sprengmeister
+*   Grenadier                                 Grenadier
+*   Marksman                                  Scharfschütze (nicht DLC)
+*   Missile Specialist (AA)                   Raketenspezialist (Luftabwehr)
+*   Missile Specialist (AT)                   Raketenspezialist (Panzerabwehr)
+*   Repair Specialist                         Reparaturspezialist
+*   Rifleman                                  Schütze
+*   Rifleman (AT)                             Schütze (Panzerabwehr)
+*   Squad Leader                              Truppführer
+*   Team Leader                               Teamleader
 */
 
 
