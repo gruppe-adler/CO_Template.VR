@@ -14,6 +14,7 @@ class BWFleck {
       compass = "ItemCompass";
       watch = "ItemWatch";
       gps = "ItemGPS";
+      radio = "tf_anprc152";
       nvgoggles = "";
       items[] = {};
       magazines[] = {};
