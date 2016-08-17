@@ -1,3 +1,6 @@
+#define MODULES_DIRECTORY node_modules
+#define DEBUG_MODE_FULL
+
 #include "USERSCRIPTS\missionsettings.sqf"
 
 class Header

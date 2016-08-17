@@ -14,5 +14,6 @@ if (_useCaching) then {
 };
 
 [] execVM "helpers\tfarsettings.sqf";
+[] execVM "helpers\selectLoadout.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;

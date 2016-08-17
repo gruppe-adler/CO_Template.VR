@@ -1,10 +1,10 @@
-﻿
 //Parameter
 #include "ga_system\sys_config\params.hpp"
 
 //Sounds
 #include "ga_system\sys_config\sound.hpp"
 
+#include "ga_system\sys_config\loadouts.hpp"
 
 //Functions
 class CfgFunctions
@@ -21,6 +21,7 @@ class CfgFunctions
   #include "functions\hc\cfgFunctions.hpp"
   #include "functions\creating\cfgFunctions.hpp"
   #include "f3cache\cfgFunctions.hpp"
+  #include "node_modules\grad-loadout\cfgFunctions.hpp"
 };
 
 //RSCTitles
