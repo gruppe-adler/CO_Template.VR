@@ -1,9 +1,12 @@
-#include "USERSCRIPTS\missionsettings.sqf";
+#include "USERSCRIPTS\missionsettings.sqf"
+#include "USERSCRIPTS\loadouts.sqf"
 #include "script_component.hpp"
 
 enableSentences false;
 enableRadio false;
 enableSaving [false, false];
+
+GRAD_Loadout_Chosen_Prefix = _loadoutFaction;
 
 if (_useCaching) then {
   f_param_debugMode = _cachingDebug;
@@ -15,7 +18,6 @@ if (_useCaching) then {
 [] execVM "helpers\intro.sqf";
 [] execVM "helpers\tfarsettings.sqf";
 [_lage, _auftrag, _durchfuehrung, _einsatzunterstuetzung] execVM "helpers\createDiaryRecords.sqf";
-[] execVM "helpers\selectLoadout.sqf";
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [0,true] call FNC_SMC(client,setClientAction);

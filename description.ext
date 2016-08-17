@@ -16,7 +16,7 @@ respawnVehicleDelay = 0;
 respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;
-disabledAI = 1;
+disabledAI = 0;
 enableDebugConsole = 1;
 
 corpseManagerMode = 1; 					// Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable

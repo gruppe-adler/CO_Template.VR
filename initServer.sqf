@@ -1,10 +1,13 @@
-#include "USERSCRIPTS\missionsettings.sqf";
+#include "USERSCRIPTS\missionsettings.sqf"
+#include "USERSCRIPTS\loadouts.sqf"
 
 enableSentences false;
 enableRadio false;
 enableSaving [false, false];
 
 setTimeMultiplier _timeMultiplication;
+
+GRAD_Loadout_Chosen_Prefix = _loadoutFaction;
 
 if (_useCaching) then {
   f_param_debugMode = _cachingDebug;
@@ -14,6 +17,5 @@ if (_useCaching) then {
 };
 
 [] execVM "helpers\tfarsettings.sqf";
-[] execVM "helpers\selectLoadout.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
