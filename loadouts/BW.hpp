@@ -1,24 +1,25 @@
 class BWFleck {
   class AllPlayable {
+    uniform = "ARC_GER_Flecktarn_Uniform";
+    vest = "ARC_GER_Flecktarn_Plate_Carrier";
+    backpack = "";
+    headgear = "ARC_GER_Flecktarn_Mich";
+    primaryWeapon = "arifle_SPAR_01_blk_F";
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33"};
+    handgunWeapon = "hgun_ACPC2_F";
+    binoculars = "Binocular";
+    map = "ItemMap";
+    compass = "ItemCompass";
+    watch = "ItemWatch";
+    gps = "ItemGPS";
+    radio = "tf_anprc152";
+    nvgoggles = "";
+    items[] = {};
+    magazines[] = {};
+
     class Type {
       //Rifleman
       class B_Soldier_F {
-        uniform = "ARC_GER_Flecktarn_Uniform";
-        vest = "ARC_GER_Flecktarn_Plate_Carrier";
-        backpack = "";
-        headgear = "ARC_GER_Flecktarn_Mich";
-        primaryWeapon = "arifle_SPAR_01_blk_F";
-        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33"};
-        handgunWeapon = "hgun_ACPC2_F";
-        binoculars = "Binocular";
-        map = "ItemMap";
-        compass = "ItemCompass";
-        watch = "ItemWatch";
-        gps = "ItemGPS";
-        radio = "tf_anprc152";
-        nvgoggles = "";
-        items[] = {};
-        magazines[] = {};
         addItemsToUniform[] = {
           "ACE_MapTools",
           "ACE_EarPlugs",
@@ -198,14 +199,14 @@ class BWFleck {
 
 class BWTrop: BWFleck {
   class AllPlayable: AllPlayable {
+    uniform = "ARC_GER_Tropentarn_Uniform";
+    vest = "ARC_GER_Tropentarn_Plate_Carrier";
+    headgear = "ARC_GER_Tropentarn_Mich";
+    primaryWeapon = "arifle_SPAR_01_snd_F";
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan"};
+
     class Type: Type {
-      class B_Soldier_F: B_Soldier_F {
-        uniform = "ARC_GER_Tropentarn_Uniform";
-        vest = "ARC_GER_Tropentarn_Plate_Carrier";
-        headgear = "ARC_GER_Tropentarn_Mich";
-        primaryWeapon = "arifle_SPAR_01_snd_F";
-        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan"};
-      };
+      class B_Soldier_F: B_Soldier_F {};
 
       class B_soldier_AAR_F: B_soldier_AAR_F {
         backpack = "ARC_GER_Kitbag_compact_Tropentarn";
