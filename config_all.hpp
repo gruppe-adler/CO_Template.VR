@@ -20,6 +20,7 @@ class CfgFunctions
   #include "functions\system\cfgFunctions.hpp"
   #include "functions\hc\cfgFunctions.hpp"
   #include "functions\creating\cfgFunctions.hpp"
+  #include "f3cache\cfgFunctions.hpp"
 };
 
 //RSCTitles

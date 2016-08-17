@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=169;
+		nextID=172;
 	};
 	class MarkerIDProvider
 	{
@@ -49,7 +49,7 @@ addons[]=
 	"acex_headless",
 	"ace_medical",
 	"ace_medical_menu",
-	"A3_Modules_F_Intel"
+	"ns_anims"
 };
 class AddonsMetaData
 {
@@ -226,10 +226,8 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			className="ns_anims";
+			name="ns_anims";
 		};
 	};
 };
@@ -264,7 +262,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=53;
+		items=50;
 		class Item0
 		{
 			dataType="Logic";
@@ -1310,11 +1308,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1400.3438,-60.321976,399.06885};
+				position[]={1604.4091,-65.985405,397.7041};
 			};
 			id=15;
 			type="ace_zeus_moduleSettings";
-			atlOffset=25.85939;
+			atlOffset=13.534668;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1670,11 +1668,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1400.8877,-61.946098,600.30518};
+				position[]={1604.953,-61.651142,598.94043};
+				angles[]={0.16109225,0,0.01749678};
 			};
 			id=20;
 			type="ModuleCurator_F";
-			atlOffset=10.20253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1780,11 +1778,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1401.3704,-64.077103,499.00586};
+				position[]={1605.4357,-63.3246,497.64111};
+				angles[]={6.2132993,0,6.255693};
 			};
 			id=21;
 			type="ModuleCurator_F";
-			atlOffset=10.202522;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1929,50 +1927,51 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1199.265,-68.049164,599.35712};
+				position[]={1403.3303,-72.132042,597.99237};
+				angles[]={6.0930123,0,0.18534794};
 			};
 			name="virtualZeus1";
 			isPlayable=1;
 			id=29;
 			type="VirtualCurator_F";
-			atlOffset=12.324715;
+			atlOffset=-7.6293945e-006;
 		};
 		class Item21
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1199.0001,-78.260002,498.75815};
+				position[]={1403.0654,-74.106812,497.3934};
+				angles[]={0.062418513,0,0.042473838};
 			};
 			name="virtualZeus2";
 			isPlayable=1;
 			id=30;
 			type="VirtualCurator_F";
-			atlOffset=12.324707;
 		};
 		class Item22
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1199.5289,-96.51107,398.95316};
+				position[]={1403.5942,-86.141441,397.58841};
+				angles[]={6.050005,0,0.11942951};
 			};
 			name="virtualZeus3";
 			isPlayable=1;
 			id=31;
 			type="VirtualCurator_F";
-			atlOffset=12.324707;
 		};
 		class Item23
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1299.3351,-75.527039,499.2879};
+				position[]={1503.4004,-63.379467,497.92316};
+				angles[]={6.2307329,0,0.16595954};
 			};
 			id=32;
 			type="ModuleCurator_F";
-			atlOffset=12.324715;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2078,11 +2077,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1299.0702,-87.80513,398.95291};
+				position[]={1503.1355,-80.130806,397.58817};
+				angles[]={6.0523748,0,0.062418513};
 			};
 			id=33;
 			type="ModuleCurator_F";
-			atlOffset=12.324715;
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2188,11 +2188,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1299.0702,-57.425262,599.09393};
+				position[]={1503.1355,-63.206165,597.72919};
+				angles[]={0.052451372,0,0.052452512};
 			};
 			id=34;
 			type="ModuleCurator_F";
-			atlOffset=12.324715;
+			atlOffset=3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2355,21 +2356,12 @@ class Mission
 		class Item27
 		{
 			dataType="Marker";
-			position[]={1819.2544,5.5,6015.7275};
-			name="marker_1";
-			text="Virtual Arsenal Box (copy-pastable)";
-			type="mil_dot";
-			id=37;
-		};
-		class Item28
-		{
-			dataType="Marker";
 			position[]={1775.1067,5.5,5928.6904};
 			name="respawn_west";
 			type="Empty";
 			id=38;
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Marker";
 			position[]={1768.8044,5.5,5901.5845};
@@ -2377,7 +2369,7 @@ class Mission
 			type="Empty";
 			id=39;
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Marker";
 			position[]={1762.7468,5.5,5878.5542};
@@ -2385,7 +2377,7 @@ class Mission
 			type="Empty";
 			id=40;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Marker";
 			position[]={1753.5798,5.5,5854.1436};
@@ -2393,27 +2385,240 @@ class Mission
 			type="Empty";
 			id=41;
 		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1303.2366,-70.521461,597.48047};
+				angles[]={6.1465416,0,6.146543};
+			};
+			isPlayer=1;
+			isPlayable=1;
+			id=44;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
 		class Item32
 		{
-			dataType="Marker";
-			position[]={1779.7913,5.5,5885.8018};
-			name="marker_6";
-			text="Respawn Positions";
-			type="mil_dot";
-			id=42;
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1303.2366,-88.35569,497.83447};
+				angles[]={6.1736274,0,6.188468};
+			};
+			isPlayable=1;
+			id=45;
+			type="VirtualSpectator_F";
+			atlOffset=-7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 		class Item33
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1099.1713,-79.079308,598.84521};
+				position[]={1303.7902,-100.45377,396.52734};
+				angles[]={6.1172266,0,0.010000871};
 			};
-			isPlayer=1;
 			isPlayable=1;
-			id=44;
+			id=46;
 			type="VirtualSpectator_F";
-			atlOffset=12.324715;
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2518,226 +2723,6 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1099.1713,-87.711273,499.19922};
-			};
-			isPlayable=1;
-			id=45;
-			type="VirtualSpectator_F";
-			atlOffset=12.324722;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="AllowFreeCamera";
-					expression="_this setVariable ['AllowFreeCamera', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="WhitelistedSides";
-					expression="_this setVariable ['WhitelistedSides', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"ARRAY"
-								};
-							};
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ShowFocusInfo";
-					expression="_this setVariable ['ShowFocusInfo', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="AllowAi";
-					expression="_this setVariable ['AllowAi', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="Allow3PPCamera";
-					expression="_this setVariable ['Allow3PPCamera', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item35
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1099.7249,-97.234665,397.89209};
-			};
-			isPlayable=1;
-			id=46;
-			type="VirtualSpectator_F";
-			atlOffset=12.324715;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="AllowFreeCamera";
-					expression="_this setVariable ['AllowFreeCamera', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="WhitelistedSides";
-					expression="_this setVariable ['WhitelistedSides', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"ARRAY"
-								};
-							};
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ShowFocusInfo";
-					expression="_this setVariable ['ShowFocusInfo', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="AllowAi";
-					expression="_this setVariable ['AllowAi', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="Allow3PPCamera";
-					expression="_this setVariable ['Allow3PPCamera', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item36
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
 				position[]={299.87311,-124.90324,299.70117};
 			};
 			id=49;
@@ -2767,7 +2752,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item37
+		class Item35
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2839,7 +2824,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item38
+		class Item36
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2892,7 +2877,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item39
+		class Item37
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2926,7 +2911,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item38
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3207,7 +3192,7 @@ class Mission
 				nAttributes=14;
 			};
 		};
-		class Item41
+		class Item39
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3279,447 +3264,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item42
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1498.797,21.962416,5898.8569};
-			};
-			id=61;
-			type="ModuleCreateDiaryRecord_F";
-			atlOffset=56.481422;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCreateDiaryRecord_F_PresetTitle";
-					expression="_this setVariable ['PresetTitle',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Situation";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCreateDiaryRecord_F_Title";
-					expression="_this setVariable ['Title',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Lage";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCreateDiaryRecord_F_Description";
-					expression="_this setVariable ['Description',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Beschreibung der allgemeinen Situation (Geschehnisse,  eigene Lage, Feindlage, ";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCreateDiaryRecord_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleCreateDiaryRecord_F_Subject";
-					expression="_this setVariable ['Subject',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item43
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1499.489,22.707146,5799.9849};
-			};
-			id=62;
-			type="ModuleCreateDiaryRecord_F";
-			atlOffset=52.566864;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCreateDiaryRecord_F_PresetTitle";
-					expression="_this setVariable ['PresetTitle',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Mission";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCreateDiaryRecord_F_Title";
-					expression="_this setVariable ['Title',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Auftrag";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCreateDiaryRecord_F_Description";
-					expression="_this setVariable ['Description',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Beschreibung des/der Missionsziele(s)";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCreateDiaryRecord_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleCreateDiaryRecord_F_Subject";
-					expression="_this setVariable ['Subject',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item44
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1499.489,21.962523,5701.1138};
-			};
-			id=63;
-			type="ModuleCreateDiaryRecord_F";
-			atlOffset=55.035416;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCreateDiaryRecord_F_PresetTitle";
-					expression="_this setVariable ['PresetTitle',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Execution";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCreateDiaryRecord_F_Title";
-					expression="_this setVariable ['Title',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Durchführung";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCreateDiaryRecord_F_Description";
-					expression="_this setVariable ['Description',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Eigene Absicht mit geplanter Operationsführung";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCreateDiaryRecord_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleCreateDiaryRecord_F_Subject";
-					expression="_this setVariable ['Subject',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item45
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={1499.395,26.065704,5598.2432};
-			};
-			id=64;
-			type="ModuleCreateDiaryRecord_F";
-			atlOffset=52.566872;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCreateDiaryRecord_F_PresetTitle";
-					expression="_this setVariable ['PresetTitle',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Situation";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCreateDiaryRecord_F_Title";
-					expression="_this setVariable ['Title',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Einsatzunterstützung";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCreateDiaryRecord_F_Description";
-					expression="_this setVariable ['Description',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="wichtige Maßnahmen und Einrichtungen der Versorgung";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCreateDiaryRecord_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ModuleCreateDiaryRecord_F_Subject";
-					expression="_this setVariable ['Subject',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=5;
-			};
-		};
-		class Item46
+		class Item40
 		{
 			dataType="Group";
 			side="West";
@@ -3966,7 +3511,7 @@ class Mission
 			};
 			id=119;
 		};
-		class Item47
+		class Item41
 		{
 			dataType="Group";
 			side="West";
@@ -4135,7 +3680,7 @@ class Mission
 			};
 			id=133;
 		};
-		class Item48
+		class Item42
 		{
 			dataType="Group";
 			side="West";
@@ -4464,7 +4009,7 @@ class Mission
 			};
 			id=136;
 		};
-		class Item49
+		class Item43
 		{
 			dataType="Group";
 			side="West";
@@ -4794,7 +4339,7 @@ class Mission
 			};
 			id=141;
 		};
-		class Item50
+		class Item44
 		{
 			dataType="Group";
 			side="West";
@@ -4963,7 +4508,7 @@ class Mission
 			};
 			id=156;
 		};
-		class Item51
+		class Item45
 		{
 			dataType="Group";
 			side="West";
@@ -5293,7 +4838,7 @@ class Mission
 			};
 			id=159;
 		};
-		class Item52
+		class Item46
 		{
 			dataType="Group";
 			side="West";
@@ -5621,6 +5166,38 @@ class Mission
 			{
 			};
 			id=164;
+		};
+		class Item47
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1804.8291,5.5,5881.335};
+			};
+			title="Respawn Positionen";
+			id=169;
+		};
+		class Item48
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1822.874,5.5,6010.8291};
+			};
+			title="Virtual-Arsenal Kiste (copy-pastable)";
+			id=170;
+		};
+		class Item49
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1472.1155,-75.206673,701.86914};
+			};
+			title="Achtung! vSpectator und vZeus";
+			description="Die virtuellen Specator und Zeuseinheiten dürfen nicht im Wasser liegen, sonst geben sie das ganze Spiel über Wassergeräusche von sich.";
+			id=171;
+			atlOffset=2.5380936;
 		};
 	};
 	class Connections
