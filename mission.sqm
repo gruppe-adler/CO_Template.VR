@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1940.1716,73.98716,5432.7671};
-		dir[]={-0.36544859,-0.43563297,0.82260448};
-		up[]={-0.17686638,0.90012342,0.39811614};
-		aside[]={0.91387802,-1.3154931e-008,0.40599698};
+		pos[]={2584.1951,103.85086,5544.3389};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -5172,9 +5172,10 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={1804.8291,5.5,5881.335};
+				position[]={1818.475,5.5,5876.1191};
 			};
 			title="Respawn Positionen";
+			description="Auch ohne Respawn wichtig! JIP-Spieler, die vorher belegte Slots wählen, spawnen am jeweiligen Respawnpunkt.";
 			id=169;
 		};
 		class Item48
