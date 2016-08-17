@@ -1,5 +1,5 @@
 class BWFleck {
-  class AllPlayableAi {
+  class AllPlayable {
     class Type {
       //Rifleman
       class B_Soldier_F {
@@ -197,7 +197,7 @@ class BWFleck {
 };
 
 class BWTrop: BWFleck {
-  class AllPlayableAi: AllPlayableAi {
+  class AllPlayable: AllPlayable {
     class Type: Type {
       class B_Soldier_F: B_Soldier_F {
         uniform = "ARC_GER_Tropentarn_Uniform";
