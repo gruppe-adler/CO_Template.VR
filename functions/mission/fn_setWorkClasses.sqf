@@ -12,7 +12,7 @@ Parameters: [paramsArray_idx]
 Returns: Bool
 
 Examples:
-            _classes_available = [0] call GRAD_conview_fnc_getFactions;
+            _classes_available = [0] call GRAD_mission_fnc_setWorkClasses;
 
 Author: Fry
 
