@@ -12,16 +12,6 @@ class Params
 		default = 0;
 		isGlobal = 1;
 	};
-
-	class timeofday
-    {
-		//paramsArray[1]
-		title = "Time of Day:";
-		values[] = {12,1};
-		texts[] = {"Night - Stealth", "Day - Power"};
-		default = 12;
-    };
-
 	class difficulty
 	{
 		//paramsArray[2]
@@ -30,15 +20,6 @@ class Params
 		texts[] = {"Easy","Normal","Hard","Ultra Hard"};
 		default = 2;
         isGlobal = 1;
-	};
-
-	class weatherset
-	{
-	     //paramsArray[3]
-         title = "Weather Settings:";
-         values[] = {0,1,2,3};
-         texts[] = {"Sunny","Cloudy","Rainy","Random"};
-
 	};
 	class c4only
 	{
@@ -49,7 +30,6 @@ class Params
 	    default = 1;
 		isGlobal = 1;
 	};
-
 	class soundplay
 	{
 	    //paramsArray[5]
@@ -59,7 +39,6 @@ class Params
 	    default = 1;
         isGlobal = 1;
 	};
-
 	class nighteffect
 	{
 	    //paramsArray[6]
@@ -69,7 +48,6 @@ class Params
 		default = 1;
 		isGlobal = 1;
 	};
-
 	class autoresppos
 	{
 	   //paramsArray[7]
@@ -79,7 +57,6 @@ class Params
 	   default = 1;
 	   isGlobal = 1;
 	};
-
 	class autodelete
 	{
 	   //paramsArray[8]
@@ -89,25 +66,4 @@ class Params
 	   default = 3;
 	   isGlobal = 1;
 	};
-
-	class autodeletecorpsecount
-	{
-	   //paramsArray[9]
-	   title = "Max Corpse Count:";
-	   values[] = {5,10,15,20};
-	   texts[] = {"5","10","15","20"};
-	   default = 15;
-	   isGlobal = 1;
-	};
-
-	class autodeletecorpsetimer
-	{
-	  //paramsArray[10]
-	   title = "Max Corpse Removal Time:";
-	   values[] = {120,300,600,900,1200};
-	   texts[] = {"2 min","5 min","10 min","15 min","20 min"};
-	   default = 600;
-	   isGlobal = 1;
-	};
-
 };
