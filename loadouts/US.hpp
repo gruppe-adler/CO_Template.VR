@@ -310,3 +310,87 @@ class USUCP: USOCP {
     };
   };
 };
+
+
+class USMPT: USOCP {
+  class AllPlayable: Allplayable {
+    uniform = "rhs_uniform_FROG01_wd";
+    vest = "rhsusf_spc_rifleman";
+    backpack = "";
+    headgear = "rhsusf_mich_helmet_marpatwd";
+    primaryWeapon = "rhs_weap_m16a4_pmag";
+    class Type: Type {
+
+      class B_Soldier_F: B_Soldier_F {};
+
+      class B_soldier_AAR_F: B_soldier_AAR_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_support_AMG_F: B_support_AMG_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_AAA_F: B_soldier_AAA_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_AAT_F: B_soldier_AAT_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_AR_F: B_soldier_AR_F {
+        vest = "rhsusf_spc_mg";
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_medic_F: B_medic_F {
+        vest = "rhsusf_spc_patchless_radio";
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_exp_F: B_soldier_exp_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_Soldier_GL_F: B_Soldier_GL_F {
+        primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
+      };
+
+      class B_HeavyGunner_F: B_HeavyGunner_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_M_F: B_soldier_M_F {
+        primaryWeapon = "rhs_weap_m14ebrri";
+        vest = "rhsusf_spc_patchless";
+      };
+
+      class B_soldier_AA_F: B_soldier_AA_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_AT_F: B_soldier_AT_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_repair_F: B_soldier_repair_F {
+        backpack = "B_Kitbag_rgr";
+      };
+
+      class B_soldier_LAT_F: B_soldier_LAT_F {};
+
+      class B_Soldier_SL_F: B_Soldier_SL_F {
+        backpack = "tf_rt1523g_bwmod";
+        headgear = "rhsusf_mich_helmet_marpatwd_norotos_headset";
+        vest = "rhsusf_spc_squadleader";
+      };
+
+      class B_Soldier_TL_F: B_Soldier_TL_F {
+        primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
+        headgear = "rhsusf_mich_helmet_marpatwd_norotos_headset";
+        vest = "rhsusf_spc_teamleader";
+      };
+    };
+  };
+};
