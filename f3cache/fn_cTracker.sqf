@@ -50,8 +50,8 @@ While {f_var_cacheRun} do {
                                                 [_x] spawn f_fnc_gCache;
                                         };
                                 };
-
-                                if (_debug) then {diag_log format ["f_fnc_cache DBG: Group is excluded: %1",_x]};
+                        } else {
+                          if (_debug) then {diag_log format ["f_fnc_cache DBG: Group is excluded: %1",_x]};
                         };
                 };
         } foreach _groups;
