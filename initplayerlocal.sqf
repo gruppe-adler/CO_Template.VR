@@ -16,6 +16,10 @@ if (_useCaching) then {
   [30] spawn f_fnc_cInit;
 };
 
+if (didJIP) then {
+  [[player], "helpers\addjiptozeus.sqf"] remoteExec ["execVM",2,false];
+};
+
 [] execVM "helpers\intro.sqf";
 [] execVM "helpers\tfarsettings.sqf";
 [_lage, _auftrag, _durchfuehrung, _einsatzunterstuetzung] execVM "helpers\createDiaryRecords.sqf";
