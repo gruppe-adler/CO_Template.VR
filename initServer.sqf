@@ -13,6 +13,7 @@ if (_useCaching) then {
   f_param_debugMode = _cachingDebug;
   f_param_caching = _cachingRange;
   f_var_cachingAggressiveness = _cachingAgressiveness;
+  f_param_uncacheForZeus = _uncacheForZeus;
   [30] spawn f_fnc_cInit;
 };
 

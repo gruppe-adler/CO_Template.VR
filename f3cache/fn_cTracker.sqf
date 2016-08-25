@@ -14,10 +14,10 @@ _debug = if (f_param_debugMode == 1) then [{true},{false}];
 
 // BEGIN THE TRACKING LOOP
 While {f_var_cacheRun} do {
+        if (_debug) then{diag_log format ["f_fnc_cache DBG: Tracking %1 groups",count _groups]};
+
         {
                 _groups = allGroups;
-
-                if (_debug) then{diag_log format ["f_fnc_cache DBG: Tracking %1 groups",count _groups]};
 
                 if (isnull _x) then {
                         _groups = _groups - [_x];
@@ -30,8 +30,6 @@ While {f_var_cacheRun} do {
 
                         if (!_exclude) then {
                                 if (_cached) then {
-
-                                        if (_debug) then {diag_log format ["f_fnc_cache DBG: Checking group: %1",_x]};
 
                                         if ([leader _x, _range] call f_fnc_nearPlayer) then {
 

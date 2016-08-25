@@ -16,6 +16,12 @@ _players = [];
    if (isPlayer _x) then {_players pushBack _x};
 } forEach playableUnits;
 
+if (f_param_uncacheForZeus) then {
+  {
+    if (isPlayer getAssignedCuratorUnit _x) then {_players pushBack (getAssignedCuratorUnit _x)};
+  } forEach allCurators;
+};
+
 // ====================================================================================
 
 // Check whether a player is in the given distance - return true if yes

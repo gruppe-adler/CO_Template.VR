@@ -41,3 +41,5 @@ _cachingAgressiveness = 2;                                                      
                                                                                 // 1 - nur nicht-Gruppenführer und nicht-Fahrer (dies ist die richtige Einstellung für Zeus-Missionen, da auch gecachte Gruppen kontrollierbar bleiben!)
                                                                                 // 2 - alle statischen Einheiten exklusive Fahrer (dies ist die richtige Einstellung für fast alle anderen Missionen)
                                                                                 // 3 - alle Einheiten inklusive Fahrer und Gruppenführer
+
+_uncacheForZeus = false;                                                        //Einheiten auch dann entcachen, wenn eine spielergesteuerte, virtuelle Zeuseinheit innerhalb der _cachingRange ist.
