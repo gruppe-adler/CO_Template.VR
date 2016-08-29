@@ -150,6 +150,7 @@ class BWFleck {
       class B_soldier_M_F: B_Soldier_F {
         primaryWeapon = "arifle_SPAR_03_blk_F";
         primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk"};
+        binoculars = "ACE_VectorDay";
         addItemsToVest[] = {
           LIST_2("SmokeShell"),
           LIST_2("16Rnd_9x21_Mag"),
