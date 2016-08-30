@@ -6,19 +6,18 @@
 private ["_range","_groups","_debug"];
 
 _range = _this select 0;
-_groups = allGroups;
-
 _debug = if (f_param_debugMode == 1) then [{true},{false}];
 
 // ====================================================================================
 
 // BEGIN THE TRACKING LOOP
-While {f_var_cacheRun} do {
+[{
+        params ["_args", "_handle"];
+        _args params ["_range", "_debug"];
+
         if (_debug) then{diag_log format ["f_fnc_cache DBG: Tracking %1 groups",count _groups]};
-
+        _groups = allGroups;
         {
-                _groups = allGroups;
-
                 if (isnull _x) then {
                         _groups = _groups - [_x];
 
@@ -54,13 +53,14 @@ While {f_var_cacheRun} do {
                 };
         } foreach _groups;
 
-        sleep f_var_cacheSleep;
-};
-
-// If the caching loop is terminated, uncache all cached groups
-{
-        if (_x getvariable ["f_cached", false]) then {
-                _x spawn f_fnc_gUncache;
-                _x setvariable ["f_cached", false];
+        if (!f_var_cacheRun) exitWith {
+          diag_log "f_fnc_cache DBG: Tracking terminated. Uncaching all groups.";
+          {
+                  if (_x getvariable ["f_cached", false]) then {
+                          _x spawn f_fnc_gUncache;
+                          _x setvariable ["f_cached", false];
+                  };
+          } forEach allGroups;
+          [_handle] call CBA_fnc_removePerFrameHandler;
         };
-} forEach allGroups;
+}, f_var_cacheSleep, [_range,_debug]] call CBA_fnc_addPerFrameHandler;
