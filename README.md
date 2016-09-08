@@ -1,5 +1,6 @@
 # CO_Template.Stratis
 Gruppe Adler Coop Template
+
 Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.
 
 Alle vom Benutzer anzupassenden Dateien befinden sich im *USERSCRIPTS* Ordner und können mit jedem beliebigen Texteditor geöffnet und bearbeitet werden.
