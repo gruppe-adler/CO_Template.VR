@@ -93,6 +93,7 @@ Beispiel: `_loadoutFaction = "USOCP";`.
 | "USOCP"     | US Army OCP            | NATO                 |
 | "USUCP"     | US Army UCP            | NATO                 |
 | "USMPT"     | US Marines MARPAT      | NATO                 |
+| "RUFlora"   | RUS MSV Flora          | CSAT                 |
 
 Um keine Loadouts zu vergeben, muss der Text zwischen den Anführungszeichen gelöscht werden.  
 Beispiel: `_loadoutFaction = "";`.  
