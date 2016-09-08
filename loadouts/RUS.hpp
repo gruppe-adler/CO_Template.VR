@@ -206,3 +206,82 @@ class RUFlora {
     };
   };
 };
+
+class RUEMR: RUFlora {
+  class Allplayable: Allplayable {
+    uniform = "rhs_uniform_msv_emr";
+    vest = "rhs_6b13_EMR_6sh92";
+    headgear = "rhs_6b27m_digi";
+
+    class Type: Type {
+      class O_Soldier_F: O_Soldier_F {
+
+      };
+
+      class O_soldier_AAR_F: O_soldier_AAR_F {
+
+      };
+
+      class O_support_AMG_F: O_support_AMG_F {
+      };
+
+      class O_soldier_AAA_F: O_soldier_AAA_F {
+
+      };
+
+      class O_soldier_AAT_F: O_soldier_AAT_F {
+
+      };
+
+      class O_soldier_AR_F: O_soldier_AR_F {
+
+      };
+
+      class O_medic_F: O_medic_F {
+        vest = "rhs_6b13_EMR_6sh92_headset_mapcase";
+      };
+
+      class O_soldier_exp_F: O_soldier_exp_F {
+
+      };
+
+      class O_Soldier_GL_F: O_Soldier_GL_F {
+        vest = "rhs_6b13_EMR_6sh92_vog";
+      };
+
+      class O_HeavyGunner_F: O_HeavyGunner_F {
+
+      };
+
+      class O_soldier_M_F: O_soldier_M_F {
+
+      };
+
+      class O_soldier_AA_F: O_soldier_AA_F {
+
+      };
+
+      class O_soldier_AT_F: O_soldier_AT_F {
+
+      };
+
+      class O_soldier_repair_F: O_soldier_repair_F {
+        headgear = "rhs_6b27m_digi_ess";
+      };
+
+      class O_soldier_LAT_F: O_soldier_LAT_F {
+        heargear = "rhs_6b27m_digi_bala";
+      };
+
+      class O_Soldier_SL_F: O_Soldier_SL_F {
+        headgear = "rhs_6b27m_digi_ess";
+        vest = "rhs_6b13_EMR_6sh92_radio";
+      };
+
+      class O_Soldier_TL_F: O_Soldier_TL_F {
+        headgear = "rhs_6b27m_digi_ess";
+        vest = "rhs_6b13_EMR_6sh92_radio";
+      };
+    };
+  };
+};

@@ -8,6 +8,7 @@ _loadoutFaction = "BWFleck";
 *   "USUCP"         US Army UCP
 *   "USMPT"         US Marines MARPAT
 *   "RUFlora"       Russian MSV Flora
+*   "RUEMR"         Russian MSV EMR-Summer
 */
 
 
