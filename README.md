@@ -1,6 +1,8 @@
 # CO_Template.Stratis
 Gruppe Adler Coop Template
-Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.
+Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.  
+Alle vom Benutzer anzupassenden Dateien befinden sich im *USERSCRIPTS* Ordner und können mit jedem beliebigen Texteditor geöffnet und bearbeitet werden.
+Zusätzlich zu dieser Anleitung sind die einzustellenden Parameter auch in den Dateien selbst noch einmal erklärt.
 
 **Inhalt**
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -10,13 +12,12 @@ Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Miss
 - [Installation](#installation)
   - [Maps](#maps)
 - [Updates](#updates)
-- [Voreinstellungen](#voreinstellungen)
-  - [missionsettings.sqf](#missionsettingssqf)
-    - [Über Die Mission](#%C3%BCber-die-mission)
-    - [Briefing](#briefing)
-    - [Allgemeine Einstellungen](#allgemeine-einstellungen)
-    - [AI Caching](#ai-caching)
-  - [loadouts.sqf](#loadoutssqf)
+- [missionsettings.sqf](#missionsettingssqf)
+  - [Ueber Die Mission](#ueber-die-mission)
+  - [Briefing](#briefing)
+  - [Allgemeine Einstellungen](#allgemeine-einstellungen)
+  - [AI Caching](#ai-caching)
+- [loadouts.sqf](#loadoutssqf)
     - [Eigene Loadouts](#eigene-loadouts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -61,29 +62,25 @@ Ab dem ersten Release werden alle Updates rückwärtskompatibel sein, sofern nic
   * *mission.sqm*
   * *USERSCRIPTS* (Ordner + Inhalt)
 
-## Voreinstellungen
-Alle vom Benutzer anzupassenden Dateien befinden sich im *USERSCRIPTS* Ordner und können mit jedem beliebigen Texteditor geöffnet und bearbeitet werden.
-Zusätzlich zu dieser Anleitung sind die einzustellenden Parameter auch in den Dateien selbst noch einmal erklärt.
-
-### missionsettings.sqf
+## missionsettings.sqf
 In *USERSCRIPTS\missionsettings.sqf* sind die allgemeinen Missionseinstellungen definiert.
 
-#### UEber Die Mission
+### Ueber Die Mission
 Hier werden Missionsauthor, -name und -beschreibung, sowie das Vorschaubild für den Ladebildschirm festgelegt. Der Name der Mission wird beim Missionsstart erneut zusammen mit dem Gruppe-Adler Logo eingeblendet.
 Im Parameter `loadScreen` kann der Pfad zu einem selbsterstellten Ladebild angegeben werden. Für die Auflösung des Bildes sind 512x256 oder 1024x512 Pixel zu empfehlen.
 
-#### Briefing
+### Briefing
 Das Template erstellt automatisch die hier angegebenen Einträge als Briefing für alle Spieler. Soll ein Eintrag nicht erstellt werden, muss der Text zwischen den jeweiligen Anführungszeichen gelöscht werden. Beispiel: `_auftrag = "";`.
 
-#### Allgemeine Einstellungen
+### Allgemeine Einstellungen
 `_timeMultiplication` stellt den Geschwindigkeitsfaktor der in-Spiel Zeit ein. Betroffen sind hiervon nur die Umweltereignisse wie Tag-/Nachwechsel oder Wetter.  
 `_civTraffic` stellt den zufällig generierten Zivilverkehr ein bzw. aus. Ausserhalb der Sichtweite der Spieler spawnen zivile KI-Fahrzeuge mit einer zufällige Fahrtroute. Nach einer gewissen Zeit despawnen sie wieder ausserhalb der Sichtweite der Spieler.
 
-#### AI Caching
+### AI Caching
 Im Template ist ein KI-Caching System enthalten, was über diese Parameter ein-/ausgeschaltet und eingestellt werden kann. Die voreingestellten Werte werden nicht in jeder Mission sinnvoll sein und sollten angepasst werden.  
 Caching bringt bessere Performance bei vielen KI-Einheiten, die nicht in direktem Kontakt mit den Spielern stehen. Diese werden vom System unsichtbar gemacht und nur noch unvollständig simuliert, um Leistung zu sparen. Caching macht nur Sinn, wenn ohne Headless Client gespielt wird, da Einheiten auf dem HC nicht gecached werden können.
 
-### loadouts.sqf
+## loadouts.sqf
 In dieser Datei wird das Standardloadout für die Spieler eingestellt. Im Eintrag `_loadoutFaction` kann eine der folgenden Parteien ausgewählt werden:  
 Beispiel: `_loadoutFaction = "USOCP";`.
 
@@ -129,5 +126,4 @@ Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout
 Das bedeutet, um einen Sprengmeister mit US Army OCP Loadout als Spielerslot zur Verfügung zu stellen, platziere ich im Editor aus der Kategorie *NATO >> Men* einen *Explosive Specialist*, nachdem ich `_loadoutFaction = "USOCP";` festgelegt habe.  
 
 #### Eigene Loadouts
-Eigene Loadouts können im Ordner *loadouts* festgelegt werden. Die Dokumentation zum Loadoutsystem gibt es unter [github/gruppe-adler/grad-loadout](https://github.com/gruppe-adler/grad-loadout).  
-Neu erstellte Loadouts nehmen wir gerne ins Template auf, dann haben alle etwas davon :).
+Eigene Loadouts können im Ordner *loadouts* festgelegt werden. Die Dokumentation zum Loadoutsystem gibt es unter [github/gruppe-adler/grad-loadout](https://github.com/gruppe-adler/grad-loadout). Neu erstellte Loadouts nehmen wir gerne ins Template auf, dann haben alle etwas davon.
