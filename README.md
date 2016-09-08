@@ -82,7 +82,7 @@ Im Template ist ein KI-Caching System enthalten, was über diese Parameter ein-/
 Caching bringt bessere Performance bei vielen KI-Einheiten, die nicht in direktem Kontakt mit den Spielern stehen. Diese werden vom System unsichtbar gemacht und nur noch unvollständig simuliert, um Leistung zu sparen. Caching macht nur Sinn, wenn ohne Headless Client gespielt wird, da Einheiten auf dem HC nicht gecached werden können.
 
 ## loadouts.sqf
-In dieser Datei wird das Standardloadout für die Spieler eingestellt. Im Eintrag `_loadoutFaction` kann eine der folgenden Parteien ausgewählt werden:  
+In *USERSCRIPTS\loadouts.sqf* wird das Standardloadout für die Spieler eingestellt. Im Eintrag `_loadoutFaction` kann eine der folgenden Parteien ausgewählt werden:  
 Beispiel: `_loadoutFaction = "USOCP";`.
 
 | Kürzel      |  Camo                  |  Einheiten-Kategorie |
