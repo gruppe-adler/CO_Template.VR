@@ -54,6 +54,7 @@ Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Miss
 
 ## Updates
 Ab dem ersten Release werden alle Updates rückwärtskompatibel sein, sofern nicht ausdrücklich erwähnt. Missionen können wie folgt auf eine neuere Version des Templates aktualisiert werden:
+
 1. Missionsordner umbenennen (z.B. *CO_myMission.Altis* --> *CO_myMission.Altis.Backup*)
 2. neue Version des Templates herunterladen und umbenennen (z.B. *CO_myMission.Altis*)
 3. die folgenden Dateien aus der alten Version (*CO_myMission.Altis.Backup*) in die neue Version (*CO_myMission.Altis*) kopieren und ggf. Existierende damit überschreiben:
@@ -67,7 +68,7 @@ Zusätzlich zu dieser Anleitung sind die einzustellenden Parameter auch in den D
 ### missionsettings.sqf
 In *USERSCRIPTS\missionsettings.sqf* sind die allgemeinen Missionseinstellungen definiert.
 
-#### Über Die Mission
+#### UEber Die Mission
 Hier werden Missionsauthor, -name und -beschreibung, sowie das Vorschaubild für den Ladebildschirm festgelegt. Der Name der Mission wird beim Missionsstart erneut zusammen mit dem Gruppe-Adler Logo eingeblendet.
 Im Parameter `loadScreen` kann der Pfad zu einem selbsterstellten Ladebild angegeben werden. Für die Auflösung des Bildes sind 512x256 oder 1024x512 Pixel zu empfehlen.
 
@@ -83,7 +84,8 @@ Im Template ist ein KI-Caching System enthalten, was über diese Parameter ein-/
 Caching bringt bessere Performance bei vielen KI-Einheiten, die nicht in direktem Kontakt mit den Spielern stehen. Diese werden vom System unsichtbar gemacht und nur noch unvollständig simuliert, um Leistung zu sparen. Caching macht nur Sinn, wenn ohne Headless Client gespielt wird, da Einheiten auf dem HC nicht gecached werden können.
 
 ### loadouts.sqf
-In dieser Datei wird das Standardloadout für die Spieler eingestellt. Im Eintrag `_loadoutFaction` kann eine der folgenden Parteien ausgewählt werden (Beispiel: `_loadoutFaction = "USOCP";`):
+In dieser Datei wird das Standardloadout für die Spieler eingestellt. Im Eintrag `_loadoutFaction` kann eine der folgenden Parteien ausgewählt werden:  
+Beispiel: `_loadoutFaction = "USOCP";`.
 
 | Kürzel      |  Camo                  |  Einheiten-Kategorie |
 |-------------|------------------------|----------------------|
@@ -93,7 +95,9 @@ In dieser Datei wird das Standardloadout für die Spieler eingestellt. Im Eintra
 | "USUCP"     | US Army UCP            | NATO                 |
 | "USMPT"     | US Marines MARPAT      | NATO                 |
 
-Um keine Loadouts zu vergeben, muss der Text zwischen den Anführungszeichen gelöscht werden. Beispiel: `_loadoutFaction = "";`.  
+Um keine Loadouts zu vergeben, muss der Text zwischen den Anführungszeichen gelöscht werden.  
+Beispiel: `_loadoutFaction = "";`.  
+
 Um Standardloadouts zu erhalten müssen im Editor Vanillaeinheiten platziert werden, oder die vorplatzierten Einheiten genutzt werden. Dabei sind die folgenden Kategorien zu benutzen:  
 
 * Blufor:         NATO >> Men
@@ -101,6 +105,7 @@ Um Standardloadouts zu erhalten müssen im Editor Vanillaeinheiten platziert wer
 * Independent:    AAF >> Men
 
 Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout:
+
 | Englisch:                                  | Deutsch:                                           | Funktion:                               |
 |--------------------------------------------|----------------------------------------------------|-----------------------------------------|
 | Asst. Autorifleman                         | Zweiter Automatik Schütze                          | Munitionsträger für LMG                 |
@@ -124,4 +129,5 @@ Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout
 Das bedeutet, um einen Sprengmeister mit US Army OCP Loadout als Spielerslot zur Verfügung zu stellen, platziere ich im Editor aus der Kategorie *NATO >> Men* einen *Explosive Specialist*, nachdem ich `_loadoutFaction = "USOCP";` festgelegt habe.  
 
 #### Eigene Loadouts
-Eigene Loadouts können im Ordner *loadouts* festgelegt werden. Die Dokumentation zum Loadoutsystem gibt es unter [github/gruppe-adler/grad-loadout](https://github.com/gruppe-adler/grad-loadout). Neu erstellte Loadouts nehmen wir gerne ins Template auf, dann haben alle etwas davon :).
+Eigene Loadouts können im Ordner *loadouts* festgelegt werden. Die Dokumentation zum Loadoutsystem gibt es unter [github/gruppe-adler/grad-loadout](https://github.com/gruppe-adler/grad-loadout).  
+Neu erstellte Loadouts nehmen wir gerne ins Template auf, dann haben alle etwas davon :).
