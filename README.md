@@ -1,6 +1,7 @@
 # CO_Template.Stratis
 Gruppe Adler Coop Template
-Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.  
+Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.
+
 Alle vom Benutzer anzupassenden Dateien befinden sich im *USERSCRIPTS* Ordner und können mit jedem beliebigen Texteditor geöffnet und bearbeitet werden.
 Zusätzlich zu dieser Anleitung sind die einzustellenden Parameter auch in den Dateien selbst noch einmal erklärt.
 
@@ -18,7 +19,7 @@ Zusätzlich zu dieser Anleitung sind die einzustellenden Parameter auch in den D
   - [Allgemeine Einstellungen](#allgemeine-einstellungen)
   - [AI Caching](#ai-caching)
 - [loadouts.sqf](#loadoutssqf)
-    - [Eigene Loadouts](#eigene-loadouts)
+  - [Eigene Loadouts](#eigene-loadouts)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -95,7 +96,7 @@ Beispiel: `_loadoutFaction = "USOCP";`.
 Um keine Loadouts zu vergeben, muss der Text zwischen den Anführungszeichen gelöscht werden.  
 Beispiel: `_loadoutFaction = "";`.  
 
-Um Standardloadouts zu erhalten müssen im Editor Vanillaeinheiten platziert werden, oder die vorplatzierten Einheiten genutzt werden. Dabei sind die folgenden Kategorien zu benutzen:  
+Um Standardloadouts zu erhalten müssen im Editor Vanillaeinheiten platziert werden, oder die vorplatzierten Einheiten genutzt werden. Dabei sind die folgenden Kategorien zu verwenden:  
 
 * Blufor:         NATO >> Men
 * Opfor:          CSAT >> Men
@@ -125,5 +126,5 @@ Von den angegebenen Kategorien haben die folgenden Einheiten ein Standardloadout
 
 Das bedeutet, um einen Sprengmeister mit US Army OCP Loadout als Spielerslot zur Verfügung zu stellen, platziere ich im Editor aus der Kategorie *NATO >> Men* einen *Explosive Specialist*, nachdem ich `_loadoutFaction = "USOCP";` festgelegt habe.  
 
-#### Eigene Loadouts
+### Eigene Loadouts
 Eigene Loadouts können im Ordner *loadouts* festgelegt werden. Die Dokumentation zum Loadoutsystem gibt es unter [github/gruppe-adler/grad-loadout](https://github.com/gruppe-adler/grad-loadout). Neu erstellte Loadouts nehmen wir gerne ins Template auf, dann haben alle etwas davon.
