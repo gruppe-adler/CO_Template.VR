@@ -16,6 +16,10 @@ if (_useCaching) then {
   [30] spawn f_fnc_cInit;
 };
 
+if (_civTraffic) then {
+  [] execVM "Engima\Traffic\Init.sqf";
+};
+
 if (didJIP) then {
   [[player], "helpers\addjiptozeus.sqf"] remoteExec ["execVM",2,false];
 };

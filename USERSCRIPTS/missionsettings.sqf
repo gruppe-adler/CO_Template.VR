@@ -23,7 +23,7 @@ _einsatzunterstuetzung =                                                        
 
 //ALLGEMEINE EINSTELLUNGEN =====================================================
 _timeMultiplication = 1;                                                        //Zeit-Multiplikator - Eine Spiel-Stunde dauert (eine Echtzeit-Stunde * _timeMultiplication) - mögliche Werte: Zahl > 0
-
+_civTraffic = true;                                                             //Zufällig generierter Zivilverkehr - mögliche Werte: true, false
 
 
 //AI CACHING ===================================================================

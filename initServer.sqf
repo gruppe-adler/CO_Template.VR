@@ -17,6 +17,10 @@ if (_useCaching) then {
   [30] spawn f_fnc_cInit;
 };
 
+if (_civTraffic) then {
+  [] execVM "Engima\Traffic\Init.sqf";
+};
+
 [] execVM "helpers\tfarsettings.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
