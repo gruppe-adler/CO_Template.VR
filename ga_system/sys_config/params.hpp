@@ -1,8 +1,6 @@
-﻿
-
-class Params
+﻿class Params
 {
-	class factionselector
+	/*class factionselector
 	{
 		//paramsArray[0]
 		title = "Select a Faction";
@@ -65,5 +63,5 @@ class Params
 	   texts[] = {"NO","YES"};
 	   default = 3;
 	   isGlobal = 1;
-	};
+	};*/
 };
