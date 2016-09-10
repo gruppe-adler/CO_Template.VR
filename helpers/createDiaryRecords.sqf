@@ -1,4 +1,4 @@
-params [["_lage", ""], ["_auftrag", ""], ["_durchfuehrung", ""], ["_einsatzunterstuetzung", ""]];
+#include "..\USERSCRIPTS\briefing.sqf"
 
 //create in reverse order --> correct order in briefing
 if (_einsatzunterstuetzung != "") then {

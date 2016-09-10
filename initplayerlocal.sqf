@@ -40,7 +40,7 @@ if (didJIP) then {
 
 [] execVM "helpers\intro.sqf";
 [] execVM "helpers\tfarsettings.sqf";
-[_lage, _auftrag, _durchfuehrung, _einsatzunterstuetzung] execVM "helpers\createDiaryRecords.sqf";
+[] execVM "helpers\createDiaryRecords.sqf";
 
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [0,true] call FNC_SMC(client,setClientAction);

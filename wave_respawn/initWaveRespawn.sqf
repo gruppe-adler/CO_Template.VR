@@ -1,4 +1,4 @@
-RESPAWNWAVEEXTRATIME = 30;
+RESPAWNWAVEEXTRATIME = 60;
 
 if (hasInterface) then {
   joinTime = serverTime;
