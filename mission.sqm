@@ -2376,11 +2376,11 @@ class Mission
 		class Item28
 		{
 			dataType="Marker";
-			position[]={6034.8447,5.5,4962.3608};
-			name="respawn_West";
+			position[]={6034.8452,4.2566065e+014,4962.3608};
+			name="respawn_east";
 			type="Empty";
 			id=39;
-			atlOffset=0.5;
+			atlOffset=4.2566065e+014;
 		};
 		class Item29
 		{

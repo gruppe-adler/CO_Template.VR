@@ -16,6 +16,20 @@ if (_useCaching) then {
   [30] spawn f_fnc_cInit;
 };
 
+if (_waveRespawn) then {
+  GRAD_waveRespawn = true;
+  WAVERESPAWNTIME = _waveRespawnTime max 10;
+  RESPAWNTIME = _respawnTime max 10;
+  BLUFORWAVESIZE = _bluforWaveSize max 0;
+  OPFORWAVESIZE = _opforWaveSize max 0;
+  INDEPWAVESIZE = _indepWaveSize max 0;
+  if (!isServer) then {
+    [] execVM "wave_respawn\initWaveRespawn.sqf";
+  };
+} else {
+  GRAD_waveRespawn = false;
+};
+
 if (_civTraffic) then {
   [] execVM "Engima\Traffic\Init.sqf";
 };

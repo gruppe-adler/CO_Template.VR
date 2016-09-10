@@ -20,11 +20,18 @@ _einsatzunterstuetzung =                                                        
 "verfügbare Einsatzunterstützung";
 
 
-
 //ALLGEMEINE EINSTELLUNGEN =====================================================
 _timeMultiplication = 1;                                                        //Zeit-Multiplikator - Eine Spiel-Stunde dauert (eine Echtzeit-Stunde * _timeMultiplication) - mögliche Werte: Zahl > 0
 _civTraffic = true;                                                             //Zufällig generierter Zivilverkehr - mögliche Werte: true, false
+
+
+//RESPAWN EINSTELLUNGEN=========================================================
 respawnDelay = 10;                                                              //Respawnzeit - 99999 für Permadeath mit Spectator
+_waveRespawn = false;                                                           //Wellen-Respawn - wenn false, können alle folgenden Einstellungen vernachlässigt werden - mögliche Werte: true, false
+_bluforWaveSize = 0;                                                            //BLUFOR Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
+_opforWaveSize = 0;                                                             //OPFOR Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
+_indepWaveSize = 0;                                                             //INDEPENDENT Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
+
 
 //AI CACHING ===================================================================
 _useCaching = false;                                                            //F3 Caching - wenn ausgeschaltet, können alle anderen Caching-Einstellungen vernachlässigt werden - mögliche Werte: true, false
