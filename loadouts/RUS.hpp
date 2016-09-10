@@ -1,3 +1,27 @@
+#ifdef NIGHTVISION
+  #define NVITEM "NVGoggles_OPFOR"
+#else
+  #define NVITEM ""
+#endif
+
+#ifdef LASERS
+  #define LLITEM ""
+#else
+  #define LLITEM ""
+#endif
+
+#ifdef GUNLIGHTS
+  #define LLITEM ""
+#else
+  #define LLITEM
+#endif
+
+#ifdef SUPPRESSORS
+  #define SUPPRESSORITEM "rhs_acc_tgpa"
+#else
+  #define SUPPRESSORITEM "rhs_acc_dtk"
+#endif
+
 class RUFlora {
   class AllPlayable {
     uniform = "rhs_uniform_flora";
@@ -5,7 +29,7 @@ class RUFlora {
     backpack = "";
     headgear = "rhs_6b26";
     primaryWeapon = "rhs_weap_ak74m";
-    primaryWeaponAttachments[] = {"rhs_acc_dtk", "rhs_acc_2dpZenit", "rhs_acc_pkas"};
+    primaryWeaponAttachments[] = {"rhs_acc_pkas", SUPPRESSORITEM};
     handgunWeapon = "rhs_weap_makarov_pm";
     binoculars = "Binocular";
     map = "ItemMap";
@@ -13,7 +37,7 @@ class RUFlora {
     watch = "ItemWatch";
     gps = "ItemGPS";
     radio = "tf_fadak";
-    nvgoggles = "";
+    nvgoggles = NVITEM;
     items[] = {};
     magazines[] = {};
 
@@ -27,7 +51,8 @@ class RUFlora {
           LIST_2("ACE_CableTie"),
           LIST_8("ACE_fieldDressing"),
           LIST_4("ACE_morphine"),
-          "ACE_epinephrine"
+          "ACE_epinephrine",
+          "ACE_Flashlight_KSF1"
         };
 
         addItemsToVest[] = {

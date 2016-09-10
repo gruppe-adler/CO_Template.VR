@@ -1,4 +1,5 @@
 #include ".\list_macros.hpp"
+#include "..\USERSCRIPTS\loadouts.sqf"
 #define FACTIONIZE(var) class O_##var: B_##var {}; class I_##var: B_##var {};
 
 class Loadouts {

@@ -1,3 +1,27 @@
+#ifdef NIGHTVISION
+  #define NVITEM "rhsusf_ANPVS_15"
+#else
+  #define NVITEM ""
+#endif
+
+#ifdef LASERS
+  #define LLITEM "rhsusf_acc_anpeq15_bk"
+#else
+  #define LLITEM ""
+#endif
+
+#ifdef GUNLIGHTS
+  #define LLITEM "rhsusf_acc_anpeq15_bk_light"
+#else
+  #define LLITEM
+#endif
+
+#ifdef SUPPRESSORS
+  #define SUPPRESSORITEM "rhsusf_acc_nt4_black"
+#else
+  #define SUPPRESSORITEM ""
+#endif
+
 class BWFleck {
   class AllPlayable {
     uniform = "ARC_GER_Flecktarn_Uniform";
@@ -5,7 +29,7 @@ class BWFleck {
     backpack = "";
     headgear = "ARC_GER_Flecktarn_Mich";
     primaryWeapon = "arifle_SPAR_01_blk_F";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33"};
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", LLITEM, SUPPRESSORITEM};
     handgunWeapon = "hgun_ACPC2_F";
     binoculars = "Binocular";
     map = "ItemMap";
@@ -13,7 +37,7 @@ class BWFleck {
     watch = "ItemWatch";
     gps = "ItemGPS";
     radio = "tf_anprc152";
-    nvgoggles = "";
+    nvgoggles = NVITEM;
     items[] = {};
     magazines[] = {};
 
@@ -27,7 +51,8 @@ class BWFleck {
           LIST_2("ACE_CableTie"),
           LIST_8("ACE_fieldDressing"),
           LIST_4("ACE_morphine"),
-          "ACE_epinephrine"
+          "ACE_epinephrine",
+          "ACE_Flashlight_MX991"
         };
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
@@ -74,7 +99,7 @@ class BWFleck {
       //Autorifleman
       class B_soldier_AR_F: B_Soldier_F {
         primaryWeapon = "arifle_SPAR_02_blk_F";
-        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", "bipod_01_F_blk"};
+        primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", "bipod_01_F_blk", LLITEM};
         handgunWeapon = "";
         backpack = "ARC_GER_Kitbag_compact_Flecktarn";
         addItemsToBackpack[] = {
@@ -149,7 +174,7 @@ class BWFleck {
       //Marksman
       class B_soldier_M_F: B_Soldier_F {
         primaryWeapon = "arifle_SPAR_03_blk_F";
-        primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk"};
+        primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk", LLITEM};
         binoculars = "ACE_VectorDay";
         addItemsToVest[] = {
           LIST_2("SmokeShell"),
@@ -222,13 +247,19 @@ class BWFleck {
   };
 };
 
+#ifdef SUPPRESSORS
+  #define SUPPRESSORITEM "rhsusf_acc_nt4_tan"
+#else
+  #define SUPPRESSORITEM ""
+#endif
+
 class BWTrop: BWFleck {
   class AllPlayable: AllPlayable {
     uniform = "ARC_GER_Tropentarn_Uniform";
     vest = "ARC_GER_Tropentarn_Plate_Carrier";
     headgear = "ARC_GER_Tropentarn_Mich";
     primaryWeapon = "arifle_SPAR_01_snd_F";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan"};
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan", LLITEM, SUPPRESSORITEM};
 
     class Type: Type {
       class B_Soldier_F: B_Soldier_F {};

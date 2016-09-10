@@ -1,3 +1,27 @@
+#ifdef NIGHTVISION
+  #define NVITEM "rhsusf_ANPVS_15"
+#else
+  #define NVITEM ""
+#endif
+
+#ifdef LASERS
+  #define LLITEM "rhsusf_acc_anpeq15_bk"
+#else
+  #define LLITEM ""
+#endif
+
+#ifdef GUNLIGHTS
+  #define LLITEM "rhsusf_acc_anpeq15_bk_light"
+#else
+  #define LLITEM
+#endif
+
+#ifdef SUPPRESSORS
+  #define SUPPRESSORITEM "rhsusf_acc_nt4_black"
+#else
+  #define SUPPRESSORITEM ""
+#endif
+
 class USOCP {
   class AllPlayable {
     uniform = "rhs_uniform_cu_ocp";
@@ -5,7 +29,7 @@ class USOCP {
     backpack = "";
     headgear = "rhsusf_ach_helmet_ocp";
     primaryWeapon = "rhs_weap_m4a1_blockII_bk";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", "acc_pointer_IR"};
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33", LLITEM, SUPPRESSORITEM};
     handgunWeapon = "rhsusf_weap_m9";
     binoculars = "Binocular";
     map = "ItemMap";
@@ -13,7 +37,7 @@ class USOCP {
     watch = "ItemWatch";
     gps = "ItemGPS";
     radio = "tf_anprc152";
-    nvgoggles = "";
+    nvgoggles = NVITEM;
     items[] = {};
     magazines[] = {};
 
@@ -27,7 +51,8 @@ class USOCP {
           LIST_2("ACE_CableTie"),
           LIST_8("ACE_fieldDressing"),
           LIST_4("ACE_morphine"),
-          "ACE_epinephrine"
+          "ACE_epinephrine",
+          "ACE_Flashlight_MX991"
         };
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
@@ -151,7 +176,7 @@ class USOCP {
       //Marksman
       class B_soldier_M_F: B_Soldier_F {
         primaryWeapon = "rhs_weap_sr25_ec";
-        primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk"};
+        primaryWeaponAttachments[] = {"optic_DMS", "bipod_01_F_blk", LLITEM};
         addItemsToVest[] = {
           LIST_2("HandGrenade"),
           LIST_2("SmokeShell"),
@@ -226,91 +251,6 @@ class USOCP {
     };
   };
 };
-
-
-class USUCP: USOCP {
-  class AllPlayable: Allplayable {
-    uniform = "rhs_uniform_cu_ucp";
-    vest = "rhsusf_iotv_ocp_Rifleman";
-    backpack = "";
-    headgear = "rhsusf_ach_helmet_ucp";
-    primaryWeapon = "rhs_weap_m4a1_blockII_d";
-    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan", "acc_pointer_IR"};
-    class Type: Type {
-
-      class B_Soldier_F: B_Soldier_F {};
-
-      class B_soldier_AAR_F: B_soldier_AAR_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_support_AMG_F: B_support_AMG_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_AAA_F: B_soldier_AAA_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_AAT_F: B_soldier_AAT_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_AR_F: B_soldier_AR_F {
-        vest = "rhsusf_iotv_ucp_SAW";
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_medic_F: B_medic_F {
-        vest = "rhsusf_iotv_ucp_Medic";
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_exp_F: B_soldier_exp_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_Soldier_GL_F: B_Soldier_GL_F {
-        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
-      };
-
-      class B_HeavyGunner_F: B_HeavyGunner_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_M_F: B_soldier_M_F {
-        primaryWeapon = "rhs_weap_sr25_ec_d";
-      };
-
-      class B_soldier_AA_F: B_soldier_AA_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_AT_F: B_soldier_AT_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_repair_F: B_soldier_repair_F {
-        backpack = "rhsusf_assault_eagleaiii_ucp";
-      };
-
-      class B_soldier_LAT_F: B_soldier_LAT_F {};
-
-      class B_Soldier_SL_F: B_Soldier_SL_F {
-        backpack = "tf_rt1523g_bwmod";
-        headgear = "rhsusf_ach_helmet_headset_ucp";
-        vest = "rhsusf_iotv_ucp_Squadleader";
-      };
-
-      class B_Soldier_TL_F: B_Soldier_TL_F {
-        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
-        headgear = "rhsusf_ach_helmet_headset_ucp";
-        vest = "rhsusf_iotv_ucp_Teamleader";
-      };
-    };
-  };
-};
-
 
 class USMPT: USOCP {
   class AllPlayable: Allplayable {
@@ -390,6 +330,96 @@ class USMPT: USOCP {
         primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
         headgear = "rhsusf_mich_helmet_marpatwd_norotos_headset";
         vest = "rhsusf_spc_teamleader";
+      };
+    };
+  };
+};
+
+
+#ifdef SUPPRESSORS
+  #define SUPPRESSORITEM "rhsusf_acc_nt4_tan"
+#else
+  #define SUPPRESSORITEM ""
+#endif
+
+class USUCP: USOCP {
+  class AllPlayable: Allplayable {
+    uniform = "rhs_uniform_cu_ucp";
+    vest = "rhsusf_iotv_ocp_Rifleman";
+    backpack = "";
+    headgear = "rhsusf_ach_helmet_ucp";
+    primaryWeapon = "rhs_weap_m4a1_blockII_d";
+    primaryWeaponAttachments[] = {"FHQ_optic_HWS_G33_tan", LLITEM, SUPPRESSORITEM};
+    class Type: Type {
+
+      class B_Soldier_F: B_Soldier_F {};
+
+      class B_soldier_AAR_F: B_soldier_AAR_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_support_AMG_F: B_support_AMG_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_AAA_F: B_soldier_AAA_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_AAT_F: B_soldier_AAT_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_AR_F: B_soldier_AR_F {
+        vest = "rhsusf_iotv_ucp_SAW";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_medic_F: B_medic_F {
+        vest = "rhsusf_iotv_ucp_Medic";
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_exp_F: B_soldier_exp_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_Soldier_GL_F: B_Soldier_GL_F {
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
+      };
+
+      class B_HeavyGunner_F: B_HeavyGunner_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_M_F: B_soldier_M_F {
+        primaryWeapon = "rhs_weap_sr25_ec_d";
+      };
+
+      class B_soldier_AA_F: B_soldier_AA_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_AT_F: B_soldier_AT_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_repair_F: B_soldier_repair_F {
+        backpack = "rhsusf_assault_eagleaiii_ucp";
+      };
+
+      class B_soldier_LAT_F: B_soldier_LAT_F {};
+
+      class B_Soldier_SL_F: B_Soldier_SL_F {
+        backpack = "tf_rt1523g_bwmod";
+        headgear = "rhsusf_ach_helmet_headset_ucp";
+        vest = "rhsusf_iotv_ucp_Squadleader";
+      };
+
+      class B_Soldier_TL_F: B_Soldier_TL_F {
+        primaryWeapon = "rhs_weap_m4a1_blockII_M203_d";
+        headgear = "rhsusf_ach_helmet_headset_ucp";
+        vest = "rhsusf_iotv_ucp_Teamleader";
       };
     };
   };

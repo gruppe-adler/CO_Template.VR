@@ -1,5 +1,13 @@
-//Partei, dessen Standardloadout die Spieler bekommen - wenn _loadoutFaction == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
-_loadoutFaction = "BWFleck";
+_loadoutFaction = "RUFlora";                                                    //Partei, dessen Standardloadout die Spieler bekommen
+                                                                                //Wenn _loadoutFaction == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
+
+//#define NIGHTVISION                                                           //Wenn Spieler Nightvision erhalten sollen, Kommentarzeichen (//) entfernen
+//#define GUNLIGHTS                                                             //Wenn Spieler Waffenlampen erhalten sollen, Kommentarzeichen (//) entfernen
+//#define LASERS                                                                //Wenn Spieler Waffenlaser erhalten sollen, Kommentarzeichen (//) entfernen
+//#define SUPPRESSORS                                                           //Wenn Spieler Schalldämpfer erhalten sollen, Kommentarzeichen (//) entfernen
+
+
+
 
 /*  Die folgenden Parteien sind verfügbar:
 *   "BWFleck"       Bundeswehr Flecktarn
