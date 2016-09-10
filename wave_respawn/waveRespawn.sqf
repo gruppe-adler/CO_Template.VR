@@ -49,6 +49,7 @@ mcd_fnc_waveTimeLeftInd = {
 
 //WAVE RESPAWN BLU =============================================================
 [] spawn {
+  if (BLUFORWAVESIZE < 0) exitWith {};
   while {true} do {
     waitUntil {!WAVERESPAWNBLU};
 
@@ -81,6 +82,7 @@ mcd_fnc_waveTimeLeftInd = {
 
 //WAVE RESPAWN OPF =============================================================
 [] spawn {
+  if (OPFORWAVESIZE < 0) exitWith {};
   while {true} do {
     waitUntil {!WAVERESPAWNOPF};
 
@@ -112,6 +114,7 @@ mcd_fnc_waveTimeLeftInd = {
 };
 //WAVE RESPAWN IND =============================================================
 [] spawn {
+  if (INDEPWAVESIZE < 0) exitWith {};
   while {true} do {
     waitUntil {!WAVERESPAWNIND};
 
@@ -135,7 +138,7 @@ mcd_fnc_waveTimeLeftInd = {
       publicVariable "WAVERESPAWNTIMELEFTIND";
       diag_log "waveRespawn.sqf - Respawning no longer possible for Independent.";
       newIndSpawns = [];
-      
+
       sleep 3;
     };
     sleep 2;

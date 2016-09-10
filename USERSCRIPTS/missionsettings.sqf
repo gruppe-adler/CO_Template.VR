@@ -26,11 +26,14 @@ _civTraffic = true;                                                             
 
 
 //RESPAWN EINSTELLUNGEN=========================================================
-respawnDelay = 10;                                                              //Respawnzeit - 99999 für Permadeath mit Spectator
+respawnDelay = 10;                                                              //Respawnzeit, wenn Wellen-Respawn ausgeschaltet ist - 99999 für Permadeath mit Spectator
+
 _waveRespawn = false;                                                           //Wellen-Respawn - wenn false, können alle folgenden Einstellungen vernachlässigt werden - mögliche Werte: true, false
-_bluforWaveSize = 0;                                                            //BLUFOR Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
-_opforWaveSize = 0;                                                             //OPFOR Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
-_indepWaveSize = 0;                                                             //INDEPENDENT Wellengröße - 0 == automatisch festgelegt - mögliche Werte: Zahl >= 0
+_waveRespawnTime = 60;                                                          //Wellen-Respawnzeit - läuft nach der Respawnzeit des ersten toten Spielers los - mögliche Werte: Zahl > 0
+_respawnTime = 60;                                                              //Respawnzeit, nach der ein toter Spieler der Welle hinzugefügt wird - mögliche Werte: Zahl > 0
+_bluforWaveSize = 0;                                                            //BLUFOR Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
+_opforWaveSize = -1;                                                            //OPFOR Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
+_indepWaveSize = -1;                                                            //INDEPENDENT Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
 
 
 //AI CACHING ===================================================================
