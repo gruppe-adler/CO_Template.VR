@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={498.7211,255.10812,841.64221};
-		dir[]={-0.57669824,-0.56887656,0.58636689};
-		up[]={-0.39889959,0.82242119,0.40558755};
-		aside[]={0.71297318,-3.2247044e-007,0.70121735};
+		pos[]={2014.9753,6.4416347,7029.5107};
+		dir[]={0.38765532,-0.18183962,-0.90371794};
+		up[]={0.071688972,0.98332328,-0.16712514};
+		aside[]={-0.91903937,2.7439091e-007,-0.39422995};
 	};
 };
 binarizationWanted=0;
@@ -9529,6 +9529,36 @@ class Mission
 		};
 		class Item84
 		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1007.5689,5,7005.5586};
+			};
+			title="BLUFOR";
+			id=595;
+		};
+		class Item85
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1000.0169,5,5004.2686};
+			};
+			title="OPFOR";
+			id=596;
+		};
+		class Item86
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={996.24091,5,3006.7556};
+			};
+			title="INDEPENDENT";
+			id=597;
+		};
+		class Item87
+		{
 			dataType="Group";
 			side="Independent";
 			class Entities
@@ -9776,7 +9806,7 @@ class Mission
 			};
 			id=539;
 		};
-		class Item85
+		class Item88
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9786,7 +9816,7 @@ class Mission
 			title="Führungselement";
 			id=543;
 		};
-		class Item86
+		class Item89
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9797,7 +9827,7 @@ class Mission
 			id=544;
 			atlOffset=0.17752361;
 		};
-		class Item87
+		class Item90
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9807,7 +9837,7 @@ class Mission
 			title="Schützengruppe";
 			id=545;
 		};
-		class Item88
+		class Item91
 		{
 			dataType="Group";
 			side="Independent";
@@ -9981,7 +10011,7 @@ class Mission
 			id=546;
 			atlOffset=0.016087532;
 		};
-		class Item89
+		class Item92
 		{
 			dataType="Group";
 			side="Independent";
@@ -10309,7 +10339,7 @@ class Mission
 			};
 			id=549;
 		};
-		class Item90
+		class Item93
 		{
 			dataType="Group";
 			side="Independent";
@@ -10643,7 +10673,7 @@ class Mission
 			id=554;
 			atlOffset=0.075961113;
 		};
-		class Item91
+		class Item94
 		{
 			dataType="Group";
 			side="Independent";
@@ -10814,7 +10844,7 @@ class Mission
 			};
 			id=559;
 		};
-		class Item92
+		class Item95
 		{
 			dataType="Group";
 			side="Independent";
@@ -11142,7 +11172,7 @@ class Mission
 			};
 			id=562;
 		};
-		class Item93
+		class Item96
 		{
 			dataType="Group";
 			side="Independent";
@@ -11471,7 +11501,7 @@ class Mission
 			};
 			id=567;
 		};
-		class Item94
+		class Item97
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -11481,7 +11511,7 @@ class Mission
 			title="Panzerabwehrtrupp";
 			id=572;
 		};
-		class Item95
+		class Item98
 		{
 			dataType="Group";
 			side="Independent";
@@ -11729,7 +11759,7 @@ class Mission
 			};
 			id=573;
 		};
-		class Item96
+		class Item99
 		{
 			dataType="Group";
 			side="Independent";
@@ -11977,7 +12007,7 @@ class Mission
 			};
 			id=577;
 		};
-		class Item97
+		class Item100
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -11987,7 +12017,7 @@ class Mission
 			title="Luftabwehrtrupp";
 			id=581;
 		};
-		class Item98
+		class Item101
 		{
 			dataType="Group";
 			side="Independent";
@@ -12235,7 +12265,7 @@ class Mission
 			};
 			id=582;
 		};
-		class Item99
+		class Item102
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -12245,7 +12275,7 @@ class Mission
 			title="Demotrupp";
 			id=586;
 		};
-		class Item100
+		class Item103
 		{
 			dataType="Group";
 			side="Independent";
@@ -12415,7 +12445,7 @@ class Mission
 			};
 			id=590;
 		};
-		class Item101
+		class Item104
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -12425,7 +12455,7 @@ class Mission
 			title="MG-Trupp (leicht)";
 			id=593;
 		};
-		class Item102
+		class Item105
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -12434,36 +12464,6 @@ class Mission
 			};
 			title="MG-Trupp (nicht verfügbar)";
 			id=594;
-		};
-		class Item103
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={1007.5689,5,7005.5586};
-			};
-			title="BLUFOR";
-			id=595;
-		};
-		class Item104
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={1000.0169,5,5004.2686};
-			};
-			title="OPFOR";
-			id=596;
-		};
-		class Item105
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={996.24091,5,3006.7556};
-			};
-			title="INDEPENDENT";
-			id=597;
 		};
 	};
 	class Connections

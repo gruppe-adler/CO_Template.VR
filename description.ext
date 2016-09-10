@@ -11,7 +11,6 @@ class Header
 };
 
 respawn = 3;
-respawnDelay = 10;
 respawnVehicleDelay = 0;
 respawnTemplates[] = {"Base"};
 respawnOnStart = -1;

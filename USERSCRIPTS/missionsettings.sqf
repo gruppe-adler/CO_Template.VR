@@ -24,7 +24,7 @@ _einsatzunterstuetzung =                                                        
 //ALLGEMEINE EINSTELLUNGEN =====================================================
 _timeMultiplication = 1;                                                        //Zeit-Multiplikator - Eine Spiel-Stunde dauert (eine Echtzeit-Stunde * _timeMultiplication) - mögliche Werte: Zahl > 0
 _civTraffic = true;                                                             //Zufällig generierter Zivilverkehr - mögliche Werte: true, false
-
+respawnDelay = 10;                                                              //Respawnzeit - 99999 für Permadeath mit Spectator
 
 //AI CACHING ===================================================================
 _useCaching = false;                                                            //F3 Caching - wenn ausgeschaltet, können alle anderen Caching-Einstellungen vernachlässigt werden - mögliche Werte: true, false

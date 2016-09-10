@@ -1,4 +1,4 @@
-_loadoutFaction = "RUFlora";                                                    //Partei, dessen Standardloadout die Spieler bekommen
+_loadoutFaction = "BWFleck";                                                    //Partei, dessen Standardloadout die Spieler bekommen
                                                                                 //Wenn _loadoutFaction == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
 
 //#define NIGHTVISION                                                           //Wenn Spieler Nightvision erhalten sollen, Kommentarzeichen (//) entfernen
