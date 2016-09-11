@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=628;
+		nextID=630;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3011.9331,30,7462.9731};
-		dir[]={-0.027540812,-0.56063831,0.82760382};
-		up[]={-0.018646481,0.82806027,0.56032836};
-		aside[]={0.99944746,-7.3487172e-010,0.033259388};
+		pos[]={4150.3027,30,2877.791};
+		dir[]={-0.12739369,-0.38034952,0.91602832};
+		up[]={-0.052391887,0.92484194,0.37672555};
+		aside[]={0.9904694,4.7148205e-009,0.13774653};
 	};
 };
 binarizationWanted=0;
@@ -315,7 +315,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=132;
+		items=134;
 		class Item0
 		{
 			dataType="Logic";
@@ -13021,7 +13021,7 @@ class Mission
 		class Item120
 		{
 			dataType="Trigger";
-			position[]={6523.3608,5,716.8324};
+			position[]={6573.9429,5,833.60889};
 			class Attributes
 			{
 				activationBy="WEST SEIZED";
@@ -13044,7 +13044,7 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={6298.9629,5,726.48816};
+				position[]={6349.5449,5,843.26465};
 			};
 			title="Gebiet eingenommen";
 			description="Der ""Seized By"" Trigger löst aus, sobald BLUFOR das eingeschlossene Gebiet effektiv kontrolliert. Es können also noch Gegner am Leben sein, BLUFOR hat aber die Übermacht.";
@@ -13053,7 +13053,7 @@ class Mission
 		class Item123
 		{
 			dataType="Trigger";
-			position[]={6535.377,5,526.87817};
+			position[]={6589.7388,5,371.53113};
 			class Attributes
 			{
 				activationType="NOT PRESENT";
@@ -13067,7 +13067,7 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={6296.8647,5,543.5481};
+				position[]={6351.2266,5,388.20105};
 			};
 			title="Gebiet gesäubert";
 			description="Der ""not present"" Trigger löst aus, wenn keine OPFOR Einheit mehr im Gebiet am Leben ist. Die Spieler müssen also den gesamten Triggerbereich säubern.";
@@ -13076,7 +13076,7 @@ class Mission
 		class Item125
 		{
 			dataType="Trigger";
-			position[]={6532.9556,5,317.45117};
+			position[]={6595.8242,5,156.20349};
 			class Attributes
 			{
 				condition="[] call {{if (alive _x) exitWith {false}; !alive _x} forEach (synchronizedObjects thisTrigger)}";
@@ -13089,7 +13089,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6611.167,6.9147005,340.77869};
+				position[]={6674.0356,6.9147005,179.53101};
 			};
 			side="Empty";
 			flags=4;
@@ -13104,7 +13104,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6613.2437,6.9147005,316.00574};
+				position[]={6676.1123,6.9147005,154.75806};
 			};
 			side="Empty";
 			flags=4;
@@ -13119,7 +13119,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6609.4707,6.9147005,293.10193};
+				position[]={6672.3394,6.9147005,131.85425};
 			};
 			side="Empty";
 			flags=4;
@@ -13134,7 +13134,7 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={6289.708,5,323.76318};
+				position[]={6352.5767,5,162.5155};
 			};
 			title="Objekte zerstört";
 			description="Dieser Trigger löst aus, sobald alle mit ihm synchronisierten Objekte zerstört sind.";
@@ -13159,6 +13159,29 @@ class Mission
 			};
 			title="Einheiten";
 			id=627;
+		};
+		class Item132
+		{
+			dataType="Trigger";
+			position[]={6575.8809,5,615.93842};
+			class Attributes
+			{
+				timeout[]={60,60,60};
+				interuptable=1;
+				activationBy="WEST SEIZED";
+			};
+			id=628;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item133
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={6357.9297,5,619.71814};
+			};
+			title="Gebiet 1min gehalten";
+			id=629;
 		};
 	};
 	class Connections

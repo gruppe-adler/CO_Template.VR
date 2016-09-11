@@ -32,7 +32,7 @@ _cachingRange = 1200;                                                           
                                                                                 //Achtung: Gecachte Einheiten sind für die Spieler nicht sichtbar! chachingRange muss also größer als die übliche Sichtweite sein, aber klein genug für gute Performance.
                                                                                 // --> In städtischen Missionen kann der Wert kleiner sein / In Missionen in offenem Gelände muss der Wert größer sein.
 
-_cachingAgressiveness = 2;                                                      //Welche Einheiten gecached werden:
+_cachingAggressiveness = 2;                                                     //Welche Einheiten gecached werden:
                                                                                 // 1 - nur nicht-Gruppenführer und nicht-Fahrer (dies ist die richtige Einstellung für Zeus-Missionen, da auch gecachte Gruppen kontrollierbar bleiben!)
                                                                                 // 2 - alle statischen Einheiten exklusive Fahrer (dies ist die richtige Einstellung für fast alle anderen Missionen)
                                                                                 // 3 - alle Einheiten inklusive Fahrer und Gruppenführer
