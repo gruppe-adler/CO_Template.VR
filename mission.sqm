@@ -13079,7 +13079,7 @@ class Mission
 			position[]={6595.8242,5,156.20349};
 			class Attributes
 			{
-				condition="[] call {{if (alive _x) exitWith {false}; !alive _x} forEach (synchronizedObjects thisTrigger)}";
+				condition="{alive _x} count (synchronizedObjects thisTrigger) == 0";
 			};
 			id=621;
 			type="EmptyDetectorAreaR50";
