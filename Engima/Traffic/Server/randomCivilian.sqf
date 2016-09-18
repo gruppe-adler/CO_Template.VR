@@ -75,7 +75,7 @@ randomCivilian = {
 			removeVest _it;
 			removeBackpack _it;
 			removeHeadgear _it;
-			removeGoggles _it;	
+			removeGoggles _it;
 	};
 
 	_reclotheHim = {
@@ -87,7 +87,7 @@ randomCivilian = {
 
 		[[_guy,_taliFaces], "setCustomFace"] call BIS_fnc_MP;
 		_guy setVariable ["BIS_noCoreConversations", true];
-		
+
 	};
 
 	/*
@@ -98,7 +98,7 @@ randomCivilian = {
 
 			if ((_this select 0) getVariable "fleeing" == "true") exitWith {};
 
-			_thisUnit = _this select 0;		
+			_thisUnit = _this select 0;
 
 			sleep (random 1);
 		 	{[_x] execVM "Engima\Traffic\Server\fleeYouFool.sqf";} forEach crew (vehicle _thisUnit);
@@ -112,33 +112,9 @@ randomCivilian = {
 	};
 
 
-    addKilledNews = {
-       (_this select 0) addEventhandler ["Killed",
-        {
-         CIV_KILLED_POS = (position (_this select 0));
-         diag_log format ["civ killed at %1",CIV_KILLED_POS];
-         publicVariableServer "CIV_KILLED_POS";
-         (_this select 0) removeAllEventHandlers "Killed";
-         (_this select 0) removeAllEventHandlers "FiredNear";
-        }];
-
-    };
-
-    addGunfightNews = {
-       (_this select 0) addEventhandler ["FiredNear",
-        {
-         CIV_GUNFIGHT_POS = (position (_this select 0));
-         diag_log format ["civ gunfight at %1",CIV_GUNFIGHT_POS];
-         publicVariableServer "CIV_GUNFIGHT_POS";
-        }];
-
-    };
-
 	[_unit] call _stripHim;
 	sleep 0.1;
 	[_unit] call _reclotheHim;
 	// [_unit] call addFleeingBehaviour;
-    [_unit] call addKilledNews;
-    [_unit] call addGunfightNews;
     [_unit] call addBehaviour;
 };

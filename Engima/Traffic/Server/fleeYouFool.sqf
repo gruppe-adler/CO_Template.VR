@@ -12,7 +12,7 @@ if (!isNull _building) then {
 	_buildingPosition = [_building] call BIS_fnc_buildingPositions;
 };
 
-	 		
+
 //hintSilent format ["%1",_bla select 0];
 if (count _buildingPosition > 0) then {
 	_thisUnit setBehaviour "SAFE";
@@ -20,30 +20,30 @@ if (count _buildingPosition > 0) then {
 	_thisUnit doMove _pos;
 	_thisUnit setSpeedMode "FULL";
 	_thisUnit forceSpeed 25;
-	_thisUnit playMove "AmovPercMevaSnonWnonDf";				
+	_thisUnit playMove "AmovPercMevaSnonWnonDf";
 	_thisUnit setVariable ["fleeing", "true"];
 	waitUntil {
 	  _thisUnit distance _pos < 2
 	};
-	
-	_thisUnit playMoveNow 'AinvPknlMstpSnonWnonDnon_1'; 
+
+	_thisUnit playMoveNow 'AinvPknlMstpSnonWnonDnon_1';
  	_thisUnit stop true;
  	_thisUnit disableAI "autoTarget";
  	_thisUnit disableAI "MOVE";
  	_thisUnit removeAllEventHandlers "FiredNear";
 
 } else {
-	_pos = [_thisUnit,[5,20],random 360] call SHK_pos;
+	_pos = _thisUnit getRelPos [5 + (random 15), random 360];
 	_thisUnit doMove _pos;
 	_thisUnit setSpeedMode "FULL";
 	_thisUnit forceSpeed 20;
-	_thisUnit playMove "AmovPercMevaSnonWnonDf";				
+	_thisUnit playMove "AmovPercMevaSnonWnonDf";
 	_thisUnit setVariable ["fleeing", "true"];
 	waitUntil {
 	  _thisUnit distance _pos < 2
 	};
 
-	_thisUnit playMoveNow 'AinvPknlMstpSnonWnonDnon_1'; 
+	_thisUnit playMoveNow 'AinvPknlMstpSnonWnonDnon_1';
 	_thisUnit stop true;
  	_thisUnit disableAI "autoTarget";
  	_thisUnit disableAI "MOVE";
