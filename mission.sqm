@@ -19,7 +19,7 @@ class EditorData
 		pos[]={4073.1538,30,4530.2017};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -14420,11 +14420,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=134;
+			nextID=140;
 		};
 		class Links
 		{
-			items=134;
+			items=140;
 			class Item0
 			{
 				linkID=0;
@@ -15760,6 +15760,66 @@ class Mission
 				linkID=133;
 				item0=674;
 				item1=675;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item134
+			{
+				linkID=134;
+				item0=680;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item135
+			{
+				linkID=135;
+				item0=679;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item136
+			{
+				linkID=136;
+				item0=683;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item137
+			{
+				linkID=137;
+				item0=681;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item138
+			{
+				linkID=138;
+				item0=686;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item139
+			{
+				linkID=139;
+				item0=684;
+				item1=178;
 				class CustomData
 				{
 					type="Sync";

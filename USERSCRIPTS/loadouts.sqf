@@ -10,13 +10,14 @@ _loadoutFaction = "BWFleck";                                                    
 
 
 /*  Die folgenden Parteien sind verfügbar:
-*   "BWFleck"       Bundeswehr Flecktarn
-*   "BWTrop"        Bundeswehr Tropentarn
-*   "USOCP"         US Army OCP
-*   "USUCP"         US Army UCP
-*   "USMPT"         US Marines MARPAT
-*   "RUFlora"       Russian MSV Flora
-*   "RUEMR"         Russian MSV EMR-Summer
+*   "BWFleck"         BLUFOR        Bundeswehr Flecktarn
+*   "BWTrop"          BLUFOR        Bundeswehr Tropentarn
+*   "USOCP"           BLUFOR        US Army OCP
+*   "USUCP"           BLUFOR        US Army UCP
+*   "USMPT"           BLUFOR        US Marines MARPAT
+*   "RUFlora"         OPFOR         Russian MSV Flora
+*   "RUEMR"           OPFOR         Russian MSV EMR-Summer
+*   "ModerateRebels"  INDEPENDENT   Mittelmäßig bewaffnete, halbzivile Rebellen
 */
 
 

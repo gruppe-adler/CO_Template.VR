@@ -5,15 +5,15 @@
 #endif
 
 #ifdef LASERS
-  #define LLITEM ""
+  #define LLITEM "rhs_acc_perst1ik"
 #else
   #define LLITEM ""
 #endif
 
 #ifdef GUNLIGHTS
-  #define LLITEM ""
+  #define LLITEM "rhs_acc_2dpZenit"
 #else
-  #define LLITEM
+  #define LLITEM ""
 #endif
 
 #ifdef SUPPRESSORS
@@ -29,7 +29,7 @@ class RUFlora {
     backpack = "";
     headgear = "rhs_6b26";
     primaryWeapon = "rhs_weap_ak74m";
-    primaryWeaponAttachments[] = {"rhs_acc_pkas", SUPPRESSORITEM};
+    primaryWeaponAttachments[] = {"rhs_acc_pkas", SUPPRESSORITEM, LLITEM};
     handgunWeapon = "rhs_weap_makarov_pm";
     binoculars = "Binocular";
     map = "ItemMap";
