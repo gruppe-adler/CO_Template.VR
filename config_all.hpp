@@ -23,6 +23,12 @@ class CfgFunctions
   #include "functions\creating\cfgFunctions.hpp"
   #include "f3cache\cfgFunctions.hpp"
   #include "node_modules\grad-loadout\cfgFunctions.hpp"
+  #include "node_modules\grad-customGear\cfgFunctions.hpp"
+};
+
+//grad-customGear
+class grad_customGear {
+  #include "USERSCRIPTS\customGear.hpp"
 };
 
 //RSCTitles
@@ -30,6 +36,7 @@ class CfgFunctions
 
 //Dialogs
 #include "ga_system\sys_dlg\dialog.hpp"
+#include "node_modules\grad-customGear\saveDialog\dialog.hpp"
 
 //CfgRemote
 #include "ga_system\sys_config\CfgRemote.hpp"
