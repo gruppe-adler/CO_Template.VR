@@ -19,27 +19,27 @@
   //add actions
   _id1 = -1; _id2 = -1; _id3 = -1;
   if (_allowHelmet) then {
-    _action = {player removeAction (_this select 2); player setVariable ["grad_customGear_HelmetLoaded", true]; ["HELMET"] call grad_customGear_fnc_loadGear};
+    _action = {["HELMET", _this select 2] call grad_customGear_fnc_loadGear};
     _id1 = player addAction ["<t color='#00ff00'>Persönlichen Helm laden</t>", _action, [], 2, false, true];
   };
 
   if (_allowGoggles) then {
-    _action = {player removeAction (_this select 2); player setVariable ["grad_customGear_GogglesLoaded", true]; ["GOGGLES"] call grad_customGear_fnc_loadGear};
+    _action = {["GOGGLES", _this select 2] call grad_customGear_fnc_loadGear};
     _id2 = player addAction ["<t color='#00ff00'>Persönliche Gesichtsbekleidung laden</t>", _action, [], 2, false, true];
   };
 
   _currentZoomFactor = [(player weaponAccessories (primaryWeapon player)) select 2] call grad_customGear_fnc_getZoomFactor;
   if (_allowSimpleScopes && _currentZoomFactor == 1) then {
-    _action = {player removeAction (_this select 2); player setVariable ["grad_customGear_ScopeLoaded", true]; ["SCOPE1", (_this select 3) select 0, (_this select 3) select 0] call grad_customGear_fnc_loadGear};
-    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [_allowMagnifyingScopes, _allowMarksmanScopes], 2, false, true];
+    _action = {["SCOPE1", _this select 2] call grad_customGear_fnc_loadGear};
+    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [], 2, false, true];
   };
   if (_allowMagnifyingScopes && _currentZoomFactor > 1 && _currentZoomFactor < 4) then {
-    _action = {player removeAction (_this select 2); player setVariable ["grad_customGear_ScopeLoaded", true]; ["SCOPE4", (_this select 3) select 0, (_this select 3) select 0] call grad_customGear_fnc_loadGear};
-    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [_allowMagnifyingScopes, _allowMarksmanScopes], 2, false, true];
+    _action = {["SCOPE4", _this select 2] call grad_customGear_fnc_loadGear};
+    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [], 2, false, true];
   };
   if (_allowMarksmanScopes && _currentZoomFactor >= 4) then {
-    _action = {player removeAction (_this select 2); player setVariable ["grad_customGear_ScopeLoaded", true]; ["SCOPEM", (_this select 3) select 0, (_this select 3) select 0] call grad_customGear_fnc_loadGear};
-    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [_allowMagnifyingScopes, _allowMarksmanScopes], 2, false, true];
+    _action = {["SCOPEM", _this select 2] call grad_customGear_fnc_loadGear};
+    _id3 = player addAction ["<t color='#00ff00'>Persönliches Visier laden</t>", _action, [], 2, false, true];
   };
 
 

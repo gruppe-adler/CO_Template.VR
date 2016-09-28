@@ -12,14 +12,14 @@ class CfgFunctions {
 };
 ```
 
-### Saving
+## Saving
 Add this to any objects init field:
 ```
 [this] call grad_customGear_fnc_addAction;
 ```
 This will allow players to open the saving dialog.
 
-### Loading
+## Loading
 Add this to your `description.ext`:
 ```
 class grad_customGear {
@@ -31,3 +31,5 @@ class grad_customGear {
 };
 ```
 Adjust values to define what players may load after mission start.
+
+Load gear with mouse wheel interaction shortly after mission start.

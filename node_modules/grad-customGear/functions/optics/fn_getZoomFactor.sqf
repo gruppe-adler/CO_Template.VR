@@ -10,7 +10,7 @@
 params ["_optic"];
 
 _opticModes = "true" configClasses (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "OpticsModes");
-_opticsZoomMin = 100;
+_opticsZoomMin = 1000;
 {
   if (isNumber (_x >> "opticsZoomMin")) then {
     if (getNumber (_x >> "opticsZoomMin") < _opticsZoomMin) then {
@@ -25,8 +25,8 @@ _opticsZoomMin = 100;
   };
 } forEach _opticModes;
 
-if (_opticsZoomMin == 100) then {
-  diag_log format ["grad_customgear_fnc_getZoomFactor - ERROR: COULD NOT FIND opticsZoomMin CONFIG VALUE FOR OPTIC %1.", _optic];
+if (_opticsZoomMin == 1000) then {
+  _opticsZoomMin = -0.25;
 };
 
 _zoomFactor = 0.25/_opticsZoomMin;
