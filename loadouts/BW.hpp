@@ -245,6 +245,12 @@ class BWFleck {
       };
     };
   };
+
+  class Rank {
+    class LIEUTENANT {
+      headgear = "ARC_GER_Flecktarn_Milcap";
+    };
+  };
 };
 
 #ifdef SUPPRESSORS
@@ -328,6 +334,12 @@ class BWTrop: BWFleck {
       class B_Soldier_TL_F: B_Soldier_TL_F {
         primaryWeapon = "arifle_SPAR_01_GL_snd_F";
       };
+    };
+  };
+
+  class Rank: Rank {
+    class LIEUTENANT: LIEUTENANT {
+      headgear = "ARC_GER_Tropentarn_Milcap";
     };
   };
 };

@@ -250,6 +250,12 @@ class USOCP {
       };
     };
   };
+
+  class Rank {
+    class LIEUTENANT {
+      headgear = "rhsusf_patrolcap_ocp";
+    };
+  };
 };
 
 class USMPT: USOCP {
@@ -421,6 +427,12 @@ class USUCP: USOCP {
         headgear = "rhsusf_ach_helmet_headset_ucp";
         vest = "rhsusf_iotv_ucp_Teamleader";
       };
+    };
+  };
+
+  class Rank: Rank {
+    class LIEUTENANT: LIEUTENANT {
+      headgear = "rhsusf_patrolcap_ucp";
     };
   };
 };

@@ -134,4 +134,10 @@ class LOADOUTNAME {
       };
     };
   };
+
+  class Rank {
+    class LIEUTENANT {
+  
+    };
+  };
 };

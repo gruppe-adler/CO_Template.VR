@@ -230,6 +230,12 @@ class RUFlora {
       };
     };
   };
+
+  class Rank {
+    class LIEUTENANT {
+      headgear = "rhs_fieldcap_vsr";
+    };
+  };
 };
 
 class RUEMR: RUFlora {
@@ -307,6 +313,12 @@ class RUEMR: RUFlora {
         headgear = "rhs_6b27m_digi_ess";
         vest = "rhs_6b13_EMR_6sh92_radio";
       };
+    };
+  };
+
+  class Rank: Rank {
+    class LIEUTENANT: LIEUTENANT {
+      headgear = "rhs_fieldcap_digi";
     };
   };
 };
