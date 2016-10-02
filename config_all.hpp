@@ -17,6 +17,7 @@ class CfgFunctions
   //#include "functions\mission\cfgFunctions.hpp"
   #include "functions\usage\cfgFunctions.hpp"
   #include "functions\dial\cfgFunctions.hpp"
+  #include "functions\external\cfgFunctions.hpp"
   #include "functions\client\cfgFunctions.hpp"
   #include "functions\system\cfgFunctions.hpp"
   #include "functions\hc\cfgFunctions.hpp"
