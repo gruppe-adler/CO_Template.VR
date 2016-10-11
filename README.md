@@ -1,5 +1,4 @@
-# CO_Template.Stratis
-Gruppe Adler Coop Template
+# CO_Template
 
 Ziel dieser Vorlage ist es, eine standardisierte Plattform für unsere Coop Missionen zu bieten und dem Missionsersteller den Großteil der Voreinstellungsarbeit abzunehmen.
 
