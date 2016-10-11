@@ -37,3 +37,4 @@ if (_civTraffic) then {
 [] execVM "helpers\tfarsettings.sqf";
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
+[] execVM "helpers\registerGroups.sqf";
