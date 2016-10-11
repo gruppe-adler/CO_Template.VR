@@ -13,5 +13,11 @@
 
 //hier Gruppennamen auflisten:
 [
-
+  ["Command",7,1],
+  ["Alpha",1,1],
+  ["Alpha 1",2,1],
+  ["Alpha 2",3,1],
+  ["Bravo",4,1],
+  ["Bravo 1",5,1],
+  ["Bravo 2",6,1]
 ]

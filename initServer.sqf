@@ -58,7 +58,7 @@ if (_civTraffic) then {
   [] execVM "Engima\Traffic\Init.sqf";
 };
 
-[] execVM "helpers\tfarsettings.sqf";
-
 ["Initialize"] call BIS_fnc_dynamicGroups;
-[] execVM "helpers\registerGroups.sqf";
+[] execVM "helpers\tfarsettings.sqf";
+[] execVM "helpers\setRadioSettings.sqf";
+[] execVM "helpers\setGroupSettings.sqf";
