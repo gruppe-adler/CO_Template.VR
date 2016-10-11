@@ -23,6 +23,17 @@ if (_waveRespawn) then {
   BLUFORWAVESIZE = _bluforWaveSize max -1;
   OPFORWAVESIZE = _opforWaveSize max -1;
   INDEPWAVESIZE = _indepWaveSize max -1;
+
+  if (isNil "_bluMaxWaves") then {
+    BLUMAXWAVES = 9999;
+    OPFMAXWAVES = 9999;
+    INDEPMAXWAVES = 9999;
+  } else {
+    BLUMAXWAVES = _bluMaxWaves;
+    OPFMAXWAVES = _opfMaxWaves;
+    INDEPMAXWAVES = _indepMaxWaves;
+  };
+
   if (!isServer) then {
     [] execVM "wave_respawn\initWaveRespawn.sqf";
   };

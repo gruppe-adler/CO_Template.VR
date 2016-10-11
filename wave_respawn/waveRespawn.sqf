@@ -17,6 +17,12 @@ WAVERESPAWNTIMELEFTOPF = WAVERESPAWNTIME;
 publicVariable "WAVERESPAWNTIMELEFTOPF";
 WAVERESPAWNTIMELEFTIND = WAVERESPAWNTIME;
 publicVariable "WAVERESPAWNTIMELEFTIND";
+BLURESPAWNDISABLED = false;
+publicVariable "BLURESPAWNDISABLED";
+OPFRESPAWNDISABLED = false;
+publicVariable "OPFRESPAWNDISABLED";
+INDEPRESPAWNDISABLED = false;
+publicVariable "INDEPRESPAWNDISABLED";
 
 deadPlayersBlu = [];
 deadPlayersOpf = [];
@@ -50,6 +56,7 @@ mcd_fnc_waveTimeLeftInd = {
 //WAVE RESPAWN BLU =============================================================
 [] spawn {
   if (BLUFORWAVESIZE < 0) exitWith {};
+  _respawnCounter = 0;
   while {true} do {
     waitUntil {!WAVERESPAWNBLU};
 
@@ -65,6 +72,8 @@ mcd_fnc_waveTimeLeftInd = {
       publicVariable "WAVERESPAWNBLU";
       diag_log "waveRespawn.sqf - Respawning now possible for Blufor.";
 
+      _respawnCounter = _respawnCounter + 1;
+
       sleep (RESPAWNWAVEEXTRATIME max 7);
 
       WAVERESPAWNBLU = false;
@@ -77,12 +86,14 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
+    if (_respawnCounter >= BLUMAXWAVES) exitWith {BLURESPAWNDISABLED = true; publicVariable "BLURESPAWNDISABLED"};
   };
 };
 
 //WAVE RESPAWN OPF =============================================================
 [] spawn {
   if (OPFORWAVESIZE < 0) exitWith {};
+  _respawnCounter = 0;
   while {true} do {
     waitUntil {!WAVERESPAWNOPF};
 
@@ -110,11 +121,13 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
+    if (_respawnCounter >= OPFMAXWAVES) exitWith {OPFRESPAWNDISABLED = true; publicVariable "OPFRESPAWNDISABLED"};
   };
 };
 //WAVE RESPAWN IND =============================================================
 [] spawn {
   if (INDEPWAVESIZE < 0) exitWith {};
+  _respawnCounter = 0;
   while {true} do {
     waitUntil {!WAVERESPAWNIND};
 
@@ -142,5 +155,6 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
+    if (_respawnCounter >= INDEPMAXWAVES) exitWith {INDEPRESPAWNDISABLED = true; publicVariable "INDEPRESPAWNDISABLED"};
   };
 };

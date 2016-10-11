@@ -3,8 +3,12 @@ if (serverTime-joinTime < 30 && didJIP) exitWith {diag_log "Player is JIP, not e
 private ["_timeleft","_waveLeft","_minutes","_seconds","_respawnIn", "_explanation"];
 
 //keep player from respawning
-setPlayerRespawnTime 9999;
+setPlayerRespawnTime 99999;
 sleep 2;
+
+if (WAITSPECTATOR) then {
+  ["Initialize", [player, WAITSPECSIDES, WAITSPECAI, WAITSPECFREECAM, WAITSPEC3PP, true, true, true, true, true]] call BIS_fnc_EGSpectator;
+};
 
 //declare/define variables =====================================================
 _rule = parseText "<t align='center'><t color='#708090'>-----------------------------------------------------<br /></t></t>";
@@ -20,6 +24,7 @@ if (originalSide == "WEST") then {
   _waitCondition = compile "!WAVERESPAWNBLU";
   _playersLeft = {WAVERESPAWNPLAYERSLEFTBLU};
   _waveTimeLeft = {WAVERESPAWNTIMELEFTBLU};
+  _exitCondition = {BLURESPAWNDISABLED};
   _waveSize = BLUFORWAVESIZE;
   diag_log "onPlayerKilled - player side is WEST";
 };
@@ -27,6 +32,7 @@ if (originalSide == "EAST") then {
   _waitCondition = compile "!WAVERESPAWNOPF";
   _playersLeft = {WAVERESPAWNPLAYERSLEFTOPF};
   _waveTimeLeft = {WAVERESPAWNTIMELEFTOPF};
+  _exitCondition = {OPFRESPAWNDISABLED};
   _waveSize = OPFORWAVESIZE;
   diag_log "onPlayerKilled - player side is EAST";
 };
@@ -34,6 +40,7 @@ if (originalSide == "GUER") then {
   _waitCondition = compile "!WAVERESPAWNIND";
   _playersLeft = {WAVERESPAWNPLAYERSLEFTIND};
   _waveTimeLeft = {WAVERESPAWNTIMELEFTIND};
+  _exitCondition = {INDEPRESPAWNDISABLED};
   _waveSize = INDEPWAVESIZE;
   diag_log "onPlayerKilled - player side is GUER";
 };
@@ -41,6 +48,8 @@ if (originalSide == "GUER") then {
 
 //respawn countdown ============================================================
 while {_timeleft > 0} do {
+  if (call _exitCondition) exitWith {};
+
   //countdown
   _timeleft = _timeleft - 1;
   _minutes = str (floor (_timeleft/60));
@@ -63,6 +72,8 @@ while {_timeleft > 0} do {
 
   sleep 1;
 };
+if (call _exitCondition) exitWith {["Initialize", [player, [], true]] call BIS_fnc_EGSpectator};
+
 
 //send command to server to add player to wave array ===========================
 [profileName, originalSide] remoteExec ["mcd_fnc_addDeadPlayerToWave",2,false];
@@ -70,6 +81,8 @@ while {_timeleft > 0} do {
 
 //wait until enough players in wave ============================================
 while _waitCondition do {
+  if (call _exitCondition) exitWith {};
+
   _respawnIn = parseText format ["<t align='center' size='1.4'>Spieler <t color='#00ff00'>bereit</t></t>"];
   _minutes = str (floor (call _waveTimeLeft/60));
   _seconds = floor (call _waveTimeLeft mod 60);
@@ -85,6 +98,7 @@ while _waitCondition do {
 
   sleep 1;
 };
+if (call _exitCondition) exitWith {["Initialize", [player, [], true]] call BIS_fnc_EGSpectator};
 
 //respawn ======================================================================
 

@@ -19,6 +19,15 @@ _respawnTime = 60;                                                              
 _bluforWaveSize = 0;                                                            //BLUFOR Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
 _opforWaveSize = -1;                                                            //OPFOR Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
 _indepWaveSize = -1;                                                            //INDEPENDENT Wellengröße - 0 == automatisch festgelegt, -1 == ausgeschaltet - mögliche Werte: Zahl >= 0
+_bluMaxWaves = 9999;                                                            //BLUFOR maximale Anzahl an Wellenrespawns --> Danach Spectator
+_opfMaxWaves = 9999;                                                            //OPFOR maximale Anzahl an Wellenrespawns --> Danach Spectator
+_indepMaxWaves = 9999;                                                          //INDEPENDENT maximale Anzahl an Wellenrespawns --> Danach Spectator
+
+_waitSpectator = false;                                                         //Spectator während Spieler auf Respawn wartet - mögliche Werte: true, false
+_waitSpecSides = [WEST, EAST, INDEPENDENT];                                     //Seiten, die im Spectator angezeigt werden
+_waitSpecAI = false;                                                            //KI-Einheiten im Spectator anzeigen - mögliche Werte: true, false
+_waitSpecFreecam = false;                                                       //Freie Kamera erlauben - mögliche Werte: true, false
+_waitSpec3PP = false;                                                           //Schulterkamera erlauben - mögliche Werte: true, false
 
 
 //AI CACHING ===================================================================
