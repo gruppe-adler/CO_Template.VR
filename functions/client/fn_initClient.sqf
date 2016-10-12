@@ -4,8 +4,12 @@ If(!hasInterface) exitWith {};
 
 //Function to init a Client
 
-//___________________________________________________________________________________________________________________________________________________________________
-// Init ACE Self Interaction for SatPhone
 
-[0,true] call FNC_SMC(client,setClientAction);
-//___________________________________________________________________________________________________________________________________________________________________
+//Get Rank of Soldier
+[] call FNC_SMC(client,getRankInfo);
+
+//Add Client Self-Interaction Menu SatPhone
+If(missionNamespace getVariable [VAR_SMA(allowed_informations),false])then
+{
+ [0,true] call FNC_SMC(client,setClientAction); // Add ACE Self-InteractionMenue
+};
