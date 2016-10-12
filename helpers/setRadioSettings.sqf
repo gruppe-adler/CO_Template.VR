@@ -92,7 +92,7 @@ _mcd_fnc_radioMarker = {
   _marker = createMarker [_name, _pos];
   _marker setMarkerType "mil_dot";
   _marker setMarkerColor "COLORBLACK";
-  _marker setMarkerText format ["%1: %2", _desc, _freq];
+  _marker setMarkerText format ["%1: %2 MHz", _desc, _freq];
 };
 
 {[_forEachIndex, _x] call _mcd_fnc_radioMarker} forEach _allChannels;
