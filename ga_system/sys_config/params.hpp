@@ -4,7 +4,7 @@
 	{
 		 title = "Flow of Information:";
 		 values[] = {0,1,2,3,4,5,6};
-		 texts[] = {"EVERYBODY","CORPORAL","SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"};
+		 texts[] = {"EVERYBODY","CORPORAL AND HIGHER","SERGEANT AND HIGHER","LIEUTENANT AND HIGHER","CAPTAIN AND HIGHER","MAJOR AND HIGHER","COLONEL"};
 		 default = 0;
 		 isGlobal = 1;
 	};
