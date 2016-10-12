@@ -16,6 +16,7 @@ switch(true)do
   case (typeName _insertion == "ARRAY"):{_idx = 0;_type = "ARRAY";};
 };
 
+
 switch(_idx)do
 {
   case 0:{
