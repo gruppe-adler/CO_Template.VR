@@ -74,6 +74,9 @@ if (hasInterface) then {
 
 //create markers (server only)
 if (!isServer) exitWith {};
+_allChannels = _longRangeChannels + _shortRangeChannels;
+if (count _allChannels == 0) exitWith {};
+
 _pos = [worldSize + 200, worldSize - 100, 0];
 _marker = createMarker ["grad_radioMarker_headline", _pos];
 _marker setMarkerType "mil_dot";
@@ -92,4 +95,4 @@ _mcd_fnc_radioMarker = {
   _marker setMarkerText format ["%1: %2", _desc, _freq];
 };
 
-{[_forEachIndex, _x] call _mcd_fnc_radioMarker} forEach (_longRangeChannels + _shortRangeChannels);
+{[_forEachIndex, _x] call _mcd_fnc_radioMarker} forEach _allChannels;
