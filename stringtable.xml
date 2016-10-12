@@ -69,38 +69,55 @@
    </Package>
 
 
-    <Package name="main">
-        <Key ID="STR_SUC_info">
-			<Original>Success!</Original>
-			<German>Erfolg!</German>
-		</Key>
-        <Key ID="STR_FAI_info">
-			<Original>Failed!</Original>
-			<German>Gescheitert!</German>
-		</Key>
-        <Key ID="STR_MSG_info">
-			<Original>Message:</Original>
-			<German>Nachricht:</German>
-		</Key>
-        <Key ID="STR_SUC_reserve_info">
-			<Original>Good Job!</Original>
-			<German>Gut gemacht!</German>
-		</Key>
-        <Key ID="STR_Mission_txt1">
-			<Original>\n\n\n\nNo Messages available!</Original>
-			<German>\n\n\n\nKeine Nachrichten verfügbar!</German>
-		</Key>
-		<Key ID="STR_Mission_txt2">
-			<Original>Connect Tablet with Base</Original>
-			<German>Gruppe Adler!\nIn Ihrem Gebiet befindet sich\neine Radaranlage die Sie\nunbedingt zerstören müssen!</German>
-		</Key>
-		<Key ID="STR_COA_Connect_settings">
-			<Original>Use Tablet for Settings</Original>
-			<German>Benutze Tablet für Einstellungen</German>
-		</Key>
-		<Key ID="STR_COA_Connect_private">
-			<Original>Use Tablet</Original>
-			<German>Benutze Tablet</German>
-		</Key>
-	</Package>
-</Project>
+   <Package name="main">
+   <Key ID="STR_SUC_info">
+   <Original>Success!</Original>
+   <German>Erfolg!</German>
+   </Key>
+   <Key ID="STR_FAI_info">
+   <Original>Failed!</Original>
+   <German>Gescheitert!</German>
+   </Key>
+   <Key ID="STR_MSG_info">
+   <Original>Message:</Original>
+   <German>Nachricht:</German>
+   </Key>
+   <Key ID="STR_SUC_reserve_info">
+   <Original>Good Job!</Original>
+   <German>Gut gemacht!</German>
+   </Key>
+   <Key ID="STR_Mission_txt1">
+   <Original>\n\n\n\nNo Messages available!</Original>
+   <German>\n\n\n\nKeine Nachrichten verfügbar!</German>
+   </Key>
+   <Key ID="STR_Mission_txt2">
+   <Original>\nMother:\nMove to\n%1\nand recon the target position.\nYou are greenlighted to seizure\nand\nconduction to EU law enforcement authorities\nas soon as you have positive ID of ZP1.\nExternal support\nis not available,\nmake sure to supply accordingly.\n...Over and out...</Original>
+   <German>\nMutter:\nBewegen Sie sich\n%1\nund klären Sie das Ziel auf.\nBei positiver ID der ZP1\nerhalten Sie grünes Licht\nfür die Festnahme und Zuführung zu den\nEU Starfverfolgungsbehörden!\nUnterstützung externer Art\nist nicht vorhanden,\nrüsten Sie sich dementsprechend aus!\n...ENDE...</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_1">
+   <Original>Faronaki</Original>
+   <German>nach Faronaki</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_2">
+   <Original>Cape Thelos</Original>
+   <German>zum Kap Thelos</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_3">
+   <Original>the South of Zaros</Original>
+   <German>in den Süden von Zaros</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_4">
+   <Original>Cape Strigla</Original>
+   <German>zum Kap Strigla</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_5">
+   <Original>the south-east of Selakano</Original>
+   <German>in den Süd-Osten von Selakano</German>
+   </Key>
+   <Key ID="STR_Mission_txt2_6">
+   <Original>the north-west of Krya Nera</Original>
+   <German>in den Nord-Westen von Krya Nera</German>
+   </Key>
+
+   </Package>
+   </Project>
