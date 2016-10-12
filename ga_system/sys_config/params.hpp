@@ -1,5 +1,13 @@
 ﻿class Params
 {
+	class chainofcommand
+	{
+		 title = "Flow of Information:";
+		 values[] = {0,1,2,3,4,5,6};
+		 texts[] = {"EVERYBODY","CORPORAL","SERGEANT","LIEUTENANT","CAPTAIN","MAJOR","COLONEL"};
+		 default = 0;
+		 isGlobal = 1;
+	};
 	/*class factionselector
 	{
 		//paramsArray[0]
