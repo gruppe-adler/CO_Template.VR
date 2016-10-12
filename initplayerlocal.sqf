@@ -71,4 +71,4 @@ if (didJIP) then {
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 [] execVM "helpers\setGroupSettings.sqf";
 
-[0,true] call FNC_SMC(client,setClientAction);
+[] call FNC_SMC(client,initClient);
