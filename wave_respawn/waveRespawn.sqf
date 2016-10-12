@@ -1,33 +1,3 @@
-//initial definition of variables
-WAVERESPAWNBLU = false;
-publicVariable "WAVERESPAWNBLU";
-WAVERESPAWNOPF = false;
-publicVariable "WAVERESPAWNOPF";
-WAVERESPAWNIND = false;
-publicVariable "WAVERESPAWNIND";
-WAVERESPAWNPLAYERSLEFTBLU = BLUFORWAVESIZE;
-publicVariable "WAVERESPAWNPLAYERSLEFTBLU";
-WAVERESPAWNPLAYERSLEFTOPF = OPFORWAVESIZE;
-publicVariable "WAVERESPAWNPLAYERSLEFTOPF";
-WAVERESPAWNPLAYERSLEFTIND = INDEPWAVESIZE;
-publicVariable "WAVERESPAWNPLAYERSLEFTIND";
-WAVERESPAWNTIMELEFTBLU = WAVERESPAWNTIME;
-publicVariable "WAVERESPAWNTIMELEFTBLU";
-WAVERESPAWNTIMELEFTOPF = WAVERESPAWNTIME;
-publicVariable "WAVERESPAWNTIMELEFTOPF";
-WAVERESPAWNTIMELEFTIND = WAVERESPAWNTIME;
-publicVariable "WAVERESPAWNTIMELEFTIND";
-BLURESPAWNDISABLED = false;
-publicVariable "BLURESPAWNDISABLED";
-OPFRESPAWNDISABLED = false;
-publicVariable "OPFRESPAWNDISABLED";
-INDEPRESPAWNDISABLED = false;
-publicVariable "INDEPRESPAWNDISABLED";
-
-deadPlayersBlu = [];
-deadPlayersOpf = [];
-deadPlayersInd = [];
-
 //FUNCTIONS ====================================================================
 mcd_fnc_waveTimeLeftBlu = {
   while {WAVERESPAWNTIMELEFTBLU > 0} do {
@@ -86,7 +56,7 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
-    if (_respawnCounter >= BLUMAXWAVES) exitWith {BLURESPAWNDISABLED = true; publicVariable "BLURESPAWNDISABLED"};
+    if (_respawnCounter >= BLUMAXWAVES) exitWith {BLURESPAWNDISABLED = true; publicVariable "BLURESPAWNDISABLED"; diag_log "waveRespawn.sqf - Max number of waves for Blufor. Respawn disabled."};
   };
 };
 
@@ -121,7 +91,7 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
-    if (_respawnCounter >= OPFMAXWAVES) exitWith {OPFRESPAWNDISABLED = true; publicVariable "OPFRESPAWNDISABLED"};
+    if (_respawnCounter >= OPFMAXWAVES) exitWith {OPFRESPAWNDISABLED = true; publicVariable "OPFRESPAWNDISABLED"; diag_log "waveRespawn.sqf - Max number of waves for Opfor. Respawn disabled."};
   };
 };
 //WAVE RESPAWN IND =============================================================
@@ -155,6 +125,6 @@ mcd_fnc_waveTimeLeftInd = {
       sleep 3;
     };
     sleep 2;
-    if (_respawnCounter >= INDEPMAXWAVES) exitWith {INDEPRESPAWNDISABLED = true; publicVariable "INDEPRESPAWNDISABLED"};
+    if (_respawnCounter >= INDEPMAXWAVES) exitWith {INDEPRESPAWNDISABLED = true; publicVariable "INDEPRESPAWNDISABLED"; diag_log "waveRespawn.sqf - Max number of waves for Independent. Respawn disabled."};
   };
 };

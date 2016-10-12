@@ -1,4 +1,33 @@
 RESPAWNWAVEEXTRATIME = 60;
+publicVariable "RESPAWNWAVEEXTRATIME";
+WAVERESPAWNBLU = false;
+publicVariable "WAVERESPAWNBLU";
+WAVERESPAWNOPF = false;
+publicVariable "WAVERESPAWNOPF";
+WAVERESPAWNIND = false;
+publicVariable "WAVERESPAWNIND";
+WAVERESPAWNPLAYERSLEFTBLU = BLUFORWAVESIZE;
+publicVariable "WAVERESPAWNPLAYERSLEFTBLU";
+WAVERESPAWNPLAYERSLEFTOPF = OPFORWAVESIZE;
+publicVariable "WAVERESPAWNPLAYERSLEFTOPF";
+WAVERESPAWNPLAYERSLEFTIND = INDEPWAVESIZE;
+publicVariable "WAVERESPAWNPLAYERSLEFTIND";
+WAVERESPAWNTIMELEFTBLU = WAVERESPAWNTIME;
+publicVariable "WAVERESPAWNTIMELEFTBLU";
+WAVERESPAWNTIMELEFTOPF = WAVERESPAWNTIME;
+publicVariable "WAVERESPAWNTIMELEFTOPF";
+WAVERESPAWNTIMELEFTIND = WAVERESPAWNTIME;
+publicVariable "WAVERESPAWNTIMELEFTIND";
+BLURESPAWNDISABLED = false;
+publicVariable "BLURESPAWNDISABLED";
+OPFRESPAWNDISABLED = false;
+publicVariable "OPFRESPAWNDISABLED";
+INDEPRESPAWNDISABLED = false;
+publicVariable "INDEPRESPAWNDISABLED";
+
+deadPlayersBlu = [];
+deadPlayersOpf = [];
+deadPlayersInd = [];
 
 if (hasInterface) then {
   joinTime = serverTime;
@@ -204,5 +233,5 @@ if (isServer) then {
 
   //============================================================================
   addMissionEventHandler ["HandleDisconnect", {[_this select 3] spawn mcd_fnc_handleRespawned}];
-  [] execVM "waveRespawn.sqf";
+  [] execVM "wave_respawn\waveRespawn.sqf";
 };

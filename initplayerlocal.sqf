@@ -34,6 +34,20 @@ if (_waveRespawn) then {
     INDEPMAXWAVES = _indepMaxWaves;
   };
 
+  if (isNil "_waitSpectator") then {
+    WAITSPECTATOR = false;
+    WAITSPECSIDES = [WEST, EAST, INDEPENDENT];
+    WAITSPECAI = false;
+    WAITSPECFREECAM = false;
+    WAITSPEC3PP = false;
+  } else {
+    WAITSPECTATOR = _waitSpectator;
+    WAITSPECSIDES = _waitSpecSides;
+    WAITSPECAI = _waitSpecAI;
+    WAITSPECFREECAM = _waitSpecFreecam;
+    WAITSPEC3PP = _waitSpec3PP;
+  };
+
   if (!isServer) then {
     [] execVM "wave_respawn\initWaveRespawn.sqf";
   };

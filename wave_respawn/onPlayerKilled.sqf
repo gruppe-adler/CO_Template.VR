@@ -17,6 +17,7 @@ _timeleft = RESPAWNTIME;
 _waitCondition = {};
 _playersLeft = {};
 _waveTimeLeft = {};
+_exitCondition = {};
 _freeRespawn = {};
 _waveSize = {};
 

@@ -4,8 +4,11 @@
 
 
 if (isServer) then {
-  if !(["USERSCRIPTS\groupSettings.sqf"] call KK_fnc_fileExists) exitWith {};
+  private ["_groupSettings"];
+
+  if (hasInterface && !(["USERSCRIPTS\groupSettings.sqf"] call KK_fnc_fileExists)) exitWith {};
   _groupSettings = call compile preprocessFileLineNumbers "USERSCRIPTS\groupSettings.sqf";
+  if (isNil "_groupSettings") then {_groupSettings = []};
 
   //find groups
   _findPlayable = {
@@ -45,6 +48,8 @@ if (hasInterface) then {
   [{_groupIndex = (group player) getVariable "grad_groupIndex"; !isNil "_groupIndex" && !(missionNamespace getVariable ["TF_first_radio_request",true])}, {
     params ["_groupSettings"];
     _i = (group player) getVariable ["grad_groupIndex", 0];
+
+    if (count _groupSettings - 1 < _i) exitWith {};
     _mySettings = _groupSettings select _i;
     [(call TFAR_fnc_activeSwRadio), (_mySettings select 1)-1] call TFAR_fnc_setSwChannel;
     [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, (_mySettings select 2)-1] call TFAR_fnc_setLrChannel;

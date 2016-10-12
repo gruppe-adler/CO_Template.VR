@@ -6,10 +6,16 @@ _longRangeChannels = [];
 
 
 //get
-if (["USERSCRIPTS\radioSettings.sqf"] call KK_fnc_fileExists) then {
-  _settings = call compile preprocessFileLineNumbers "USERSCRIPTS\radioSettings.sqf";
+if (hasInterface) then {
+  if (["USERSCRIPTS\radioSettings.sqf"] call KK_fnc_fileExists) then {
+    _settings = call compile preprocessFileLineNumbers "USERSCRIPTS\radioSettings.sqf";
+  };
 } else {
-  _settings = [[50,60,70,80,90,100,110,120],[30,31,32,33,34,35,36,37,38]];
+  _settings = call compile preprocessFileLineNumbers "USERSCRIPTS\radioSettings.sqf";
+};
+
+if (isNil "_settings") then {
+  _settings = [[50,60,70,80,90,100,110,120],[30,31,32,33,34,35,36,37]];
 };
 _settings params ["_shortRangeSettings", "_longRangeSettings"];
 
@@ -50,9 +56,24 @@ tf_freq_west_lr = [0,7,_longRange,0,"_bluefor",-1,0,false];
 tf_freq_east_lr = [0,7,_longRange,0,"_opfor",-1,0,false];
 tf_freq_guer_lr = [0,7,_longRange,0,"_guer",-1,0,false];
 
+if (hasInterface) then {
+  [{player getvariable ["tf_handlers_set", false]}, {
+    _activeLR = [] call TFAR_fnc_activeLrRadio;
+    if (!isNil "_activeLR") then {
+      _settings = switch (side player) do {
+        case (WEST): {tf_freq_west_lr};
+        case (EAST): {tf_freq_east_lr};
+        case (INDEPENDENT): {tf_freq_guer_lr};
+        default {tf_freq_west_lr};
+      };
+      [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _settings] call TFAR_fnc_setLrSettings;
+    };
+  }, []] call CBA_fnc_waitUntilAndExecute;
+};
 
-//create markers
-if !(["USERSCRIPTS\radioSettings.sqf"] call KK_fnc_fileExists) exitWith {};
+
+//create markers (server only)
+if (!isServer) exitWith {};
 _pos = [worldSize + 200, worldSize - 100, 0];
 _marker = createMarker ["grad_radioMarker_headline", _pos];
 _marker setMarkerType "mil_dot";
