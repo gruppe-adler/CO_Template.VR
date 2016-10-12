@@ -2,15 +2,18 @@ If(!hasInterface) exitWith {};
 #include "script_component.hpp"
 
 //Function to get and set Informations about SatPhone
-private ["_idx","_ring_count"];
+private ["_idx","_ring_count","_type","_txt_holder"];
 params["_insertion"];
 
+If(missionNamespace getVariable [VAR_SMA(allowed_informations),false])then
+{
 _idx = -1;
 
 switch(true)do
 {
-  case (typeName _insertion == "STRING"):{_idx = 0;};
+  case (typeName _insertion == "STRING"):{_idx = 0;_type = "STRING";};
   case (typeName _insertion == "SCALAR"):{_idx = _insertion;};
+  case (typeName _insertion == "ARRAY"):{_idx = 0;_type = "ARRAY";};
 };
 
 switch(_idx)do
@@ -22,12 +25,23 @@ switch(_idx)do
              waitUntil{!(player getVariable "grad_phone_open")};
              sleep 2;
            };
-           If(isLocalized _insertion)then
+           switch(_type)do
            {
-             missionNamespace setVariable ["grad_mission_text",(localize _insertion),false];
-           }else{
-                  missionNamespace setVariable ["grad_mission_text",_insertion,false];
-                };
+             case "STRING":{
+                            If(isLocalized _insertion)then
+                            {
+                              missionNamespace setVariable ["grad_mission_text",(localize _insertion),false];
+                            }else{
+                                    missionNamespace setVariable ["grad_mission_text",_insertion,false];
+                                 };
+                           };
+             case "ARRAY":{
+                            If(count _insertion < 2 || !isLocalized (_insertion select 0))exitWith {LOG_ERR("Check choice for Showing Text in SatPhone!");};
+                            _txt_holder = "";
+                            If(isLocalized (_insertion select 1))then{_txt_holder = (localize (_insertion select 1));}else{_txt_holder = (_insertion select 1);};
+                            missionNamespace setVariable ["grad_mission_text",(format [(localize (_insertion select 0)),_txt_holder]),false];
+                          };
+           };
            player setVariable ["grad_show_phoneinfo",true,false];
            _ring_count = 0;
            while{(player getVariable "grad_show_phoneinfo")}do
@@ -56,4 +70,5 @@ switch(_idx)do
             cutRsc ["ShowPhone", "PLAIN"];
             [0] call FNC_SMC(client,setClientAction);
           };
+};
 };
