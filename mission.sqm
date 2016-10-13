@@ -1722,7 +1722,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={682.86035,5,3493.6885};
+				position[]={682.85999,5,3493.688};
 			};
 			name="zeusModule_adminLogged";
 			id=20;
@@ -1820,7 +1820,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=2;
+							value=3;
 						};
 					};
 				};
@@ -1832,7 +1832,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={683.34375,5,3392.3892};
+				position[]={683.34399,5,3392.3889};
 			};
 			name="zeusModule_adminVoted";
 			id=21;
@@ -1930,7 +1930,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=2;
+							value=3;
 						};
 					};
 				};
