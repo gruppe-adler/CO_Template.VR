@@ -5,7 +5,7 @@
 #include "ga_system\sys_config\sound.hpp"
 
 //Loadouts
-#include "loadouts\loadouts.hpp"
+#include "node_modules\grad-factions\loadouts.hpp"
 
 //Functions
 class CfgFunctions
