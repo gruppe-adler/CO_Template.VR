@@ -7,7 +7,19 @@ enableSaving [false, false];
 
 setTimeMultiplier _timeMultiplication;
 
-GRAD_Loadout_Chosen_Prefix = _loadoutFaction;
+if (!isNil "_loadoutFactionBlu") then {
+  if (_loadoutFactionBlu != "") then {
+    ["BLU_F", _loadoutFactionBlu] call GRAD_Loadout_fnc_FactionSetLoadout;
+  };
+  if (_loadoutFactionOpf != "") then {
+    ["OPF_F", _loadoutFactionOpf] call GRAD_Loadout_fnc_FactionSetLoadout;
+  };
+  if (_loadoutFactionInd != "") then {
+    ["IND_F", _loadoutFactionInd] call GRAD_Loadout_fnc_FactionSetLoadout;
+  };
+} else {
+  ["BLU_F", _loadoutFaction] call GRAD_Loadout_fnc_FactionSetLoadout;
+};
 
 if (_useCaching) then {
   f_param_debugMode = _cachingDebug;

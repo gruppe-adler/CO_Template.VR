@@ -169,7 +169,7 @@ class USOCP {
             primaryWeaponMuzzle = "";
             primaryWeaponPointer = LLITEM;
             primaryWeaponOptics = "optic_DMS";
-            primaryWeaponUnderbarrel = "bipod_01_F_blk"
+            primaryWeaponUnderbarrel = "bipod_01_F_blk";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
