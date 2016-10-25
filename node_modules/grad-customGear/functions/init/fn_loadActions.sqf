@@ -7,7 +7,12 @@
 
   //wait until other loadout scripts are done
   waitUntil {!isNull player};
-  sleep 10;
+  if (isclass (missionConfigFile >> "Loadouts")) then {
+    waitUntil {(player getVariable ["GRAD_loadout_applicationCount", 0]) > 0};
+  } else {
+    sleep 10;
+  };
+  sleep 3;
 
   //get config values
   _allowHelmet = getNumber (missionConfigFile >> "grad_customGear" >> "allowHelmet") == 1;

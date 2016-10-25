@@ -40,8 +40,6 @@ class RUFlora {
         gps = "ItemGPS";
         radio = "tf_fadak";
         nvgoggles = NVITEM;
-        items[] = {};
-        magazines[] = {};
     };
     class Type {
         //Rifleman
