@@ -15,6 +15,7 @@ class CfgFunctions
   #include "functions\spawnhelp\cfgFunctions.hpp"
   #include "functions\conview\cfgFunctions.hpp"
   //#include "functions\mission\cfgFunctions.hpp"
+  #include "functions\radiosettings\cfgFunctions.hpp"
   #include "functions\usage\cfgFunctions.hpp"
   #include "functions\dial\cfgFunctions.hpp"
   #include "functions\external\cfgFunctions.hpp"
