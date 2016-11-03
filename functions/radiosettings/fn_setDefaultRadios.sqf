@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------------------------------------------------------
 Function: GRAD_radiosettings_fnc_setDefaultRadios
 
-Description: Sets default radios because apparently TFAR does not understand what the word "disable", "automatic" and "distribution" mean
+Description: Sets default radios because apparently TFAR does not understand what the words "disable", "automatic" and "distribution" mean
 
               CLIENT
 
@@ -20,9 +20,6 @@ Author: McDiod
 
 _radios = [player] call FNC_SMC(radiosettings,getLoadoutRadios);
 _radios params ["_shortrange", "_longrange"];
-
-if (_shortrange == "") then {_shortrange = "tf_anprc152"};
-if (_longrange == "") then {_longrange = "tf_rt1523g"};
 
 TF_defaultWestBackpack = _longrange;
 TF_defaultEastBackpack = _longrange;

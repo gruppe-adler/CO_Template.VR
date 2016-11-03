@@ -30,7 +30,7 @@ _unitLoadout = getUnitLoadout _unit;
 _loadout = [_loadoutHash, _unitLoadout] call GRAD_Loadout_fnc_hashToUnitLoadout;
 
 _shortrange = (_loadout select 9) select 2;
-_longrange = (_loadout select 5) select 0;
+_longrange = if (count (_loadout select 5) == 0) then {""} else {(_loadout select 5) select 0};
 if (_longrange find "tf_" != 0) then {_longrange = ""};
 
 [_shortrange, _longrange]
