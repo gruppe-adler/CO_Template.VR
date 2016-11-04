@@ -1,13 +1,13 @@
 ﻿class Params
 {
-	class chainofcommand
+	/*class chainofcommand
 	{
 		 title = "Flow of Information:";
 		 values[] = {0,1,2,3,4,5,6};
 		 texts[] = {"EVERYBODY","CORPORAL AND HIGHER","SERGEANT AND HIGHER","LIEUTENANT AND HIGHER","CAPTAIN AND HIGHER","MAJOR AND HIGHER","COLONEL"};
 		 default = 0;
 		 isGlobal = 1;
-	};
+	};*/
 	/*class factionselector
 	{
 		//paramsArray[0]
