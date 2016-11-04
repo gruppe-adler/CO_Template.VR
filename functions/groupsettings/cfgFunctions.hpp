@@ -6,6 +6,9 @@ class GRAD_groupsettings {
         class getUserSettings {
             description = "Gets radio settings defined by user in USERSCRIPTS.";
         };
+        class setAdditionalGroupChannels {
+            description = "Sets additional channels and custom frequencies.";
+        };
         class setDynamicGroupNames {
             description = "Sets dynamic group names for groups, based on settings defined by user in USERSCRIPTS.";
         };

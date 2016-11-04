@@ -16,7 +16,6 @@ Author: McDiod
 
 ------------------------------------------------------------------------------------------------------------- */
 params ["_allgroups", "_groupSettings"];
-_allgroups params ["_blugroups", "_opfgroups", "_indgroups"];
 
 //set names
 {
