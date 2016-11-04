@@ -1,5 +1,7 @@
-_loadoutFaction = "BWFleck";                                                    //Partei, dessen Standardloadout die Spieler bekommen
-                                                                                //Wenn _loadoutFaction == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
+_loadoutFactionBlu = "BWFleck";                                                 //Partei, dessen Standardloadout die Bluforspieler bekommen
+_loadoutFactionOpf = "";                                                        //Partei, dessen Standardloadout die Opforspieler bekommen
+_loadoutFactionInd = "";                                                        //Partei, dessen Standardloadout die Independentspieler bekommen
+                                                                                //Wenn _loadoutFactionXXX == "" werden keine Loadouts verteilt und Missionsersteller kann eigene Loadouts über den Editor vergeben (Achtung: nicht respawnsicher).
 
 //#define NIGHTVISION                                                           //Wenn Spieler Nightvision erhalten sollen, Kommentarzeichen (//) entfernen
 //#define GUNLIGHTS                                                             //Wenn Spieler Waffenlampen erhalten sollen, Kommentarzeichen (//) entfernen
@@ -10,14 +12,14 @@ _loadoutFaction = "BWFleck";                                                    
 
 
 /*  Die folgenden Parteien sind verfügbar:
-*   "BWFleck"         BLUFOR        Bundeswehr Flecktarn
-*   "BWTrop"          BLUFOR        Bundeswehr Tropentarn
-*   "USOCP"           BLUFOR        US Army OCP
-*   "USUCP"           BLUFOR        US Army UCP
-*   "USMPT"           BLUFOR        US Marines MARPAT
-*   "RUFlora"         OPFOR         Russian MSV Flora
-*   "RUEMR"           OPFOR         Russian MSV EMR-Summer
-*   "ModerateRebels"  INDEPENDENT   Mittelmäßig bewaffnete, halbzivile Rebellen
+*   "BWFleck"                 Bundeswehr Flecktarn
+*   "BWTrop"                  Bundeswehr Tropentarn
+*   "USOCP"                   US Army OCP
+*   "USUCP"                   US Army UCP
+*   "USMPT"                   US Marines MARPAT
+*   "RUFlora"                 Russian MSV Flora
+*   "RUEMR"                   Russian MSV EMR-Summer
+*   "ModerateRebels"          Mittelmäßig bewaffnete, halbzivile Rebellen
 */
 
 
@@ -54,5 +56,5 @@ _loadoutFaction = "BWFleck";                                                    
 /*  Eigene Loadouts für GRAD-Loadout definieren:
 *   Die Standardloadouts können Ordner loadouts ergänzt werden.
 *   Die neuen Loadouts nehmen wir gerne ins Template mit auf, dann haben alle etwas davon :)
-*   https://github.com/gruppe-adler/CO_Template.Stratis
+*   https://github.com/gruppe-adler/CO_Template.VR
 */
