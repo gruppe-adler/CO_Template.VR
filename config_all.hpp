@@ -5,6 +5,7 @@
 #include "ga_system\sys_config\sound.hpp"
 
 //Loadouts
+#include "USERSCRIPTS\loadouts.sqf"
 #include "node_modules\grad-factions\loadouts.hpp"
 
 //Functions
