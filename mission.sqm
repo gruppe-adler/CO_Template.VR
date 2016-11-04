@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2660.1335,16.9617,3484.9182};
-		dir[]={-0.016487421,-0.81216949,0.58319336};
-		up[]={-0.0229517,0.58342057,0.81184638};
-		aside[]={0.99960417,-7.1158865e-009,0.028259758};
+		pos[]={2661.3364,22.681747,3452.0898};
+		dir[]={-0.032548808,-0.35948038,0.93259186};
+		up[]={-0.012539092,0.93314993,0.35926953};
+		aside[]={0.99939942,-3.4924597e-009,0.034880549};
 	};
 };
 binarizationWanted=0;
@@ -49,7 +49,6 @@ addons[]=
 	"acex_headless",
 	"ace_medical",
 	"ace_medical_menu",
-	"Desert",
 	"A3_Characters_F_Mark",
 	"A3_Modules_F_Intel",
 	"A3_Soft_F_Gamma_Truck_01",
@@ -62,7 +61,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=29;
 		class Item0
 		{
 			className="ace_advanced_ballistics";
@@ -206,14 +205,14 @@ class AddonsMetaData
 		class Item20
 		{
 			className="acex_sitting";
-			name="acex_sitting";
+			name="ACEX - Sitting";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
 		class Item21
 		{
 			className="acex_headless";
-			name="acex_headless";
+			name="ACEX - Headless";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -233,38 +232,33 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="Desert";
-			name="Desert";
-		};
-		class Item25
-		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item26
+		class Item25
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item27
+		class Item26
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item28
+		class Item27
 		{
 			className="ace_advanced_fatigue";
 			name="ACE3 - Advanced Fatigue";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item29
+		class Item28
 		{
 			className="ace_advanced_throwing";
 			name="ACE3 - Advanced Throwing";
@@ -2808,8 +2802,8 @@ class Mission
 			{
 				class Attribute0
 				{
-					property="acex_headless_module_Delay";
-					expression="_this setVariable ['Delay',_value,true];";
+					property="acex_headless_module_delay";
+					expression="_this setVariable ['delay',_value,true];";
 					class Value
 					{
 						class data
@@ -2827,8 +2821,8 @@ class Mission
 				};
 				class Attribute1
 				{
-					property="acex_headless_module_Log";
-					expression="_this setVariable ['Log',_value,true];";
+					property="acex_headless_module_log";
+					expression="_this setVariable ['log',_value,true];";
 					class Value
 					{
 						class data
@@ -2846,8 +2840,8 @@ class Mission
 				};
 				class Attribute2
 				{
-					property="acex_headless_module_Enabled";
-					expression="_this setVariable ['Enabled',_value,true];";
+					property="acex_headless_module_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
 					class Value
 					{
 						class data
@@ -2863,7 +2857,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=3;
+				class Attribute3
+				{
+					property="acex_headless_module_endMission";
+					expression="_this setVariable ['endMission',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 		class Item36
