@@ -23,333 +23,333 @@ switch (typeOf player) do {
 
 
 //KLASSENSPEZIFISCHE WHITELIST =================================================
-  //Rifleman
-  case ("B_Soldier_F"): {
-    _classBackpacks = [
+    //Rifleman
+    case ("B_Soldier_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Asst. Autorifleman
-  case ("B_soldier_AAR_F"): {
-    _classBackpacks = [
+    //Asst. Autorifleman
+    case ("B_soldier_AAR_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Asst. Gunner (HMG/GMG)
-  case ("B_support_AMG_F"): {
-    _classBackpacks = [
+    //Asst. Gunner (HMG/GMG)
+    case ("B_support_AMG_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Asst. Missile Specialist (AA)
-  case ("B_soldier_AAA_F"): {
-    _classBackpacks = [
+    //Asst. Missile Specialist (AA)
+    case ("B_soldier_AAA_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Asst. Missile Specialist (AT)
-  case ("B_soldier_AAT_F"): {
-    _classBackpacks = [
+    //Asst. Missile Specialist (AT)
+    case ("B_soldier_AAT_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Autorifleman
-  case ("B_soldier_AR_F"): {
-    _classBackpacks = [
+    //Autorifleman
+    case ("B_soldier_AR_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Combat Life Saver
-  case ("B_medic_F"): {
-    _classBackpacks = [
+    //Combat Life Saver
+    case ("B_medic_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Explosive Specialist
-  case ("B_soldier_exp_F"): {
-    _classBackpacks = [
+    //Explosive Specialist
+    case ("B_soldier_exp_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Grenadier
-  case ("B_Soldier_GL_F"): {
-    _classBackpacks = [
+    //Grenadier
+    case ("B_Soldier_GL_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Heavy Gunner
-  case ("B_HeavyGunner_F"): {
-    _classBackpacks = [
+    //Heavy Gunner
+    case ("B_HeavyGunner_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Marksman
-  case ("B_soldier_M_F"): {
-    _classBackpacks = [
+    //Marksman
+    case ("B_soldier_M_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Missile Specialist (AA)
-  case ("B_soldier_AA_F"): {
-    _classBackpacks = [
+    //Missile Specialist (AA)
+    case ("B_soldier_AA_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Missile Specialist (AT)
-  case ("B_soldier_AT_F"): {
-    _classBackpacks = [
+    //Missile Specialist (AT)
+    case ("B_soldier_AT_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Repair Specialist
-  case ("B_soldier_repair_F"): {
-    _classBackpacks = [
+    //Repair Specialist
+    case ("B_soldier_repair_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Rifleman (AT)
-  case ("B_soldier_LAT_F"): {
-    _classBackpacks = [
+    //Rifleman (AT)
+    case ("B_soldier_LAT_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Squad Leader
-  case ("B_Soldier_SL_F"): {
-    _classBackpacks = [
+    //Squad Leader
+    case ("B_Soldier_SL_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
-  //Team Leader
-  case ("B_Soldier_TL_F"): {
-    _classBackpacks = [
+    //Team Leader
+    case ("B_Soldier_TL_F"): {
+        _classBackpacks = [
 
-    ];
+        ];
 
-    _classItems = [
+        _classItems = [
 
-    ];
+        ];
 
-    _classMagazines = [
+        _classMagazines = [
 
-    ];
+        ];
 
-    _classWeapons = [
+        _classWeapons = [
 
-    ];
-  };
+        ];
+    };
 
 
 
 
 //AB HIER NICHT EDITIEREN ======================================================
-  default {_classBackpack = []; _classItems = []; _classMagazines = []; _classWeapons = []};
+    default {_classBackpack = []; _classItems = []; _classMagazines = []; _classWeapons = []};
 };
 [_backpacks+_classBackpacks, _items+_classItems, _magazines+_classMagazines, _weapons+_classWeapons]
