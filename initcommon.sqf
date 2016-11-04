@@ -64,9 +64,7 @@ if (_waveRespawn) then {
         WAITSPEC3PP = _waitSpec3PP;
     };
 
-    if (!isServer) then {
-        [] execVM "wave_respawn\initWaveRespawn.sqf";
-    };
+    [] execVM "wave_respawn\initWaveRespawn.sqf";
 } else {
     GRAD_waveRespawn = false;
 };
@@ -75,3 +73,14 @@ if (_waveRespawn) then {
 if (_civTraffic) then {
     [] execVM "Engima\Traffic\Init.sqf";
 };
+
+if (hasInterface) then {
+  if (["USERSCRIPTS\userInit.sqf"] call KK_fnc_fileExists) then {
+    [] execVM "USERSCRIPTS\userInit.sqf";
+  };
+} else {
+  [] execVM "USERSCRIPTS\userInit.sqf";
+};
+
+[] execVM "helpers\setRadioSettings.sqf";
+[] execVM "helpers\setGroupSettings.sqf";
