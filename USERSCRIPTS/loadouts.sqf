@@ -20,6 +20,7 @@ _loadoutFactionInd = "";                                                        
 *   "RUFlora"                 Russian MSV Flora
 *   "RUEMR"                   Russian MSV EMR-Summer
 *   "ModerateRebels"          Mittelmäßig bewaffnete, halbzivile Rebellen
+*   "Peshmerga"               kurdische Streitkräfte, russische Waffen
 */
 
 
