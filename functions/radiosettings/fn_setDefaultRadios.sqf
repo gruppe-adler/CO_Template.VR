@@ -18,6 +18,12 @@ Author: McDiod
 
 ----------------------------------------------------------------------------------------------------------------- */
 
+if (typeOf player == "VirtualCurator_F") exitWith {};
+if (typeOf player == "B_VirtualCurator_F") exitWith {};
+if (typeOf player == "C_VirtualCurator_F") exitWith {};
+if (typeOf player == "I_VirtualCurator_F") exitWith {};
+if (typeOf player == "O_VirtualCurator_F") exitWith {};
+
 _radios = [player] call FNC_SMC(radiosettings,getLoadoutRadios);
 _radios params ["_shortrange", "_longrange"];
 
