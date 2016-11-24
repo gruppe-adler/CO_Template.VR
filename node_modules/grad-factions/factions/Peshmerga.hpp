@@ -154,7 +154,7 @@ class Peshmerga {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_svdp";
-            primaryWeaponOptics = "rhs_acc_pso1m2;"
+            primaryWeaponOptics = "rhs_acc_pso1m2";
             binoculars = "ACE_Vector";
             addItemsToVest[] = {
                 LIST_2("SmokeShell"),
