@@ -350,6 +350,6 @@ switch (typeOf player) do {
 
 
 //AB HIER NICHT EDITIEREN ======================================================
-    default {_classBackpack = []; _classItems = []; _classMagazines = []; _classWeapons = []};
+    default {_classBackpacks = []; _classItems = []; _classMagazines = []; _classWeapons = []};
 };
 [_backpacks+_classBackpacks, _items+_classItems, _magazines+_classMagazines, _weapons+_classWeapons]
