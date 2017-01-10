@@ -26,7 +26,7 @@ class BWTrop: BWFleck {
 	class AllUnits: AllUnits {
 		uniform = "ARC_GER_Tropentarn_Uniform";
 		vest = "ARC_GER_Tropentarn_Plate_Carrier";
-		headgear = "ARC_GER_Tropentarn_Mich";
+		headgear = "ARC_GER_Tropentarn_Helmet_simple";
 	};
     class Type: Type {
         class Soldier_F: Soldier_F {
@@ -54,6 +54,7 @@ class BWTrop: BWFleck {
         };
 
         class medic_F: medic_F {
+            headgear = "ARC_GER_Tropentarn_Helmet_simple_medic";
             backpack = "ARC_GER_Backpack_Tropentarn";
         };
 

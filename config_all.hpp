@@ -6,7 +6,17 @@
 
 //Loadouts
 #include "USERSCRIPTS\loadouts.sqf"
-#include "node_modules\grad-factions\loadouts.hpp"
+
+class Loadouts {
+    baseDelay = 1;      // base delay in seconds before applying loadouts on mission start
+    handleRadios = 1;   // radios are handled by grad-loadout
+    resetLoadout = 0;   // start with empty loadouts instead of modifying existing loadout
+
+    class Faction {
+        #include "node_modules\grad-factions\loadouts.hpp"
+        #include "USERSCRIPTS\userLoadouts.hpp"
+    };
+};
 
 //Functions
 class CfgFunctions

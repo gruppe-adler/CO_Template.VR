@@ -27,7 +27,7 @@ class BWFleck {
 		uniform = "ARC_GER_Flecktarn_Uniform";
 		vest = "ARC_GER_Flecktarn_Plate_Carrier";
 		backpack = "";
-		headgear = "ARC_GER_Flecktarn_Mich";
+		headgear = "ARC_GER_Flecktarn_Helmet_simple";
 		primaryWeapon = "rhs_weap_hk416d10";
 		primaryWeaponOptics = "FHQ_optic_HWS_G33";
 		primaryWeaponPointer = LLITEM;
@@ -114,6 +114,7 @@ class BWFleck {
 
         //Combat Life Saver
         class medic_F: Soldier_F {
+            headgear = "ARC_GER_Flecktarn_Helmet_simple_Medic";
             backpack = "ARC_GER_Backpack_Flecktarn";
             addItemsToBackpack[] = {
                 LIST_5("ACE_bloodIV"),
@@ -241,7 +242,7 @@ class BWFleck {
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
-                LIST_2("1Rnd_HE_Grenade_shell")            
+                LIST_2("1Rnd_HE_Grenade_shell")
             };
         };
     };
