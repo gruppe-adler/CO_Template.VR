@@ -10,3 +10,4 @@
 #include "factions\UsUCP.hpp"
 #include "factions\RuFlora.hpp"
 #include "factions\RuEMR.hpp"
+#include "factions\Taliban.hpp"
