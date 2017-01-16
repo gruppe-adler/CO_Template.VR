@@ -40,6 +40,13 @@ class CfgFunctions
     #include "node_modules\grad-customGear\cfgFunctions.hpp"
 };
 
+//Extendend EventHandlers
+class Extended_InitPost_EventHandlers  {
+    class CAManBase {
+         init = "params ['_u']; if !(isPlayer _u) then {[_u] call GRAD_Loadout_fnc_doLoadoutForUnit;};";
+    };
+};
+
 //grad-customGear
 class grad_customGear {
     #include "USERSCRIPTS\customGear.hpp"
