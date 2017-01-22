@@ -20,7 +20,12 @@ params ["_channelNames"];
 if (count _channelNames == 0) exitWith {};
 
 //headline
-_pos = [worldSize + 200, worldSize - 100, 0];
+_pos = if (str getMarkerpos "radiofrequencies" != "[0,0,0]") then {
+    getMarkerpos "radiofrequencies";
+} else {
+    [worldSize + 200, worldSize - 100, 0];
+};
+
 _marker = createMarker ["grad_radioMarker_headline", _pos];
 _marker setMarkerType "mil_dot";
 _marker setMarkerColor "COLORWEST";
