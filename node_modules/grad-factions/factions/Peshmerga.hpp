@@ -12,8 +12,6 @@
 
 #ifdef GUNLIGHTS
   #define LLITEM "rhs_acc_2dpZenit"
-#else
-  #define LLITEM
 #endif
 
 #ifdef SUPPRESSORS

@@ -122,8 +122,18 @@ class LOADOUTNAME {
 
         };
 
+        //Sniper
+        class Sniper_F: Soldier_F {
+
+        };
+
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
+
+        };
+
+        //Spotter
+        class Spotter_F: Soldier_F {
 
         };
 

@@ -12,8 +12,6 @@
 
 #ifdef GUNLIGHTS
   #define LLITEM "rhsusf_acc_anpeq15_bk_light"
-#else
-  #define LLITEM
 #endif
 
 #ifdef SUPPRESSORS
