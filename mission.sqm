@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=706;
+		nextID=722;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2661.3364,22.681747,3452.0898};
-		dir[]={-0.032548808,-0.35948038,0.93259186};
-		up[]={-0.012539092,0.93314993,0.35926953};
-		aside[]={0.99939942,-3.4924597e-009,0.034880549};
+		pos[]={2518.9373,307.19507,4864.0259};
+		dir[]={0.10163672,-0.58636028,0.80365396};
+		up[]={0.073570117,0.81004983,0.58172905};
+		aside[]={0.99210149,7.5087883e-009,-0.12546937};
 	};
 };
 binarizationWanted=0;
@@ -49,6 +49,8 @@ addons[]=
 	"acex_headless",
 	"ace_medical",
 	"ace_medical_menu",
+	"asr_ai3_cfgcamouflage",
+	"asr_ai3_cfgvehicles",
 	"Desert",
 	"A3_Characters_F_Mark",
 	"A3_Modules_F_Intel",
@@ -339,7 +341,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=154;
+		items=160;
 		class Item0
 		{
 			dataType="Logic";
@@ -14645,16 +14647,190 @@ class Mission
 				nAttributes=6;
 			};
 		};
+		class Item154
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2572.4863,5.0014291,5330.9858};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=709;
+					type="O_spotter_F";
+					atlOffset=-1.001358e-005;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2567.5854,5.0014219,5327.8389};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=710;
+					type="O_sniper_F";
+					atlOffset=-1.7166138e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=708;
+			atlOffset=-1.001358e-005;
+		};
+		class Item155
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2555.2949,5,5327.7021};
+			};
+			title="Sniper Team";
+			id=711;
+		};
+		class Item156
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2577.6611,5.0014429,7336.3589};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=713;
+					type="B_spotter_F";
+					atlOffset=3.8146973e-006;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2572.5154,5.0014372,7332.377};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=714;
+					type="B_sniper_F";
+					atlOffset=-1.9073486e-006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=712;
+			atlOffset=3.8146973e-006;
+		};
+		class Item157
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2563.49,5,7330.7939};
+			};
+			title="Sniper Team";
+			id=715;
+		};
+		class Item158
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2566.7634,5.0014372,3332.7791};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=717;
+					type="I_Spotter_F";
+					atlOffset=-1.9073486e-006;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2561.7866,5.0014315,3329.9399};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=718;
+					type="I_Sniper_F";
+					atlOffset=-7.6293945e-006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=716;
+			atlOffset=-1.9073486e-006;
+		};
+		class Item159
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2554.2029,5,3332.4409};
+			};
+			title="Sniper Team";
+			id=719;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=140;
+			nextID=146;
 		};
 		class Links
 		{
-			items=140;
+			items=146;
 			class Item0
 			{
 				linkID=0;
@@ -16049,6 +16225,66 @@ class Mission
 			{
 				linkID=139;
 				item0=704;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item140
+			{
+				linkID=140;
+				item0=709;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item141
+			{
+				linkID=141;
+				item0=710;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item142
+			{
+				linkID=142;
+				item0=713;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item143
+			{
+				linkID=143;
+				item0=714;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item144
+			{
+				linkID=144;
+				item0=717;
+				item1=178;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item145
+			{
+				linkID=145;
+				item0=718;
 				item1=178;
 				class CustomData
 				{
