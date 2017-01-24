@@ -11,6 +11,7 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
+    waitUntil {!isNull player};
     if (didJIP) then {[player] remoteExec ["GRAD_groupsettings_fnc_setJIPGroupIndex",2,false]};
     [_groupSettings] call GRAD_groupsettings_fnc_setGroupChannels;
 };
