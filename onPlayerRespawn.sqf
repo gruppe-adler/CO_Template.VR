@@ -1,5 +1,5 @@
-if (GRAD_waveRespawn) then {
-    [] execVM "wave_respawn\onPlayerRespawn.sqf";
-};
-
 ["Terminate"] call BIS_fnc_EGSpectator;
+
+if (([missionConfigFile >> "missionsettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 1) then {
+    [] call grad_waverespawn_fnc_onPlayerRespawn;
+};

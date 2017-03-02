@@ -1,5 +1,3 @@
-#include "script_component.hpp"
-
 if (!isServer) then {
     [] execVM "initcommon.sqf";
 };

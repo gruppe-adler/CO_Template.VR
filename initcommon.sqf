@@ -15,43 +15,6 @@ if (_useCaching) then {
     [30] spawn f_fnc_cInit;
 };
 
-// WAVE RESPAWN ================================================================
-if (_waveRespawn) then {
-    GRAD_waveRespawn = true;
-    WAVERESPAWNTIME = _waveRespawnTime max 10;
-    RESPAWNTIME = _respawnTime max 10;
-    BLUFORWAVESIZE = _bluforWaveSize max -1;
-    OPFORWAVESIZE = _opforWaveSize max -1;
-    INDEPWAVESIZE = _indepWaveSize max -1;
-
-    if (isNil "_bluMaxWaves") then {
-        BLUMAXWAVES = 9999;
-        OPFMAXWAVES = 9999;
-        INDEPMAXWAVES = 9999;
-    } else {
-        BLUMAXWAVES = _bluMaxWaves;
-        OPFMAXWAVES = _opfMaxWaves;
-        INDEPMAXWAVES = _indepMaxWaves;
-    };
-
-    if (isNil "_waitSpectator") then {
-        WAITSPECTATOR = false;
-        WAITSPECSIDES = [WEST, EAST, INDEPENDENT];
-        WAITSPECAI = false;
-        WAITSPECFREECAM = false;
-        WAITSPEC3PP = false;
-    } else {
-        WAITSPECTATOR = _waitSpectator;
-        WAITSPECSIDES = _waitSpecSides;
-        WAITSPECAI = _waitSpecAI;
-        WAITSPECFREECAM = _waitSpecFreecam;
-        WAITSPEC3PP = _waitSpec3PP;
-    };
-
-    [] execVM "wave_respawn\initWaveRespawn.sqf";
-} else {
-    GRAD_waveRespawn = false;
-};
 
 // SCRIPTS =====================================================================
 if (_civTraffic) then {
