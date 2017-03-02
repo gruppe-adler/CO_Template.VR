@@ -35,6 +35,10 @@ wreckRemovalMaxTime = 1200;
 
 class missionsettings {
 	#include "USERSCRIPTS\missionsettings.hpp"
+
+	class restrictedArsenal {
+		#include "USERSCRIPTS\restrictedArsenal.hpp"
+	};	
 };
 
 //FUNCTIONS ====================================================================

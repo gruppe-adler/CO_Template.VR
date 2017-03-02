@@ -3,7 +3,6 @@
 enableSentences false;
 enableRadio false;
 enableSaving [false, false];
-setTimeMultiplier _timeMultiplication;
 
 
 // CACHING =====================================================================
@@ -17,17 +16,10 @@ if (_useCaching) then {
 
 
 // SCRIPTS =====================================================================
+[] execVM "USERSCRIPTS\userInit.sqf";
+[] execVM "helpers\setRadioSettings.sqf";
+[] execVM "helpers\setGroupSettings.sqf";
+
 if (_civTraffic) then {
     [] execVM "Engima\Traffic\Init.sqf";
 };
-
-if (hasInterface) then {
-  if (["USERSCRIPTS\userInit.sqf"] call KK_fnc_fileExists) then {
-    [] execVM "USERSCRIPTS\userInit.sqf";
-  };
-} else {
-  [] execVM "USERSCRIPTS\userInit.sqf";
-};
-
-[] execVM "helpers\setRadioSettings.sqf";
-[] execVM "helpers\setGroupSettings.sqf";

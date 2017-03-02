@@ -3,6 +3,7 @@
 *   Beispiel1: Nicht- und mehrfachvergrößernde Visiere sind erlaubt. Im Missionsloadout ist für einen Spieler ein Rotpunktvisier vorgesehen. Bei Missionsstart wird er deshalb trotzdem nur das nichtvergrößernde Visier laden können.
 *   Beispiel2: Nur Scharfschützenvisiere sind erlaubt. Bei Missionsstart wird nur der Marksman sein persönliches Visier laden können.
 */
+
                                                                                 // 0 == nicht erlaubt ; 1 == erlaubt
 allowHelmet = 0;                                                                // Kopfbedeckungen
 allowGoggles = 1;                                                               // Gesichtsbekleidung

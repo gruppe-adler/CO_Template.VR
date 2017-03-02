@@ -1,3 +1,7 @@
+//ALLGEMEIN ====================================================================
+timeMultiplication = 1;                                                         //Zeit-Multiplikator - Eine Spiel-Stunde dauert (eine Echtzeit-Stunde * timeMultiplication) - mögliche Werte: Zahl > 0
+
+
 //LOADOUTS =====================================================================
 loadoutFactionBlu = "BWFleck";                                                  //Partei, dessen Standardloadout die Bluforspieler bekommen
 loadoutFactionOpf = "";                                                         //Partei, dessen Standardloadout die Opforspieler bekommen
