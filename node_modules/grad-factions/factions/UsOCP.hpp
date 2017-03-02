@@ -27,10 +27,12 @@ class USOCP {
         backpack = "";
         headgear = "rhsusf_ach_helmet_ocp";
         primaryWeapon = "rhs_weap_m4a1_blockII_bk";
+        primaryWeaponMagazine = "30Rnd_556x45_Stanag";
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponPointer = LLITEM;
         primaryWeaponOptics = "FHQ_optic_HWS_G33";
         handgunWeapon = "rhsusf_weap_m9";
+        handgunWeaponMagazine = "rhsusf_mag_15Rnd_9x19_JHP";
         binoculars = "Binocular";
         map = "ItemMap";
         compass = "ItemCompass";
@@ -56,7 +58,7 @@ class USOCP {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_8("30Rnd_556x45_Stanag")
+                LIST_7("30Rnd_556x45_Stanag")
             };
         };
         //Asst. Autorifleman
@@ -92,7 +94,9 @@ class USOCP {
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S";
+            primaryWeaponMagazine = "rhs_200rnd_556x45_M_SAW";
             handgunWeapon = "";
+            handgunWeaponMagazine = "";
             vest = "rhsusf_iotv_ocp_SAW";
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
@@ -101,8 +105,7 @@ class USOCP {
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
-                "rhs_200rnd_556x45_M_SAW"
+                LIST_2("SmokeShell")
             };
         };
         //Combat Life Saver
@@ -149,7 +152,9 @@ class USOCP {
         //Heavy Gunner
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "rhs_weap_m240B";
+            primaryWeaponMagazine = "rhsusf_100Rnd_762x51";
             handgunWeapon = "";
+            handgunWeaponMagazine = "";
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
                 LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
@@ -157,13 +162,13 @@ class USOCP {
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
-                "rhsusf_100Rnd_762x51"
+                LIST_2("SmokeShell")
             };
         };
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_sr25_ec";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
             primaryWeaponMuzzle = "";
             primaryWeaponPointer = LLITEM;
             primaryWeaponOptics = "optic_DMS";
@@ -172,23 +177,25 @@ class USOCP {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_8("rhsusf_20Rnd_762x51_m118_special_Mag")
+                LIST_7("rhsusf_20Rnd_762x51_m118_special_Mag")
             };
         };
         //Missile Specialist (AA)
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fim92";
+            secondaryWeaponMagazine = "rhs_fim92_mag";
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fim92_mag")
+                "rhs_fim92_mag"
             };
         };
         //Missile Specialist (AT)
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fgm148";
+            secondaryWeaponMagazine = "rhs_fgm148_magazine_AT";
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fgm148_magazine_AT")
+                "rhs_fgm148_magazine_AT"
             };
         };
         //Repair Specialist

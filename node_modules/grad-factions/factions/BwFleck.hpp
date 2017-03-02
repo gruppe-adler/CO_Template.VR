@@ -27,10 +27,12 @@ class BWFleck {
 		backpack = "";
 		headgear = "ARC_GER_Flecktarn_Helmet_simple";
 		primaryWeapon = "rhs_weap_hk416d10";
+        primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 		primaryWeaponOptics = "FHQ_optic_HWS_G33";
 		primaryWeaponPointer = LLITEM;
 		primaryWeaponMuzzle = SUPPRESSORITEM;
 		handgunWeapon = "rhsusf_weap_glock17g4";
+        handgunWeaponMagazine = "rhsusf_mag_17Rnd_9x19_JHP";
 		binoculars = "Binocular";
 		map = "ItemMap";
 		compass = "ItemCompass";
@@ -56,7 +58,7 @@ class BWFleck {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
+                LIST_7("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
         };
 
@@ -97,14 +99,15 @@ class BWFleck {
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S";
+            primaryWeaponMagazine = "rhs_200rnd_556x45_T_SAW";
             handgunWeapon = "";
+            handgunWeaponMagazine = "";
             backpack = "ARC_GER_Kitbag_compact_Flecktarn";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhs_200rnd_556x45_T_SAW"
+                "rhsusf_100Rnd_556x45_soft_pouch",
             };
             addItemsToVest[] = {
-                "rhsusf_100Rnd_556x45_soft_pouch",
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell")
             };
@@ -157,11 +160,13 @@ class BWFleck {
         //Heavy Gunner
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "rhs_weap_m240G";
+            primaryWeaponMagazine = "rhsusf_50Rnd_762x51_m62_tracer";
             handgunWeapon = "";
+            handgunWeaponMagazine = "";
             backpack = "ARC_GER_Kitbag_compact_Flecktarn";
             addItemsToBackpack[] = {
                 LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
-                LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
+                LIST_3("rhsusf_50Rnd_762x51_m62_tracer")
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
@@ -172,13 +177,14 @@ class BWFleck {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_hk416d145";
+            primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
             primaryWeaponOptics ="optic_DMS";
             primaryWeaponUnderbarrel ="bipod_01_F_blk";
             binoculars = "ACE_VectorDay";
             addItemsToVest[] = {
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
-                LIST_9("rhs_mag_30Rnd_556x45_Mk262_Stanag"),
+                LIST_8("rhs_mag_30Rnd_556x45_Mk262_Stanag"),
                 LIST_4("rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red")
             };
         };
@@ -186,18 +192,20 @@ class BWFleck {
         //Missile Specialist (AA)
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fim92";
+            secondaryWeaponMagazine = "rhs_fim92_mag";
             backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fim92_mag")
+                "rhs_fim92_mag"
             };
         };
 
         //Missile Specialist (AT)
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fgm148";
+            secondaryWeaponMagazine = "rhs_fgm148_magazine_AT";
             backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fgm148_magazine_AT")
+                "rhs_fgm148_magazine_AT"
             };
         };
 

@@ -27,9 +27,11 @@ class ModerateRebels {
         backpack = "";
         headgear = "";
         primaryWeapon = "rhs_weap_ak74m_2mag";
+        primaryWeaponMagazine = "rhs_30Rnd_545x39_AK";
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponPointer = LLITEM;
         handgunWeapon = "rhs_weap_makarov_pm";
+        handgunWeaponMagazine = "rhs_mag_9x18_8_57N181S";
         binoculars = "Binocular";
         map = "ItemMap";
         compass = "ItemCompass";
@@ -54,7 +56,7 @@ class ModerateRebels {
             addItemsToVest[] = {
                 "rhs_mag_rgd5",
                 "rhs_mag_rdg2_white",
-                LIST_8("rhs_30Rnd_545x39_AK")
+                LIST_7("rhs_30Rnd_545x39_AK")
             };
         };
         //Asst. Autorifleman
@@ -93,11 +95,12 @@ class ModerateRebels {
             backpack = "B_FieldPack_oli";
             headgear = "rhs_beanie_green";
             primaryWeapon = "rhs_weap_pkm";
+            primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_green";
             addItemsToVest[] = {
                 LIST_2("rhs_100Rnd_762x54mmR_green")
             };
             addItemsToBackpack[] = {
-                LIST_3("rhs_100Rnd_762x54mmR_green")
+                LIST_2("rhs_100Rnd_762x54mmR_green")
             };
         };
         //Combat Life Saver
@@ -155,10 +158,11 @@ class ModerateRebels {
             vest = "V_TacChestrig_grn_F";
             goggles = "G_Bandanna_khk";
             primaryWeapon = "rhs_weap_m76";
+            primaryWeaponMagazine = "rhsgref_10Rnd_792x57_m76";
             primaryWeaponOptics = "rhs_acc_1p78";
             addItemsToVest[] = {
                 LIST_2("rhs_mag_rdg2_white"),
-                LIST_12("rhsgref_10Rnd_792x57_m76")
+                LIST_11("rhsgref_10Rnd_792x57_m76")
             };
         };
         //Missile Specialist (AA)
@@ -168,8 +172,9 @@ class ModerateRebels {
             backpack = "rhs_rpg_empty";
             primaryWeapon = "rhs_weap_ak74m_desert";
             secondaryWeapon = "rhs_weap_igla";
+            secondaryWeaponMagazine = "rhs_mag_9k38_rocket";
             addItemsToBackpack[] = {
-                LIST_2("rhs_mag_9k38_rocket")
+                "rhs_mag_9k38_rocket"
             };
         };
         //Missile Specialist (AT)
@@ -179,8 +184,9 @@ class ModerateRebels {
             backpack = "rhs_rpg_empty";
             primaryWeapon = "rhs_weap_ak74m_desert";
             secondaryWeapon = "rhs_weap_rpg7";
+            secondaryWeaponMagazine = "rhs_rpg7_PG7VL_mag";
             addItemsToBackpack[] = {
-                LIST_3("rhs_rpg7_PG7VL_mag"),
+                LIST_2("rhs_rpg7_PG7VL_mag"),
                 "rhs_rpg7_OG7V_mag"
             };
         };
@@ -210,6 +216,7 @@ class ModerateRebels {
             primaryWeapon = "rhs_weap_ak74m";
             primaryWeaponOptics = "rhs_acc_1p63";
         };
+        //Team Leader
         class Soldier_TL_F: Soldier_F {
             uniform = "U_BG_leader";
             vest = "V_TacVest_brn";

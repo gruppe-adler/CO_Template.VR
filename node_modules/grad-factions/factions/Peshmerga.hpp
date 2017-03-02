@@ -27,6 +27,7 @@ class Peshmerga {
         backpack = "SMA_BackPack_Tan";
         headgear = "LOP_H_6B27M_M81";
         primaryWeapon = "rhs_weap_ak74m";
+        primaryWeaponMagazine = "rhs_30Rnd_545x39_7N10_AK";
         primaryWeaponOptics = "rhs_acc_1p29";
         primaryWeaponPointer = LLITEM;
         primaryWeaponMuzzle = SUPPRESSORITEM;
@@ -94,10 +95,11 @@ class Peshmerga {
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_pkp";
+            primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_7N26";
             primaryWeaponOptics = "rhs_acc_1p29";
             backpack = "SMA_BackPack_Tan";
             addItemsToBackpack[] = {
-                LIST_4("rhs_100Rnd_762x54mmR_7N26"),
+                LIST_3("rhs_100Rnd_762x54mmR_7N26"),
                 "rhs_acc_1p29"
             };
         };
@@ -152,29 +154,32 @@ class Peshmerga {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_svdp";
+            primaryWeaponMagazine = "rhs_10Rnd_762x54mmR_7N1";
             primaryWeaponOptics = "rhs_acc_pso1m2";
             binoculars = "ACE_Vector";
             addItemsToVest[] = {
                 LIST_2("SmokeShell"),
-                LIST_8("rhs_10Rnd_762x54mmR_7N1")
+                LIST_7("rhs_10Rnd_762x54mmR_7N1")
             };
         };
 
         //Missile Specialist (AA)
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_igla";
+            secondaryWeaponMagazine = "rhs_mag_9k38_rocket";
             backpack = "SMA_BackPack_Tan";
             addItemsToBackpack[] = {
-                LIST_2("rhs_mag_9k38_rocket")
+                "rhs_mag_9k38_rocket"
             };
         };
 
         //Missile Specialist (AT)
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_rpg7";
+            secondaryWeaponMagazine = "rhs_rpg7_PG7VL_mag";
             backpack = "SMA_BackPack_Tan";
             addItemsToBackpack[] = {
-                LIST_2("rhs_rpg7_PG7VL_mag"),
+                "rhs_rpg7_PG7VL_mag",
                 LIST_2("rhs_rpg7_OG7V_mag")
             };
         };

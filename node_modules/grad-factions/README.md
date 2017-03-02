@@ -105,6 +105,7 @@ Squad Leader                  | Truppführer                              | Trup
 Team Leader                   | Teamleader                               | Gruppenführer und Zugführer
 
 Sowie derzeit nur bei den russischen Faktionen:
+
 Englisch:                     | Deutsch:                                 | Funktion:
 ------------------------------|------------------------------------------|----------------------------------------
 Sniper                        | Sniper                                   | Sniper

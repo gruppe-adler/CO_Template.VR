@@ -27,6 +27,7 @@ class Taliban {
 		    backpack = "B_TacticalPack_blk";
 		    headgear = "LOP_H_Turban";
 		    primaryWeapon = "rhs_weap_m70b1";
+            primaryWeaponMagazine = "rhs_30Rnd_762x39mm";
 		    primaryWeaponOptics = "";
 		    primaryWeaponPointer = LLITEM;
 		    primaryWeaponMuzzle = SUPPRESSORITEM;
@@ -91,13 +92,13 @@ class Taliban {
         class soldier_AR_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_03";
             primaryWeapon = "rhs_weap_pkm";
+            primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_green";
             backpack = "rhs_sidor";
             addItemsToBackpack[] = {
                 LIST_3("rhs_100Rnd_762x54mmR_green")
             };
             addItemsToVest[] = {
-                "rhs_mag_rgd5",
-                "rhs_100Rnd_762x54mmR_green"
+                "rhs_mag_rgd5"
             };
         };
 
@@ -157,10 +158,11 @@ class Taliban {
         class soldier_M_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_01";
             primaryWeapon = "rhs_weap_svdp";
+            primaryWeaponMagazine = "rhs_10Rnd_762x54mmR_7N1";
             primaryWeaponAttachments[] = {"rhs_acc_pso1m21"};
             addItemsToVest[] = {
                 LIST_2("rhs_mag_rgd5"),
-                LIST_11("rhs_10Rnd_762x54mmR_7N1")
+                LIST_10("rhs_10Rnd_762x54mmR_7N1")
             };
         };
 
@@ -168,12 +170,22 @@ class Taliban {
         class soldier_AA_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_02";
             secondaryWeapon = "rhs_weap_igla";
+            secondaryWeaponMagazine = "rhs_mag_9k38_rocket";
+            backpack = "rhs_rpg_empty";
+            addItemsToBackpack[] = {
+                "rhs_mag_9k38_rocket"
+            };
         };
 
         //Missile Specialist (AT)
         class soldier_AT_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_03";
             secondaryWeapon = "rhs_weap_rpg7";
+            secondaryWeaponMagazine = "rhs_rpg7_PG7VR_mag";
+            backpack = "rhs_rpg_empty";
+            addItemsToBackpack[] = {
+                LIST_2("rhs_rpg7_PG7VR_mag")
+            };
         };
 
         //Repair Specialist
