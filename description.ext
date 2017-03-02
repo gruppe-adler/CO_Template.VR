@@ -58,7 +58,6 @@ class CfgFunctions
     #include "functions\radiosettings\cfgFunctions.hpp"
 	#include "functions\waverespawn\cfgFunctions.hpp"
 
-    #include "f3cache\cfgFunctions.hpp"
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
     #include "node_modules\grad-customGear\cfgFunctions.hpp"
 };
