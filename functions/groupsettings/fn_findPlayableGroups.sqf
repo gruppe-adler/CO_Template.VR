@@ -1,20 +1,6 @@
 #include "script_component.hpp"
 #include "\x\cba\addons\main\script_macros_mission.hpp"
-/* ---------------------------------------------------------------------------------------------------------
-Function: GRAD_groupsettings_fnc_findPlayableGroups
 
-Description: Finds all groups with players as leaders.
-
-Parameters: []
-
-Returns:  [blufor groups, opfor groups, independent groups]
-
-Examples:
-          _allgroups = [] call GRAD_groupsettings_fnc_findPlayableGroups;
-
-Author: McDiod
-
-------------------------------------------------------------------------------------------------------------- */
 _blugroups = [];
 _opfgroups = [];
 _indgroups = [];

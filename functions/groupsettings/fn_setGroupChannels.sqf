@@ -1,52 +1,73 @@
 #include "script_component.hpp"
 #include "\x\cba\addons\main\script_macros_mission.hpp"
-/* ---------------------------------------------------------------------------------------------------------
-Function: GRAD_groupsettings_fnc_setGroupChannels
 
-Description: Sets additional channels and custom frequencies.
+params ["_group"];
 
-Parameters: [groupSettings]
+_groupIndex = _group getVariable ["grad_groupIndex",-1];
+if (_groupIndex < 0) exitWith {};
 
-Returns:  []
+_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionsettings" >> "groupsettings");
+if !(count _allGroupConfigs > _groupIndex) exitWith {};
 
-Examples:
-          [_groupSettings] call GRAD_groupsettings_fnc_setGroupChannels;
+_groupConfig = _allGroupConfigs select _groupIndex;
+_tfarSrSettings = switch (playerSide) do {
+    case (WEST): {tf_freq_west};
+    case (EAST): {tf_freq_east};
+    case (INDEPENDENT): {tf_freq_guer};
+    default {tf_freq_west};
+};
+_tfarSrFreqs = _tfarSrSettings select 2;
+_tfarLrSettings = switch (playerSide) do {
+    case (WEST): {tf_freq_west_lr};
+    case (EAST): {tf_freq_east_lr};
+    case (INDEPENDENT): {tf_freq_guer_lr};
+    default {tf_freq_west_lr};
+};
+_tfarLrFreqs = _tfarLrSettings select 2;
 
-Author: McDiod
 
-------------------------------------------------------------------------------------------------------------- */
+//SHORTRANGE SETTINGS
+_srDefaultChannel = ([_groupConfig >> "shortrange","defaultChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_srAltChannel = ([_groupConfig >> "shortrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_srAltOnlyTL = ([_groupConfig >> "shortrange","altChannelOnlyTL",1] call BIS_fnc_returnConfigEntry) == 1;
 
-_waitCondition = {
-    _groupIndex = (group player) getVariable "grad_groupIndex";
-    !isNil "_groupIndex" && !(missionNamespace getVariable ["TF_first_radio_request", true]) && missionNamespace getVariable ["GRAD_radioSettingsActivated", false];
+if (_srDefaultChannel > 7) then {_srDefaultChannel = 0};
+_tfarSrSettings set [0,_srDefaultChannel];
+
+if (_srAltChannel > 7) then {_srAltChannel = 0};
+if (leader group player == player || !_srAltOnlyTL) then {
+    _tfarSrSettings set [5,_srAltChannel];
 };
 
-
-[_waitCondition, {
-    params ["_groupSettings"];
-
-    _index = (group player) getVariable ["grad_groupIndex", 0];
-    if (count _groupSettings > _index) then {
-
-        _mySettings = _groupSettings select _index;
-        _mySettings params ["_groupName", ["_srSettings", 0], ["_lrSettings", 0]];
-
-        if (typeName _srSettings == "ARRAY") then {
-            [_srSettings, "SHORTRANGE"] call GRAD_groupsettings_fnc_setAdditionalGroupChannels;
-        } else {
-            _srChannel = _srSettings - 1;
-            if (_srChannel > 7) then {_srChannel = 0};
-            [(call TFAR_fnc_activeSwRadio), _srChannel] call TFAR_fnc_setSwChannel;
-        };
-
-        if (typeName _lrSettings == "ARRAY") then {
-            [_lrSettings, "LONGRANGE"] call GRAD_groupsettings_fnc_setAdditionalGroupChannels;
-        } else {
-            _lrChannel = _lrSettings - 1;
-            if (_lrChannel > 8) then {_lrChannel = 0};
-            [(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _lrChannel] call TFAR_fnc_setLrChannel;
-        };
-
+{
+    _channelName = [_groupConfig >> "shortrange",_x,""] call BIS_fnc_returnConfigEntry;
+    _channelFreq = ["shortrange",_channelName] call GRAD_groupsettings_fnc_findChannelFrequency;
+    if (_channelFreq != -1) then {
+        _tfarSrFreqs set [_forEachIndex,str _channelFreq];
     };
-    systemChat "Radio channels were set.";
-}, [_groupSettings]] call CBA_fnc_waitUntilAndExecute;
+} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8"];
+
+
+//LONGRANGE SETTINGS
+_lrDefaultChannel = ([_groupConfig >> "longrange","defaultChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_lrAltChannel = ([_groupConfig >> "longrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_lrAltOnlyTL = ([_groupConfig >> "longrange","altChannelOnlyTL",1] call BIS_fnc_returnConfigEntry) == 1;
+
+if (_lrDefaultChannel > 8) then {_lrDefaultChannel = 0};
+_tfarLrSettings set [0,_lrDefaultChannel];
+
+if (_lrAltChannel > 8) then {_lrAltChannel = 0};
+if (leader group player == player || !_lrAltOnlyTL) then {
+    _tfarLrSettings set [5,_lrAltChannel];
+};
+
+{
+    _channelName = [_groupConfig >> "longrange",_x,""] call BIS_fnc_returnConfigEntry;
+    _channelFreq = ["longrange",_channelName] call GRAD_groupsettings_fnc_findChannelFrequency;
+    if (_channelFreq != -1) then {
+        _tfarLrFreqs set [_forEachIndex,str _channelFreq];
+    };
+} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8","channel9"];
+
+
+systemChat "groupsettings: group channels loaded";

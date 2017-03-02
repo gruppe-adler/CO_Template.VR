@@ -6,7 +6,7 @@ class GRAD_radiosettings {
         class extractFrequencies {};
         class getLoadoutRadios {};
         class setDefaultRadios {};
-        class setRadioSettings {postInit = 1;};
+        class setRadioSettings {};
         class setTFARSettings {postInit = 1;};
     };
 };

@@ -1,19 +1,22 @@
 /*  Definiert voreingestellte Funkfrequenzen und die zugehörigen Kanalnamen.
 *   Kanalname ist optional und wird, sofern vorhanden, bei Spielstart am Kartenrand vermerkt.
-*   Die ersten 8 Shortrange Kanäle und die ersten 9 Longrange Kanäle werden standardmäßig voreingestellt. Es können aber mehr Kanäle definiert werden.
+*   Die ersten 8 Shortrange Kanäle und die ersten 9 Longrange Kanäle werden standardmäßig voreingestellt.
+*   Es können aber mehr Kanäle definiert werden, die dann in der groupsettings.hpp einzelnen Gruppen zugewiesen werden können.
 *
 *   Benannte Kanäle können in der groupSettings.hpp einzelnen Gruppen zugewiesen werden.
 *
 *   Beispiel:
-*   class channel1 {
-*       freq = 32.5;
-*       name = "Command Kanal";
-*   };
-*   [...]
-*   class channel10 {
-*       freq = 80.1;
-*       name = "Air Intern";
-*   };
+    class channel1 {
+        freq = 32.5;
+        name = "Command Kanal";
+    };
+
+    //[...]
+    
+    class channel10 {
+        freq = 80.1;
+        name = "Air Intern";
+    };
 */
 
 //SHORTRANGE KANÄLE ============================================================
@@ -28,7 +31,6 @@ class shortrange {
 
     class channel3 {
         freq = 70;
-        name = "Test Kanal";
     };
 
     class channel4 {
@@ -65,7 +67,6 @@ class longrange {
 
     class channel3 {
         freq = 34;
-        name = "Test Kanal Longrange";
     };
 
     class channel4 {

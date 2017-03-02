@@ -38,12 +38,12 @@ class missionsettings {
 		#include "USERSCRIPTS\restrictedArsenal.hpp"
 	};
 
-	class groupSettings {
-		#include "USERSCRIPTS\groupSettings.hpp"
+	class groupsettings {
+		#include "USERSCRIPTS\groupsettings.hpp"
 	};
 
 	class radiosettings {
-		#include "USERSCRIPTS\radioSettings.hpp"
+		#include "USERSCRIPTS\radiosettings.hpp"
 	};
 };
 

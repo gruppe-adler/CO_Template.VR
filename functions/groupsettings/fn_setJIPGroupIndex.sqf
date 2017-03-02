@@ -1,27 +1,13 @@
 #include "script_component.hpp"
 #include "\x\cba\addons\main\script_macros_mission.hpp"
-/* ---------------------------------------------------------------------------------------------------------
-Function: GRAD_groupsettings_fnc_setJIPGroupIndex
 
-Description: Saves group index in JIP unit's group.
-
-Parameters: [unit]
-
-Returns:  []
-
-Examples:
-          [player] call GRAD_groupsettings_fnc_setJIPGroupIndex;
-
-Author: McDiod
-
-------------------------------------------------------------------------------------------------------------- */
 private ["_index"];
 params ["_unit"];
 
 _group = group _unit;
 
 //unit already has index --> rebroadcast
-if (_group getVariable ["grad_groupIndex", -1] > 0) exitWith {_group setVariable ["grad_groupIndex", _group getVariable "grad_groupIndex", true]};
+if (_group getVariable ["grad_groupIndex", -1] > 0) exitWith {_group setVariable ["grad_groupIndex", _group getVariable "grad_groupIndex", false]};
 
 //find group index
 _allgroups = [] call GRAD_groupsettings_fnc_findPlayableGroups;
@@ -37,4 +23,4 @@ _allgroups = [] call GRAD_groupsettings_fnc_findPlayableGroups;
 
 if (isNil "_index") then {_index = 9999};
 
-_group setVariable ["grad_groupIndex", _index, true];
+_group setVariable ["grad_groupIndex", _index, false];
