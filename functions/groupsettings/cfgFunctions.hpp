@@ -6,6 +6,7 @@ class GRAD_groupsettings {
         class setDynamicGroupNames {};
         class setGroupChannels {};
         class setGroupIndices {};
+        class setGroupSettings {postInit = 1;};
         class setJIPGroupIndex {};
     };
 };

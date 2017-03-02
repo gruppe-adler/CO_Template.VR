@@ -4,10 +4,11 @@
 *   0:  Object
 */
 
-params ["_box"];
+params [["_box",objNull]];
+
+if (isNull _box) exitWith {};
 
 _create = ["AmmoboxInit", [_box, false, {true}]] spawn BIS_fnc_arsenal;
-waitUntil {scriptDone _create};
 
 [{scriptDone (_this select 0)}, {
     _box = _this select 1;

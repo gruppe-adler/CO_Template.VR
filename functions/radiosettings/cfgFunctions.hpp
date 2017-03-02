@@ -5,8 +5,8 @@ class GRAD_radiosettings {
         class extractChannelNames {};
         class extractFrequencies {};
         class getLoadoutRadios {};
-        class getUserSettings {};
         class setDefaultRadios {};
+        class setRadioSettings {postInit = 1;};
         class setTFARSettings {postInit = 1;};
     };
 };

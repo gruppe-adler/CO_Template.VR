@@ -16,7 +16,6 @@ Author: McDiod
 
 ------------------------------------------------------------------------------------------------------------- */
 
-if (hasInterface && !(["USERSCRIPTS\groupSettings.sqf"] call KK_fnc_fileExists)) exitWith {[]};
 _userSettings = call compile preprocessFileLineNumbers "USERSCRIPTS\groupSettings.sqf";
 if (isNil "_userSettings") exitWith {[]};
 

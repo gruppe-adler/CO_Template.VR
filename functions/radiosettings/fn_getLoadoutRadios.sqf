@@ -1,25 +1,7 @@
 #include "script_component.hpp"
 #include "\x\cba\addons\main\script_macros_mission.hpp"
-/* ---------------------------------------------------------------------------------------------------------
-Function: GRAD_radiosettings_fnc_getLoadoutRadios
-
-Description: Gets radios from grad-loadout
-
-Parameters: [Unit]
-
-            UNIT  -      Unit whose loadout to get
-
-Returns:  [shortrange radio classname, longrange radio classname]
-
-Examples:
-          _radios = [player] call GRAD_radiosettings_fnc_getLoadoutRadios;
-
-Author: McDiod
-
-------------------------------------------------------------------------------------------------------------- */
 
 if (!isClass (missionConfigFile >> "CfgFunctions" >> "GRAD_loadout")) exitWith {WARNING("No grad-loadout - can't extract radios.")};
-
 
 params ["_unit"];
 

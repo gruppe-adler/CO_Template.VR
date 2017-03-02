@@ -3,8 +3,6 @@
 class Header
 {
 	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 60;
 };
 
 #include "USERSCRIPTS\mission.hpp"
@@ -38,12 +36,21 @@ class missionsettings {
 
 	class restrictedArsenal {
 		#include "USERSCRIPTS\restrictedArsenal.hpp"
-	};	
+	};
+
+	class groupSettings {
+		#include "USERSCRIPTS\groupSettings.hpp"
+	};
+
+	class radiosettings {
+		#include "USERSCRIPTS\radioSettings.hpp"
+	};
 };
 
 //FUNCTIONS ====================================================================
 class CfgFunctions
 {
+	#include "functions\common\cfgFunctions.hpp"
 	#include "functions\diagnostics\cfgFunctions.hpp"
     #include "functions\external\cfgFunctions.hpp"
     #include "functions\groupsettings\cfgFunctions.hpp"

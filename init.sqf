@@ -17,8 +17,6 @@ if (_useCaching) then {
 
 // SCRIPTS =====================================================================
 [] execVM "USERSCRIPTS\userInit.sqf";
-[] execVM "helpers\setRadioSettings.sqf";
-[] execVM "helpers\setGroupSettings.sqf";
 
 if (_civTraffic) then {
     [] execVM "Engima\Traffic\Init.sqf";

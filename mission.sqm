@@ -14917,7 +14917,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this] execVM ""helpers\limitedArsenal.sqf""";
+				init="0 = [this] call grad_common_fnc_restrictedArsenal";
 			};
 			id=677;
 			type="B_supplyCrate_F";

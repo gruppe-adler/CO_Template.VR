@@ -1,21 +1,3 @@
-#include "script_component.hpp"
-#include "\x\cba\addons\main\script_macros_mission.hpp"
-/* ---------------------------------------------------------------------------------------------------------
-Function: GRAD_radiosettings_fnc_createChannelMarkers
-
-Description: Creates markers on map for each channel that has a name.
-
-Parameters: [channel names]
-
-Returns:  []
-
-Examples:
-          [channel names] call GRAD_radiosettings_fnc_getUserSettings;
-
-Author: McDiod
-
-------------------------------------------------------------------------------------------------------------- */
-
 params ["_channelNames"];
 if (count _channelNames == 0) exitWith {};
 

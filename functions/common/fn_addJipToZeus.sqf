@@ -1,6 +1,6 @@
 if (!isServer) exitWith {};
 
-_unit = _this select 0;
+params ["_unit"];
 {
     _x addCuratorEditableObjects [[_unit], true];
 } forEach allCurators;
