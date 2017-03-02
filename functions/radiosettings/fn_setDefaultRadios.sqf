@@ -1,22 +1,6 @@
 #include "script_component.hpp"
 #include "\x\cba\addons\main\script_macros_mission.hpp"
-/* --------------------------------------------------------------------------------------------------------------
-Function: GRAD_radiosettings_fnc_setDefaultRadios
 
-Description: Sets default radios because apparently TFAR does not understand what the words "disable", "automatic" and "distribution" mean
-
-              CLIENT
-
-Parameters: []
-
-Returns: []
-
-Examples:
-            [] call GRAD_radiosettings_fnc_setDefaultRadios;
-
-Author: McDiod
-
------------------------------------------------------------------------------------------------------------------ */
 
 if (typeOf player == "VirtualCurator_F") exitWith {};
 if (typeOf player == "B_VirtualCurator_F") exitWith {};
@@ -24,19 +8,19 @@ if (typeOf player == "C_VirtualCurator_F") exitWith {};
 if (typeOf player == "I_VirtualCurator_F") exitWith {};
 if (typeOf player == "O_VirtualCurator_F") exitWith {};
 
-_radios = [player] call FNC_SMC(radiosettings,getLoadoutRadios);
+_radios = [player] call GRAD_radiosettings_fnc_getLoadoutRadios;
 _radios params ["_shortrange", "_longrange"];
 
-TF_defaultWestBackpack = _longrange;
-TF_defaultEastBackpack = _longrange;
-TF_defaultGuerBackpack = _longrange;
-TF_defaultWestAirborneRadio = _longrange;
-TF_defaultEastAirborneRadio = _longrange;
-TF_defaultGuerAirborneRadio = _longrange;
+TFAR_DefaultRadio_Backpack_West         = _longrange;
+TFAR_DefaultRadio_Backpack_East         = _longrange;
+TFAR_DefaultRadio_Backpack_Independent  = _longrange;
+TFAR_DefaultRadio_Airborne_West         = _longrange;
+TFAR_DefaultRadio_Airborne_East         = _longrange;
+TFAR_DefaultRadio_Airborne_Independent  = _longrange;
 
-TF_defaultWestPersonalRadio = _shortrange;
-TF_defaultEastPersonalRadio = _shortrange;
-TF_defaultGuerPersonalRadio = _shortrange;
-TF_defaultWestRiflemanRadio = _shortrange;
-TF_defaultEastRiflemanRadio = _shortrange;
-TF_defaultGuerRiflemanRadio = _shortrange;
+TFAR_DefaultRadio_Personal_West         = _shortrange;
+TFAR_DefaultRadio_Personal_East         = _shortrange;
+TFAR_DefaultRadio_Personal_Independent  = _shortrange;
+TFAR_DefaultRadio_Rifleman_West         = _shortrange;
+TFAR_DefaultRadio_Rifleman_East         = _shortrange;
+TFAR_DefaultRadio_Rifleman_Independent  = _shortrange;
