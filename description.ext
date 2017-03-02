@@ -1,7 +1,4 @@
 #define MODULES_DIRECTORY node_modules
-#define DEBUG_MODE_FULL
-
-#include "USERSCRIPTS\missionsettings.sqf"
 
 class Header
 {
@@ -10,6 +7,12 @@ class Header
 	maxPlayers = 60;
 };
 
+#include "USERSCRIPTS\missionsettings.sqf"
+#include "USERSCRIPTS\loadouts.sqf"
+#include "node_modules\grad-customGear\saveDialog\dialog.hpp"
+
+
+//MISSION SETTINGS =============================================================
 respawn = 3;
 respawnVehicleDelay = 0;
 respawnTemplates[] = {"Base"};
@@ -18,15 +21,47 @@ respawnDialog = 0;
 disabledAI = 0;
 enableDebugConsole = 1;
 
-corpseManagerMode = 1; 					// Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
-corpseLimit = 30	; 						// Max number of bodies which can be available at the same time. When exceeded, start deleting immediately.
-corpseRemovalMinTime = 300; 		// Minimal time in seconds a body stays in the scene (can't be removed sooner).
-corpseRemovalMaxTime = 500; 		// Maximal time in seconds after which a dead body is removed (can't stay longer)
+corpseManagerMode = 1;
+corpseLimit = 30	;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 500;
 
-wreckManagerMode = 1; 					// Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
-wreckLimit = 20; 								// Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately.
-wreckRemovalMinTime = 500; 			// Minimal time in seconds a wreck stays in the scene (can't be removed sooner).
-wreckRemovalMaxTime = 1200;			// Maximal time in seconds after which a wreck is removed (can't stay longer)
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 500;
+wreckRemovalMaxTime = 1200;
+
+class missionsettings {
+	#include "USERSCRIPTS\missionsettings.hpp"
+};
+
+//FUNCTIONS ====================================================================
+class CfgFunctions
+{
+    #include "functions\external\cfgFunctions.hpp"
+    #include "functions\groupsettings\cfgFunctions.hpp"
+    #include "functions\radiosettings\cfgFunctions.hpp"
+
+    #include "f3cache\cfgFunctions.hpp"
+    #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\grad-customGear\cfgFunctions.hpp"
+};
 
 
-#include "config_all.hpp"
+//GRAD CUSTOM GEAR =============================================================
+class grad_customGear {
+    #include "USERSCRIPTS\customGear.hpp"
+};
+
+
+//GRAD LOADOUT =================================================================
+class Loadouts {
+    baseDelay = 1;
+    handleRadios = 1;
+    resetLoadout = 0;
+
+    class Faction {
+        #include "node_modules\grad-factions\loadouts.hpp"
+        #include "USERSCRIPTS\userLoadouts.hpp"
+    };
+};

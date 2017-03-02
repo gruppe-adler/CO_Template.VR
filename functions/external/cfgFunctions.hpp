@@ -1,9 +1,7 @@
-class KK
-{
-  class external
-  {
-    class fileExists {
-      description = "Checks if a file exists.";
+class KK {
+    class external {
+        class fileExists {
+            description = "Checks if a file exists.";
+        };
     };
-  };
 };

@@ -1,26 +1,10 @@
 #include "USERSCRIPTS\missionsettings.sqf"
-#include "USERSCRIPTS\loadouts.sqf"
 
 enableSentences false;
 enableRadio false;
 enableSaving [false, false];
 setTimeMultiplier _timeMultiplication;
 
-// LOADOUT FACTIONS ============================================================
-if (!isNil "_loadoutFactionBlu") then {
-    if (_loadoutFactionBlu != "") then {
-        ["BLU_F", _loadoutFactionBlu] call GRAD_Loadout_fnc_FactionSetLoadout;
-    };
-    if (_loadoutFactionOpf != "") then {
-        ["OPF_F", _loadoutFactionOpf] call GRAD_Loadout_fnc_FactionSetLoadout;
-    };
-    if (_loadoutFactionInd != "") then {
-        ["IND_F", _loadoutFactionInd] call GRAD_Loadout_fnc_FactionSetLoadout;
-    };
-} else {
-    ["BLU_F", _loadoutFaction] call GRAD_Loadout_fnc_FactionSetLoadout;
-};
-GRAD_loadoutFactionSet = true;
 
 // CACHING =====================================================================
 if (_useCaching) then {
