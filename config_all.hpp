@@ -41,11 +41,11 @@ class CfgFunctions
 };
 
 //Extendend EventHandlers
-class Extended_InitPost_EventHandlers  {
+/*class Extended_InitPost_EventHandlers  {
     class CAManBase {
          init = "params ['_u']; if !(isPlayer _u) then {[_u] call GRAD_Loadout_fnc_doLoadoutForUnit;};";
     };
-};
+};*/
 
 //grad-customGear
 class grad_customGear {
