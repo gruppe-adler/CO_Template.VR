@@ -15,3 +15,5 @@ if (didJIP) then {
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
 /*[0,true] call FNC_SMC(client,setClientAction);*/
+
+["hideHud", [false, false, true, true, true, false, false, false]] call ace_common_fnc_showHud; // fix for action menu crosshair info
