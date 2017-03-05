@@ -20,7 +20,6 @@ respawnDialog = 0;
 disabledAI = 0;
 enableDebugConsole = 1;
 allowFunctionsRecompile = 1;
-showHUD[] = {false,true,true,true,true,true,true,true}; // attention: you cant use showHUD script command anymore if you set it here! fixes bug displaying cursortarget info in certain vehicle positions (uaz dshkm)
 
 corpseManagerMode = 1;
 corpseLimit = 30;
