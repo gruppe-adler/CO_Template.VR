@@ -18,8 +18,6 @@ respawnDialog = 0;
 disabledAI = 0;
 enableDebugConsole = 1;
 
-showHUD[] = {false,true,true,true,true,true,true,true}; // attention: you cant use showHUD script command anymore if you set it here! fixes bug displaying cursortarget info in certain vehicle positions (uaz dshkm)
-
 corpseManagerMode = 1; 					// Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
 corpseLimit = 30	; 						// Max number of bodies which can be available at the same time. When exceeded, start deleting immediately.
 corpseRemovalMinTime = 300; 		// Minimal time in seconds a body stays in the scene (can't be removed sooner).
