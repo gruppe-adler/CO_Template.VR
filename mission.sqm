@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=722;
+		nextID=728;
 	};
 	class MarkerIDProvider
 	{
@@ -47,8 +47,6 @@ addons[]=
 	"A3_Data_F_Exp_A_Virtual",
 	"acex_sitting",
 	"acex_headless",
-	"ace_medical",
-	"ace_medical_menu",
 	"asr_ai3_cfgcamouflage",
 	"asr_ai3_cfgvehicles",
 	"Desert",
@@ -58,13 +56,16 @@ addons[]=
 	"ace_realisticnames",
 	"ace_advanced_fatigue",
 	"ace_advanced_throwing",
-	"ace_weather"
+	"ace_weather",
+	"ace_medical",
+	"ace_respawn",
+	"ace_medical_menu"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			className="ace_advanced_ballistics";
@@ -221,62 +222,69 @@ class AddonsMetaData
 		};
 		class Item22
 		{
-			className="ace_medical";
-			name="ACE3 - Medical";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item23
-		{
-			className="ace_medical_menu";
-			name="ACE3 - Medical Menu";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item24
-		{
 			className="Desert";
 			name="Desert";
 		};
-		class Item25
+		class Item23
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item24
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item25
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item26
 		{
 			className="ace_advanced_fatigue";
 			name="ACE3 - Advanced Fatigue";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item29
+		class Item27
 		{
 			className="ace_advanced_throwing";
 			name="ACE3 - Advanced Throwing";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item30
+		class Item28
 		{
 			className="ace_weather";
 			name="ACE3 - Weather";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item29
+		{
+			className="ace_medical";
+			name="ACE3 - Medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item30
+		{
+			className="ace_respawn";
+			name="ACE3 - Respawn";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item31
+		{
+			className="ace_medical_menu";
+			name="ACE3 - Medical Menu";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -1015,7 +1023,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=160;
+		items=162;
 		class Item0
 		{
 			dataType="Logic";
@@ -3570,442 +3578,6 @@ class Mission
 		};
 		class Item36
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={898.87268,5,996.2876};
-			};
-			id=52;
-			type="ACE_moduleBasicMedicalSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleBasicMedicalSettings_medicSetting_basicEpi";
-					expression="_this setVariable ['medicSetting_basicEpi',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_moduleBasicMedicalSettings_useLocation_basicEpi";
-					expression="_this setVariable ['useLocation_basicEpi',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item37
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={897.48828,5,890.91016};
-			};
-			id=53;
-			type="ACE_moduleMedicalMenuSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleMedicalMenuSettings_allow";
-					expression="_this setVariable ['allow',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item38
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={897.48792,5,794.4342};
-			};
-			id=54;
-			type="ACE_moduleMedicalSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleMedicalSettings_litterCleanUpDelay";
-					expression="_this setVariable ['litterCleanUpDelay',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=300;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_moduleMedicalSettings_enableScreams";
-					expression="_this setVariable ['enableScreams',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_moduleMedicalSettings_preventInstaDeath";
-					expression="_this setVariable ['preventInstaDeath',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ACE_moduleMedicalSettings_bleedingCoefficient";
-					expression="_this setVariable ['bleedingCoefficient',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="ACE_moduleMedicalSettings_increaseTrainingInLocations";
-					expression="_this setVariable ['increaseTrainingInLocations',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ACE_moduleMedicalSettings_enableUnconsciousnessAI";
-					expression="_this setVariable ['enableUnconsciousnessAI',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="ACE_moduleMedicalSettings_remoteControlledAI";
-					expression="_this setVariable ['remoteControlledAI',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute7
-				{
-					property="ACE_moduleMedicalSettings_painCoefficient";
-					expression="_this setVariable ['painCoefficient',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute8
-				{
-					property="ACE_moduleMedicalSettings_AIDamageThreshold";
-					expression="_this setVariable ['AIDamageThreshold',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.69999999;
-						};
-					};
-				};
-				class Attribute9
-				{
-					property="ACE_moduleMedicalSettings_playerDamageThreshold";
-					expression="_this setVariable ['playerDamageThreshold',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute10
-				{
-					property="ACE_moduleMedicalSettings_level";
-					expression="_this setVariable ['level',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute11
-				{
-					property="ACE_moduleMedicalSettings_allowLitterCreation";
-					expression="_this setVariable ['allowLitterCreation',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute12
-				{
-					property="ACE_moduleMedicalSettings_keepLocalSettingsSynced";
-					expression="_this setVariable ['keepLocalSettingsSynced',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute13
-				{
-					property="ACE_moduleMedicalSettings_medicSetting";
-					expression="_this setVariable ['medicSetting',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=14;
-			};
-		};
-		class Item39
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={896.52399,5,693.13397};
-			};
-			id=55;
-			type="ACE_moduleReviveSettings";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleReviveSettings_amountOfReviveLives";
-					expression="_this setVariable ['amountOfReviveLives',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=-1;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ACE_moduleReviveSettings_enableRevive";
-					expression="_this setVariable ['enableRevive',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ACE_moduleReviveSettings_maxReviveTime";
-					expression="_this setVariable ['maxReviveTime',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3600;
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item40
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -4253,7 +3825,7 @@ class Mission
 			};
 			id=119;
 		};
-		class Item41
+		class Item37
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4264,7 +3836,7 @@ class Mission
 			description="Auch ohne Respawn wichtig! JIP-Spieler, die vorher belegte Slots wählen, spawnen am jeweiligen Respawnpunkt.";
 			id=169;
 		};
-		class Item42
+		class Item38
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4275,7 +3847,7 @@ class Mission
 			description="Die Virtual Arsenal (VA) Kiste erlaubt es den Spielern, das virtuelle Arsenal zu öffnen und ihre Ausrüstung frei zu ändern. Welches Objekt hier verwendet wird ist egal. Wenn wir die Kiste doppelklicken finden wir im Feld *Init* eine Zeile Code: " \n " " \n "`0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;` " \n " " \n "Diesen Code können wir in das Init-Feld jedes beliebigen Objektes kopieren und machen es damit zu einem VA Zugangspunkt.";
 			id=170;
 		};
-		class Item43
+		class Item39
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4286,7 +3858,7 @@ class Mission
 			description="Die virtuellen Specator und Zeuseinheiten dürfen nicht im Wasser liegen, sonst geben sie das ganze Spiel über Wassergeräusche von sich.";
 			id=171;
 		};
-		class Item44
+		class Item40
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -4357,7 +3929,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item45
+		class Item41
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4367,7 +3939,7 @@ class Mission
 			title="Führungselement";
 			id=181;
 		};
-		class Item46
+		class Item42
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4378,7 +3950,7 @@ class Mission
 			id=183;
 			atlOffset=0.17770672;
 		};
-		class Item47
+		class Item43
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -4388,7 +3960,7 @@ class Mission
 			title="Schützengruppe";
 			id=184;
 		};
-		class Item48
+		class Item44
 		{
 			dataType="Group";
 			side="West";
@@ -4640,7 +4212,7 @@ class Mission
 			id=263;
 			atlOffset=0.016270638;
 		};
-		class Item49
+		class Item45
 		{
 			dataType="Group";
 			side="West";
@@ -4968,7 +4540,7 @@ class Mission
 			};
 			id=266;
 		};
-		class Item50
+		class Item46
 		{
 			dataType="Group";
 			side="West";
@@ -5302,7 +4874,7 @@ class Mission
 			id=271;
 			atlOffset=0.076144218;
 		};
-		class Item51
+		class Item47
 		{
 			dataType="Group";
 			side="West";
@@ -5551,7 +5123,7 @@ class Mission
 			};
 			id=276;
 		};
-		class Item52
+		class Item48
 		{
 			dataType="Group";
 			side="West";
@@ -5879,7 +5451,7 @@ class Mission
 			};
 			id=279;
 		};
-		class Item53
+		class Item49
 		{
 			dataType="Group";
 			side="West";
@@ -6208,7 +5780,7 @@ class Mission
 			};
 			id=284;
 		};
-		class Item54
+		class Item50
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -6218,7 +5790,7 @@ class Mission
 			title="Panzerabwehrtrupp";
 			id=289;
 		};
-		class Item55
+		class Item51
 		{
 			dataType="Group";
 			side="West";
@@ -6466,7 +6038,7 @@ class Mission
 			};
 			id=290;
 		};
-		class Item56
+		class Item52
 		{
 			dataType="Group";
 			side="West";
@@ -6714,7 +6286,7 @@ class Mission
 			};
 			id=294;
 		};
-		class Item57
+		class Item53
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -6724,7 +6296,7 @@ class Mission
 			title="Luftabwehrtrupp";
 			id=298;
 		};
-		class Item58
+		class Item54
 		{
 			dataType="Group";
 			side="West";
@@ -6972,7 +6544,7 @@ class Mission
 			};
 			id=299;
 		};
-		class Item59
+		class Item55
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -6982,7 +6554,7 @@ class Mission
 			title="Demotrupp";
 			id=303;
 		};
-		class Item60
+		class Item56
 		{
 			dataType="Group";
 			side="West";
@@ -7152,7 +6724,7 @@ class Mission
 			};
 			id=304;
 		};
-		class Item61
+		class Item57
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7162,7 +6734,7 @@ class Mission
 			title="MG-Trupp";
 			id=307;
 		};
-		class Item62
+		class Item58
 		{
 			dataType="Group";
 			side="West";
@@ -7332,7 +6904,7 @@ class Mission
 			};
 			id=308;
 		};
-		class Item63
+		class Item59
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7342,7 +6914,7 @@ class Mission
 			title="MG-Trupp (leicht)";
 			id=311;
 		};
-		class Item64
+		class Item60
 		{
 			dataType="Group";
 			side="East";
@@ -7591,7 +7163,7 @@ class Mission
 			};
 			id=482;
 		};
-		class Item65
+		class Item61
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7601,7 +7173,7 @@ class Mission
 			title="Führungselement";
 			id=486;
 		};
-		class Item66
+		class Item62
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7612,7 +7184,7 @@ class Mission
 			id=487;
 			atlOffset=0.17770672;
 		};
-		class Item67
+		class Item63
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7622,7 +7194,7 @@ class Mission
 			title="Schützengruppe";
 			id=488;
 		};
-		class Item68
+		class Item64
 		{
 			dataType="Group";
 			side="East";
@@ -7874,7 +7446,7 @@ class Mission
 			id=489;
 			atlOffset=0.016270638;
 		};
-		class Item69
+		class Item65
 		{
 			dataType="Group";
 			side="East";
@@ -8202,7 +7774,7 @@ class Mission
 			};
 			id=492;
 		};
-		class Item70
+		class Item66
 		{
 			dataType="Group";
 			side="East";
@@ -8536,7 +8108,7 @@ class Mission
 			id=497;
 			atlOffset=0.076144218;
 		};
-		class Item71
+		class Item67
 		{
 			dataType="Group";
 			side="East";
@@ -8785,7 +8357,7 @@ class Mission
 			};
 			id=502;
 		};
-		class Item72
+		class Item68
 		{
 			dataType="Group";
 			side="East";
@@ -9113,7 +8685,7 @@ class Mission
 			};
 			id=505;
 		};
-		class Item73
+		class Item69
 		{
 			dataType="Group";
 			side="East";
@@ -9442,7 +9014,7 @@ class Mission
 			};
 			id=510;
 		};
-		class Item74
+		class Item70
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9452,7 +9024,7 @@ class Mission
 			title="Panzerabwehrtrupp";
 			id=515;
 		};
-		class Item75
+		class Item71
 		{
 			dataType="Group";
 			side="East";
@@ -9700,7 +9272,7 @@ class Mission
 			};
 			id=516;
 		};
-		class Item76
+		class Item72
 		{
 			dataType="Group";
 			side="East";
@@ -9948,7 +9520,7 @@ class Mission
 			};
 			id=520;
 		};
-		class Item77
+		class Item73
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9958,7 +9530,7 @@ class Mission
 			title="Luftabwehrtrupp";
 			id=524;
 		};
-		class Item78
+		class Item74
 		{
 			dataType="Group";
 			side="East";
@@ -10206,7 +9778,7 @@ class Mission
 			};
 			id=525;
 		};
-		class Item79
+		class Item75
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10216,7 +9788,7 @@ class Mission
 			title="Demotrupp";
 			id=529;
 		};
-		class Item80
+		class Item76
 		{
 			dataType="Group";
 			side="East";
@@ -10386,7 +9958,7 @@ class Mission
 			};
 			id=530;
 		};
-		class Item81
+		class Item77
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10396,7 +9968,7 @@ class Mission
 			title="MG-Trupp";
 			id=533;
 		};
-		class Item82
+		class Item78
 		{
 			dataType="Group";
 			side="East";
@@ -10566,7 +10138,7 @@ class Mission
 			};
 			id=534;
 		};
-		class Item83
+		class Item79
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10576,7 +10148,7 @@ class Mission
 			title="MG-Trupp (leicht)";
 			id=537;
 		};
-		class Item84
+		class Item80
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10586,7 +10158,7 @@ class Mission
 			title="BLUFOR";
 			id=595;
 		};
-		class Item85
+		class Item81
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10596,7 +10168,7 @@ class Mission
 			title="OPFOR";
 			id=596;
 		};
-		class Item86
+		class Item82
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10606,7 +10178,7 @@ class Mission
 			title="INDEPENDENT";
 			id=597;
 		};
-		class Item87
+		class Item83
 		{
 			dataType="Group";
 			side="Independent";
@@ -10855,7 +10427,7 @@ class Mission
 			};
 			id=539;
 		};
-		class Item88
+		class Item84
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10865,7 +10437,7 @@ class Mission
 			title="Führungselement";
 			id=543;
 		};
-		class Item89
+		class Item85
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10876,7 +10448,7 @@ class Mission
 			id=544;
 			atlOffset=0.17752361;
 		};
-		class Item90
+		class Item86
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -10886,7 +10458,7 @@ class Mission
 			title="Schützengruppe";
 			id=545;
 		};
-		class Item91
+		class Item87
 		{
 			dataType="Group";
 			side="Independent";
@@ -11138,7 +10710,7 @@ class Mission
 			id=546;
 			atlOffset=0.016087532;
 		};
-		class Item92
+		class Item88
 		{
 			dataType="Group";
 			side="Independent";
@@ -11466,7 +11038,7 @@ class Mission
 			};
 			id=549;
 		};
-		class Item93
+		class Item89
 		{
 			dataType="Group";
 			side="Independent";
@@ -11800,7 +11372,7 @@ class Mission
 			id=554;
 			atlOffset=0.075961113;
 		};
-		class Item94
+		class Item90
 		{
 			dataType="Group";
 			side="Independent";
@@ -12049,7 +11621,7 @@ class Mission
 			};
 			id=559;
 		};
-		class Item95
+		class Item91
 		{
 			dataType="Group";
 			side="Independent";
@@ -12377,7 +11949,7 @@ class Mission
 			};
 			id=562;
 		};
-		class Item96
+		class Item92
 		{
 			dataType="Group";
 			side="Independent";
@@ -12706,7 +12278,7 @@ class Mission
 			};
 			id=567;
 		};
-		class Item97
+		class Item93
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -12716,7 +12288,7 @@ class Mission
 			title="Panzerabwehrtrupp";
 			id=572;
 		};
-		class Item98
+		class Item94
 		{
 			dataType="Group";
 			side="Independent";
@@ -12964,7 +12536,7 @@ class Mission
 			};
 			id=573;
 		};
-		class Item99
+		class Item95
 		{
 			dataType="Group";
 			side="Independent";
@@ -13212,7 +12784,7 @@ class Mission
 			};
 			id=577;
 		};
-		class Item100
+		class Item96
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -13222,7 +12794,7 @@ class Mission
 			title="Luftabwehrtrupp";
 			id=581;
 		};
-		class Item101
+		class Item97
 		{
 			dataType="Group";
 			side="Independent";
@@ -13470,7 +13042,7 @@ class Mission
 			};
 			id=582;
 		};
-		class Item102
+		class Item98
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -13480,7 +13052,7 @@ class Mission
 			title="Demotrupp";
 			id=586;
 		};
-		class Item103
+		class Item99
 		{
 			dataType="Group";
 			side="Independent";
@@ -13650,7 +13222,7 @@ class Mission
 			};
 			id=590;
 		};
-		class Item104
+		class Item100
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -13660,7 +13232,7 @@ class Mission
 			title="MG-Trupp (leicht)";
 			id=593;
 		};
-		class Item105
+		class Item101
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -13670,7 +13242,7 @@ class Mission
 			title="MG-Trupp (nicht verfügbar)";
 			id=594;
 		};
-		class Item106
+		class Item102
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -13912,7 +13484,7 @@ class Mission
 				nAttributes=12;
 			};
 		};
-		class Item107
+		class Item103
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -13983,7 +13555,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item108
+		class Item104
 		{
 			dataType="Trigger";
 			position[]={6930.8687,5,1618.0001};
@@ -13993,7 +13565,7 @@ class Mission
 			id=603;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item109
+		class Item105
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14003,7 +13575,7 @@ class Mission
 			title="Task 1...";
 			id=604;
 		};
-		class Item110
+		class Item106
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14013,7 +13585,7 @@ class Mission
 			title="...ist erfüllt, wenn...";
 			id=605;
 		};
-		class Item111
+		class Item107
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14023,7 +13595,7 @@ class Mission
 			title="...Trigger 1 ausgelöst wird. Dieser erstellt wiederum...";
 			id=606;
 		};
-		class Item112
+		class Item108
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -14265,7 +13837,7 @@ class Mission
 				nAttributes=12;
 			};
 		};
-		class Item113
+		class Item109
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14275,7 +13847,7 @@ class Mission
 			title="...den Task 2...";
 			id=608;
 		};
-		class Item114
+		class Item110
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -14346,7 +13918,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item115
+		class Item111
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14356,7 +13928,7 @@ class Mission
 			title="... welcher erfüllt wird, wenn...";
 			id=610;
 		};
-		class Item116
+		class Item112
 		{
 			dataType="Trigger";
 			position[]={7732.4688,5,1415.8102};
@@ -14366,7 +13938,7 @@ class Mission
 			id=611;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item117
+		class Item113
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14376,7 +13948,7 @@ class Mission
 			title="...Trigger 2 ausgelöst wird.";
 			id=612;
 		};
-		class Item118
+		class Item114
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14386,7 +13958,7 @@ class Mission
 			title="Taskketten";
 			id=613;
 		};
-		class Item119
+		class Item115
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14396,7 +13968,7 @@ class Mission
 			title="Weitere Objekte";
 			id=614;
 		};
-		class Item120
+		class Item116
 		{
 			dataType="Trigger";
 			position[]={6821.1597,5,855.17004};
@@ -14407,7 +13979,7 @@ class Mission
 			id=616;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item121
+		class Item117
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14417,7 +13989,7 @@ class Mission
 			title="verschiedene Trigger";
 			id=617;
 		};
-		class Item122
+		class Item118
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14428,7 +14000,7 @@ class Mission
 			description="Der ""Seized By"" Trigger löst aus, sobald BLUFOR das eingeschlossene Gebiet effektiv kontrolliert. Es können also noch Gegner am Leben sein, BLUFOR hat aber die Übermacht. Die Übermacht wird vom Spiel nicht nur nach Anzahl der präsenten Kräfte ausgewertet, sondern auch nach Stärke. BLUFOR kann zum Beispiel das Gebiet mit einem Kampfpanzer kontrollieren, wenn noch fünf gegnerische Soldaten im Gebiet sind.";
 			id=618;
 		};
-		class Item123
+		class Item119
 		{
 			dataType="Trigger";
 			position[]={6836.9556,5,393.09229};
@@ -14440,7 +14012,7 @@ class Mission
 			id=619;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item124
+		class Item120
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14451,7 +14023,7 @@ class Mission
 			description="Der ""not present"" Trigger löst aus, wenn keine OPFOR Einheit mehr im Gebiet am Leben ist. Die Spieler müssen also den gesamten Triggerbereich säubern. Dieser Trigger macht zum Beispiel Sinn, wenn eine Stadt Haus für Haus geklärt werden soll.";
 			id=620;
 		};
-		class Item125
+		class Item121
 		{
 			dataType="Trigger";
 			position[]={6843.041,5,177.76465};
@@ -14462,7 +14034,7 @@ class Mission
 			id=621;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item126
+		class Item122
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14477,7 +14049,7 @@ class Mission
 			id=622;
 			type="B_Truck_01_mover_F";
 		};
-		class Item127
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14492,7 +14064,7 @@ class Mission
 			id=623;
 			type="B_Truck_01_mover_F";
 		};
-		class Item128
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14507,7 +14079,7 @@ class Mission
 			id=624;
 			type="B_Truck_01_mover_F";
 		};
-		class Item129
+		class Item125
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14518,7 +14090,7 @@ class Mission
 			description="Dieser Trigger löst aus, sobald alle mit ihm synchronisierten Objekte zerstört sind. Objekte, die eingesammelt wurden gelten ebenfalls als ""zerstört"", sodass dieser Trigger beispielsweise auch für Intelobjekte benutzt werden kann. Der Trigger läuft nicht über die Einstellung im Activation Feld, sondern über den Code im Condition Feld: " \n " " \n "{alive _x} count (synchronizedObjects thisTrigger) == 0";
 			id=625;
 		};
-		class Item130
+		class Item126
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14528,7 +14100,7 @@ class Mission
 			title="Module";
 			id=626;
 		};
-		class Item131
+		class Item127
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14538,7 +14110,7 @@ class Mission
 			title="Einheiten";
 			id=627;
 		};
-		class Item132
+		class Item128
 		{
 			dataType="Trigger";
 			position[]={6823.0977,5,637.49957};
@@ -14551,7 +14123,7 @@ class Mission
 			id=628;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item133
+		class Item129
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14562,7 +14134,7 @@ class Mission
 			description="Funktioniert wie der ""Gebiet eingenommen"" Trigger, hat aber eine Timeout Einstellung. Das Gebiet muss eine Minute (einstellbar über die Timer Values Felder) gehalten werden, bevor der Trigger auslöst. Verliert BLUFOR in dieser Zeit die Kontrolle, so wird der Timer zurückgesetzt.";
 			id=629;
 		};
-		class Item134
+		class Item130
 		{
 			dataType="Trigger";
 			position[]={7548.4302,5,853.16699};
@@ -14577,7 +14149,7 @@ class Mission
 			id=633;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item135
+		class Item131
 		{
 			dataType="Group";
 			side="West";
@@ -14667,7 +14239,7 @@ class Mission
 			};
 			id=634;
 		};
-		class Item136
+		class Item132
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -14677,7 +14249,7 @@ class Mission
 			id=637;
 			type="ace_captives_ModuleHandcuffed";
 		};
-		class Item137
+		class Item133
 		{
 			dataType="Group";
 			side="West";
@@ -14767,7 +14339,7 @@ class Mission
 			};
 			id=644;
 		};
-		class Item138
+		class Item134
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -14777,7 +14349,7 @@ class Mission
 			id=646;
 			type="ace_captives_ModuleHandcuffed";
 		};
-		class Item139
+		class Item135
 		{
 			dataType="Group";
 			side="West";
@@ -14867,7 +14439,7 @@ class Mission
 			};
 			id=647;
 		};
-		class Item140
+		class Item136
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -14877,7 +14449,7 @@ class Mission
 			id=649;
 			type="ace_captives_ModuleHandcuffed";
 		};
-		class Item141
+		class Item137
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14888,7 +14460,7 @@ class Mission
 			description="Die Beispieleinheiten bei diesem Trigger werden bei Spielstart durch die ACE *Make Unit Handcuffed* Module zu Gefangenen. Der Trigger löst aus, sobald alle mit ihm synchronisierten Einheiten befreit wurden. Da der Gefangenenstatus vor allem am Missionsstart etwas wackelig ist, ist ein 10 Sekunden Timeout gesetzt. Das *Condition Feld*: " \n " " \n "`{_x getvariable [""ace_captives_ishandcuffed"", false]} count (synchronizedObjects thisTrigger) == 0`";
 			id=650;
 		};
-		class Item142
+		class Item138
 		{
 			dataType="Trigger";
 			position[]={7550.978,5,652.034};
@@ -14902,7 +14474,7 @@ class Mission
 			id=652;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item143
+		class Item139
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -14912,7 +14484,7 @@ class Mission
 			title="Einheiten gefangen genommen...";
 			id=662;
 		};
-		class Item144
+		class Item140
 		{
 			dataType="Group";
 			side="East";
@@ -14940,7 +14512,7 @@ class Mission
 			};
 			id=667;
 		};
-		class Item145
+		class Item141
 		{
 			dataType="Group";
 			side="East";
@@ -14968,7 +14540,7 @@ class Mission
 			};
 			id=670;
 		};
-		class Item146
+		class Item142
 		{
 			dataType="Group";
 			side="East";
@@ -14996,7 +14568,7 @@ class Mission
 			};
 			id=673;
 		};
-		class Item147
+		class Item143
 		{
 			dataType="Trigger";
 			position[]={7550.1011,5,448.53299};
@@ -15008,7 +14580,7 @@ class Mission
 			id=675;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item148
+		class Item144
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -15019,7 +14591,7 @@ class Mission
 			description="Dieser Trigger löst aus, wenn alle synchronisierten Einheiten getötet oder in den Triggerbereich wurden. In diesem Beispiel werden die gleichen Einheiten wie im ""gefangen genommen"" Trigger verwendet. Der Trigger funktioniert aber auch eigenständig. Das *Condition* Feld: " \n " " \n "`{!(_x in thisList) && alive _x} count (synchronizedObjects thisTrigger) == 0`";
 			id=676;
 		};
-		class Item149
+		class Item145
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15078,7 +14650,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item150
+		class Item146
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -15089,7 +14661,7 @@ class Mission
 			description="Ein Virtual Arsenal Zugangspunkt mit Whitelist, in der alle Gegenstände aufgezählt werden müssen, die in diesem Arsenal verfügbar sein sollen. Die Funktion der Whitelist wird auf der Seite [[limitedArsenalItems.sqf]] erklärt. Den Code aus dem Init-Feld können wir erneut in jedes beliebige Objekt kopieren: " \n " " \n "`0 = [this] execVM ""helpers\limitedArsenal.sqf""`";
 			id=678;
 		};
-		class Item151
+		class Item147
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -15198,7 +14770,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item152
+		class Item148
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -15307,7 +14879,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item153
+		class Item149
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -15435,7 +15007,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item154
+		class Item150
 		{
 			dataType="Group";
 			side="East";
@@ -15483,7 +15055,7 @@ class Mission
 			id=708;
 			atlOffset=-1.001358e-005;
 		};
-		class Item155
+		class Item151
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -15493,7 +15065,7 @@ class Mission
 			title="Sniper Team";
 			id=711;
 		};
-		class Item156
+		class Item152
 		{
 			dataType="Group";
 			side="West";
@@ -15541,7 +15113,7 @@ class Mission
 			id=712;
 			atlOffset=3.8146973e-006;
 		};
-		class Item157
+		class Item153
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -15551,7 +15123,7 @@ class Mission
 			title="Sniper Team";
 			id=715;
 		};
-		class Item158
+		class Item154
 		{
 			dataType="Group";
 			side="Independent";
@@ -15599,7 +15171,7 @@ class Mission
 			id=716;
 			atlOffset=-1.9073486e-006;
 		};
-		class Item159
+		class Item155
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -15608,6 +15180,761 @@ class Mission
 			};
 			title="Sniper Team";
 			id=719;
+		};
+		class Item156
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={899.7619,85.801003,601.27557};
+			};
+			id=722;
+			type="ACE_moduleAssignMedicRoles";
+			atlOffset=80.801003;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAssignMedicRoles_EnableList";
+					expression="_this setVariable ['EnableList',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="opfor_assistant, blufor_assistant";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleAssignMedicRoles_role";
+					expression="_this setVariable ['role',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item157
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={903.34375,128.17531,496.21661};
+			};
+			id=723;
+			type="ACE_ModuleRespawn";
+			atlOffset=123.17531;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleRespawn_RemoveDeadBodiesDisconnected";
+					expression="_this setVariable ['RemoveDeadBodiesDisconnected',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleRespawn_SavePreDeathGear";
+					expression="_this setVariable ['SavePreDeathGear',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item158
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={900.12793,44,705.45953};
+			};
+			id=724;
+			type="ACE_moduleMedicalMenuSettings";
+			atlOffset=39;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleMedicalMenuSettings_allow";
+					expression="_this setVariable ['allow',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item159
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={900.64093,44.125999,1002.9575};
+			};
+			id=725;
+			type="ACE_moduleMedicalSettings";
+			atlOffset=39.125999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleMedicalSettings_litterCleanUpDelay";
+					expression="_this setVariable ['litterCleanUpDelay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=300;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleMedicalSettings_enableScreams";
+					expression="_this setVariable ['enableScreams',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleMedicalSettings_preventInstaDeath";
+					expression="_this setVariable ['preventInstaDeath',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleMedicalSettings_bleedingCoefficient";
+					expression="_this setVariable ['bleedingCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleMedicalSettings_increaseTrainingInLocations";
+					expression="_this setVariable ['increaseTrainingInLocations',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleMedicalSettings_enableUnconsciousnessAI";
+					expression="_this setVariable ['enableUnconsciousnessAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleMedicalSettings_remoteControlledAI";
+					expression="_this setVariable ['remoteControlledAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleMedicalSettings_painCoefficient";
+					expression="_this setVariable ['painCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleMedicalSettings_AIDamageThreshold";
+					expression="_this setVariable ['AIDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.69999999;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ACE_moduleMedicalSettings_playerDamageThreshold";
+					expression="_this setVariable ['playerDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ACE_moduleMedicalSettings_level";
+					expression="_this setVariable ['level',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ACE_moduleMedicalSettings_allowLitterCreation";
+					expression="_this setVariable ['allowLitterCreation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ACE_moduleMedicalSettings_keepLocalSettingsSynced";
+					expression="_this setVariable ['keepLocalSettingsSynced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ACE_moduleMedicalSettings_medicSetting";
+					expression="_this setVariable ['medicSetting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=14;
+			};
+		};
+		class Item160
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={900.12793,44.075005,801.88953};
+			};
+			id=726;
+			type="ACE_moduleReviveSettings";
+			atlOffset=39.075005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleReviveSettings_amountOfReviveLives";
+					expression="_this setVariable ['amountOfReviveLives',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleReviveSettings_enableRevive";
+					expression="_this setVariable ['enableRevive',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleReviveSettings_maxReviveTime";
+					expression="_this setVariable ['maxReviveTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3600;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item161
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={900.64093,44.011002,904.47455};
+			};
+			id=727;
+			type="ACE_moduleAdvancedMedicalSettings";
+			atlOffset=39.011002;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAdvancedMedicalSettings_enableVehicleCrashes";
+					expression="_this setVariable ['enableVehicleCrashes',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleAdvancedMedicalSettings_consumeItem_SurgicalKit";
+					expression="_this setVariable ['consumeItem_SurgicalKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleAdvancedMedicalSettings_enableAdvancedWounds";
+					expression="_this setVariable ['enableAdvancedWounds',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleAdvancedMedicalSettings_consumeItem_PAK";
+					expression="_this setVariable ['consumeItem_PAK',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleAdvancedMedicalSettings_useCondition_PAK";
+					expression="_this setVariable ['useCondition_PAK',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleAdvancedMedicalSettings_medicSetting_PAK";
+					expression="_this setVariable ['medicSetting_PAK',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleAdvancedMedicalSettings_medicSetting_SurgicalKit";
+					expression="_this setVariable ['medicSetting_SurgicalKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleAdvancedMedicalSettings_healHitPointAfterAdvBandage";
+					expression="_this setVariable ['healHitPointAfterAdvBandage',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleAdvancedMedicalSettings_useLocation_SurgicalKit";
+					expression="_this setVariable ['useLocation_SurgicalKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ACE_moduleAdvancedMedicalSettings_useCondition_SurgicalKit";
+					expression="_this setVariable ['useCondition_SurgicalKit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ACE_moduleAdvancedMedicalSettings_useLocation_PAK";
+					expression="_this setVariable ['useLocation_PAK',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ACE_moduleAdvancedMedicalSettings_enableFor";
+					expression="_this setVariable ['enableFor',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ACE_moduleAdvancedMedicalSettings_painIsOnlySuppressed";
+					expression="_this setVariable ['painIsOnlySuppressed',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=13;
+			};
 		};
 	};
 	class Connections
