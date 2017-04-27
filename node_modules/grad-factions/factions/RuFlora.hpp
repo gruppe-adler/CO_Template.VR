@@ -46,10 +46,10 @@ class RUFlora {
         class Soldier_F {
             addItemsToUniform[] = {
                 "ACE_MapTools",
-                "ACE_EarPlugs",
                 LIST_2("rhs_mag_9x18_8_57N181S"),
                 LIST_2("ACE_CableTie"),
-                LIST_8("ACE_fieldDressing"),
+                LIST_10("ACE_fieldDressing"),
+                LIST_6("ACE_quikclot"),
                 LIST_4("ACE_morphine"),
                 "ACE_epinephrine",
                 "ACE_Flashlight_KSF1"
@@ -98,15 +98,28 @@ class RUFlora {
         };
         //Combat Life Saver
         class medic_F: Soldier_F {
+            handgunWeapon = "";
+            handgunWeaponMagazine = "";
             vest = "rhs_6b13_Flora_6sh92_headset_mapcase";
             backpack = "rhs_assault_umbts";
+            addItemsToUniform[] = {
+                "ACE_MapTools",
+                LIST_2("ACE_CableTie"),
+                "ACE_Flashlight_KSF1",
+                "GRAD_ALK",
+                "ACE_personalAidKit",
+                "ACE_surgicalKit"
+            };
             addItemsToBackpack[] = {
-                LIST_8("ACE_bloodIV"),
-                LIST_15("ACE_epinephrine"),
-                LIST_20("ACE_morphine"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_10("ACE_fieldDressing"),
-                LIST_6("rhs_mag_rdg2_white")
+                LIST_25("ACE_fieldDressing"),
+                LIST_25("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_quikclot"),
+                LIST_12("ACE_epinephrine"),
+                LIST_16("ACE_morphine"),
+                LIST_6("ACE_adenosine"),
+                LIST_6("ACE_tourniquet"),
+                LIST_10("ACE_salineIV_500")
             };
         };
         //Explosive Specialist

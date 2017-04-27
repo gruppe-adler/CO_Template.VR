@@ -24,7 +24,7 @@ class Taliban {
 	  class AllUnits {
 		    uniform = "LOP_U_AM_Fatigue_01";
 		    vest = "V_BandollierB_khk";
-		    backpack = "B_TacticalPack_blk";
+		    backpack = "";
 		    headgear = "LOP_H_Turban";
 		    primaryWeapon = "rhs_weap_m70b1";
             primaryWeaponMagazine = "rhs_30Rnd_762x39mm";
@@ -37,7 +37,7 @@ class Taliban {
 		    compass = "ItemCompass";
 		    watch = "ItemWatch";
 		    gps = "";
-		    radio = "tf_fadak_1";
+		    radio = "tf_fadak";
 		    nvgoggles = NVITEM;
     };
     class Type {
@@ -48,7 +48,8 @@ class Taliban {
                 LIST_2("ACE_Cabletie"),
                 LIST_8("ACE_fieldDressing"),
                 LIST_4("ACE_morphine"),
-                "ACE_Flashlight_KSF1"
+                "ACE_Flashlight_KSF1",
+                "rhs_mag_rdg2_white"
             };
             addItemsToVest[] = {
                 LIST_4("rhs_30Rnd_762x39mm"),
@@ -75,7 +76,7 @@ class Taliban {
             uniform = "LOP_U_AM_Fatigue_03";
             backpack = "B_Carryall_khk";
             addItemsToBackpack[] = {
-                List_3("rhs_mag_9k38_rocket")
+                LIST_3("rhs_mag_9k38_rocket")
             };
         };
 
@@ -134,7 +135,7 @@ class Taliban {
         //Grenadier
         class Soldier_GL_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_04";
-            addPrimaryWeapon = "rhs_weap_akm_gp25";
+            primaryWeapon = "rhs_weap_akm_gp25";
             backpack = "rhs_sidor";
             addItemsToBackpack[] = {
                 LIST_2("rhs_mag_rgd5"),
@@ -145,7 +146,8 @@ class Taliban {
                 LIST_2("rhs_VG40MD_Red")
             };
             addItemsToVest[] = {
-                LIST_5("rhs_mag_rgd5"),
+                LIST_4("rhs_30Rnd_762x39mm"),
+                LIST_5("rhs_mag_rgd5")
             };
         };
 
@@ -225,6 +227,7 @@ class Taliban {
         class Soldier_TL_F: Soldier_F {
             uniform = "LOP_U_AM_Fatigue_04";
             primaryWeapon = "rhs_weap_akms_gp25";
+            backpack = "B_Carryall_khk";
             addItemsToBackpack[] = {
                 LIST_2("rhs_mag_rdg2_white"),
                 LIST_2("rhs_VG40MD_Green"),

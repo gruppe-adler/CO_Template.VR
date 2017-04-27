@@ -67,12 +67,8 @@ These factions are available (see also the `factions` directory):
 |----------------|----------------------------------------------|
 | BwFleck        |  Bundeswehr Flecktarn                        |
 | BwTrop         |  Bundeswehr Tropentarn                       |
-| ModerateRebels |  Mittelmäßig bewaffnete, halbzivile Rebellen |
-| Peshmerga      |  kurdische Streitkräfte, russische Waffen    |
 | RuFlora        |  Russian MSV Flora                           |
 | RuEMR          |  Russian MSV EMR-Summer                      |
-| RuMedit        |  Russian Mediterran                          |
-| Taliban        |  Taliban                                     |
 | UsOCP          |  US Army OCP                                 |
 | UsUCP          |  US Army UCP                                 |
 | UsMPT          |  US Marines MARPAT                           |

@@ -46,10 +46,10 @@ class USOCP {
         class Soldier_F {
             addItemsToUniform[] = {
                 "ACE_MapTools",
-                "ACE_EarPlugs",
                 "ACE_DefusalKit",
                 LIST_2("ACE_CableTie"),
-                LIST_8("ACE_fieldDressing"),
+                LIST_10("ACE_fieldDressing"),
+                LIST_6("ACE_quikclot"),
                 LIST_4("ACE_morphine"),
                 "ACE_epinephrine",
                 "ACE_Flashlight_MX991"
@@ -112,12 +112,12 @@ class USOCP {
         class medic_F: Soldier_F {
             vest = "rhsusf_iotv_ocp_Medic";
             backpack = "rhsusf_assault_eagleaiii_ocp";
-            addItemsToBackpack[] = {
-                LIST_5("ACE_bloodIV"),
-                LIST_15("ACE_epinephrine"),
-                LIST_20("ACE_morphine"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_fieldDressing")
+            addItemsToUniform[] = {
+                "ACE_MapTools",
+                "ACE_Flashlight_MX991",
+                "GRAD_ALK",
+                "ACE_personalAidKit",
+                "ACE_surgicalKit"
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
@@ -125,6 +125,17 @@ class USOCP {
                 LIST_8("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 LIST_8("30Rnd_556x45_Stanag")
+            };
+            addItemsToBackpack[] = {
+                LIST_25("ACE_fieldDressing"),
+                LIST_25("ACE_elasticBandage"),
+                LIST_10("ACE_packingBandage"),
+                LIST_10("ACE_quikclot"),
+                LIST_12("ACE_epinephrine"),
+                LIST_16("ACE_morphine"),
+                LIST_6("ACE_adenosine"),
+                LIST_6("ACE_tourniquet"),
+                LIST_10("ACE_salineIV_500")
             };
         };
         //Explosive Specialist

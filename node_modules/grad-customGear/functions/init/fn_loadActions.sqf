@@ -2,6 +2,10 @@
 *
 */
 
+params [["_mode","MANUAL"]];
+
+if (_mode == "postInit" && ([(missionConfigFile >> "grad_customGear"), "actionsOnMissionStart", 1] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
+
 [] spawn {
     private ["_action"];
 
@@ -15,66 +19,69 @@
     sleep 3;
 
     //get config values
-    _allowHelmet = getNumber (missionConfigFile >> "grad_customGear" >> "allowHelmet") == 1;
-    _allowGoggles = getNumber (missionConfigFile >> "grad_customGear" >> "allowGoggles") == 1;
-    _allowSimpleScopes = getNumber (missionConfigFile >> "grad_customGear" >> "allowSimpleScopes") == 1;
-    _allowMagnifyingScopes = getNumber (missionConfigFile >> "grad_customGear" >> "allowMagnifyingScopes") == 1;
-    _allowMarksmanScopes = getNumber (missionConfigFile >> "grad_customGear" >> "allowMarksmanScopes") == 1;
+    _allowHelmet            = getNumber (missionConfigFile >> "grad_customGear" >> "allowHelmet") == 1;
+    _allowGoggles           = getNumber (missionConfigFile >> "grad_customGear" >> "allowGoggles") == 1;
+    _allowSimpleScopes      = getNumber (missionConfigFile >> "grad_customGear" >> "allowSimpleScopes") == 1;
+    _allowMagnifyingScopes  = getNumber (missionConfigFile >> "grad_customGear" >> "allowMagnifyingScopes") == 1;
+    _allowMarksmanScopes    = getNumber (missionConfigFile >> "grad_customGear" >> "allowMarksmanScopes") == 1;
 
     //add actions
-    _id1 = -1; _id2 = -1; _id3 = -1;
+    if (!isNil "grad_customGear_actionID1") then {player removeAction grad_customGear_actionID1; grad_customGear_actionID1 = -1};
+    if (!isNil "grad_customGear_actionID2") then {player removeAction grad_customGear_actionID2; grad_customGear_actionID2 = -1};
+    if (!isNil "grad_customGear_actionID3") then {player removeAction grad_customGear_actionID3; grad_customGear_actionID3 = -1};
     if (_allowHelmet) then {
         _action = {["HELMET", _this select 2] call grad_customGear_fnc_loadGear};
-        _id1 = player addAction ["<t color='#00ff00'>load custom helmet</t>", _action, [], 2, false, true];
+        grad_customGear_actionID1 = player addAction ["<t color='#00ff00'>load custom helmet</t>", _action, [], 2, false, true];
     };
 
     if (_allowGoggles) then {
         _action = {["GOGGLES", _this select 2] call grad_customGear_fnc_loadGear};
-        _id2 = player addAction ["<t color='#00ff00'>load custom facewear</t>", _action, [], 2, false, true];
+        grad_customGear_actionID2 = player addAction ["<t color='#00ff00'>load custom facewear</t>", _action, [], 2, false, true];
     };
 
     _currentZoomFactor = [(player weaponAccessories (primaryWeapon player)) select 2] call grad_customGear_fnc_getZoomFactor;
     if (_allowSimpleScopes && _currentZoomFactor == 1) then {
         _action = {["SCOPE1", _this select 2] call grad_customGear_fnc_loadGear};
-        _id3 = player addAction ["<t color='#00ff00'>load custom sights</t>", _action, [], 2, false, true];
+        grad_customGear_actionID3 = player addAction ["<t color='#00ff00'>load custom sights</t>", _action, [], 2, false, true];
     };
     if (_allowMagnifyingScopes && _currentZoomFactor > 1 && _currentZoomFactor < 4) then {
         _action = {["SCOPE4", _this select 2] call grad_customGear_fnc_loadGear};
-        _id3 = player addAction ["<t color='#00ff00'>load custom scope</t>", _action, [], 2, false, true];
+        grad_customGear_actionID3 = player addAction ["<t color='#00ff00'>load custom scope</t>", _action, [], 2, false, true];
     };
     if (_allowMarksmanScopes && _currentZoomFactor >= 4) then {
         _action = {["SCOPEM", _this select 2] call grad_customGear_fnc_loadGear};
-        _id3 = player addAction ["<t color='#00ff00'>load custom scope</t>", _action, [], 2, false, true];
+        grad_customGear_actionID3 = player addAction ["<t color='#00ff00'>load custom scope</t>", _action, [], 2, false, true];
     };
 
 
     //exit if no actions added
-    if ({_x != -1} count [_id1, _id2, _id3] == 0) exitWith {};
+    if ({_x != -1} count [grad_customGear_actionID1, grad_customGear_actionID2, grad_customGear_actionID3] == 0) exitWith {};
     systemChat "grad-customGear: custom equipment can now be loaded";
 
 
     //remove action after time
-    sleep 120;
-    params ["_id1", "_id2", "_id3"];
+    grad_customGear_removeTime = time + 120;
+    if (!isNil "grad_customGear_removeActionTimer") exitWith {};
+    grad_customGear_removeActionTimer = [] spawn {
+        waitUntil {time > grad_customGear_removeTime};
 
-    if (_id1 != -1) then {
-        if !(player getVariable ["grad_customGear_HelmetLoaded", false]) then {
-            player removeAction _id1;
+        if (grad_customGear_actionID1 != -1) then {
+            if !(player getVariable ["grad_customGear_HelmetLoaded", false]) then {
+                player removeAction grad_customGear_actionID1;
+            };
         };
-    };
 
-    if (_id2 != -1) then {
-        if !(player getVariable ["grad_customGear_GogglesLoaded", false]) then {
-            player removeAction _id2;
+        if (grad_customGear_actionID2 != -1) then {
+            if !(player getVariable ["grad_customGear_GogglesLoaded", false]) then {
+                player removeAction grad_customGear_actionID2;
+            };
         };
-    };
 
-    if (_id3 != -1) then {
-        if !(player getVariable ["grad_customGear_ScopeLoaded", false]) then {
-            player removeAction _id3;
+        if (grad_customGear_actionID3 != -1) then {
+            if !(player getVariable ["grad_customGear_ScopeLoaded", false]) then {
+                player removeAction grad_customGear_actionID3;
+            };
         };
+        grad_customGear_removeActionTimer = nil;
     };
-
-
-
 };
