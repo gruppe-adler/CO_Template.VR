@@ -8,15 +8,15 @@ private ["_item"];
 if (isNil "mcd_coTemplate_customGearArray") exitWith {};
 
 _modeName = switch (_mode) do {
-  case "HELMET": {"Persönlicher Helm"};
-  case "GOGGLES": {"Persönliche Gesichtsbekleidung"};
-  case "SCOPE1": {"Persönliches Visier"};
-  case "SCOPE4": {"Persönliches Visier"};
-  case "SCOPEM": {"Persönliches Visier"};
+  case "HELMET": {"custom helmet"};
+  case "GOGGLES": {"custom facewear"};
+  case "SCOPE1": {"custom sights"};
+  case "SCOPE4": {"custom scope"};
+  case "SCOPEM": {"custom scope"};
 };
 
 _id = [mcd_coTemplate_customGearArray, getPlayerUID player] call grad_customGear_fnc_findUID;
-if (_id == -1) exitWith {systemChat format ["%1 nicht gefunden.", _modeName]};
+if (_id == -1) exitWith {systemChat format ["%1 not found.", _modeName]};
 _playerGear = mcd_coTemplate_customGearArray select _id;
 _currentZoomFactor = [(player weaponAccessories (primaryWeapon player)) select 2] call grad_customGear_fnc_getZoomFactor;
 
@@ -54,7 +54,7 @@ _itemDisplayName = [_item] call grad_customGear_fnc_getDisplayName;
 _itemZoomFactor = [_item] call grad_customGear_fnc_getZoomFactor;
 
 //check if item was found
-if (_item == "") exitWith {systemChat format ["%1 nicht gefunden.", _modeName]};
+if (_item == "") exitWith {systemChat format ["%1 not found.", _modeName]};
 
 //check validity of scope
 _validScope = true;
@@ -62,18 +62,18 @@ _validScope = true;
 if (_mode == "SCOPE1" && _currentZoomFactor > 1) then {_validScope = false};
 if (_mode == "SCOPE4" && _currentZoomFactor == 1) then {_validScope = false};
 if (_mode == "SCOPEM" && _currentZoomFactor < 4) then {_validScope = false};
-if (!_validScope) exitWith {systemChat format ["%1 nicht geladen. Startvisier wurde gewechselt?", _modeName]};
+if (!_validScope) exitWith {systemChat format ["%1 not loaded. Default sights were changed?", _modeName]};
 
 if (_mode == "SCOPE1" && _itemZoomFactor > 1) then {_validScope = false};
 if (_mode == "SCOPE4" && _itemZoomFactor >= 4) then {_validScope = false};
-if (!_validScope) exitWith {systemChat format ["%1 nicht geladen. %2 ist nicht zulässig.", _modeName, _itemDisplayName]};
+if (!_validScope) exitWith {systemChat format ["%1 not loaded. %2 is not allowed.", _modeName, _itemDisplayName]};
 
 if ((_mode == "SCOPE1" || _MODE == "SCOPE4" || _mode == "SCOPEM") && !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1)) then {_validScope = false};
-if (!_validScope) exitWith {systemChat format ["%1 nicht geladen. %2 passt nicht auf deine Waffe.", _modeName, _itemDisplayName]};
+if (!_validScope) exitWith {systemChat format ["%1 not loaded. %2 is not compatible with your weapon.", _modeName, _itemDisplayName]};
 
 if (_mode == "HELMET") then {player addHeadgear _item; player setVariable ["grad_customGear_HelmetLoaded", true]};
 if (_mode == "GOGGLES") then {player addGoggles _item; player setVariable ["grad_customGear_GogglesLoaded", true]};
 if (_itemZoomFactor != -1) then {player addPrimaryWeaponItem _item; player setVariable ["grad_customGear_ScopeLoaded", true]};
-systemChat format ["%1 geladen: %2", _modeName, _itemDisplayName];
+systemChat format ["%1 loaded: %2", _modeName, _itemDisplayName];
 
 if (_actionID != -1) then {player removeAction _actionID};

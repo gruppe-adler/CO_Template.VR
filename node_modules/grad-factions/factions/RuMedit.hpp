@@ -27,6 +27,7 @@ class RuMedit: RUFlora {
 		backpack = "";
 		headgear = "rhs_6b27m_ml";
 		primaryWeapon = "rhs_weap_ak74m_fullplum";
+        primaryWeaponMagazine = "rhs_30Rnd_545x39_AK";
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponPointer = LLITEM;
 		goggles = "";

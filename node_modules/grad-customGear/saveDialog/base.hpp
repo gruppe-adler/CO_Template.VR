@@ -1,9 +1,9 @@
-#define CT_STATIC           0
-#define CT_BUTTON           1
-#define CT_STRUCTURED_TEXT	13
+#define CT_STATIC                   0
+#define CT_BUTTON                   1
+#define CT_STRUCTURED_TEXT			13
 
-#define ST_LEFT           0x00
-#define ST_RIGHT          0x01
+#define ST_LEFT                     0x00
+#define ST_RIGHT                    0x01
 
 class sd_RscText {
 	idc = -1;
@@ -23,30 +23,30 @@ class sd_RscTextR: sd_RscText {
 };
 
 class sd_RscStructText {
-  idc = -1;
-  type = CT_STRUCTURED_TEXT;
-  style = ST_LEFT;
-  colorBackground[] = { 1, 1, 1, 0 };
-  x = 0.1;
-  y = 0.1;
-  w = 0.3;
-  h = 0.1;
-  size = 0.04 * TEXT_SCALE;
-  text = "";
-  class Attributes {
-    font = "PuristaMedium";
-    color = "#ffffff";
-    align = "left";
-    valign = "top";
-    shadow = false;
-    shadowColor = "#ff0000";
-    size = "1";
-  };
+    idc = -1;
+    type = CT_STRUCTURED_TEXT;
+    style = ST_LEFT;
+    colorBackground[] = { 1, 1, 1, 0 };
+    x = 0.1;
+    y = 0.1;
+    w = 0.3;
+    h = 0.1;
+    size = 0.04 * TEXT_SCALE;
+    text = "";
+    class Attributes {
+        font = "PuristaMedium";
+        color = "#ffffff";
+        align = "left";
+        valign = "top";
+        shadow = false;
+        shadowColor = "#ff0000";
+        size = "1";
+    };
 };
 
 class sd_RscCloseButton
 {
-  access = 0;
+    access = 0;
 	type = CT_BUTTON;
 	action = "closeDialog 0";
 	text = "X";

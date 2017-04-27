@@ -40,25 +40,25 @@ _curScope = (player weaponAccessories (primaryWeapon player)) select 2;
 
 //set button text
 If (_helmet != "") then {
-  (_dialog displayCtrl sd_save0) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save0) ctrlSetText "overwrite";
 };
 If (_goggles != "") then {
-  (_dialog displayCtrl sd_save1) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save1) ctrlSetText "overwrite";
 };
 If (_usScope1 != "") then {
-  (_dialog displayCtrl sd_save2) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save2) ctrlSetText "overwrite";
 };
 If (_usScope4 != "") then {
-  (_dialog displayCtrl sd_save3) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save3) ctrlSetText "overwrite";
 };
 If (_usScopeM != "") then {
-  (_dialog displayCtrl sd_save4) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save4) ctrlSetText "overwrite";
 };
 If (_rusScope1 != "") then {
-  (_dialog displayCtrl sd_save5) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save5) ctrlSetText "overwrite";
 };
 If (_rusScope4 != "") then {
-  (_dialog displayCtrl sd_save6) ctrlSetText "überschreiben";
+  (_dialog displayCtrl sd_save6) ctrlSetText "overwrite";
 };
 
 
