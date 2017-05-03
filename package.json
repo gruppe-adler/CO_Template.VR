@@ -1,4 +1,9 @@
 {
+    "name": "co-template",
+    "description": "Gruppe Adler Coop Template",
+    "version": "1.3.2",
+    "author": "McDiod",
+
     "dependencies": {
         "grad-loadout": ">=4.5.0",
         "grad-factions": ">0.1.1",

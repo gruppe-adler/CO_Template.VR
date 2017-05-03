@@ -1,4 +1,4 @@
-/*  Loads custom gear
+/*    Loads custom gear
 *
 */
 
@@ -8,11 +8,11 @@ private ["_item"];
 if (isNil "mcd_coTemplate_customGearArray") exitWith {};
 
 _modeName = switch (_mode) do {
-  case "HELMET": {"custom helmet"};
-  case "GOGGLES": {"custom facewear"};
-  case "SCOPE1": {"custom sights"};
-  case "SCOPE4": {"custom scope"};
-  case "SCOPEM": {"custom scope"};
+    case "HELMET": {"custom helmet"};
+    case "GOGGLES": {"custom facewear"};
+    case "SCOPE1": {"custom sights"};
+    case "SCOPE4": {"custom scope"};
+    case "SCOPEM": {"custom scope"};
 };
 
 _id = [mcd_coTemplate_customGearArray, getPlayerUID player] call grad_customGear_fnc_findUID;
@@ -21,32 +21,32 @@ _playerGear = mcd_coTemplate_customGearArray select _id;
 _currentZoomFactor = [(player weaponAccessories (primaryWeapon player)) select 2] call grad_customGear_fnc_getZoomFactor;
 
 switch (_mode) do {
-  case "HELMET": {_item = _playerGear select 1};
-  case "GOGGLES": {_item = _playerGear select 2};
-  case "SCOPE1": {
-    //rus scope
-    _item = _playerGear select 6;
-    if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
-      //us scope
-      _item = _playerGear select 3;
+    case "HELMET": {_item = _playerGear select 1};
+    case "GOGGLES": {_item = _playerGear select 2};
+    case "SCOPE1": {
+        //rus scope
+        _item = _playerGear select 6;
+        if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
+            //us scope
+            _item = _playerGear select 3;
+        };
     };
-  };
-  case "SCOPE4": {
-    //rus scope
-    _item = _playerGear select 7;
-    if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
-      //us scope
-      _item = _playerGear select 4;
+    case "SCOPE4": {
+        //rus scope
+        _item = _playerGear select 7;
+        if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
+            //us scope
+            _item = _playerGear select 4;
+        };
     };
-  };
-  case "SCOPEM": {
-    //rus scope
-    _item = _playerGear select 7;
-    if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
-      //us scope
-      _item = _playerGear select 5;
+    case "SCOPEM": {
+        //rus scope
+        _item = _playerGear select 7;
+        if !(getNumber (configFile >> "CfgWeapons" >> primaryWeapon player >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _item) == 1) then {
+            //us scope
+            _item = _playerGear select 5;
+        };
     };
-  };
 };
 
 //get item info
