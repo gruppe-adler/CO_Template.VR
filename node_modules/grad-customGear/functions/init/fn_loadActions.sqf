@@ -26,9 +26,9 @@ if (_mode == "postInit" && ([(missionConfigFile >> "grad_customGear"), "actionsO
     _allowMarksmanScopes    = getNumber (missionConfigFile >> "grad_customGear" >> "allowMarksmanScopes") == 1;
 
     //add actions
-    if (!isNil "grad_customGear_actionID1") then {player removeAction grad_customGear_actionID1; grad_customGear_actionID1 = -1};
-    if (!isNil "grad_customGear_actionID2") then {player removeAction grad_customGear_actionID2; grad_customGear_actionID2 = -1};
-    if (!isNil "grad_customGear_actionID3") then {player removeAction grad_customGear_actionID3; grad_customGear_actionID3 = -1};
+    if (!isNil "grad_customGear_actionID1") then {player removeAction grad_customGear_actionID1; grad_customGear_actionID1 = -1} else {grad_customGear_actionID1 = -1};
+    if (!isNil "grad_customGear_actionID2") then {player removeAction grad_customGear_actionID2; grad_customGear_actionID2 = -1} else {grad_customGear_actionID2 = -1};
+    if (!isNil "grad_customGear_actionID3") then {player removeAction grad_customGear_actionID3; grad_customGear_actionID3 = -1} else {grad_customGear_actionID3 = -1};
     if (_allowHelmet) then {
         _action = {["HELMET", _this select 2] call grad_customGear_fnc_loadGear};
         grad_customGear_actionID1 = player addAction ["<t color='#00ff00'>load custom helmet</t>", _action, [], 2, false, true];
