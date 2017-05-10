@@ -5,7 +5,7 @@
 *   Beispiel:
 *
     class group1 {
-    groupName = "Command";
+        groupName = "Command";
 
         class shortrange {
             defaultChannel = 1;
