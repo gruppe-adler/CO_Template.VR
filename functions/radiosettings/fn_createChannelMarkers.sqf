@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 params ["_channelNames"];
 if (count _channelNames == 0) exitWith {};
 

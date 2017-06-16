@@ -2,11 +2,13 @@
 *
 */
 
+#include "component.hpp"
+
 params ["_mode", ["_category",""], ["_log", ""]];
 
 _category = [_category] call BIS_fnc_filterString;
 if (count _category == 0) exitWith {};
-    
+
 _varName = "GRAD_diagReport_" + _category;
 
 switch (_mode) do {

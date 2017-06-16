@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 private ["_settings"];
 
 _shortRangeFreqs = ["shortrange"] call GRAD_radiosettings_fnc_extractFrequencies;

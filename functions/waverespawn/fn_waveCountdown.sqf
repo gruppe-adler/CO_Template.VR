@@ -1,6 +1,4 @@
-#define PREFIX GRAD
-#define COMPONENT waverespawn
-#include "\x\cba\addons\main\script_macros_mission.hpp"
+#include "component.hpp"
 
 if (player getVariable "wr_interrupted") exitWith {player setVariable ["wr_waveCountdownDone", true]};
 if (player getVariable "wr_isFreeRespawn") exitWith {player setVariable ["wr_waveCountdownDone", true]};

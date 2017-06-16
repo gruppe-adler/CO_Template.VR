@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 if (typeName _this == "ARRAY") then {
     _log = format _this;
 } else {

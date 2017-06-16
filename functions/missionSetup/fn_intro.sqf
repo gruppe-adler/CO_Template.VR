@@ -3,6 +3,8 @@
 *   executed on players via init.sqf
 */
 
+#include "component.hpp"
+
 if (!hasInterface) exitWith {};
 [{!isNull player}, {
     [{

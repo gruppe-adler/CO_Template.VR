@@ -2,6 +2,8 @@
 *
 */
 
+#include "component.hpp"
+
 _groupNames = [] call GRAD_groupsettings_fnc_extractGroupNames;
 _allgroups = [] call GRAD_groupsettings_fnc_findPlayableGroups;
 [_allgroups] call GRAD_groupsettings_fnc_setGroupIndices;

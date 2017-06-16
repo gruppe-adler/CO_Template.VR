@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 params ["_type","_channelName"];
 
 if (_channelName == "") exitWith {-1};

@@ -2,6 +2,8 @@
 *
 */
 
+#include "component.hpp"
+
 params ["_side","_status"];
 private ["_status"];
 

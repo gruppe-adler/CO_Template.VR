@@ -1,6 +1,4 @@
-#define PREFIX GRAD
-#define COMPONENT waverespawn
-#include "\x\cba\addons\main\script_macros_mission.hpp"
+#include "component.hpp"
 
 [profileName,playerSide] remoteExec ["grad_waverespawn_fnc_removeFromWave",2,false];
 

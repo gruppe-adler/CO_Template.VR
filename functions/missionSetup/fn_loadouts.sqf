@@ -2,6 +2,8 @@
 *
 */
 
+#include "component.hpp"
+
 _loadoutFactionBlu = [missionConfigFile,"loadoutFactionBlu",""] call BIS_fnc_returnConfigEntry;
 _loadoutFactionOpf = [missionConfigFile,"loadoutFactionOpf",""] call BIS_fnc_returnConfigEntry;
 _loadoutFactionInd = [missionConfigFile,"loadoutFactionInd",""] call BIS_fnc_returnConfigEntry;

@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 if (([missionConfigFile >> "missionSettings" >> "respawnSettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
 
 

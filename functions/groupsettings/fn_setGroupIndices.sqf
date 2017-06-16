@@ -1,5 +1,4 @@
-#include "script_component.hpp"
-#include "\x\cba\addons\main\script_macros_mission.hpp"
+#include "component.hpp"
 
 params ["_allgroups"];
 

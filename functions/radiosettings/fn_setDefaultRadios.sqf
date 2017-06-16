@@ -1,6 +1,4 @@
-#include "script_component.hpp"
-#include "\x\cba\addons\main\script_macros_mission.hpp"
-
+#include "component.hpp"
 
 if (typeOf player == "VirtualCurator_F") exitWith {};
 if (typeOf player == "B_VirtualCurator_F") exitWith {};

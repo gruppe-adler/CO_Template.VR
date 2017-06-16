@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 if (!hasInterface) exitWith {};
 
 #include "..\..\USER\briefing.sqf"

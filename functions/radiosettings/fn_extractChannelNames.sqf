@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 _radioCfg = missionConfigFile >> "missionSettings" >> "radioSettings";
 _shortRangeChannels = "true" configClasses (_radioCfg >> "shortrange");
 _longRangeChannels = "true" configClasses (_radioCfg >> "longrange");

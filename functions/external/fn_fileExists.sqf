@@ -14,6 +14,8 @@ Author: KillzoneKid
 
 -------------------------------------------------------------------------------------------------- */
 
+#include "component.hpp"
+
 params ["_filePath"];
 private ["_ctrl", "_fileExists"];
 

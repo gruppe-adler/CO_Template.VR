@@ -4,6 +4,8 @@
 *   0:  Object
 */
 
+#include "component.hpp"
+
 params [["_box",objNull],["_arsenalClass",""]];
 
 if (isNull _box) exitWith {};

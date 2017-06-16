@@ -19,6 +19,8 @@ allowFunctionsRecompile = 1;
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
 #include "USER\garbageCollector.hpp"
+#include "cfgIslands.hpp"
+#include "cfgCivilians.hpp"
 
 class missionSettings {
 	/*#include "USER\missionSettings.hpp"*/
@@ -89,9 +91,7 @@ class CfgNotifications
 
 
 //PARAMS =======================================================================
-class Params
-{
-
+class Params {
     #include "USER\userParams.hpp"
 };
 
@@ -99,16 +99,6 @@ class Params
 //SOUNDS =======================================================================
 class CfgSounds {
 	#include "USER\userSounds.hpp"
-};
-
-
-//OTHER NPM MODULES ============================================================
-class grad_customGear {
-    #include "USER\customGear.hpp"
-};
-
-class CfgGradFortifications {
-    #include "USER\userFortifications.hpp"
 };
 
 
@@ -130,30 +120,14 @@ class CfgGradCivs {
 
     autoInit = 0;
     debugMode = 0;
+};
 
-	clothes[] = {
-        "rds_uniform_Worker1",
-    	"rds_uniform_Worker2"
-    };
 
-    headgear[] = {
-        "rds_Villager_cap1",
-    	"rds_Villager_cap2"
-    };
+//OTHER NPM MODULES ============================================================
+class grad_customGear {
+    #include "USER\customGear.hpp"
+};
 
-    faces[] = {
-        "PersianHead_A3_01",
-    	"PersianHead_A3_02",
-    	"PersianHead_A3_03"
-    };
-
-    goggles[] = {
-        "TRYK_Beard_BK",
-       	"TRYK_Beard_BK2",
-        "TRYK_Beard_BK3"
-    };
-
-    backpacks[] = {
-        "rhs_sidor"
-    };
+class CfgGradFortifications {
+    #include "USER\userFortifications.hpp"
 };

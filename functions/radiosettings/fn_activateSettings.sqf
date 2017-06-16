@@ -1,3 +1,5 @@
+#include "component.hpp"
+
 if !(isClass (configFile >> "CfgPatches" >> "tfar_core")) exitWith {
     systemChat "radiosettings: not activated (tfar < 1.0)";
 };
