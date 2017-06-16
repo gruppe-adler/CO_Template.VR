@@ -1,11 +1,9 @@
-//ALLGEMEIN ====================================================================
-timeMultiplication = 1;                                                         //Zeit-Multiplikator - Eine Spiel-Stunde dauert (eine Echtzeit-Stunde * timeMultiplication) - mögliche Werte: Zahl > 0
-
-
-//LOADOUTS =====================================================================
-loadoutFactionBlu = "BWFleck";                                                  //Partei, dessen Standardloadout die Bluforspieler bekommen
-loadoutFactionOpf = "";                                                         //Partei, dessen Standardloadout die Opforspieler bekommen
-loadoutFactionInd = "";                                                         //Partei, dessen Standardloadout die Independentspieler bekommen
+/*
+*   Legt Respawn-Einstellungen für die Mission fest.
+*   Damit Spieler sterben können, muss die "Max. Revive Time" im "ACE Revive Settings" Modul reduziert werden.
+*   Wenn Waverespawn ausgeschaltet ist, wird normaler Respawn verwendet.
+*   Alle Zeitangaben in Sekunden.
+*/
 
 
 //WAVE RESPAWN =================================================================
@@ -21,7 +19,7 @@ waverespawntimeOpf = 30;                                                        
 waverespawntimeInd = 30;                                                        //Wellenrespawnzeit Independent in Sekunden
 
 
-//NORMALER RESPAWN =============================================================//Diese Einträge sind nur bei ausgeschaltetem Wave Respawn wichtig
+//NORMALER RESPAWN =============================================================
 respawntimeBlu = 10;                                                            //Respawnzeit Blufor in Sekunden
 respawntimeOpf = 10;                                                            //Respawnzeit Opfor in Sekunden
 respawntimeInd = 10;                                                            //Respawnzeit Independent in Sekunden

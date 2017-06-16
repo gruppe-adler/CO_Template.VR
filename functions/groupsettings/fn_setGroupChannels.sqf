@@ -6,7 +6,7 @@ params ["_group"];
 _groupIndex = _group getVariable ["grad_groupIndex",-1];
 if (_groupIndex < 0) exitWith {};
 
-_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionsettings" >> "groupsettings");
+_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionSettings" >> "groupsettings");
 if !(count _allGroupConfigs > _groupIndex) exitWith {};
 
 _groupConfig = _allGroupConfigs select _groupIndex;
@@ -45,7 +45,7 @@ if (leader group player == player || !_srAltOnlyTL) then {
     if (_channelFreq != -1) then {
         _tfarSrFreqs set [_forEachIndex,str _channelFreq];
     };
-} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8"];
+} forEach ["net1","net2","net3","net4","net5","net6","net7","net8"];
 
 
 //LONGRANGE SETTINGS
@@ -67,7 +67,7 @@ if (leader group player == player || !_lrAltOnlyTL) then {
     if (_channelFreq != -1) then {
         _tfarLrFreqs set [_forEachIndex,str _channelFreq];
     };
-} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8","channel9"];
+} forEach ["net1","net2","net3","net4","net5","net6","net7","net8","net9"];
 
 
 systemChat "groupsettings: group channels loaded";

@@ -1,4 +1,4 @@
-#include "USERSCRIPTS\missionsettings.sqf"
+#include "USER\missionSettings.sqf"
 
 enableSentences false;
 enableRadio false;
@@ -6,7 +6,7 @@ enableSaving [false, false];
 
 
 // SCRIPTS =====================================================================
-[] execVM "USERSCRIPTS\userInit.sqf";
+[] execVM "USER\userInit.sqf";
 
 if (_civTraffic) then {
     [] execVM "Engima\Traffic\Init.sqf";

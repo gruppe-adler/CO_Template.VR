@@ -5,8 +5,6 @@ class Header
 	gameType = Coop;
 };
 
-#include "USERSCRIPTS\mission.hpp"
-
 #include "node_modules\grad-customGear\saveDialog\dialog.hpp"
 
 
@@ -21,29 +19,27 @@ disabledAI = 0;
 enableDebugConsole = 1;
 allowFunctionsRecompile = 1;
 
-corpseManagerMode = 1;
-corpseLimit = 30;
-corpseRemovalMinTime = 300;
-corpseRemovalMaxTime = 500;
+#include "USER\missionInfo.hpp"
+#include "USER\loadouts.hpp"
+#include "USER\garbageCollector.hpp"
 
-wreckManagerMode = 1;
-wreckLimit = 20;
-wreckRemovalMinTime = 500;
-wreckRemovalMaxTime = 1200;
-
-class missionsettings {
-	#include "USERSCRIPTS\missionsettings.hpp"
+class missionSettings {
+	#include "USER\missionSettings.hpp"
 
 	class restrictedArsenal {
-		#include "USERSCRIPTS\restrictedArsenal.hpp"
+		#include "USER\restrictedArsenal.hpp"
 	};
 
 	class groupsettings {
-		#include "USERSCRIPTS\groupsettings.hpp"
+		#include "USER\groupsettings.hpp"
 	};
 
 	class radiosettings {
-		#include "USERSCRIPTS\radiosettings.hpp"
+		#include "USER\radiosettings.hpp"
+	};
+
+	class respawnSettings {
+		#include "USER\respawnSettings.hpp"
 	};
 };
 
@@ -65,7 +61,7 @@ class CfgFunctions
 
 //GRAD CUSTOM GEAR =============================================================
 class grad_customGear {
-    #include "USERSCRIPTS\customGear.hpp"
+    #include "USER\customGear.hpp"
 };
 
 
@@ -77,6 +73,6 @@ class Loadouts {
 
     class Faction {
         #include "node_modules\grad-factions\loadouts.hpp"
-        #include "USERSCRIPTS\userLoadouts.hpp"
+        #include "USER\userLoadouts.hpp"
     };
 };

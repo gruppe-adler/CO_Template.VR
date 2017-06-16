@@ -1,6 +1,8 @@
-/*  Legt Gruppennamen, Standardkanäle und Sonderfrequenzen fest.
-*   Gruppen müssen in der Reihenfolge aufgeführt werden, in der sie in der Slotliste stehen. Blufor zuerst, dann Opfor, dann Independent.
-*   Gruppenspezifische Kanäle können über die Einträge channel1,channel2,[...],channel8 festgelegt werden. Hier werden die in der radiosettings.hpp definierten Kanalnamen verwendet.
+/*
+*   Legt Gruppennamen, Standardkanäle und Sonderfrequenzen fest.
+*   Gruppen müssen in der Reihenfolge aufgeführt werden, in der sie in der Slotliste stehen. Zuerst Blufor, dann Opfor, dann Independent.
+*   Gruppenspezifische Kanäle können über die Einträge channel1-channel8 für Shortrange und channel1-channel9 für Longrange festgelegt werden.
+*   Hier werden die in der radiosettings.hpp definierten Kanalnamen verwendet.
 *
 *   Beispiel:
 *

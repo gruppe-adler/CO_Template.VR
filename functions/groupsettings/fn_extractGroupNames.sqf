@@ -1,4 +1,4 @@
-_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionsettings" >> "groupSettings");
+_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionSettings" >> "groupSettings");
 
 private _allGroupNames = [];
 {

@@ -1,6 +1,6 @@
 if (!hasInterface) exitWith {};
 
-#include "..\..\USERSCRIPTS\briefing.sqf"
+#include "..\..\USER\briefing.sqf"
 
 //create in reverse order --> correct order in briefing
 if !(_einsatzunterstuetzung in ["","verfügbare Einsatzunterstützung"]) then {

@@ -4,6 +4,6 @@ class GRAD_missionSetup {
         class initMission {postInit = 1;};
         class intro {};
         class loadouts {};
-        class setTimeMultiplicator {};
+        class setTimeMultiplier {};
     };
 };

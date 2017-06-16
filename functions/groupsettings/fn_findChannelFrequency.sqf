@@ -2,7 +2,7 @@ params ["_type","_channelName"];
 
 if (_channelName == "") exitWith {-1};
 
-_allChannelConfigs = "true" configClasses (missionConfigFile >> "missionsettings" >> "radiosettings" >> _type);
+_allChannelConfigs = "true" configClasses (missionConfigFile >> "missionSettings" >> "radiosettings" >> _type);
 _frequency = -1;
 
 {

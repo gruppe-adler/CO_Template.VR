@@ -1,12 +1,12 @@
-if (([missionConfigFile >> "missionsettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
+if (([missionConfigFile >> "missionSettings" >> "respawnSettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
 
-BLUFORWAVESIZE = [missionConfigFile >> "missionsettings","bluforWaveSize",1] call BIS_fnc_returnConfigEntry;
-OPFORWAVESIZE = [missionConfigFile >> "missionsettings","opforWaveSize",1] call BIS_fnc_returnConfigEntry;
-INDEPWAVESIZE = [missionConfigFile >> "missionsettings","indepWaveSize",1] call BIS_fnc_returnConfigEntry;
-WAVERESPAWNTIMEPLAYER = [missionConfigFile >> "missionsettings","waverespawntimePlayer",30] call BIS_fnc_returnConfigEntry;
-WAVERESPAWNTIMEBLU = [missionConfigFile >> "missionsettings","waverespawntimeBlu",30] call BIS_fnc_returnConfigEntry;
-WAVERESPAWNTIMEOPF = [missionConfigFile >> "missionsettings","waverespawntimeOpf",30] call BIS_fnc_returnConfigEntry;
-WAVERESPAWNTIMEIND = [missionConfigFile >> "missionsettings","waverespawntimeInd",30] call BIS_fnc_returnConfigEntry;
+BLUFORWAVESIZE = [missionConfigFile >> "missionSettings" >> "respawnSettings","bluforWaveSize",1] call BIS_fnc_returnConfigEntry;
+OPFORWAVESIZE = [missionConfigFile >> "missionSettings" >> "respawnSettings","opforWaveSize",1] call BIS_fnc_returnConfigEntry;
+INDEPWAVESIZE = [missionConfigFile >> "missionSettings" >> "respawnSettings","indepWaveSize",1] call BIS_fnc_returnConfigEntry;
+WAVERESPAWNTIMEPLAYER = [missionConfigFile >> "missionSettings" >> "respawnSettings","waverespawntimePlayer",30] call BIS_fnc_returnConfigEntry;
+WAVERESPAWNTIMEBLU = [missionConfigFile >> "missionSettings" >> "respawnSettings","waverespawntimeBlu",30] call BIS_fnc_returnConfigEntry;
+WAVERESPAWNTIMEOPF = [missionConfigFile >> "missionSettings" >> "respawnSettings","waverespawntimeOpf",30] call BIS_fnc_returnConfigEntry;
+WAVERESPAWNTIMEIND = [missionConfigFile >> "missionSettings" >> "respawnSettings","waverespawntimeInd",30] call BIS_fnc_returnConfigEntry;
 
 WAVERESPAWNBLU = false;
 WAVERESPAWNOPF = false;

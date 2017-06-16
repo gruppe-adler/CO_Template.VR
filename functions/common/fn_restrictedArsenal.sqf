@@ -13,10 +13,10 @@ _create = ["AmmoboxInit", [_box, false, {true}]] spawn BIS_fnc_arsenal;
 [{scriptDone (_this select 0)}, {
     _box = _this select 1;
 
-    _backpacks = [missionConfigFile >> "missionsettings" >> "restrictedArsenal","backpacks",[]] call BIS_fnc_returnConfigEntry;
-    _items = [missionConfigFile >> "missionsettings" >> "restrictedArsenal","items",[]] call BIS_fnc_returnConfigEntry;
-    _magazines = [missionConfigFile >> "missionsettings" >> "restrictedArsenal","magazines",[]] call BIS_fnc_returnConfigEntry;
-    _weapons = [missionConfigFile >> "missionsettings" >> "restrictedArsenal","weapons",[]] call BIS_fnc_returnConfigEntry;
+    _backpacks = [missionConfigFile >> "missionSettings" >> "restrictedArsenal","backpacks",[]] call BIS_fnc_returnConfigEntry;
+    _items = [missionConfigFile >> "missionSettings" >> "restrictedArsenal","items",[]] call BIS_fnc_returnConfigEntry;
+    _magazines = [missionConfigFile >> "missionSettings" >> "restrictedArsenal","magazines",[]] call BIS_fnc_returnConfigEntry;
+    _weapons = [missionConfigFile >> "missionSettings" >> "restrictedArsenal","weapons",[]] call BIS_fnc_returnConfigEntry;
 
 
     [_box, _backpacks] call BIS_fnc_addVirtualBackpackCargo;

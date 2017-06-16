@@ -2,10 +2,9 @@
 *
 */
 
-_cfg = missionConfigFile >> "missionsettings";
-_loadoutFactionBlu = [_cfg,"loadoutFactionBlu",""] call BIS_fnc_returnConfigEntry;
-_loadoutFactionOpf = [_cfg,"loadoutFactionOpf",""] call BIS_fnc_returnConfigEntry;
-_loadoutFactionInd = [_cfg,"loadoutFactionInd",""] call BIS_fnc_returnConfigEntry;
+_loadoutFactionBlu = [missionConfigFile,"loadoutFactionBlu",""] call BIS_fnc_returnConfigEntry;
+_loadoutFactionOpf = [missionConfigFile,"loadoutFactionOpf",""] call BIS_fnc_returnConfigEntry;
+_loadoutFactionInd = [missionConfigFile,"loadoutFactionInd",""] call BIS_fnc_returnConfigEntry;
 
 if (_loadoutFactionBlu != "") then {
     ["BLU_F", _loadoutFactionBlu] call GRAD_Loadout_fnc_FactionSetLoadout;

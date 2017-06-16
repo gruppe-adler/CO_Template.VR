@@ -1,3 +1,7 @@
+if !(isClass (configFile >> "CfgPatches" >> "tfar_core")) exitWith {
+    systemChat "radiosettings: not activated (tfar < 1.0)";
+};
+
 _activeLR = [] call TFAR_fnc_activeLrRadio;
 if (!isNil "_activeLR") then {
     _settings = switch (side player) do {
