@@ -5,9 +5,6 @@ class Header
 	gameType = Coop;
 };
 
-#include "node_modules\grad-customGear\saveDialog\dialog.hpp"
-
-
 //MISSION SETTINGS =============================================================
 respawn = 3;
 respawnDelay = 10;
@@ -24,7 +21,7 @@ allowFunctionsRecompile = 1;
 #include "USER\garbageCollector.hpp"
 
 class missionSettings {
-	#include "USER\missionSettings.hpp"
+	/*#include "USER\missionSettings.hpp"*/
 
 	class restrictedArsenal {
 		#include "USER\restrictedArsenal.hpp"
@@ -56,12 +53,62 @@ class CfgFunctions
 
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
     #include "node_modules\grad-customGear\cfgFunctions.hpp"
+	#include "node_modules\grad-civs\cfgFunctions.hpp"
+
+	#include "USER\userFunctions.hpp"
 };
 
 
-//GRAD CUSTOM GEAR =============================================================
+//DIALOGS ======================================================================
+#include "node_modules\grad-customGear\saveDialog\dialog.hpp"
+
+class RscTitles {
+	#include "USER\userTitles.hpp"
+
+    class grad_Default {
+        idd = -1;
+        fadein = 0;
+        fadeout = 0;
+        duration = 0;
+    };
+};
+
+//NOTIFICATIONS ================================================================
+class CfgNotifications
+{
+    class grad_notification1 {
+        title = "%1";
+        iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
+        description = "%2";
+        duration = 5;
+        priority = 0;
+    };
+
+	#include "USER\userNotifications.hpp"
+};
+
+
+//PARAMS =======================================================================
+class Params
+{
+
+    #include "USER\userParams.hpp"
+};
+
+
+//SOUNDS =======================================================================
+class CfgSounds {
+	#include "USER\userSounds.hpp"
+};
+
+
+//OTHER NPM MODULES ============================================================
 class grad_customGear {
     #include "USER\customGear.hpp"
+};
+
+class CfgGradFortifications {
+    #include "USER\userFortifications.hpp"
 };
 
 
@@ -74,5 +121,39 @@ class Loadouts {
     class Faction {
         #include "node_modules\grad-factions\loadouts.hpp"
         #include "USER\userLoadouts.hpp"
+    };
+};
+
+//GRAD CIVS ====================================================================
+class CfgGradCivs {
+	#include "USER\civSettings.hpp"
+
+    autoInit = 0;
+    debugMode = 0;
+
+	clothes[] = {
+        "rds_uniform_Worker1",
+    	"rds_uniform_Worker2"
+    };
+
+    headgear[] = {
+        "rds_Villager_cap1",
+    	"rds_Villager_cap2"
+    };
+
+    faces[] = {
+        "PersianHead_A3_01",
+    	"PersianHead_A3_02",
+    	"PersianHead_A3_03"
+    };
+
+    goggles[] = {
+        "TRYK_Beard_BK",
+       	"TRYK_Beard_BK2",
+        "TRYK_Beard_BK3"
+    };
+
+    backpacks[] = {
+        "rhs_sidor"
     };
 };
