@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=8;
 	};
 	class Camera
 	{
-		pos[]={2646.9119,291.80078,5999.5981};
+		pos[]={2651.6379,311.9855,6035.0273};
 		dir[]={-0.49708092,-0.44405222,-0.74548709};
 		up[]={-0.24634896,0.8959946,-0.36945751};
 		aside[]={-0.83201259,1.2526289e-007,0.5547744};
@@ -1032,7 +1032,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Template: Module";
-			state=2;
 			class Entities
 			{
 				items=28;
@@ -2812,11 +2811,11 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={901.2594,128.17531,600.33496};
+						position[]={901.25897,128.175,600.33502};
 					};
 					id=723;
 					type="ACE_ModuleRespawn";
-					atlOffset=123.17531;
+					atlOffset=123.175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2865,7 +2864,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={900.12793,44,705.45953};
+						position[]={900.12799,44,705.46002};
 					};
 					id=724;
 					type="ACE_moduleMedicalMenuSettings";
@@ -2978,7 +2977,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.80000001;
+									value=0.75;
 								};
 							};
 						};
@@ -3445,7 +3444,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -3511,7 +3510,7 @@ class Mission
 				};
 			};
 			id=728;
-			atlOffset=40.451729;
+			atlOffset=40.451721;
 		};
 		class Item1
 		{
@@ -14464,7 +14463,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6550.2168,5.8924227,2944.9253};
-						angles[]={-0,3.3981836,0};
+						angles[]={0,3.3981836,0};
 					};
 					side="Empty";
 					flags=4;
@@ -15863,7 +15862,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6547.5254,5.8924227,2648.0061};
-						angles[]={-0,3.398191,0};
+						angles[]={0,3.398191,0};
 					};
 					side="Empty";
 					flags=4;
