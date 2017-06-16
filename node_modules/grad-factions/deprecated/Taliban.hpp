@@ -31,6 +31,10 @@ class Taliban {
 		    primaryWeaponOptics = "";
 		    primaryWeaponPointer = LLITEM;
 		    primaryWeaponMuzzle = SUPPRESSORITEM;
+            primaryWeaponUnderbarrel = "";
+    		primaryWeaponUnderbarrelMagazine = "";
+            secondaryWeapon = "";
+            secondaryWeaponMagazine = "";
 		    handgunWeapon = "";
 		    binoculars = "Binocular";
 		    map = "ItemMap";

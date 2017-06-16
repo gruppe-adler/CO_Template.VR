@@ -31,6 +31,10 @@ class Peshmerga {
         primaryWeaponOptics = "rhs_acc_1p29";
         primaryWeaponPointer = LLITEM;
         primaryWeaponMuzzle = SUPPRESSORITEM;
+        primaryWeaponUnderbarrel = "";
+		primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
         handgunWeapon = "";
         binoculars = "Binocular";
         map = "ItemMap";
