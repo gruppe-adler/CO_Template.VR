@@ -110,6 +110,12 @@ class CfgIslands {
 		isWoodland = true;
 	};
 
+	class VR {
+		displayName = "Virtual Reality";
+		type = "mediterranean";
+		isWoodland = true;
+	};
+
 	class Woodland_ACR {
 		displayName = "Bystrica";
 		type = "russian";

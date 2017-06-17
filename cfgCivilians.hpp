@@ -57,6 +57,8 @@ class cfgCivilians {
         };
 
         backpacks[] = {
+            "B_FieldPack_oli",
+            "B_Carryall_oucamo",
             "rhs_sidor"
         };
     };
@@ -173,6 +175,79 @@ class cfgCivilians {
         };
 
         backpacks[] = {
+            "rhs_sidor"
+        };
+    };
+
+    class tropical {
+        clothes[]= {
+            "U_C_Man_casual_5_F",
+            "U_C_Man_casual_4_F",
+            "U_C_Man_casual_6_F",
+            "U_C_man_sport_3_F",
+            "U_C_man_sport_1_F",
+            "U_C_Man_casual_1_F",
+            "U_C_Man_casual_3_F",
+            "U_C_Man_casual_2_F",
+            "U_I_C_Soldier_Bandit_3_F",
+            "U_I_C_Soldier_Bandit_5_F",
+            "U_I_C_Soldier_Bandit_2_F",
+            "U_I_C_Soldier_Bandit_1_F",
+            "U_I_C_Soldier_Bandit_4_F"
+        };
+
+        headgear[] = {
+            "U_I_C_Soldier_Bandit_4_F",
+            "H_Bandanna_gry",
+            "H_Bandanna_cbr",
+            "H_Bandanna_surfer",
+            "H_Booniehat_khk",
+            "H_Hat_brown",
+            "H_Hat_grey",
+            "H_Booniehat_tna_F",
+            "H_Bandanna_mcamo",
+            "H_Bandanna_surfer_blk",
+            "H_Cap_surfer"
+        };
+
+        faces[] = {
+            "WhiteHead_12",
+            "U_I_C_Soldier_Bandit_4_F",
+            "H_Cap_surfer",
+            "TanoanHead_A3_02",
+            "TanoanHead_A3_03",
+            "AsianHead_A3_05",
+            "TanoanHead_A3_04",
+            "AsianHead_A3_04",
+            "TanoanHead_A3_05",
+            "TanoanHead_A3_07",
+            "TanoanHead_A3_01",
+            "TanoanHead_A3_06",
+            "TanoanHead_A3_08",
+            "AsianHead_A3_07",
+            "AsianHead_A3_06",
+            "WhiteHead_01",
+            "WhiteHead_02",
+            "WhiteHead_04",
+            "GreekHead_A3_03"
+        };
+
+        goggles[] = {
+            "U_I_C_Soldier_Bandit_4_F",
+            "H_Cap_surfer",
+            "GreekHead_A3_03",
+            "G_Shades_Black",
+            "G_Spectacles",
+            "G_Sport_Greenblack",
+            "G_Squares_Tinted",
+            "G_Spectacles_Tinted",
+            "G_Shades_Green",
+            "G_Shades_Blue"
+        };
+
+        backpacks[] = {
+            "B_FieldPack_oli",
+            "B_Carryall_oucamo",
             "rhs_sidor"
         };
     };
