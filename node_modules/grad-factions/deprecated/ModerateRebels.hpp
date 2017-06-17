@@ -30,6 +30,10 @@ class ModerateRebels {
         primaryWeaponMagazine = "rhs_30Rnd_545x39_AK";
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponPointer = LLITEM;
+        primaryWeaponUnderbarrel = "";
+		primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
         handgunWeapon = "rhs_weap_makarov_pm";
         handgunWeaponMagazine = "rhs_mag_9x18_8_57N181S";
         binoculars = "Binocular";
