@@ -15326,7 +15326,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={900.64093,44.125999,1002.9575};
+				position[]={900.64099,44.125999,1002.958};
 			};
 			id=725;
 			type="ACE_moduleMedicalSettings";
@@ -15405,7 +15405,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0.75;
 						};
 					};
 				};
@@ -15679,7 +15679,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={900.64093,44.011002,904.47455};
+				position[]={900.64099,44.011002,904.47498};
 			};
 			id=727;
 			type="ACE_moduleAdvancedMedicalSettings";
@@ -15872,7 +15872,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
