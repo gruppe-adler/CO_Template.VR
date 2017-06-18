@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=40;
+		nextID=56;
 	};
 	class Camera
 	{
-		pos[]={2734.3438,30,2139.3691};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={834.547,123.96172,5114.8853};
+		dir[]={0.3966946,-0.59221768,-0.70137513};
+		up[]={0.29155466,0.8057732,-0.51548254};
+		aside[]={-0.87042731,-1.4784746e-007,-0.49231115};
 	};
 };
 binarizationWanted=0;
@@ -4747,7 +4747,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Zugführer";
+								description="Zugführer Ass.";
 								isPlayable=1;
 							};
 							id=736;
@@ -5017,7 +5017,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=741;
@@ -5173,10 +5173,72 @@ class Mission
 							flags=5;
 							class Attributes
 							{
+								description="Gruppenscharfschütze";
 								isPlayable=1;
 							};
 							id=743;
 							type="B_soldier_M_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male06ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=3;
+							};
 						};
 					};
 					class Attributes
@@ -7620,7 +7682,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=789;
@@ -8701,7 +8763,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Zugführer";
+								description="Zugführer Ass.";
 								isPlayable=1;
 							};
 							id=809;
@@ -8971,7 +9033,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=814;
@@ -9121,16 +9183,78 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={939.89691,5.0014391,4974.0518};
+								position[]={939.89697,5.0014391,4974.0518};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
+								description="Gruppenscharfschütze";
 								isPlayable=1;
 							};
 							id=816;
 							type="O_soldier_M_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male01PER";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=3;
+							};
 						};
 					};
 					class Attributes
@@ -11574,7 +11698,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=862;
@@ -12655,7 +12779,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Zugführer";
+								description="Zugführer Ass.";
 								isPlayable=1;
 							};
 							id=882;
@@ -12925,7 +13049,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=887;
@@ -13075,16 +13199,78 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={875.81586,5.0014391,4973.7422};
+								position[]={875.81598,5.0014391,4973.7417};
 							};
 							side="Independent";
 							flags=5;
 							class Attributes
 							{
+								description="Gruppenscharfschütze";
 								isPlayable=1;
 							};
 							id=889;
 							type="I_Soldier_M_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="acex_headless_blacklist";
+									expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male03GRE";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								nAttributes=3;
+							};
 						};
 					};
 					class Attributes
@@ -15258,7 +15444,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								description="Ass. Gruppenführer";
+								description="Gruppenführer Ass.";
 								isPlayable=1;
 							};
 							id=930;
