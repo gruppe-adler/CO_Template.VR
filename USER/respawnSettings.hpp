@@ -7,11 +7,11 @@
 
 
 //WAVE RESPAWN =================================================================
-waveRespawnEnabled = 1;                                                         //Wave Respawn ein-/ausschalten (1/0)
+waveRespawnEnabled = 0;                                                         //Wave Respawn ein-/ausschalten (1/0)
 
-bluforWaveSize = 1;                                                             //Wellengröße Blufor
-opforWaveSize = 1;                                                              //Wellengröße Opfor
-indepWaveSize = 1;                                                              //Wellengröße Independent
+bluforWaveSize = -1;                                                            //Wellengröße Blufor
+opforWaveSize = -1;                                                             //Wellengröße Opfor
+indepWaveSize = -1;                                                             //Wellengröße Independent
 
 waverespawntimePlayer = 30;                                                     //Spielerrespawnzeit, bevor er der Welle hinzugefügt wird
 waverespawntimeBlu = 30;                                                        //Wellenrespawnzeit Blufor in Sekunden

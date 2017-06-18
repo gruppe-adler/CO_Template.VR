@@ -9,6 +9,7 @@ _allGroupConfigs = "true" configClasses (missionConfigFile >> "missionSettings" 
 if !(count _allGroupConfigs > _groupIndex) exitWith {};
 
 _groupConfig = _allGroupConfigs select _groupIndex;
+
 _tfarSrSettings = switch (playerSide) do {
     case (WEST): {tf_freq_west};
     case (EAST): {tf_freq_east};
@@ -16,6 +17,7 @@ _tfarSrSettings = switch (playerSide) do {
     default {tf_freq_west};
 };
 _tfarSrFreqs = _tfarSrSettings select 2;
+
 _tfarLrSettings = switch (playerSide) do {
     case (WEST): {tf_freq_west_lr};
     case (EAST): {tf_freq_east_lr};
@@ -44,7 +46,7 @@ if (leader group player == player || !_srAltOnlyTL) then {
     if (_channelFreq != -1) then {
         _tfarSrFreqs set [_forEachIndex,str _channelFreq];
     };
-} forEach ["net1","net2","net3","net4","net5","net6","net7","net8"];
+} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8"];
 
 
 //LONGRANGE SETTINGS
@@ -66,7 +68,7 @@ if (leader group player == player || !_lrAltOnlyTL) then {
     if (_channelFreq != -1) then {
         _tfarLrFreqs set [_forEachIndex,str _channelFreq];
     };
-} forEach ["net1","net2","net3","net4","net5","net6","net7","net8","net9"];
+} forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8","channel9"];
 
 
 systemChat "groupsettings: group channels loaded";
