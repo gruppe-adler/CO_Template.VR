@@ -12,12 +12,12 @@
 if (hasInterface) then {
     //activate radiosettings
     _loadoutWaitCondition = if (isClass (missionConfigFile >> "CfgFunctions" >> "GRAD_loadout")) then {{player getVariable ["GRAD_loadout_applicationCount", 0] > 0}} else {true};
-
-    [{!isNil {(group player) getVariable "grad_groupIndex"} && _this}, {
+    [_loadoutWaitCondition, {
         if ((assignedItems player) select 3 == "") exitWith {systemChat "radiosettings: No radio in loadout."};
 
-        [{count (((assignedItems player) select 3) splitString "_") > 2}, {
+        [] call grad_missionSetup_fnc_waitForRadioInit;
+        [{player getVariable ["grad_radiosReceived",false]}, {
             [{[] call GRAD_radiosettings_fnc_activateSettings}, [], 1] call CBA_fnc_waitAndExecute;
         }, []] call CBA_fnc_waitUntilAndExecute;
-    }, _loadoutWaitCondition] call CBA_fnc_waitUntilAndExecute;
+    }, []] call CBA_fnc_waitUntilAndExecute;
 };

@@ -1,12 +1,11 @@
 class GRAD_groupsettings {
     class groupsettings {
-        class extractGroupNames {};
         class findChannelFrequency {};
         class findPlayableGroups {};
+        class getCallsign {};
+        class getGroupConfig {};
         class setDynamicGroupNames {};
         class setGroupChannels {};
-        class setGroupIndices {};
         class setGroupSettings {};
-        class setJIPGroupIndex {};
     };
 };

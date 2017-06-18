@@ -2,29 +2,29 @@
 
 params ["_group"];
 
-_groupIndex = _group getVariable ["grad_groupIndex",-1];
-if (_groupIndex < 0) exitWith {};
 
-_allGroupConfigs = "true" configClasses (missionConfigFile >> "missionSettings" >> "groupsettings");
-if !(count _allGroupConfigs > _groupIndex) exitWith {};
+private _callsign = [_group] call grad_groupsettings_fnc_getCallsign;
+if (_callsign == "") exitWith {INFO("No settings for player group.")};
 
-_groupConfig = _allGroupConfigs select _groupIndex;
+private _groupConfig = [_callsign,_group] call grad_groupsettings_fnc_getGroupConfig;
+if (isNil "_groupConfig") exitWith {INFO("No settings for player group.")};
 
-_tfarSrSettings = switch (playerSide) do {
+
+private _tfarSrSettings = switch (playerSide) do {
     case (WEST): {tf_freq_west};
     case (EAST): {tf_freq_east};
     case (INDEPENDENT): {tf_freq_guer};
     default {tf_freq_west};
 };
-_tfarSrFreqs = _tfarSrSettings select 2;
+private _tfarSrFreqs = _tfarSrSettings select 2;
 
-_tfarLrSettings = switch (playerSide) do {
+private _tfarLrSettings = switch (playerSide) do {
     case (WEST): {tf_freq_west_lr};
     case (EAST): {tf_freq_east_lr};
     case (INDEPENDENT): {tf_freq_guer_lr};
     default {tf_freq_west_lr};
 };
-_tfarLrFreqs = _tfarLrSettings select 2;
+private _tfarLrFreqs = _tfarLrSettings select 2;
 
 
 //SHORTRANGE SETTINGS

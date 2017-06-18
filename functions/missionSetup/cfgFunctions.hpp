@@ -7,5 +7,6 @@ class GRAD_missionSetup {
         class intro {};
         class loadouts {};
         class setTimeMultiplier {};
+        class waitForRadioInit {};
     };
 };
