@@ -5,6 +5,7 @@
 [] call grad_missionSetup_fnc_createDiaryRecords;
 [] call grad_missionSetup_fnc_intro;
 [] call grad_missionSetup_fnc_initCivs;
+[] call grad_missionSetup_fnc_initPlayableAI;
 [] call grad_radiosettings_fnc_setRadioSettings;
 [] call grad_groupsettings_fnc_setGroupSettings;
 
