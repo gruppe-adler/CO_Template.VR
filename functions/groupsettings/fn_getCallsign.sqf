@@ -9,4 +9,6 @@ private _callsign = "";
     false
 } count (units _group);
 
+if (_callsign == "") then {_callsign = groupID _group};
+
 _callsign
