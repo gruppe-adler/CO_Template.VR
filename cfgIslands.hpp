@@ -56,6 +56,12 @@ class CfgIslands {
 		isWoodland = false;
 	};
 
+	class Malden {
+		displayName = "Malden";
+		type = "mediterranean";
+		isWoodland = true;
+	};
+
 	class mbg_celle2 {
 		displayName = "Celle";
 		type = "russian";
