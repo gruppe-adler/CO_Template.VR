@@ -5,37 +5,41 @@
 #define PROJECT_NAME grad-customGear
 
 class grad_customgear {
-  class dialog {
-    file = MODULES_DIRECTORY\PROJECT_NAME\functions\dialog;
-    class addAction {};
-    class getDisplayName {};
-    class openDialog {};
-    class updateDialog {};
-  };
+    class common {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\common;
+        class notificationAndLog {};
+    };
 
-  class init {
-    file = MODULES_DIRECTORY\PROJECT_NAME\functions\init;
-    class broadcastVar {postInit = 1;};
-    class loadActions {postInit = 1;};
-  };
+    class dialog {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\dialog;
+        class addAction {};
+        class getDisplayName {};
+        class openDialog {};
+        class updateDialog {};
+    };
 
-  class load {
-    file = MODULES_DIRECTORY\PROJECT_NAME\functions\load;
-    class findUID {};
-    class loadGear {};
-  };
+    class init {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\init;
+        class broadcastVar {postInit = 1;};
+        class loadActions {postInit = 1;};
+    };
 
-  class optics {
-    file = MODULES_DIRECTORY\PROJECT_NAME\functions\optics;
-    class getZoomFactor {};
-    class isNightVision {};
-    class isRussian {};
-    class isThermal {};
-  };
+    class load {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\load;
+        class findUID {};
+        class loadGear {};
+    };
 
-  class save {
-    file = MODULES_DIRECTORY\PROJECT_NAME\functions\save;
-    class saveGear {};
-  };
+    class optics {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\optics;
+        class getZoomFactor {};
+        class isNightVision {};
+        class isRussian {};
+        class isThermal {};
+    };
 
+    class save {
+        file = MODULES_DIRECTORY\PROJECT_NAME\functions\save;
+        class saveGear {};
+    };
 };

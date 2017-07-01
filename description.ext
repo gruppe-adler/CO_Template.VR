@@ -81,6 +81,8 @@ class RscTitles {
 //NOTIFICATIONS ================================================================
 class CfgNotifications
 {
+	#include "node_modules\grad-customGear\cfgNotifications.hpp"
+	
     class grad_notification1 {
         title = "%1";
         iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
@@ -127,7 +129,7 @@ class CfgGradCivs {
 
 
 //OTHER NPM MODULES ============================================================
-class grad_customGear {
+class CfgGradCustomGear {
     #include "USER\customGear.hpp"
 };
 

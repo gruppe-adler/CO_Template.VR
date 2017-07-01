@@ -9,14 +9,14 @@
 
 params ["_class"];
 
-_displayName = "";
+private _displayName = "";
 
 if (_displayName == "") then {
-  _displayName = getText (configfile >> "CfgWeapons" >> _class >> "displayName");
+    _displayName = getText (configfile >> "CfgWeapons" >> _class >> "displayName");
 };
 
 if (_displayName == "") then {
-  _displayName = getText (configfile >> "CfgGlasses" >> _class >> "displayName");
+    _displayName = getText (configfile >> "CfgGlasses" >> _class >> "displayName");
 };
 
 _displayName

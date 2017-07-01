@@ -10,5 +10,5 @@
 
 params ["_optic"];
 
-_isRussian = (getNumber (configfile >> "CfgWeapons" >> "rhs_weap_ak74m" >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _optic) == 1);
+private _isRussian = (getNumber (configfile >> "CfgWeapons" >> "rhs_weap_ak74m" >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems" >> _optic) == 1);
 _isRussian

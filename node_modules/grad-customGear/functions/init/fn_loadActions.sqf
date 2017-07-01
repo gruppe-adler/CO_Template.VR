@@ -4,7 +4,7 @@
 
 params [["_mode","MANUAL"]];
 
-if (_mode == "postInit" && ([(missionConfigFile >> "grad_customGear"), "actionsOnMissionStart", 1] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
+if (_mode == "postInit" && ([(missionConfigFile >> "CfgGradCustomGear"), "actionsOnMissionStart", 1] call BIS_fnc_returnConfigEntry) == 0) exitWith {};
 
 [] spawn {
     private ["_action"];
@@ -19,11 +19,11 @@ if (_mode == "postInit" && ([(missionConfigFile >> "grad_customGear"), "actionsO
     sleep 3;
 
     //get config values
-    _allowHelmet            = getNumber (missionConfigFile >> "grad_customGear" >> "allowHelmet") == 1;
-    _allowGoggles           = getNumber (missionConfigFile >> "grad_customGear" >> "allowGoggles") == 1;
-    _allowSimpleScopes      = getNumber (missionConfigFile >> "grad_customGear" >> "allowSimpleScopes") == 1;
-    _allowMagnifyingScopes  = getNumber (missionConfigFile >> "grad_customGear" >> "allowMagnifyingScopes") == 1;
-    _allowMarksmanScopes    = getNumber (missionConfigFile >> "grad_customGear" >> "allowMarksmanScopes") == 1;
+    _allowHelmet            = getNumber (missionConfigFile >> "CfgGradCustomGear" >> "allowHelmet") == 1;
+    _allowGoggles           = getNumber (missionConfigFile >> "CfgGradCustomGear" >> "allowGoggles") == 1;
+    _allowSimpleScopes      = getNumber (missionConfigFile >> "CfgGradCustomGear" >> "allowSimpleScopes") == 1;
+    _allowMagnifyingScopes  = getNumber (missionConfigFile >> "CfgGradCustomGear" >> "allowMagnifyingScopes") == 1;
+    _allowMarksmanScopes    = getNumber (missionConfigFile >> "CfgGradCustomGear" >> "allowMarksmanScopes") == 1;
 
     //add actions
     if (!isNil "grad_customGear_actionID1") then {player removeAction grad_customGear_actionID1; grad_customGear_actionID1 = -1} else {grad_customGear_actionID1 = -1};
@@ -56,8 +56,8 @@ if (_mode == "postInit" && ([(missionConfigFile >> "grad_customGear"), "actionsO
 
     //exit if no actions added
     if ({_x != -1} count [grad_customGear_actionID1, grad_customGear_actionID2, grad_customGear_actionID3] == 0) exitWith {};
-    systemChat "grad-customGear: custom equipment can now be loaded";
 
+    ["Custom equipment can now be loaded."] call grad_customGear_fnc_notificationAndLog;
 
     //remove action after time
     grad_customGear_removeTime = time + 120;
