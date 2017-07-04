@@ -13,8 +13,13 @@ respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;
 disabledAI = 0;
-enableDebugConsole = 1;
 allowFunctionsRecompile = 1;
+enableDebugConsole = 1;
+//mcdiod, nomisum
+enableDebugConsole[] = {
+	"76561198044320063",
+	"76561197961080101"
+};
 
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
@@ -82,7 +87,7 @@ class RscTitles {
 class CfgNotifications
 {
 	#include "node_modules\grad-customGear\cfgNotifications.hpp"
-	
+
     class grad_notification1 {
         title = "%1";
         iconPicture = "\A3\ui_f\data\map\markers\military\warning_CA.paa";
