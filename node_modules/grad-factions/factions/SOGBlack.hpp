@@ -125,30 +125,21 @@ class SOGBLACK {
         //Combat Life Saver
         class medic_F: Soldier_F {
 			vest = "V_TacVestIR_blk";
-            backpack = "ga_kitbag_lite_black_medic";
+            backpack = "ga_kitbag_black_medic";
             addItemsToUniform[] = {
                 "ACE_MapTools",
-                "ACE_Flashlight_MX991",
-                "GRAD_ALK",
-                "ACE_surgicalKit"
+                "ACE_Flashlight_MX991"
             };
-            addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShellPurple"),
-                LIST_8("SmokeShell"),
-                LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_7("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer")
-            };
-            addItemsToBackpack[] = {
-                LIST_25("ACE_fieldDressing"),
-                LIST_25("ACE_elasticBandage"),
-                LIST_10("ACE_packingBandage"),
-                LIST_10("ACE_quikclot"),
-                LIST_12("ACE_epinephrine"),
-                LIST_16("ACE_morphine"),
-                LIST_6("ACE_adenosine"),
-                LIST_6("ACE_tourniquet"),
-                LIST_8("ACE_salineIV_500")
+            class Rank {
+                class PRIVATE {
+                    GRAD_FACTIONS_MEDICITEMS_CFR
+                };
+                class CORPORAL {
+                    GRAD_FACTIONS_MEDICITEMS_SQ
+                };
+                class SERGEANT {
+                    GRAD_FACTIONS_MEDICITEMS_PT
+                };
             };
         };
         //Explosive Specialist

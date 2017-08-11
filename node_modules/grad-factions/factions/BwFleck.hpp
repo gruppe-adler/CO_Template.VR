@@ -137,18 +137,16 @@ class BWFleck {
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
                 LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
-            addItemsToBackpack[] = {
-                LIST_30("ACE_fieldDressing"),
-                LIST_30("ACE_elasticBandage"),
-                LIST_10("ACE_packingBandage"),
-                LIST_10("ACE_quikclot"),
-                LIST_15("ACE_epinephrine"),
-                LIST_20("ACE_morphine"),
-                LIST_6("ACE_adenosine"),
-                LIST_8("ACE_tourniquet"),
-                LIST_8("ACE_salineIV_500"),
-                LIST_1("GRAD_ALK"),
-                LIST_1("ACE_surgicalKit")
+            class Rank {
+                class PRIVATE {
+                    GRAD_FACTIONS_MEDICITEMS_CFR
+                };
+                class CORPORAL {
+                    GRAD_FACTIONS_MEDICITEMS_SQ
+                };
+                class SERGEANT {
+                    GRAD_FACTIONS_MEDICITEMS_PT
+                };
             };
         };
 

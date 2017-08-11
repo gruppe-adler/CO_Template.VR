@@ -118,12 +118,10 @@ class USOCP {
         //Combat Life Saver
         class medic_F: Soldier_F {
             vest = "rhsusf_iotv_ocp_Medic";
-            backpack = "rhsusf_assault_eagleaiii_ocp";
+            backpack = "B_Kitbag_cbr";
             addItemsToUniform[] = {
                 "ACE_MapTools",
-                "ACE_Flashlight_MX991",
-                "GRAD_ALK",
-                "ACE_surgicalKit"
+                "ACE_Flashlight_MX991"
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
@@ -132,16 +130,17 @@ class USOCP {
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 LIST_8("30Rnd_556x45_Stanag")
             };
-            addItemsToBackpack[] = {
-                LIST_25("ACE_fieldDressing"),
-                LIST_25("ACE_elasticBandage"),
-                LIST_10("ACE_packingBandage"),
-                LIST_10("ACE_quikclot"),
-                LIST_12("ACE_epinephrine"),
-                LIST_16("ACE_morphine"),
-                LIST_6("ACE_adenosine"),
-                LIST_6("ACE_tourniquet"),
-                LIST_8("ACE_salineIV_500")
+
+            class Rank {
+                class PRIVATE {
+                    GRAD_FACTIONS_MEDICITEMS_CFR
+                };
+                class CORPORAL {
+                    GRAD_FACTIONS_MEDICITEMS_SQ
+                };
+                class SERGEANT {
+                    GRAD_FACTIONS_MEDICITEMS_PT
+                };
             };
         };
         //Explosive Specialist

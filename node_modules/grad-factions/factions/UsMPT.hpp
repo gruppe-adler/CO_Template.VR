@@ -21,7 +21,7 @@
 #endif
 
 class USMPT: USOCP {
-    class AllUnits {
+    class AllUnits: AllUnits {
         uniform = "rhs_uniform_FROG01_wd";
         vest = "rhsusf_spc_rifleman";
         backpack = "";

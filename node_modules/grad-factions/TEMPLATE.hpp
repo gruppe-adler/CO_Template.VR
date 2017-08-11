@@ -32,7 +32,12 @@ class LOADOUTNAME {
 		primaryWeaponOptics = "";
 		primaryWeaponPointer = LLITEM;
 		primaryWeaponMuzzle = SUPPRESSORITEM;
+        primaryWeaponUnderbarrel = "";
+        primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
 		handgunWeapon = "";
+        handgunWeaponMagazine = "";
 		binoculars = "Binocular";
 		map = "ItemMap";
 		compass = "ItemCompass";

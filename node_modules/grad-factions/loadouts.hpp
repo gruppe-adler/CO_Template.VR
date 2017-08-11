@@ -1,5 +1,6 @@
 #include "list_macros.hpp"
 
+#include "medicloadoutBase.hpp"
 
 #include "factions\BwFleck.hpp"
 #include "factions\BwTrop.hpp"
