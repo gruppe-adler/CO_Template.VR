@@ -61,6 +61,29 @@ class cfgCivilians {
             "B_Carryall_oucamo",
             "rhs_sidor"
         };
+
+        vehicles[] = {
+            "C_Van_01_fuel_F",
+            "C_Hatchback_01_F",
+            "C_Truck_02_transport_F",
+            "C_Truck_02_covered_F",
+            "C_Offroad_01_F",
+            "C_Offroad_01_repair_F",
+            "C_Quadbike_01_F",
+            "C_Van_01_transport_F",
+            "RDS_Gaz24_Civ_03",
+            "RDS_Gaz24_Civ_01",
+            "RDS_Gaz24_Civ_02",
+            "RDS_S1203_Civ_01",
+            "RDS_Zetor6945_Base",
+            "RDS_Lada_Civ_01",
+            "RDS_Lada_Civ_03",
+            "RDS_Lada_Civ_02",
+            "RDS_tt650_Civ_01",
+            "RDS_JAWA353_Civ_01",
+            "RHS_Ural_Civ_01",
+            "RHS_Ural_Open_Civ_02"
+        };
     };
 
     class russian {
@@ -137,6 +160,25 @@ class cfgCivilians {
         backpacks[] = {
             "rhs_sidor"
         };
+
+        vehicles[] = {
+            "C_Van_01_fuel_F",
+            "C_Truck_02_transport_F",
+            "C_Truck_02_covered_F",
+            "C_Van_01_transport_F",
+            "RDS_Gaz24_Civ_03",
+            "RDS_Gaz24_Civ_01",
+            "RDS_Gaz24_Civ_02",
+            "RDS_S1203_Civ_01",
+            "RDS_Zetor6945_Base",
+            "RDS_Lada_Civ_01",
+            "RDS_Lada_Civ_03",
+            "RDS_Lada_Civ_02",
+            "RDS_tt650_Civ_01",
+            "RDS_JAWA353_Civ_01",
+            "RHS_Ural_Civ_01",
+            "RHS_Ural_Open_Civ_02"
+        };
     };
 
     class middleEastern {
@@ -176,6 +218,32 @@ class cfgCivilians {
 
         backpacks[] = {
             "rhs_sidor"
+        };
+
+        vehicles[] = {
+            "C_Van_01_fuel_F",
+            "C_Hatchback_01_F",
+            "C_Truck_02_transport_F",
+            "C_Truck_02_covered_F",
+            "C_Offroad_01_F",
+            "C_Offroad_01_repair_F",
+            "C_Quadbike_01_F",
+            "C_Van_01_transport_F",
+            "RDS_Gaz24_Civ_03",
+            "RDS_Gaz24_Civ_01",
+            "RDS_Gaz24_Civ_02",
+            "RDS_S1203_Civ_01",
+            "RDS_Zetor6945_Base",
+            "RDS_Lada_Civ_01",
+            "RDS_Lada_Civ_03",
+            "RDS_Lada_Civ_02",
+            "RDS_tt650_Civ_01",
+            "RDS_JAWA353_Civ_01",
+            "RHS_Ural_Civ_01",
+            "RHS_Ural_Open_Civ_02",
+            "LOP_TAK_Civ_Landrover",
+            "LOP_TAK_Civ_UAZ",
+            "LOP_TAK_Civ_UAZ_Open"
         };
     };
 
@@ -249,6 +317,32 @@ class cfgCivilians {
             "B_FieldPack_oli",
             "B_Carryall_oucamo",
             "rhs_sidor"
+        };
+
+        vehicles[] = {
+            "C_Van_01_fuel_F",
+            "C_Hatchback_01_F",
+            "C_Truck_02_transport_F",
+            "C_Truck_02_covered_F",
+            "C_Offroad_01_F",
+            "C_Offroad_01_repair_F",
+            "C_Quadbike_01_F",
+            "C_Van_01_transport_F",
+            "RDS_Gaz24_Civ_03",
+            "RDS_Gaz24_Civ_01",
+            "RDS_Gaz24_Civ_02",
+            "RDS_S1203_Civ_01",
+            "RDS_Zetor6945_Base",
+            "RDS_Lada_Civ_01",
+            "RDS_Lada_Civ_03",
+            "RDS_Lada_Civ_02",
+            "RDS_tt650_Civ_01",
+            "RDS_JAWA353_Civ_01",
+            "RHS_Ural_Civ_01",
+            "RHS_Ural_Open_Civ_02",
+            "C_Offroad_02_unarmed_F_black",
+            "C_Offroad_02_unarmed_F",
+            "C_Offroad_02_unarmed_F_green"
         };
     };
 };

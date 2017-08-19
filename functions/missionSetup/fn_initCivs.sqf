@@ -16,6 +16,7 @@ private _headgear = [_civCfg,"headgear",[]] call BIS_fnc_returnConfigEntry;
 private _faces = [_civCfg,"faces",[]] call BIS_fnc_returnConfigEntry;
 private _goggles = [_civCfg,"goggles",[]] call BIS_fnc_returnConfigEntry;
 private _backpacks = [_civCfg,"backpacks",[]] call BIS_fnc_returnConfigEntry;
+private _vehicles = [_civCfg,"vehicles",[]] call BIS_fnc_returnConfigEntry;
 
 private _userEquipmentCfg = missionConfigFile >> "CfgGradCivs" >> "userEquipment";
 private _userClothes = [_userEquipmentCfg,"clothes",[]] call BIS_fnc_returnConfigEntry;
@@ -23,6 +24,7 @@ private _userHeadgear = [_userEquipmentCfg,"headgear",[]] call BIS_fnc_returnCon
 private _userFaces = [_userEquipmentCfg,"faces",[]] call BIS_fnc_returnConfigEntry;
 private _userGoggles = [_userEquipmentCfg,"goggles",[]] call BIS_fnc_returnConfigEntry;
 private _userBackpacks = [_userEquipmentCfg,"backpacks",[]] call BIS_fnc_returnConfigEntry;
+private _userVehicles = [_userEquipmentCfg,"vehicles",[]] call BIS_fnc_returnConfigEntry;
 
 
 private _replace = ([_userEquipmentCfg,"replace",0] call BIS_fnc_returnConfigEntry) == 1;
@@ -32,12 +34,14 @@ if (_replace) then {
     REPNIF0(_faces,_userFaces);
     REPNIF0(_goggles,_userGoggles);
     REPNIF0(_backpacks,_userBackpacks);
+    REPNIF0(_vehicles,_userVehicles);
 } else {
     APPENDUNIQUE(_clothes,_userClothes);
     APPENDUNIQUE(_headgear,_userHeadgear);
     APPENDUNIQUE(_faces,_userFaces);
     APPENDUNIQUE(_goggles,_userGoggles);
     APPENDUNIQUE(_backpacks,_userBackpacks);
+    APPENDUNIQUE(_vehicles,_userVehicles);
 };
 
 [_clothes] call grad_civs_fnc_setClothes;
@@ -45,5 +49,6 @@ if (_replace) then {
 [_faces] call grad_civs_fnc_setFaces;
 [_goggles] call grad_civs_fnc_setGoggles;
 [_backpacks] call grad_civs_fnc_setBackpacks;
+[_vehicles] call grad_civs_fnc_setVehicles;
 
 [] call grad_civs_fnc_initModule;

@@ -14,6 +14,12 @@ onSpawn = "";                                                                   
 onHeldUp = "";                                                                  // Code, der ausgeführt wird, wenn ein Zivilist angehalten wird (Spieler zeigt mit Waffe auf Zivilist)
 
 
+maxCivsOnFoot = 40;                                                             // maximale Anzahl an Zivilisten zu Fuß
+maxCivsInVehicles = 15;                                                         // maximale Anzahl an Zivilisten in Fahrzeugen
+spawnDistancesOnFoot[] = {1000,4500};                                           // Mindest- und Maximalabstand zu allen Spielern, in denen Zivilisten zu Fuß spawnen
+spawnDistancesInVehicles[] = {1800,6000};                                       // Mindest- und Maximalabstand zu allen Spielern, in denen Zivilisten in Fahrzeugen spawnen
+
+
 class userEquipment {
     // Soll die hier definierte Ausrüstung die vordefinierte, inselabhängige Ausrüstung ersetzen oder zu dieser hinzugefügt werden? (0: hinzufügen, 1: ersetzen)
     replace = 0;
@@ -40,6 +46,10 @@ class userEquipment {
 
     // Rucksäcke
     backpacks[] = {
+
+    };
+
+    vehicles[] = {
 
     };
 };
