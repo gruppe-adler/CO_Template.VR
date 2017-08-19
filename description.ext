@@ -50,6 +50,7 @@ class missionSettings {
 	};
 };
 
+
 //FUNCTIONS ====================================================================
 class CfgFunctions
 {
@@ -143,4 +144,11 @@ class CfgGradCustomGear {
 
 class CfgGradFortifications {
     #include "USER\userFortifications.hpp"
+};
+
+//XEHs =========================================================================
+class Extended_InitPost_EventHandlers  {
+	class CAManBase {
+	   init = "params ['_u']; if (!(isPlayer _u) && {local _u}) then {[_u] call GRAD_Loadout_fnc_doLoadoutForUnit};";
+	};
 };
