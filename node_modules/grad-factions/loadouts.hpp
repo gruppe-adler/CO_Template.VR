@@ -10,6 +10,8 @@
 #include "factions\RuFlora.hpp"
 #include "factions\RuEMR.hpp"
 #include "factions\SOGBlack.hpp"
+#include "factions\UsmcVietnam.hpp"
+#include "factions\Vietcong.hpp"
 
 //deprecated:
 /*#include "factions\ModerateRebels.hpp"*/

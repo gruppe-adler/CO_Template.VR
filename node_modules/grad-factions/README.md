@@ -64,16 +64,18 @@ Somewhere in your init.sqf, for example:
 
 These factions are available (see also the `factions` directory):
 
-| name           |  description                                 |
-|----------------|----------------------------------------------|
-| BwFleck        |  Bundeswehr Flecktarn                        |
-| BwTrop         |  Bundeswehr Tropentarn                       |
-| RuFlora        |  Russian MSV Flora                           |
-| RuEMR          |  Russian MSV EMR-Summer                      |
-| UsOCP          |  US Army OCP                                 |
-| UsUCP          |  US Army UCP                                 |
-| UsMPT          |  US Marines MARPAT                           |
-| SOGBlack       |  CIA Special Operations Group                |
+| name        | description                  | author |
+|-------------|------------------------------|--------|
+| BwFleck     | Bundeswehr Flecktarn         | McDiod |
+| BwTrop      | Bundeswehr Tropentarn        | McDiod |
+| RuFlora     | Russian MSV Flora            | McDiod |
+| RuEMR       | Russian MSV EMR-Summer       | McDiod |
+| UsOCP       | US Army OCP                  | McDiod |
+| UsUCP       | US Army UCP                  | McDiod |
+| UsMPT       | US Marines MARPAT            | McDiod |
+| SOGBlack    | CIA Special Operations Group | Synch  |
+| UsmcVietnam | Vietnam-Era USMC             | Eras   |
+| Vietcong    | Vietnamese Guerilla          | Eras   |
 
 
 **HINT**: If you do not know which faction your editor-created units belong to, have a look into the [BI Community Wiki](https://community.bistudio.com/wiki/Arma_3_CfgVehicles_WEST)
