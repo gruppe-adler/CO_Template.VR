@@ -74,6 +74,12 @@ class CfgIslands {
 		isWoodland = false;
 	};
 
+	class prei_khmaoch_luong {
+		displayName = "Prei Khmaoch Luong";
+		type = "tropic";
+		isWoodland = true;
+	};
+
 	class Stratis {
 		displayName = "Stratis";
 		type = "mediterranean";
