@@ -15,7 +15,7 @@ respawnDialog = 0;
 disabledAI = 0;
 allowFunctionsRecompile = 1;
 
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 
 //disabled because BIS doesn't ever test shit
 //mcdiod, nomisum
