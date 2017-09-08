@@ -2,9 +2,6 @@
 #define REPNIF0(var1,var2) if(count var2 > 0) then {var1 = var2}
 #define APPENDUNIQUE(var1,var2) var1 = var1 + var2;var1 = var1 arrayIntersect var1
 
-private _enable = ([missionConfigFile >> "CfgGradCivs","enableCivs",0] call BIS_fnc_returnConfigEntry) == 1;
-if !(_enable) exitWith {};
-
 private _islandType = [missionConfigFile >> "CfgIslands" >> worldName,"type",""] call BIS_fnc_returnConfigEntry;
 if (_islandType == "") exitWith {ERROR("World is not defined in cfgIslands.")};
 

@@ -3,8 +3,8 @@
 *   In der Klasse "userEquipment" können eigene Ausrüstungsgegenstände für die Zivilisten definiert werden.
 */
 
-
-enableCivs = 1;                                                                 // Zivilisten aktiviert (0/1)
+enableOnFoot = 0;                                                               // Zivilisten, die durch die Gegend laufen, einschalten (0/1)
+enableInVehicles = 0;                                                           // Fahrzeugfahrende Zivilisten einschalten (0/1)
 
 maxCivs = 60;                                                                   // maximale Anzahl an Zivilisten
 spawnDistances[] = {1000,4500};                                                 // Mindest- und Maximalabstand zu allen Spielern, in denen Zivilisten spawnen
