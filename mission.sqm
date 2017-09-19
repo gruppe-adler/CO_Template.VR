@@ -60,8 +60,6 @@ addons[]=
 	"A3_Modules_F_Intel",
 	"A3_Soft_F_Gamma_Truck_01",
 	"ace_realisticnames",
-	"asr_ai3_cfgcamouflage",
-	"asr_ai3_cfgvehicles",
 	"A3_Characters_F_Mark",
 	"A3_Characters_F_Jets",
 	"ace_nouniformrestrictions"
