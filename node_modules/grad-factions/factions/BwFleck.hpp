@@ -28,7 +28,7 @@ class BWFleck {
 		headgear = "ARC_GER_Flecktarn_Helmet_simple";
 		primaryWeapon = "rhs_weap_hk416d10";
         primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
-		primaryWeaponOptics = "FHQ_optic_HWS_G33";
+		primaryWeaponOptics = "rhsusf_acc_g33_T1";
 		primaryWeaponPointer = LLITEM;
 		primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponUnderbarrel = "";

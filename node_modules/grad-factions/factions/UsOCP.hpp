@@ -30,7 +30,7 @@ class USOCP {
         primaryWeaponMagazine = "30Rnd_556x45_Stanag";
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponPointer = LLITEM;
-        primaryWeaponOptics = "FHQ_optic_HWS_G33";
+        primaryWeaponOptics = "rhsusf_acc_g33_T1";
         primaryWeaponUnderbarrel = "";
 		primaryWeaponUnderbarrelMagazine = "";
         secondaryWeapon = "";

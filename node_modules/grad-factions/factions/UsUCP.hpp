@@ -27,7 +27,7 @@ class USUCP: USOCP {
         backpack = "";
         headgear = "rhsusf_ach_helmet_ucp";
         primaryWeapon = "rhs_weap_m4a1_blockII_d";
-        primaryWeaponOptics = "FHQ_optic_HWS_G33_tan";
+        primaryWeaponOptics = "rhsusf_acc_g33_T1";
     };
     class Type: Type {
         class Soldier_F: Soldier_F {};
