@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=96;
+		nextID=120;
 	};
 	class Camera
 	{
-		pos[]={923.75037,92.869644,5117.5854};
+		pos[]={919.83649,99.170319,5123.5508};
 		dir[]={0.24287175,-0.52020782,-0.81882519};
 		up[]={0.14794376,0.8540014,-0.49878079};
 		aside[]={-0.9587484,-3.5512494e-007,-0.284374};
@@ -2719,7 +2719,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -2757,7 +2757,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -2776,7 +2776,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -2814,7 +2814,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -2992,7 +2992,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.50;
+									value=0.5;
 								};
 							};
 						};
