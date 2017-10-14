@@ -1,10 +1,6 @@
 #include "component.hpp"
 
-if (typeOf player == "VirtualCurator_F") exitWith {};
-if (typeOf player == "B_VirtualCurator_F") exitWith {};
-if (typeOf player == "C_VirtualCurator_F") exitWith {};
-if (typeOf player == "I_VirtualCurator_F") exitWith {};
-if (typeOf player == "O_VirtualCurator_F") exitWith {};
+if (typeOf player in ["VirtualCurator_F","B_VirtualCurator_F","C_VirtualCurator_F","I_VirtualCurator_F","O_VirtualCurator_F"]) exitWith {};
 
 _radios = [player] call GRAD_radiosettings_fnc_getLoadoutRadios;
 _radios params ["_shortrange", "_longrange"];

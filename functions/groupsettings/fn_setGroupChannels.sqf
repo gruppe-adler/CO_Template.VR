@@ -28,8 +28,8 @@ private _tfarLrFreqs = _tfarLrSettings select 2;
 
 
 //SHORTRANGE SETTINGS
-_srDefaultChannel = ([_groupConfig >> "shortrange","defaultChannel",0] call BIS_fnc_returnConfigEntry) - 1;
-_srAltChannel = ([_groupConfig >> "shortrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_srDefaultChannel = (([_groupConfig >> "shortrange","defaultChannel",1] call BIS_fnc_returnConfigEntry) - 1) max 0;
+_srAltChannel = (([_groupConfig >> "shortrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1) max -1;
 _srAltOnlyTL = ([_groupConfig >> "shortrange","altChannelOnlyTL",1] call BIS_fnc_returnConfigEntry) == 1;
 
 if (_srDefaultChannel > 7) then {_srDefaultChannel = 0};
@@ -50,8 +50,8 @@ if (leader group player == player || !_srAltOnlyTL) then {
 
 
 //LONGRANGE SETTINGS
-_lrDefaultChannel = ([_groupConfig >> "longrange","defaultChannel",0] call BIS_fnc_returnConfigEntry) - 1;
-_lrAltChannel = ([_groupConfig >> "longrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1;
+_lrDefaultChannel = (([_groupConfig >> "longrange","defaultChannel",1] call BIS_fnc_returnConfigEntry) - 1) max 0;
+_lrAltChannel = (([_groupConfig >> "longrange","altChannel",0] call BIS_fnc_returnConfigEntry) - 1) max -1;
 _lrAltOnlyTL = ([_groupConfig >> "longrange","altChannelOnlyTL",1] call BIS_fnc_returnConfigEntry) == 1;
 
 if (_lrDefaultChannel > 8) then {_lrDefaultChannel = 0};
