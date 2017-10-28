@@ -11,3 +11,5 @@ wreckManagerMode = 1;                                                           
 wreckLimit = 20;                                                                // Schwellenwert an Wracks, ab dem die wreckRemovalMinTime benutzt wird
 wreckRemovalMinTime = 500;                                                      // Mindestdauer bevor ein Wrack gelöscht wird
 wreckRemovalMaxTime = 1200;                                                     // Maximaldauer nach der ein Wrack gelöscht wird
+
+minPlayerDistance = 50;                                                         // Distanze zum Spieler wo keine Leichen oder Wrack gelöscht werden darf
