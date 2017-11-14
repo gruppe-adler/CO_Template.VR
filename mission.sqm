@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1265;
+		nextID=1266;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=120;
+		nextID=128;
 	};
 	class Camera
 	{
@@ -62,13 +62,14 @@ addons[]=
 	"ace_realisticnames",
 	"A3_Characters_F_Mark",
 	"A3_Characters_F_Jets",
-	"ace_nouniformrestrictions"
+	"ace_nouniformrestrictions",
+	"ace_markers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=34;
 		class Item0
 		{
 			className="ace_advanced_ballistics";
@@ -295,6 +296,13 @@ class AddonsMetaData
 		{
 			className="ace_nouniformrestrictions";
 			name="ACE3 - No Uniform Restrictions";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item33
+		{
+			className="ace_markers";
+			name="ACE3 - Markers";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -1033,7 +1041,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=92;
+		items=93;
 		class Item0
 		{
 			dataType="Layer";
@@ -1403,7 +1411,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="ace_captives_moduleSettings_requireSurrenderAi";
+							expression="_this setVariable ['requireSurrenderAi',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -2763,8 +2790,8 @@ class Mission
 						};
 						class Attribute3
 						{
-							property="ace_weather_ModuleSettings_syncRain";
-							expression="_this setVariable ['syncRain',_value,true];";
+							property="ace_weather_ModuleSettings_syncWind";
+							expression="_this setVariable ['syncWind',_value,true];";
 							class Value
 							{
 								class data
@@ -2799,26 +2826,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="ace_weather_ModuleSettings_syncWind";
-							expression="_this setVariable ['syncWind',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=6;
+						nAttributes=5;
 					};
 				};
 				class Item22
@@ -3559,7 +3567,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={999.26373,5,2797.7119};
+						position[]={999.26398,5,2797.7119};
 					};
 					id=15;
 					type="ace_zeus_moduleSettings";
@@ -3675,7 +3683,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -19376,6 +19384,58 @@ class Mission
 			};
 			title="Mörsertrupp";
 			id=1264;
+		};
+		class Item92
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={800.29797,5,697.81201};
+			};
+			id=1265;
+			type="ACE_ModuleMarkers";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleMarkers_MovableMarkersEnabled";
+					expression="_this setVariable ['MovableMarkersEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleMarkers_MoveRestriction";
+					expression="_this setVariable ['MoveRestriction',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
