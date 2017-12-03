@@ -29,6 +29,7 @@ class RUEMR: RUFlora {
     class Type: Type {
         class Soldier_F: Soldier_F {};
         class soldier_AAR_F: soldier_AAR_F {};
+        class soldier_A_F: soldier_A_F {};
         class support_AMG_F: support_AMG_F {};
         class soldier_AAA_F: soldier_AAA_F {};
         class soldier_AAT_F: soldier_AAT_F {};
@@ -41,6 +42,7 @@ class RUEMR: RUFlora {
             vest = "rhs_6b13_EMR_6sh92_vog";
         };
         class HeavyGunner_F: HeavyGunner_F {};
+        class support_MG_F: support_MG_F {};
         class soldier_M_F: soldier_M_F {};
         class soldier_AA_F: soldier_AA_F {};
         class soldier_AT_F: soldier_AT_F {};
