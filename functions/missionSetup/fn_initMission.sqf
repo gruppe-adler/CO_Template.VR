@@ -1,7 +1,7 @@
 #include "component.hpp"
 
 [] call grad_missionSetup_fnc_loadouts;
-/*[] call grad_missionSetup_fnc_setTimeMultiplier;*/
+[] call grad_missionSetup_fnc_setMissionSettings;
 [] call grad_missionSetup_fnc_createDiaryRecords;
 [] call grad_missionSetup_fnc_intro;
 [] call grad_missionSetup_fnc_initCivs;

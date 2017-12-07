@@ -30,7 +30,7 @@ enableDebugConsole[] = {
 #include "cfgCivilians.hpp"
 
 class missionSettings {
-	/*#include "USER\missionSettings.hpp"*/
+	#include "USER\missionSettings.hpp"
 
 	class restrictedArsenal {
 		#include "USER\restrictedArsenal.hpp"
