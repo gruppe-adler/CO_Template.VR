@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=170;
+		nextID=178;
 	};
 	class Camera
 	{
@@ -211,7 +211,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=41;
+									items=42;
 									class Item0
 									{
 										class data
@@ -786,6 +786,20 @@ class CustomAttributes
 											value="sthud_settings_squadbar";
 										};
 									};
+									class Item41
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_parachute_hidealtimeter";
+										};
+									};
 								};
 							};
 						};
@@ -802,7 +816,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=41;
+									items=42;
 									class Item0
 									{
 										class data
@@ -2640,6 +2654,51 @@ class CustomAttributes
 															type[]=
 															{
 																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item41
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
 															};
 														};
 														value=1;
