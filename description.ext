@@ -15,15 +15,13 @@ respawnDialog = 0;
 disabledAI = 0;
 allowFunctionsRecompile = 1;
 
-enableDebugConsole = 1;
 /*enableTargetDebug = 1;*/
 
-//disabled because BIS doesn't ever test shit
 //mcdiod, nomisum
-/*enableDebugConsole[] = {
+enableDebugConsole[] = {
 	"76561198044320063",
 	"76561197961080101"
-};*/
+};
 
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
@@ -32,7 +30,7 @@ enableDebugConsole = 1;
 #include "cfgCivilians.hpp"
 
 class missionSettings {
-	/*#include "USER\missionSettings.hpp"*/
+	#include "USER\missionSettings.hpp"
 
 	class restrictedArsenal {
 		#include "USER\restrictedArsenal.hpp"

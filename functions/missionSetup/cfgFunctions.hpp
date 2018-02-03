@@ -7,7 +7,7 @@ class GRAD_missionSetup {
         class initPlayableAI {};
         class intro {};
         class loadouts {};
-        class setTimeMultiplier {};
+        class setMissionSettings {};
         class waitForRadioInit {};
     };
 };
