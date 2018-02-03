@@ -6,3 +6,5 @@ ambientSound = 1;                                                               
 sideChannel = 0;                                                                // Sidechannel aktiv (0/1) - standardmäßig aus, damit Spieler Marker immer zeussichtbar in Global setzen können
 
 artilleryComputer = 0;                                                          // Artilleriecomputer (0/1) - wenn ausgeschaltet, benutzt KI Mörser nicht mehr für indirekten Beschuss
+
+showLogo = 1;                                                                   // Adlerlogo mit Missionsnamen anzeigen (0/1) - alternativ kann hier eine Wartebedingung festgelegt werden (siehe Wiki)
