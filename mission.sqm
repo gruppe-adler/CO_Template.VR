@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=154;
+		nextID=162;
 	};
 	class Camera
 	{
@@ -29,14 +29,13 @@ class EditorData
 binarizationWanted=0;
 addons[]=
 {
-	"ace_viewdistance",
 	"A3_Modules_F_Heli_Misc",
 	"A3_Characters_F",
-	"Desert",
 	"ace_zeus",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Data_F_Curator_Virtual",
 	"A3_Data_F_Exp_A_Virtual",
+	"Desert",
 	"A3_Characters_F_Mark",
 	"ace_explosives",
 	"A3_Characters_F_Jets",
@@ -52,118 +51,111 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=16;
 		class Item0
-		{
-			className="ace_viewdistance";
-			name="ACE3 - View Distance";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item1
 		{
 			className="A3_Modules_F_Heli";
 			name="Arma 3 Helicopters - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item1
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
-		{
-			className="Desert";
-			name="Desert";
-		};
-		class Item4
+		class Item2
 		{
 			className="ace_zeus";
 			name="ACE3 - Zeus";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item5
+		class Item3
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item4
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item5
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item6
+		{
+			className="Desert";
+			name="Desert";
+		};
+		class Item7
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item8
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Characters_F_Jets";
 			name="Arma 3 Jets - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="ace_nouniformrestrictions";
 			name="ACE3 - No Uniform Restrictions";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item12
+		class Item11
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item16
+		class Item15
 		{
 			className="ace_captives";
 			name="ACE3 - Captives";
@@ -2741,79 +2733,39 @@ class Mission
 			name="Template: Module";
 			class Entities
 			{
-				items=6;
+				items=5;
 				class Item0
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={999.29303,5,999.05402};
+						position[]={1000.7023,5,1999.1807};
 					};
-					id=11;
-					type="ace_viewdistance_ModuleSettings";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_viewdistance_ModuleSettings_moduleViewDistanceLimit";
-							expression="_this setVariable ['moduleViewDistanceLimit',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=5000;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_viewdistance_ModuleSettings_moduleViewDistanceEnabled";
-							expression="_this setVariable ['moduleViewDistanceEnabled',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
+					id=19;
+					type="ModuleSlingload_F";
 				};
 				class Item1
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={999.77563,5,897.75342};
+						position[]={597.68079,5,2999.3765};
 					};
-					id=19;
-					type="ModuleSlingload_F";
+					name="HC";
+					isPlayable=1;
+					id=26;
+					type="HeadlessClient_F";
 				};
 				class Item2
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={900.41864,5,998.61035};
+						position[]={597.4165,5,2899.0415};
 					};
-					name="HC";
+					name="HC2";
 					isPlayable=1;
-					id=26;
+					id=27;
 					type="HeadlessClient_F";
 				};
 				class Item3
@@ -2821,48 +2773,21 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={900.15436,5,898.27551};
-					};
-					name="HC2";
-					isPlayable=1;
-					id=27;
-					type="HeadlessClient_F";
-				};
-				class Item4
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={900.41888,5,797.94006};
+						position[]={597.68103,5,2798.7061};
 					};
 					name="HC3";
 					isPlayable=1;
 					id=28;
 					type="HeadlessClient_F";
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Layer";
 					name="Kommentare";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Comment";
-							class PositionInfo
-							{
-								position[]={1988.3589,5,990.93506};
-							};
-							title="Module";
-							id=1495;
-						};
-					};
 					id=951;
 				};
 			};
 			id=728;
-			atlOffset=20.225861;
 		};
 		class Item1
 		{
@@ -4006,9 +3931,9 @@ class Mission
 							dataType="Comment";
 							class PositionInfo
 							{
-								position[]={2268.2258,5,2771.2256};
+								position[]={2042.583,5,2935.405};
 							};
-							title="vSpectator und vZeus";
+							title="vSpectator, vZeus, Headless Clients";
 							description="Die virtuellen Specator und Zeuseinheiten dürfen nicht im Wasser liegen, sonst geben sie das ganze Spiel über Wassergeräusche von sich.";
 							id=171;
 						};
