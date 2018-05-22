@@ -211,7 +211,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=48;
+									items=49;
 									class Item0
 									{
 										class data
@@ -884,6 +884,20 @@ class CustomAttributes
 											value="ace_medical_painisonlysuppressed";
 										};
 									};
+									class Item48
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_nightvision_noisescaling";
+										};
+									};
 								};
 							};
 						};
@@ -900,7 +914,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=48;
+									items=49;
 									class Item0
 									{
 										class data
@@ -3042,6 +3056,51 @@ class CustomAttributes
 															};
 														};
 														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item48
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.3291311;
 													};
 												};
 												class Item1
