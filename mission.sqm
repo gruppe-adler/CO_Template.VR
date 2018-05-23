@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=194;
+		nextID=202;
 	};
 	class Camera
 	{
-		pos[]={1154.1393,20.446928,4767.3892};
-		dir[]={0.39769813,-0.29492876,0.86883307};
-		up[]={0.12275416,0.95551634,0.26817563};
-		aside[]={0.90927804,-2.0925654e-007,-0.4162125};
+		pos[]={1047.2224,74.060188,4165.0522};
+		dir[]={-0.18930881,-0.27267176,0.9433403};
+		up[]={-0.053655136,0.96209133,0.26737282};
+		aside[]={0.98048413,-4.3892942e-007,0.19676265};
 	};
 };
 binarizationWanted=0;
@@ -211,7 +211,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=47;
+									items=49;
 									class Item0
 									{
 										class data
@@ -870,6 +870,34 @@ class CustomAttributes
 											value="ace_vehiclelock_lockvehicleinventory";
 										};
 									};
+									class Item47
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_medical_painisonlysuppressed";
+										};
+									};
+									class Item48
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_nightvision_noisescaling";
+										};
+									};
 								};
 							};
 						};
@@ -886,7 +914,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=47;
+									items=49;
 									class Item0
 									{
 										class data
@@ -2127,7 +2155,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -2138,7 +2166,7 @@ class CustomAttributes
 														{
 															type[]=
 															{
-																"BOOL"
+																"SCALAR"
 															};
 														};
 														value=1;
@@ -2983,6 +3011,96 @@ class CustomAttributes
 															};
 														};
 														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item47
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item48
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.3291311;
 													};
 												};
 												class Item1
@@ -17720,7 +17838,7 @@ class Mission
 								class Attribute0
 								{
 									property="ace_isHandcuffed";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 									class Value
 									{
 										class data
@@ -17758,7 +17876,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isSurrendered";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 									class Value
 									{
 										class data
@@ -17820,7 +17938,7 @@ class Mission
 								class Attribute0
 								{
 									property="ace_isHandcuffed";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 									class Value
 									{
 										class data
@@ -17858,7 +17976,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isSurrendered";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 									class Value
 									{
 										class data
@@ -17920,7 +18038,7 @@ class Mission
 								class Attribute0
 								{
 									property="ace_isHandcuffed";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 									class Value
 									{
 										class data
@@ -17958,7 +18076,7 @@ class Mission
 								class Attribute2
 								{
 									property="ace_isSurrendered";
-									expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+									expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 									class Value
 									{
 										class data
