@@ -19,7 +19,7 @@ if (_loadoutFactionInd != "") then {
     ["IND_F", _loadoutFactionInd] call GRAD_Loadout_fnc_FactionSetLoadout;
 };
 
-if (_loadoutFactionInd != "") then {
+if (_loadoutFactionCiv != "") then {
     ["CIV_F", _loadoutFactionCiv] call GRAD_Loadout_fnc_FactionSetLoadout;
 };
 
