@@ -22,6 +22,9 @@ loadoutFactionBlu = "BwFleck";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 
+// Achtung: grad-factions enthält derzeit keine Loadouts, die für Zivilisten funktionieren
+loadoutFactionCiv = "";
+
 
 //#define NIGHTVISION
 //#define GUNLIGHTS
