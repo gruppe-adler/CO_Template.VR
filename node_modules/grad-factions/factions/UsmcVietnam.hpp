@@ -17,7 +17,7 @@
 #ifdef SUPPRESSORS
   #define SUPPRESSORITEM "rhsusf_acc_nt4_black"
 #else
-  #define SUPPRESSORITEM ""
+  #define SUPPRESSORITEM "muzzle_snds_B_khk_F"
 #endif
 
 class UsmcVietnam {
@@ -54,7 +54,6 @@ class UsmcVietnam {
                 LIST_1("ACE_DefusalKit"),
                 LIST_2("ACE_CableTie"),
                 LIST_1("ACE_Flashlight_MX991"),
-
                 LIST_4("ACE_packingBandage"),
                 LIST_4("ACE_elasticBandage"),
                 LIST_4("ACE_quikclot"),
@@ -65,7 +64,7 @@ class UsmcVietnam {
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
-                LIST_2("rhsusf_mag_7x45acp_MHP"),
+                LIST_1("rhsusf_mag_7x45acp_MHP"),
                 LIST_7("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
         };
@@ -97,7 +96,7 @@ class UsmcVietnam {
         class soldier_AAA_F: Soldier_F {
             backpack = "B_FieldPack_oli";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fim92_mag")
+                LIST_1("rhs_fim92_mag")
             };
         };
 
@@ -141,7 +140,7 @@ class UsmcVietnam {
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShellPurple"),
-                LIST_8("SmokeShell"),
+                LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_7x45acp_MHP"),
                 LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
@@ -165,7 +164,8 @@ class UsmcVietnam {
         //Explosive Specialist
         class soldier_exp_F: Soldier_F {
             headgear = "H_Bandanna_blu";
-	    handgunWeapon = "ACE_VMH3";
+			handgunWeapon = "ACE_VMH3";
+				handgunWeaponMagazine = "";
             backpack = "B_FieldPack_oli";
             addItemsToBackpack[] = {
                 "ACE_Clacker",
@@ -178,15 +178,21 @@ class UsmcVietnam {
         //Grenadier
         class Soldier_GL_F: Soldier_F {
 			headgear = "H_Booniehat_oli";
+			backpack = "B_FieldPack_oli";
             primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
-                LIST_8("1Rnd_HE_Grenade_shell"),
-                LIST_3("1Rnd_SmokeRed_Grenade_shell")
+                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
+			addItemsToBackpack[] = {
+			LIST_8("1Rnd_HE_Grenade_shell"),
+            LIST_3("1Rnd_SmokeRed_Grenade_shell"),
+			LIST_2("1Rnd_SmokeRed_Grenade_shell"),
+            LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
+            LIST_2("1Rnd_SmokeBlue_Grenade_shell")
+	        };
         };
 
         //Heavy Gunner (MMG)
@@ -221,10 +227,12 @@ class UsmcVietnam {
             primaryWeaponUnderbarrel ="";
             binoculars = "Binocular";
             addItemsToVest[] = {
-                LIST_2("SmokeShell"),
 				LIST_2("HandGrenade"),
-                LIST_2("rhsusf_mag_7x45acp_MHP"),
-                LIST_8("20Rnd_762x51_Mag"),
+                LIST_2("rhsusf_mag_7x45acp_MHP")
+				};
+			backpack = "B_FieldPack_oli";
+            addItemsToBackpack[] = {
+				LIST_8("20Rnd_762x51_Mag"),
                 LIST_4("ACE_20Rnd_762x51_Mag_Tracer")
             };
         };
@@ -235,8 +243,8 @@ class UsmcVietnam {
             secondaryWeaponMagazine = "rhs_fim92_mag";
             backpack = "B_FieldPack_oli";
             addItemsToBackpack[] = {
-                "rhs_fim92_mag"
-            };
+                "rhs_fim92_mag"  
+			};	
         };
 
         //Missile Specialist (AT)
@@ -273,17 +281,13 @@ class UsmcVietnam {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
+                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
+            };
+			addItemsToBackpack[] = {
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
-                LIST_2("1Rnd_HE_Grenade_shell"),
-                "SmokeShellBlue",
-                "SmokeShellGreen",
-                "SmokeShellOrange",
-                "SmokeShellPurple",
-                "SmokeShellRed",
-                "SmokeShellYellow"
+                LIST_2("1Rnd_HE_Grenade_shell")
             };
         };
 
@@ -296,7 +300,9 @@ class UsmcVietnam {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
+                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
+            };
+			addItemsToBackpack[] = {
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
@@ -320,7 +326,7 @@ class UsmcVietnam {
         };
 
 		class Helipilot_F: Soldier_F {
-			headgear = "rhssaf_helmet_hgu56p";
+			headgear = "rhsusf_hgu56p_green";
 			backpack = "tf_rt1523g_black";
 			binoculars = "Binocular";
 			addItemsToBackpack[] = {
