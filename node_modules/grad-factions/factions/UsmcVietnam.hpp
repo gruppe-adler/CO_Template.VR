@@ -21,30 +21,30 @@
 #endif
 
 class UsmcVietnam {
-	class AllUnits {
-		uniform = "LOP_U_TKA_Fatigue_02";
-		vest = "LOP_V_6Sh92_OLV";
-		backpack = "";
-		headgear = "rhsgref_helmet_M1_bare";
-		primaryWeapon = "rhs_weap_m16a4_carryhandle";
-        	primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
-		primaryWeaponOptics = "";
-		primaryWeaponPointer = LLITEM;
-		primaryWeaponMuzzle = SUPPRESSORITEM;
-        	primaryWeaponUnderbarrel = "";
-		primaryWeaponUnderbarrelMagazine = "";
-        	secondaryWeapon = "";
-        	secondaryWeaponMagazine = "";
-		handgunWeapon = "rhsusf_weap_m1911a1";
-        	handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
-		binoculars = "";
-		map = "ItemMap";
-		compass = "ItemCompass";
-		watch = "ItemWatch";
-		gps = "";
-		radio = "";
-		goggles = "";
-		nvgoggles = NVITEM;
+    class AllUnits {
+        uniform = "rhsgref_uniform_olive";
+        vest = "rhsgref_alice_webbing";
+        backpack = "";
+        headgear = "rhsgref_helmet_M1_bare";
+        primaryWeapon = "rhs_weap_m16a4_carryhandle";
+        primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
+        primaryWeaponOptics = "";
+        primaryWeaponPointer = LLITEM;
+        primaryWeaponMuzzle = SUPPRESSORITEM;
+        primaryWeaponUnderbarrel = "";
+        primaryWeaponUnderbarrelMagazine = "";
+        secondaryWeapon = "";
+        secondaryWeaponMagazine = "";
+        handgunWeapon = "";
+        handgunWeaponMagazine = "";
+        binoculars = "";
+        map = "ItemMap";
+        compass = "ItemCompass";
+        watch = "ItemWatch";
+        gps = "";
+        radio = "";
+        goggles = "";
+        nvgoggles = NVITEM;
     };
     class Type {
         //Rifleman
@@ -64,14 +64,13 @@ class UsmcVietnam {
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
-                LIST_1("rhsusf_mag_7x45acp_MHP"),
                 LIST_7("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
         };
 
         //Asst. Autorifleman
         class soldier_AAR_F: Soldier_F {
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
                 "rhs_200rnd_556x45_T_SAW"
@@ -80,7 +79,7 @@ class UsmcVietnam {
 
         //Asst. Gunner (MMG) / Ammo Bearer
         class soldier_A_F: Soldier_F {
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
                 LIST_4("rhsusf_50Rnd_762x51_m62_tracer")
@@ -94,7 +93,7 @@ class UsmcVietnam {
 
         //Asst. Missile Specialist (AA)
         class soldier_AAA_F: Soldier_F {
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_1("rhs_fim92_mag")
             };
@@ -104,7 +103,7 @@ class UsmcVietnam {
         class soldier_AAT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_m72a7";
             secondaryWeaponMagazine = "rhs_m72a7_mag";
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_2("rhs_m72a7_mag")
             };
@@ -115,22 +114,21 @@ class UsmcVietnam {
             headgear = "H_Bandanna_sgg";
             primaryWeapon = "rhs_weap_m249_pip";
             primaryWeaponMagazine = "rhs_200rnd_556x45_T_SAW";
-            handgunWeapon = "";
-            handgunWeaponMagazine = "";
-            backpack = "B_FieldPack_oli";
+            handgunWeapon = "rhsusf_weap_m1911a1";
+            handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch",
+                "rhsusf_100Rnd_556x45_soft_pouch"
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell")
+                LIST_1("rhsusf_mag_7x45acp_MHP")
             };
         };
 
         //Combat Life Saver
         class medic_F: Soldier_F {
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToUniform[] = {
                 "ACE_MapTools",
                 "ACE_DefusalKit",
@@ -138,9 +136,7 @@ class UsmcVietnam {
                 "ACE_Flashlight_MX991"
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShellPurple"),
-                LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_7x45acp_MHP"),
                 LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
@@ -164,9 +160,9 @@ class UsmcVietnam {
         //Explosive Specialist
         class soldier_exp_F: Soldier_F {
             headgear = "H_Bandanna_blu";
-			handgunWeapon = "ACE_VMH3";
-				handgunWeaponMagazine = "";
-            backpack = "B_FieldPack_oli";
+            handgunWeapon = "ACE_VMH3";
+            handgunWeaponMagazine = "";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 "ACE_Clacker",
                 "ACE_M26_Clacker",
@@ -177,22 +173,26 @@ class UsmcVietnam {
 
         //Grenadier
         class Soldier_GL_F: Soldier_F {
-			headgear = "H_Booniehat_oli";
-			backpack = "B_FieldPack_oli";
-            primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
+            headgear = "H_Booniehat_oli";
+            backpack = "rhsgref_hidf_alicepack";
+            primaryWeapon = "rhs_weap_m3a1";
+            primaryWeaponMagazine = "rhsgref_30rnd_1143x23_M1T_2mag_SMG";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
+                LIST_8("rhsgref_30rnd_1143x23_M1T_2mag_SMG")
             };
-			addItemsToBackpack[] = {
-			LIST_8("1Rnd_HE_Grenade_shell"),
-            LIST_3("1Rnd_SmokeRed_Grenade_shell"),
-			LIST_2("1Rnd_SmokeRed_Grenade_shell"),
-            LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
-            LIST_2("1Rnd_SmokeBlue_Grenade_shell")
-	        };
+            addItemsToBackpack[] = {
+                LIST_1("rhs_weap_m79"),
+                LIST_8("rhs_mag_M433_HEDP"),
+                LIST_3("1Rnd_SmokeRed_Grenade_shell"),
+                LIST_2("1Rnd_Smoke_Grenade_shell"),
+                LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
+                LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
+                LIST_2("UGL_FlareWhite_F"),
+                LIST_2("UGL_FlareGreen_F"),
+                LIST_2("UGL_FlareRed_F"),
+                LIST_2("UGL_FlareYellow_F")
+            };
         };
 
         //Heavy Gunner (MMG)
@@ -200,16 +200,15 @@ class UsmcVietnam {
             headgear = "H_Bandanna_gry";
             primaryWeapon = "rhs_weap_m240G";
             primaryWeaponMagazine = "rhsusf_50Rnd_762x51_m62_tracer";
-            handgunWeapon = "";
-            handgunWeaponMagazine = "";
-            backpack = "B_FieldPack_oli";
+            handgunWeapon = "rhsusf_weap_m1911a1";
+            handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 LIST_2("rhsusf_100Rnd_762x51_m80a1epr"),
                 LIST_3("rhsusf_50Rnd_762x51_m62_tracer")
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell")
+                LIST_1("rhsusf_mag_7x45acp_MHP")
             };
         };
 
@@ -220,19 +219,20 @@ class UsmcVietnam {
 
         //Marksman
         class soldier_M_F: Soldier_F {
-			headgear = "H_Booniehat_oli";
+            headgear = "H_Booniehat_oli";
             primaryWeapon = "srifle_DMR_06_olive_F";
             primaryWeaponMagazine = "20Rnd_762x51_Mag";
             primaryWeaponOptics ="optic_KHS_old";
             primaryWeaponUnderbarrel ="";
+            handgunWeapon = "rhsusf_weap_m1911a1";
+            handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
             binoculars = "Binocular";
             addItemsToVest[] = {
-				LIST_2("HandGrenade"),
                 LIST_2("rhsusf_mag_7x45acp_MHP")
-				};
-			backpack = "B_FieldPack_oli";
+            };
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
-				LIST_8("20Rnd_762x51_Mag"),
+                LIST_8("20Rnd_762x51_Mag"),
                 LIST_4("ACE_20Rnd_762x51_Mag_Tracer")
             };
         };
@@ -241,17 +241,17 @@ class UsmcVietnam {
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fim92";
             secondaryWeaponMagazine = "rhs_fim92_mag";
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
-                "rhs_fim92_mag"  
-			};	
+                "rhs_fim92_mag"
+            };
         };
 
         //Missile Specialist (AT)
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_m72a7";
             secondaryWeaponMagazine = "rhs_m72a7_mag";
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 "rhs_m72a7_mag"
             };
@@ -259,7 +259,7 @@ class UsmcVietnam {
 
         //Repair Specialist
         class soldier_repair_F: Soldier_F {
-            backpack = "B_FieldPack_oli";
+            backpack = "rhsgref_hidf_alicepack";
             addItemsToBackpack[] = {
                 "ToolKit",
                 "ACE_wirecutter"
@@ -274,47 +274,71 @@ class UsmcVietnam {
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
-            primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
-			backpack = "B_FieldPack_oli";
-			binoculars = "Binocular";
+            handgunWeapon = "rhsusf_weap_m1911a1";
+            handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
+            backpack = "rhsgref_hidf_alicepack";
+            binoculars = "Binocular";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
+                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
+                LIST_1("rhsusf_mag_7x45acp_MHP")
             };
-			addItemsToBackpack[] = {
-                LIST_2("1Rnd_SmokeRed_Grenade_shell"),
-                LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
-                LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
-                LIST_2("1Rnd_HE_Grenade_shell")
+            addItemsToBackpack[] = {
+                LIST_2("SmokeShellBlue"),
+                LIST_2("SmokeShellGreen"),
+                LIST_2("SmokeShellOrange"),
+                LIST_2("SmokeShellPurple"),
+                LIST_2("SmokeShellRed"),
+                LIST_2("SmokeShellYellow"),
+                LIST_2("SmokeShell"),
+                LIST_2("hgun_Pistol_Signal_F"),
+                LIST_1("6Rnd_GreenSignal_F"),
+                LIST_1("6Rnd_RedSignal_F")
             };
         };
 
         //Team Leader
         class Soldier_TL_F: Soldier_F {
-            primaryWeapon = "rhs_weap_m16a4_carryhandle_M203";
-			backpack = "B_FieldPack_oli";
-			binoculars = "Binocular";
+            backpack = "rhsgref_hidf_alicepack";
+            binoculars = "Binocular";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
                 LIST_2("rhs_mag_m67"),
                 LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag")
             };
-			addItemsToBackpack[] = {
-                LIST_2("1Rnd_SmokeRed_Grenade_shell"),
-                LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
-                LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
-                LIST_2("1Rnd_HE_Grenade_shell")
+            addItemsToBackpack[] = {
+                LIST_2("SmokeShellBlue"),
+                LIST_2("SmokeShellGreen"),
+                LIST_2("SmokeShellOrange"),
+                LIST_2("SmokeShellPurple"),
+                LIST_2("SmokeShellRed"),
+                LIST_2("SmokeShellYellow"),
+                LIST_2("SmokeShell")
             };
         };
 
-		class officer_F: Soldier_F {
+        class officer_F: Soldier_F {
             headgear = "rhssaf_beret_red";
-			backpack = "B_FieldPack_oli";
-			binoculars = "Binocular";
-			addItemsToBackpack[] = {
+            backpack = "rhsgref_hidf_alicepack";
+            binoculars = "Binocular";
+            addItemsToBackpack[] = {
+                LIST_2("SmokeShellBlue"),
+                LIST_2("SmokeShellGreen"),
+                LIST_2("SmokeShellOrange"),
+                LIST_2("SmokeShellPurple"),
+                LIST_2("SmokeShellRed"),
+                LIST_2("SmokeShellYellow"),
+                LIST_2("SmokeShell"),
+                LIST_2("hgun_Pistol_Signal_F"),
+                LIST_1("6Rnd_GreenSignal_F"),
+                LIST_1("6Rnd_RedSignal_F")
+            };
+        };
+
+        class Helipilot_F: Soldier_F {
+            headgear = "rhsusf_hgu56p_green";
+            backpack = "tf_rt1523g_black";
+            binoculars = "Binocular";
+            addItemsToBackpack[] = {
                 LIST_2("SmokeShellBlue"),
                 LIST_2("SmokeShellGreen"),
                 LIST_2("SmokeShellOrange"),
@@ -325,42 +349,29 @@ class UsmcVietnam {
             };
         };
 
-		class Helipilot_F: Soldier_F {
-			headgear = "rhsusf_hgu56p_green";
-			backpack = "tf_rt1523g_black";
-			binoculars = "Binocular";
-			addItemsToBackpack[] = {
-                LIST_2("SmokeShellBlue"),
-                LIST_2("SmokeShellGreen"),
-                LIST_2("SmokeShellOrange"),
-                LIST_2("SmokeShellPurple"),
-                LIST_2("SmokeShellRed"),
-                LIST_2("SmokeShellYellow"),
-                LIST_2("SmokeShell")
-			};
+        class Soldier_UAV_F: Soldier_F {
+            backpack = "tf_rt1523g_black";
+            binoculars = "Binocular";
         };
-
-		class Soldier_UAV_F: Soldier_F {
-			backpack = "tf_rt1523g_black";
-			binoculars = "Binocular";
-        };
-
     };
 
     class Rank {
         class LIEUTENANT {
             headgear = "rhssaf_beret_red";
-			backpack = "B_FieldPack_oli";
-			binoculars = "Binocular";
-			addItemsToBackpack[] = {
+            backpack = "rhsgref_hidf_alicepack";
+            binoculars = "Binocular";
+            addItemsToBackpack[] = {
                 LIST_2("SmokeShellBlue"),
                 LIST_2("SmokeShellGreen"),
                 LIST_2("SmokeShellOrange"),
                 LIST_2("SmokeShellPurple"),
                 LIST_2("SmokeShellRed"),
                 LIST_2("SmokeShellYellow"),
-                LIST_2("SmokeShell")
-			};
+                LIST_2("SmokeShell"),
+                LIST_2("hgun_Pistol_Signal_F"),
+                LIST_1("6Rnd_GreenSignal_F"),
+                LIST_1("6Rnd_RedSignal_F")
+            };
         };
     };
 };

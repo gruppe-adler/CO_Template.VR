@@ -97,6 +97,7 @@ These factions are available (see also the `factions` directory):
 | UsMPT               | US Marines MARPAT                     | McDiod |
 | SOGBlack            | CIA Special Operations Group          | Synch  |
 | UsmcVietnam         | Vietnam-Era USMC                      | Eras   |
+| SOCOMVietnam        | Vietnam-Era Special Forces            | Ainer  |
 | Vietcong            | Vietnamese Guerilla                   | Eras   |
 | SWAT                | US SWAT                               | Eras   |
 | Taliban             | Taliban (non-standard medic loadouts) | Slant  |
