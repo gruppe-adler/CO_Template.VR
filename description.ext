@@ -14,6 +14,7 @@ respawnOnStart = -1;
 respawnDialog = 0;
 disabledAI = 0;
 allowFunctionsRecompile = 1;
+reviveMode = 0;
 
 /*enableTargetDebug = 1;*/
 
