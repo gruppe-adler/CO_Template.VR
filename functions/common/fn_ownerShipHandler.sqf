@@ -23,7 +23,7 @@ if (hasInterface) then {
             };
         }];
 
-        // EH is aGlobal
+        // EH is aGlobal but fires only on source and target
         _x addEventHandler ["Local", {
             params ["_entity", "_isLocal"];
 
