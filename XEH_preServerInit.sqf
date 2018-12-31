@@ -2,10 +2,10 @@
     params ["_group"];
 
     // make unit editable for all zeus
-    if([_group] isEqualTypeParams [grpNull])then{
+    if([_group] isEqualType grpNull)then{
         {
             _x addCuratorEditableObjects [units _group, true];
-        } forEach (entities "moduleCurator_F");
+        } forEach allCurators;
     };
 
     // change owner to server by default
