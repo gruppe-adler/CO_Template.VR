@@ -27,6 +27,7 @@ enableDebugConsole[] = {
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
 #include "USER\garbageCollector.hpp"
+#include "cfgEventHandlers.hpp"
 #include "cfgIslands.hpp"
 #include "cfgCivilians.hpp"
 
@@ -56,6 +57,7 @@ class CfgFunctions
 {
 	#include "functions\common\cfgFunctions.hpp"
 	#include "functions\diagnostics\cfgFunctions.hpp"
+    #include "functions\events\cfgFunctions.hpp"
     #include "functions\external\cfgFunctions.hpp"
     #include "functions\groupsettings\cfgFunctions.hpp"
 	#include "functions\missionSetup\cfgFunctions.hpp"
@@ -144,11 +146,4 @@ class CfgGradCustomGear {
 
 class CfgGradFortifications {
     #include "USER\userFortifications.hpp"
-};
-
-//XEHs =========================================================================
-class Extended_InitPost_EventHandlers  {
-	class CAManBase {
-	   init = "params ['_u']; if (!(isPlayer _u) && {local _u}) then {[_u] call GRAD_Loadout_fnc_doLoadoutForUnit};";
-	};
 };
