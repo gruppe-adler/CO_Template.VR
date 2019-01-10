@@ -9,11 +9,12 @@ params ["_unit","_isLocal"];
 
 if (_isLocal) then {
     [{
-        params ["_unit"];
+        private _loadoutApplicationCountPre = _unit getVariable ["grad_loadout_applicationCount",0];
+        [_unit] call grad_loadout_fnc_doLoadoutForUnit;
 
-        // setunitloadout class as a fallback, if unit is naked
-        if ((uniform _unit) isEqualTo "") then {
+        // no grad loadout found and unit is naked? --> apply class loadout
+        if ((_unit getVariable ["grad_loadout_applicationCount",0]) == _loadoutApplicationCountPre && {(uniform _unit) == ""}) then {
             _unit setUnitLoadout (typeOf _unit);
         };
-    }, [_unit], 3] call CBA_fnc_waitAndExecute;
+    }, [_unit], 1] call CBA_fnc_waitAndExecute;
 };
