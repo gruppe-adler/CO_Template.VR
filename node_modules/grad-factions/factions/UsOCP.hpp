@@ -42,7 +42,7 @@ class USOCP {
         compass = "ItemCompass";
         watch = "ItemWatch";
         gps = "ItemGPS";
-        radio = "tf_anprc152";
+        radio = "tfar_anprc152";
         nvgoggles = NVITEM;
     };
     class Type {
@@ -257,7 +257,7 @@ class USOCP {
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
-            backpack = "tf_rt1523g_rhs";
+            backpack = "tfar_rt1523g_rhs";
             headgear = "rhsusf_ach_helmet_headset_ocp";
             vest = "rhsusf_iotv_ocp_Squadleader";
             addItemsToBackpack[] = {

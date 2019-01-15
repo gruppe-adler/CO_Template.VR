@@ -41,7 +41,7 @@ class Taliban {
 		    compass = "ItemCompass";
 		    watch = "ItemWatch";
 		    gps = "";
-		    radio = "tf_fadak";
+		    radio = "tfar_fadak";
 		    nvgoggles = NVITEM;
     };
     class Type {
