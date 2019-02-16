@@ -98,7 +98,7 @@ class BWTrop: BWFleck {
         };
 
         class Soldier_SL_F: Soldier_SL_F {
-            backpack = "tf_rt1523g_big_bwmod_tropen";
+            backpack = "tfar_rt1523g_big_bwmod_tropen";
         };
 
         class Soldier_TL_F: Soldier_TL_F {

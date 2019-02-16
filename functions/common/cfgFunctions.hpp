@@ -1,6 +1,6 @@
 class GRAD_common {
     class common {
-        class addJipToZeus {};        
+        class addJipToZeus {};
         class restrictedArsenal {};
     };
 };

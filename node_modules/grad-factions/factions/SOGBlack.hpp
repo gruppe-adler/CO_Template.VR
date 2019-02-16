@@ -47,7 +47,7 @@ class SOGBLACK {
         compass = "ItemCompass";
         watch = "ACE_Altimeter";
         gps = "ItemGPS";
-        radio = "tf_anprc152";
+        radio = "tfar_anprc152";
         nvgoggles = NVITEM;
     };
     class Type {
@@ -265,7 +265,7 @@ class SOGBLACK {
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
 			vest = "V_PlateCarrier1_blk";
-            backpack = "tf_rt1523g_black";
+            backpack = "tfar_rt1523g_black";
             addItemsToBackpack[] = {
                 LIST_2("SmokeShellBlue"),
                 LIST_2("SmokeShellGreen"),
