@@ -42,7 +42,7 @@ class BWFleck {
 		compass = "ItemCompass";
 		watch = "ItemWatch";
 		gps = "ItemGPS";
-		radio = "tf_anprc152";
+		radio = "tfar_anprc152";
 		nvgoggles = NVITEM;
     };
     class Type {
@@ -257,7 +257,7 @@ class BWFleck {
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
-            backpack = "tf_rt1523g_big_bwmod";
+            backpack = "tfar_rt1523g_big_bwmod";
             addItemsToBackpack[] = {
                 LIST_2("SmokeShellBlue"),
                 LIST_2("SmokeShellGreen"),

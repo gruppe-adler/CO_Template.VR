@@ -42,7 +42,7 @@ class RUFlora {
         compass = "ItemCompass";
         watch = "ItemWatch";
         gps = "ItemGPS";
-        radio = "tf_fadak";
+        radio = "tfar_fadak";
         nvgoggles = NVITEM;
     };
     class Type {
@@ -261,7 +261,7 @@ class RUFlora {
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
             primaryWeapon = "rhs_weap_ak74m_gp25";
-            backpack = "tf_mr3000_rhs";
+            backpack = "tfar_mr3000_rhs";
             headgear = "rhs_6b26_ess";
             vest = "rhs_6b13_Flora_6sh92_radio";
             addItemsToBackpack[] = {
