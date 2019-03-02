@@ -5,13 +5,13 @@
 #endif
 
 #ifdef LASERS
-  #define LLITEM "ACE_acc_pointer_green"
+  #define LLITEM "rhsusf_acc_anpeq15A"
 #else
   #define LLITEM ""
 #endif
 
 #ifdef GUNLIGHTS
-  #define LLITEM "rhsusf_acc_anpeq15_bk_light"
+  #define LLITEM "rhsusf_acc_M952V"
 #endif
 
 #ifdef SUPPRESSORS
@@ -114,6 +114,7 @@ class IsraeliDefenseForce {
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_minimi_para_railed";
             primaryWeaponMagazine = "rhs_200rnd_556x45_M_SAW";
+            primaryWeaponUnderbarrel = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             vest = "rhsgref_otv_khaki";
@@ -138,12 +139,11 @@ class IsraeliDefenseForce {
                 "ACE_Flashlight_MX991"
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShellPurple"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
                 LIST_8("30Rnd_556x45_Stanag")
-            };	
+            };
             class Rank {
                 class PRIVATE {
                     GRAD_FACTIONS_MEDICITEMS_CFR
@@ -180,7 +180,7 @@ class IsraeliDefenseForce {
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
-                LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
+                LIST_1("rhsusf_mag_17Rnd_9x19_JHP"),
                 LIST_8("30Rnd_556x45_Stanag")
             };
 			addItemsToBackpack[] = {
@@ -193,6 +193,8 @@ class IsraeliDefenseForce {
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "LMG_Zafir_F";
             primaryWeaponMagazine = "150Rnd_762x54_Box";
+            primaryWeaponMuzzle = "";
+            primaryWeaponUnderbarrel = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             backpack = "B_Kitbag_rgr";
@@ -214,14 +216,14 @@ class IsraeliDefenseForce {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_sr25_ec";
-            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
             primaryWeaponMuzzle = "";
             primaryWeaponPointer = LLITEM;
             primaryWeaponOptics = "optic_DMS";
             primaryWeaponUnderbarrel = "bipod_01_F_blk";
             backpack = "B_Kitbag_rgr";
             addItemsToVest[] = {
-                LIST_7("rhsusf_20Rnd_762x51_m118_special_Mag")
+                LIST_6("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
             };
 			addItemsToBackpack[] = {
                 LIST_2("HandGrenade"),
@@ -280,10 +282,10 @@ class IsraeliDefenseForce {
                 LIST_2("SmokeShellOrange"),
                 LIST_2("SmokeShellPurple"),
                 LIST_2("SmokeShellRed")
-			};	
+			};
             addItemsToVest[] = {
                 LIST_1("rhsusf_mag_17Rnd_9x19_JHP"),
-                LIST_8("30Rnd_556x45_Stanag"),
+                LIST_7("30Rnd_556x45_Stanag"),
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_Smoke_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
@@ -303,7 +305,6 @@ class IsraeliDefenseForce {
                 LIST_8("30Rnd_556x45_Stanag"),
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_Smoke_Grenade_shell"),
-                LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
                 LIST_2("1Rnd_HE_Grenade_shell")
             };
 			addItemsToBackpack[] = {
@@ -314,7 +315,7 @@ class IsraeliDefenseForce {
                 LIST_2("SmokeShellOrange"),
                 LIST_2("SmokeShellPurple"),
                 LIST_2("SmokeShellRed")
-			};	
+			};
         };
 
         //Mortar
@@ -325,11 +326,11 @@ class IsraeliDefenseForce {
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
-                LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
+                LIST_1("rhsusf_mag_17Rnd_9x19_JHP"),
                 LIST_8("30Rnd_556x45_Stanag")
             };
-        };		
-		
+        };
+
         //Ass. Mortar
         class support_AMort_F: Soldier_F {
 			backpack = "B_Kitbag_rgr";

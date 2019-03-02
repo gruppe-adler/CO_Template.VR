@@ -73,7 +73,7 @@ class RUFlora {
         class Soldier_AAR_F: Soldier_F {
             backpack = "rhs_assault_umbts";
             addItemsToBackpack[] = {
-                LIST_3("rhs_100Rnd_762x54mmR_green")
+                LIST_2("rhs_100Rnd_762x54mmR_green")
             };
         };
 
@@ -89,7 +89,7 @@ class RUFlora {
         class Soldier_AAA_F: Soldier_F {
             backpack = "rhs_rpg_empty";
             addItemsToBackpack[] = {
-                LIST_2("rhs_mag_9k38_rocket")
+                LIST_1("rhs_mag_9k38_rocket")
             };
         };
 
@@ -105,11 +105,14 @@ class RUFlora {
         class Soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_pkp";
             primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_7N26";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             backpack = "rhs_assault_umbts";
             addItemsToBackpack[] = {
-                LIST_3("rhs_100Rnd_762x54mmR_green")
+                LIST_2("rhs_100Rnd_762x54mmR_green")
             };
             addItemsToVest[] = {
+                LIST_1("rhs_100Rnd_762x54mmR_green"),
                 LIST_2("rhs_mag_rgd5"),
                 LIST_2("rhs_mag_rdg2_white")
             };
@@ -151,13 +154,14 @@ class RUFlora {
                 "ACE_M26_Clacker",
                 "ACE_DefusalKit",
                 "SatchelCharge_Remote_Mag",
-                LIST_3("DemoCharge_Remote_Mag")
+                LIST_2("DemoCharge_Remote_Mag")
             };
         };
 
         //Grenadier
         class Soldier_GL_F: Soldier_F {
             primaryWeapon = "rhs_weap_ak74m_gp25";
+            primaryWeaponPointer = "";
             vest = "rhs_6b13_Flora_6sh92_vog";
             backpack = "rhs_assault_umbts";
             addItemsToBackpack[] = {
@@ -238,6 +242,8 @@ class RUFlora {
             primaryWeaponMagazine = "rhs_5Rnd_338lapua_t5000";
             primaryWeaponOptics = "rhs_acc_dh520x56";
             primaryWeaponUnderbarrel = "rhs_acc_harris_swivel";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             vest = "rhsgref_6b23_khaki_sniper";
             headgear = "rhs_Booniehat_flora";
             binoculars = "rhs_pdu4";
@@ -261,6 +267,7 @@ class RUFlora {
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
             primaryWeapon = "rhs_weap_ak74m_gp25";
+            primaryWeaponPointer = "";
             backpack = "tfar_mr3000_rhs";
             headgear = "rhs_6b26_ess";
             vest = "rhs_6b13_Flora_6sh92_radio";

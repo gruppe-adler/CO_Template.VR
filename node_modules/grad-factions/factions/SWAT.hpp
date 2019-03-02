@@ -70,7 +70,7 @@ class SWAT {
             addItemsToVest[] = {
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_10("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer")
+                LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer")
             };
         };
 
@@ -79,8 +79,8 @@ class SWAT {
 			vest = "V_PlateCarrier1_blk";
             backpack = "ga_kitbag_black";
             addItemsToBackpack[] = {
-                LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch"
+                LIST_2("rhsusf_200rnd_556x45_mixed_box"),
+                LIST_1("rhsusf_100Rnd_556x45_mixed_soft_pouch")
             };
         };
 
@@ -121,15 +121,14 @@ class SWAT {
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S_para";
-            primaryWeaponMagazine = "rhs_200rnd_556x45_M_SAW";
+            primaryWeaponMagazine = "rhsusf_200rnd_556x45_mixed_box";
+            primaryWeaponUnderbarrel = "";
             primaryWeaponPointer = LLITEM_MG;
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
-				LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch"
+				LIST_2("rhsusf_100Rnd_556x45_mixed_soft_pouch"),
+                LIST_1("rhsusf_200rnd_556x45_mixed_box")
             };
         };
 
@@ -172,13 +171,13 @@ class SWAT {
         //Grenadier
         class Soldier_GL_F: Soldier_F {
             primaryWeapon = "rhs_weap_mk18_m320";
+            primaryWeaponUnderbarrel = "";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
-                LIST_6("rhs_mag_M441_HE"),
-                LIST_2("rhs_mag_m713_Red")
+                LIST_5("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
+                LIST_4("rhs_mag_M441_HE"),
+                LIST_1("rhs_mag_m713_Red")
             };
         };
 
@@ -186,18 +185,18 @@ class SWAT {
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "rhs_weap_m240B";
             primaryWeaponMagazine = "rhsusf_100Rnd_762x51";
+            primaryWeaponMuzzle = "";
+            primaryWeaponUnderbarrel = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             backpack = "ga_kitbag_black";
             addItemsToBackpack[] = {
-                LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
-                "rhsusf_100Rnd_762x51"
+                LIST_4("rhsusf_100Rnd_762x51_m62_tracer"),
+                LIST_2("rhsusf_100Rnd_762x51")
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
-				LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
-                "rhsusf_100Rnd_762x51"
+                LIST_2("SmokeShell")
             };
         };
 
@@ -210,16 +209,15 @@ class SWAT {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_sr25_ec";
-            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
 			primaryWeaponMuzzle = SUPPRESSORITEM_MARKSMAN;
-            primaryWeaponPointer = LLITEM;
+            primaryWeaponPointer = "";
             primaryWeaponOptics = "optic_DMS";
             primaryWeaponUnderbarrel = "bipod_01_F_blk";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_7("rhsusf_20Rnd_762x51_m118_special_Mag")
+                LIST_5("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
             };
         };
 
@@ -277,17 +275,16 @@ class SWAT {
         //Team Leader
         class Soldier_TL_F: Soldier_F {
             primaryWeapon = "rhs_weap_mk18_m320";
+            primaryWeaponUnderbarrel = "";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
-                LIST_2("SmokeShell"),
+                LIST_1("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
+                LIST_6("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
-                LIST_2("1Rnd_Smoke_Grenade_shell"),
-                LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
                 LIST_2("1Rnd_HE_Grenade_shell")
             };
         };
-        
+
     };
 };

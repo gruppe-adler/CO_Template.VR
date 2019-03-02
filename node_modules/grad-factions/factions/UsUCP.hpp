@@ -43,7 +43,6 @@ class USUCP: USOCP {
             backpack = "rhsusf_assault_eagleaiii_ucp";
         };
         class soldier_AAT_F: soldier_AAT_F {
-            backpack = "rhsusf_assault_eagleaiii_ucp";
         };
         class soldier_AR_F: soldier_AR_F {
             vest = "rhsusf_iotv_ucp_SAW";
@@ -71,7 +70,6 @@ class USUCP: USOCP {
             backpack = "rhsusf_assault_eagleaiii_ucp";
         };
         class soldier_AT_F: soldier_AT_F {
-            backpack = "rhsusf_assault_eagleaiii_ucp";
         };
         class soldier_repair_F: soldier_repair_F {
             backpack = "rhsusf_assault_eagleaiii_ucp";

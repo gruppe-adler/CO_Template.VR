@@ -114,6 +114,7 @@ class UsmcVietnam {
             headgear = "H_Bandanna_sgg";
             primaryWeapon = "rhs_weap_m249_pip";
             primaryWeaponMagazine = "rhs_200rnd_556x45_T_SAW";
+            primaryWeaponPointer = "";
             handgunWeapon = "rhsusf_weap_m1911a1";
             handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
             backpack = "rhsgref_hidf_alicepack";
@@ -177,9 +178,11 @@ class UsmcVietnam {
             backpack = "rhsgref_hidf_alicepack";
             primaryWeapon = "rhs_weap_m3a1";
             primaryWeaponMagazine = "rhsgref_30rnd_1143x23_M1T_2mag_SMG";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             addItemsToVest[] = {
                 LIST_2("rhs_mag_m67"),
-                LIST_8("rhsgref_30rnd_1143x23_M1T_2mag_SMG")
+                LIST_5("rhsgref_30rnd_1143x23_M1T_2mag_SMG")
             };
             addItemsToBackpack[] = {
                 "rhs_weap_m79",
@@ -191,7 +194,8 @@ class UsmcVietnam {
                 LIST_2("UGL_FlareWhite_F"),
                 LIST_2("UGL_FlareGreen_F"),
                 LIST_2("UGL_FlareRed_F"),
-                LIST_2("UGL_FlareYellow_F")
+                LIST_2("UGL_FlareYellow_F"),
+                LIST_3("rhsgref_30rnd_1143x23_M1T_2mag_SMG")
             };
             class rhs_weap_m79 {
                 magazine = "rhs_mag_M433_HEDP";
@@ -203,6 +207,8 @@ class UsmcVietnam {
             headgear = "H_Bandanna_gry";
             primaryWeapon = "rhs_weap_m240G";
             primaryWeaponMagazine = "rhsusf_50Rnd_762x51_m62_tracer";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             handgunWeapon = "rhsusf_weap_m1911a1";
             handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
             backpack = "rhsgref_hidf_alicepack";
@@ -227,6 +233,8 @@ class UsmcVietnam {
             primaryWeaponMagazine = "20Rnd_762x51_Mag";
             primaryWeaponOptics ="optic_KHS_old";
             primaryWeaponUnderbarrel ="";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             handgunWeapon = "rhsusf_weap_m1911a1";
             handgunWeaponMagazine = "rhsusf_mag_7x45acp_MHP";
             binoculars = "Binocular";

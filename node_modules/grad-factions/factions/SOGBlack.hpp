@@ -123,6 +123,7 @@ class SOGBLACK {
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S_para";
             primaryWeaponMagazine = "rhs_200rnd_556x45_M_SAW";
+            primaryWeaponUnderbarrel = "";
             primaryWeaponPointer = LLITEM_MG;
             handgunWeapon = "";
             handgunWeaponMagazine = "";
@@ -174,11 +175,12 @@ class SOGBLACK {
         //Grenadier
         class Soldier_GL_F: Soldier_F {
             primaryWeapon = "rhs_weap_mk18_m320";
+            primaryWeaponUnderbarrel = "";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
+                LIST_7("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
                 LIST_6("rhs_mag_M441_HE"),
                 LIST_2("rhs_mag_m713_Red")
             };
@@ -188,6 +190,9 @@ class SOGBLACK {
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "rhs_weap_m240B";
             primaryWeaponMagazine = "rhsusf_100Rnd_762x51";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
+            primaryWeaponUnderbarrel = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             backpack = "ga_kitbag_black";
@@ -212,16 +217,16 @@ class SOGBLACK {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_sr25_ec";
-            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
 			primaryWeaponMuzzle = SUPPRESSORITEM_MARKSMAN;
-            primaryWeaponPointer = LLITEM;
+            primaryWeaponPointer = "";
             primaryWeaponOptics = "optic_DMS";
             primaryWeaponUnderbarrel = "bipod_01_F_blk";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_7("rhsusf_20Rnd_762x51_m118_special_Mag")
+                LIST_6("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
             };
         };
 
@@ -279,17 +284,18 @@ class SOGBLACK {
         //Team Leader
         class Soldier_TL_F: Soldier_F {
             primaryWeapon = "rhs_weap_mk18_m320";
+            primaryWeaponUnderbarrel = "";
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
-                LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
+                LIST_7("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer"),
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_Smoke_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
                 LIST_2("1Rnd_HE_Grenade_shell")
             };
         };
-        
+
     };
 };

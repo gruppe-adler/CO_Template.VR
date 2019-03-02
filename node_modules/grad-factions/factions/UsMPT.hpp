@@ -42,7 +42,7 @@ class USMPT: USOCP {
             backpack = "B_Kitbag_rgr";
         };
         class soldier_AAT_F: soldier_AAT_F {
-            backpack = "B_Kitbag_rgr";
+            backpack = "B_Carryall_cbr";
         };
         class soldier_AR_F: soldier_AR_F {
             vest = "rhsusf_spc_mg";
@@ -65,13 +65,19 @@ class USMPT: USOCP {
         };
         class soldier_M_F: soldier_M_F {
             primaryWeapon = "rhs_weap_m14ebrri";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
             vest = "rhsusf_spc_patchless";
+            addItemsToVest[] = {
+                LIST_1("rhsusf_mag_15Rnd_9x19_JHP"),
+                LIST_1("rhs_mag_an_m8hc"),
+                LIST_5("rhsusf_20Rnd_762x51_m118_special_Mag")
+            };
         };
         class soldier_AA_F: soldier_AA_F {
             backpack = "B_Kitbag_rgr";
         };
         class soldier_AT_F: soldier_AT_F {
-            backpack = "B_Kitbag_rgr";
+            backpack = "B_Carryall_cbr";
         };
         class soldier_repair_F: soldier_repair_F {
             backpack = "B_Kitbag_rgr";

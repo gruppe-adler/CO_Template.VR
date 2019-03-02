@@ -5,13 +5,13 @@
 #endif
 
 #ifdef LASERS
-  #define LLITEM "rhsusf_acc_anpeq15_bk"
+  #define LLITEM "rhsusf_acc_anpeq15A"
 #else
   #define LLITEM ""
 #endif
 
 #ifdef GUNLIGHTS
-  #define LLITEM "rhsusf_acc_anpeq15_bk_light"
+  #define LLITEM "rhsusf_acc_M952V"
 #endif
 
 #ifdef SUPPRESSORS
@@ -102,9 +102,9 @@ class USOCP {
 
         //Asst. Missile Specialist (AT)
         class soldier_AAT_F: Soldier_F {
-            backpack = "rhsusf_assault_eagleaiii_ocp";
+            backpack = "B_Carryall_cbr";
             addItemsToBackpack[] = {
-                "rhs_mag_smaw_HEAA"
+                "rhs_fgm148_magazine_AT"
             };
         };
 
@@ -135,7 +135,6 @@ class USOCP {
                 "ACE_Flashlight_MX991"
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShellPurple"),
                 LIST_8("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
@@ -177,7 +176,7 @@ class USOCP {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_8("30Rnd_556x45_Stanag"),
+                LIST_7("30Rnd_556x45_Stanag"),
                 LIST_6("rhs_mag_M441_HE"),
                 LIST_2("rhs_mag_m713_Red")
             };
@@ -187,6 +186,7 @@ class USOCP {
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "rhs_weap_m240B";
             primaryWeaponMagazine = "rhsusf_100Rnd_762x51";
+            primaryWeaponMuzzle = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -208,16 +208,15 @@ class USOCP {
         //Marksman
         class soldier_M_F: Soldier_F {
             primaryWeapon = "rhs_weap_sr25_ec";
-            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_m118_special_Mag";
+            primaryWeaponMagazine = "rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
             primaryWeaponMuzzle = "";
-            primaryWeaponPointer = LLITEM;
+            primaryWeaponPointer = "";
             primaryWeaponOptics = "optic_DMS";
             primaryWeaponUnderbarrel = "bipod_01_F_blk";
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_7("rhsusf_20Rnd_762x51_m118_special_Mag")
+                LIST_7("rhsusf_20Rnd_762x51_SR25_m118_special_Mag")
             };
         };
 
@@ -235,7 +234,7 @@ class USOCP {
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fgm148";
             secondaryWeaponMagazine = "rhs_fgm148_magazine_AT";
-            backpack = "rhsusf_assault_eagleaiii_ocp";
+            backpack = "B_Carryall_cbr";
             addItemsToBackpack[] = {
                 "rhs_fgm148_magazine_AT"
             };

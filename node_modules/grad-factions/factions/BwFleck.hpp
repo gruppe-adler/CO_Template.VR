@@ -104,13 +104,14 @@ class BWFleck {
         class soldier_AAT_F: Soldier_F {
             backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
             addItemsToBackpack[] = {
-                LIST_2("rhs_fgm148_magazine_AT")
+                LIST_1("rhs_fgm148_magazine_AT")
             };
         };
 
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S";
+            primaryWeaponPointer = "";
             primaryWeaponMagazine = "rhs_200rnd_556x45_T_SAW";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
@@ -136,7 +137,6 @@ class BWFleck {
                 "ACE_Flashlight_MX991"
             };
             addItemsToVest[] = {
-                LIST_2("HandGrenade"),
                 LIST_2("SmokeShellPurple"),
                 LIST_8("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
@@ -178,9 +178,9 @@ class BWFleck {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
-                LIST_8("1Rnd_HE_Grenade_shell"),
-                LIST_3("1Rnd_SmokeRed_Grenade_shell")
+                LIST_7("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
+                LIST_6("1Rnd_HE_Grenade_shell"),
+                LIST_2("1Rnd_SmokeRed_Grenade_shell")
             };
         };
 
@@ -188,6 +188,8 @@ class BWFleck {
         class HeavyGunner_F: Soldier_F {
             primaryWeapon = "hlc_lmg_MG3_optic";
             primaryWeaponMagazine = "hlc_50Rnd_762x51_T_MG3";
+            primaryWeaponMuzzle = "";
+            primaryWeaponPointer = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             backpack = "ARC_GER_Kitbag_compact_Flecktarn";
@@ -276,7 +278,7 @@ class BWFleck {
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_2("rhsusf_mag_17Rnd_9x19_JHP"),
-                LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
+                LIST_7("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
                 LIST_2("1Rnd_SmokeRed_Grenade_shell"),
                 LIST_2("1Rnd_SmokeGreen_Grenade_shell"),
                 LIST_2("1Rnd_SmokeBlue_Grenade_shell"),
