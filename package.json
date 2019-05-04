@@ -8,6 +8,6 @@
         "grad-factions": ">0.1.1",
         "grad-customGear": ">1.0.0",
         "grad-fortifications": ">0.0.1",
-        "grad-civs": ">0.0.1"
+        "grad-civs": "^1.2.2"
     }
 }
