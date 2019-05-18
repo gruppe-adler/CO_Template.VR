@@ -90,6 +90,7 @@ These factions are available (see also the `factions` directory):
 |---------------------|---------------------------------------|--------|
 | BwFleck             | Bundeswehr Flecktarn                  | McDiod |
 | BwTrop              | Bundeswehr Tropentarn                 | McDiod |
+| BwSnow              | Bundeswehr Schneetarn                 | McDiod |
 | RuFlora             | Russian MSV Flora                     | McDiod |
 | RuEMR               | Russian MSV EMR-Summer                | McDiod |
 | UsOCP               | US Army OCP                           | McDiod |

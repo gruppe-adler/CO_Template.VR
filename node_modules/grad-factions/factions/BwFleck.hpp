@@ -22,10 +22,10 @@
 
 class BWFleck {
 	class AllUnits {
-		uniform = "ARC_GER_Flecktarn_Uniform";
-		vest = "ARC_GER_Flecktarn_Plate_Carrier";
+		uniform = "SMM_Uniform_BW_FT";
+		vest = "SMM_Vest_BW_FT";
 		backpack = "";
-		headgear = "ARC_GER_Flecktarn_Helmet_simple";
+		headgear = "SMM_Helmet_A_BW_FT";
 		primaryWeapon = "rhs_weap_hk416d10";
         primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 		primaryWeaponOptics = "rhsusf_acc_g33_T1";
@@ -71,7 +71,7 @@ class BWFleck {
 
         //Asst. Autorifleman
         class soldier_AAR_F: Soldier_F {
-            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
                 "rhs_200rnd_556x45_T_SAW"
@@ -80,7 +80,7 @@ class BWFleck {
 
         //Asst. Gunner (MMG) / Ammo Bearer
         class soldier_A_F: Soldier_F {
-            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("hlc_100Rnd_762x51_B_MG3"),
                 LIST_4("hlc_50Rnd_762x51_T_MG3")
@@ -94,7 +94,7 @@ class BWFleck {
 
         //Asst. Missile Specialist (AA)
         class soldier_AAA_F: Soldier_F {
-            backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+            backpack = "SMM_Carryall_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("rhs_fim92_mag")
             };
@@ -102,7 +102,7 @@ class BWFleck {
 
         //Asst. Missile Specialist (AT)
         class soldier_AAT_F: Soldier_F {
-            backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+            backpack = "SMM_Carryall_BW_FT";
             addItemsToBackpack[] = {
                 LIST_1("rhs_fgm148_magazine_AT")
             };
@@ -115,7 +115,7 @@ class BWFleck {
             primaryWeaponMagazine = "rhs_200rnd_556x45_T_SAW";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
-            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
                 "rhsusf_100Rnd_556x45_soft_pouch",
@@ -128,8 +128,7 @@ class BWFleck {
 
         //Combat Life Saver
         class medic_F: Soldier_F {
-            headgear = "ARC_GER_Flecktarn_Helmet_simple_Medic";
-            backpack = "ARC_GER_Backpack_Flecktarn_Med";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToUniform[] = {
                 "ACE_MapTools",
                 "ACE_DefusalKit",
@@ -161,8 +160,7 @@ class BWFleck {
 
         //Explosive Specialist
         class soldier_exp_F: Soldier_F {
-            headgear = "ARC_GER_Flecktarn_Helmet_EOD";
-            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 "ACE_Clacker",
                 "ACE_M26_Clacker",
@@ -192,7 +190,7 @@ class BWFleck {
             primaryWeaponPointer = "";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
-            backpack = "ARC_GER_Kitbag_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("hlc_100Rnd_762x51_B_MG3"),
                 LIST_3("hlc_50Rnd_762x51_T_MG3")
@@ -227,7 +225,7 @@ class BWFleck {
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fim92";
             secondaryWeaponMagazine = "rhs_fim92_mag";
-            backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+            backpack = "SMM_Carryall_BW_FT";
             addItemsToBackpack[] = {
                 "rhs_fim92_mag"
             };
@@ -237,7 +235,7 @@ class BWFleck {
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_fgm148";
             secondaryWeaponMagazine = "rhs_fgm148_magazine_AT";
-            backpack = "ARC_GER_Backpack_Carryall_Flecktarn";
+            backpack = "SMM_Carryall_BW_FT";
             addItemsToBackpack[] = {
                 "rhs_fgm148_magazine_AT"
             };
@@ -245,7 +243,7 @@ class BWFleck {
 
         //Repair Specialist
         class soldier_repair_F: Soldier_F {
-            backpack = "ARC_GER_Backpack_compact_Flecktarn";
+            backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 "ToolKit",
                 "ACE_wirecutter"
@@ -289,7 +287,7 @@ class BWFleck {
 
     class Rank {
         class LIEUTENANT {
-            headgear = "ARC_GER_Flecktarn_Milcap";
+            headgear = "SMM_MilCap_BW_FT";
         };
     };
 };

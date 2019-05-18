@@ -4,6 +4,7 @@
 
 #include "factions\BwFleck.hpp"
 #include "factions\BwTrop.hpp"
+#include "factions\BwSnow.hpp"
 #include "factions\UsOCP.hpp"
 #include "factions\UsMPT.hpp"
 #include "factions\UsUCP.hpp"
