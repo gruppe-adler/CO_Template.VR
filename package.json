@@ -2,12 +2,11 @@
     "name": "grad-co-template",
     "description": "Gruppe Adler coop mission template",
     "version": "2.4.3",
-
     "dependencies": {
         "grad-loadout": ">=4.5.0",
         "grad-factions": ">0.1.1",
         "grad-customGear": ">1.0.0",
         "grad-fortifications": ">0.0.1",
-        "grad-civs": ">0.0.1"
+        "grad-civs": "^1.2.2"
     }
 }
