@@ -134,7 +134,7 @@ class Loadouts {
 class CfgGradCivs {
 	#include "USER\civSettings.hpp"
 
-    autoInit = 1;
+    autoInit = 0;
     debugMode = 0;
 };
 
