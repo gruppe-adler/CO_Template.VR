@@ -71,4 +71,4 @@ if (leader group player == player || !_lrAltOnlyTL) then {
 } forEach ["channel1","channel2","channel3","channel4","channel5","channel6","channel7","channel8","channel9"];
 
 
-systemChat "groupsettings: group channels loaded";
+INFO ("group channels loaded");
