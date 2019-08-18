@@ -34,4 +34,4 @@ if (isServer) then {
     [_channelNames] call GRAD_radiosettings_fnc_createChannelMarkers;
 };
 
-systemChat "radiosettings: loaded";
+INFO("radiosettings loaded");
