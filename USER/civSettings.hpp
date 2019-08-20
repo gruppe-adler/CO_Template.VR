@@ -10,9 +10,9 @@ exitOn = "";                                                                    
 onSpawn = "";                                                                   // Code, der ausgeführt wird, wenn ein Zivilist spawnt
 onHeldUp = "";                                                                  // Code, der ausgeführt wird, wenn ein Zivilist angehalten wird (Spieler zeigt mit Waffe auf Zivilist)
 
-maxCivsOnFoot = 10;                                                             // Maximale Anzahl an Zivilisten die zu Fuß durch die Gegend latschen
-maxCivsInVehicles = 5;                                                          // Maximale Anzahl an Zivilisten die mit Auto fahren. Achtung: inkludiert Beifahrer und Passagiere
-maxCivsResidents = 20;                                                          // Maximale Anzahl an Zivilisten mit festem Wohnsitz
+maxCivsOnFoot = 20;                                                             // Maximale Anzahl an Zivilisten die zu Fuß durch die Gegend latschen
+maxCivsInVehicles = 30;                                                         // Maximale Anzahl an Zivilisten die mit Auto fahren. Achtung: inkludiert Beifahrer und Passagiere; denkt v.a. dran wenn ihr Busse einsetzt!
+maxCivsResidents = 40;                                                          // Maximale Anzahl an Zivilisten mit festem Wohnsitz
 spawnDistancesOnFoot[] = {1000,4500};
 spawnDistancesInVehicles[] = {1800,5000};
 spawnDistancesResidents[] = {750, 1500};                                        // Mindest- und Maximalabstand zu allen Spielern, in denen Zivilisten spawnen
