@@ -1,15 +1,45 @@
 /*
-*   Legt fest, welche persönlichen Ausrüstungsgegenstände bei Missionsstart geladen werden dürfen.
-*   Selbst wenn eine Visierkategorie hier erlaubt wird, kann ein Spieler sein persönliches Visier nur laden, wenn für ihn im Missionsloadout ein Visier aus der gleichen Kategorie vorgegeben ist.
-*   Beispiel1: Nicht- und mehrfachvergrößernde Visiere sind erlaubt. Im Missionsloadout ist für einen Spieler ein Rotpunktvisier vorgesehen. Bei Missionsstart wird er deshalb trotzdem nur das nichtvergrößernde Visier laden können.
-*   Beispiel2: Nur Scharfschützenvisiere sind erlaubt. Bei Missionsstart wird nur der Marksman sein persönliches Visier laden können.
-*
-*   0: nicht erlaubt
-*   1: erlaubt
+*   Legt fest welche Teile des Loadouts wann angepasst werden können.
+*   Siehe auch:
+*   https://gruppe-adler.github.io/grad-loadout/#/configuration
+*   und
+*   https://gruppe-adler.github.io/grad-loadout/#/customGear
 */
 
-allowHelmet = 0;                                                                // Kopfbedeckungen
-allowGoggles = 0;                                                               // Gesichtsbekleidung
-allowSimpleScopes = 0;                                                          // nichtvergrößernde Visiere
-allowMagnifyingScopes = 0;                                                      // Visiere bis x4 Vergrößerung
-allowMarksmanScopes = 0;                                                        // Visiere ab x4 Vergrößerung aufwärts (Scharfschützenvisiere)
+
+randomizationMode = 1;                                                          // einige Loadouts unterstützen zufällige Ausrüstungsvergabe. randomizationMode legt fest, wie mit diesen Loadouts umgegangen wird.
+                                                                                // 0 - disabled, 1 - enabled, 2 - enabled for players only, 3 - enabled for AI only
+
+customGear = 300;                                                               // Legt fest wann Spieler ihr Loadout anpassen dürfen.
+                                                                                // -1 um zu deaktivieren
+                                                                                // Zahl - Zeit in Sekunden nach Spielstart, in der Anpassung erlaubt ist.
+
+customGearAllowedCategories[] = {                                               // Legt fest, welche Ausrüstungs-Kategorien von den Spielern angepasst werden dürfen.
+    "uniform",
+    "vest",
+    "backpack",
+    "primaryWeapon",
+    "primaryWeaponMuzzle",
+    "primaryWeaponOptics",
+    "primaryWeaponPointer",
+    "primaryWeaponUnderbarrel",
+    "secondaryWeapon",
+    "secondaryWeaponMuzzle",
+    "secondaryWeaponOptics",
+    "secondaryWeaponPointer",
+    "secondaryWeaponUnderbarrel",
+    "handgunWeapon",
+    "handgunWeaponMuzzle",
+    "handgunWeaponOptics",
+    "handgunWeaponPointer",
+    "handgunWeaponUnderbarrel",
+    "headgear",
+    "goggles",
+    "nvgoggles",
+    "binoculars",
+    "map",
+    "gps",
+    "compass",
+    "watch",
+    "radio"
+};
