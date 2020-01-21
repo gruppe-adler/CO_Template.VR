@@ -49,11 +49,10 @@ class Taliban {
         class Soldier_F {
             uniform = "LOP_U_AM_Fatigue_02_6";
             addItemsToUniform[] = {
-              LIST_2("ACE_Cabletie"),
-              LIST_8("ACE_fieldDressing"),
-              LIST_4("ACE_quikclot"),
-              LIST_4("ACE_morphine"),
-              "ACE_Flashlight_KSF1"
+                "ACE_Flashlight_KSF1",
+                LIST_2("ACE_Cabletie"),
+                
+                GRAD_FACTIONS_MEDICITEMS_INF_LIST
             };
             addItemsToVest[] = {
                 LIST_4("rhs_30Rnd_762x39mm"),

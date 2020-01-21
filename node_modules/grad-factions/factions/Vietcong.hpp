@@ -56,12 +56,7 @@ class Vietcong {
                 LIST_1("ACE_Flashlight_KSF1"),
                 LIST_2("rhs_mag_9x18_8_57N181S"),
 
-                LIST_4("ACE_packingBandage"),
-                LIST_4("ACE_elasticBandage"),
-                LIST_4("ACE_quikclot"),
-                LIST_4("ACE_tourniquet"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_epinephrine")
+                GRAD_FACTIONS_MEDICITEMS_INF_LIST
             };
             addItemsToVest[] = {
                 LIST_2("rhs_mag_rgd5"),

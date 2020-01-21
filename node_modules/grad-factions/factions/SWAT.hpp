@@ -55,19 +55,14 @@ class SWAT {
         class Soldier_F {
             addItemsToUniform[] = {
                 LIST_1("ACE_MapTools"),
-                LIST_1("ACE_DefusalKit"),
                 LIST_4("ACE_CableTie"),
                 LIST_1("ACE_Flashlight_MX991"),
                 LIST_1("ACE_key_lockpick"),
 
-                LIST_4("ACE_packingBandage"),
-                LIST_4("ACE_elasticBandage"),
-                LIST_4("ACE_quikclot"),
-                LIST_4("ACE_tourniquet"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_epinephrine")
+                GRAD_FACTIONS_MEDICITEMS_INF_LIST
             };
             addItemsToVest[] = {
+                LIST_1("ACE_DefusalKit"),
                 LIST_2("SmokeShell"),
                 LIST_1("rhsusf_mag_17Rnd_9x19_FMJ"),
                 LIST_8("rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer")

@@ -54,12 +54,7 @@ class BWFleck {
                 LIST_2("ACE_CableTie"),
                 LIST_1("ACE_Flashlight_MX991"),
 
-                LIST_4("ACE_packingBandage"),
-                LIST_4("ACE_elasticBandage"),
-                LIST_4("ACE_quikclot"),
-                LIST_4("ACE_tourniquet"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_epinephrine")
+                GRAD_FACTIONS_MEDICITEMS_INF_LIST
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
@@ -118,7 +113,7 @@ class BWFleck {
             backpack = "SMM_Kitbag_BW_FT";
             addItemsToBackpack[] = {
                 LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch",
+                "rhsusf_100Rnd_556x45_soft_pouch"
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
