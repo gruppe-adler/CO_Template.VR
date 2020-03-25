@@ -20,3 +20,7 @@ _durchfuehrung =
 //Einsatzunterstützung - Informationen über unterstützende Einheiten (Luft, Artillerie, etc.) und Nachschub / Versorgungsmöglichkeiten
 _einsatzunterstuetzung =
 "";
+
+//Führungsunterstützung - Informationen über Frequenzen, Decknamen, Erkennungszeichen/Parolen und Bezugspunkten
+_fuehrungsunterstuetzung =
+"";

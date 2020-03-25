@@ -20,3 +20,7 @@ if !(_auftrag in ["","Auftragsbeschreibung"]) then {
 if !(_lage in ["","Lagebeschreibung"]) then {
     player createDiaryRecord ["Diary", ["Lage", _lage]];
 };
+
+if !(_fuehrungsunterstuetzung in ["","Führungsunterstützung"]) then {
+    player createDiaryRecord ["Diary", ["Führungsunterstützung", _fuehrungsunterstuetzung]];
+};
