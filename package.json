@@ -1,7 +1,7 @@
 {
     "name": "grad-co-template",
     "description": "Gruppe Adler coop mission template",
-    "version": "2.6.1",
+    "version": "2.6.3",
     "dependencies": {
         "grad-civs": "^2.0.0",
         "grad-factions": ">0.1.1",
