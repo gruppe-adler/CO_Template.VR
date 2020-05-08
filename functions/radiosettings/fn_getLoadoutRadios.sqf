@@ -6,6 +6,7 @@ params ["_unit"];
 
 _configPath = missionConfigFile >> "Loadouts";
 _loadoutHash = [_unit, _configPath] call GRAD_Loadout_fnc_GetUnitLoadoutFromConfig;
+[_loadoutHash] call GRAD_Loadout_fnc_randomizeLoadout;
 
 _unitLoadout = getUnitLoadout _unit;
 _loadout = [_loadoutHash, _unitLoadout] call GRAD_Loadout_fnc_hashToUnitLoadout;
