@@ -18,12 +18,16 @@ reviveMode = 0;
 
 enableDebugConsole = 1;
 
+cba_settings_hasSettingsFile = 1;                                                   //forces the use of the cba_settings.sqf file
+
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
 #include "USER\garbageCollector.hpp"
+#include "USER\medicalSettings.hpp"
 #include "cfgEventHandlers.hpp"
 #include "cfgIslands.hpp"
 #include "cfgCivilians.hpp"
+
 
 class missionSettings {
 	#include "USER\missionSettings.hpp"
