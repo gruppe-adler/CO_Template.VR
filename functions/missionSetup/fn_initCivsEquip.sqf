@@ -2,6 +2,11 @@
 #define REPNIF0(var1,var2) if(count var2 > 0) then {var1 = var2}
 #define APPENDUNIQUE(var1,var2) var1 = var1 + var2;var1 = var1 arrayIntersect var1
 
+
+if (!(isClass (configFile >> "CfgPatches" >> "grad_civs_loadout"))) exitWith {
+    INFO("@grad_civs (grad_civs_loadout) is not loaded, will not configure civilians");
+};
+
 private _islandType = [missionConfigFile >> "CfgIslands" >> worldName,"type",""] call BIS_fnc_returnConfigEntry;
 if (_islandType == "") exitWith {ERROR("World is not defined in cfgIslands.")};
 
@@ -40,9 +45,9 @@ if (_replace) then {
     APPENDUNIQUE(_vehicles,_userVehicles);
 };
 
-[_clothes] call grad_civs_fnc_setClothes;
-[_headgear] call grad_civs_fnc_setHeadgear;
-[_faces] call grad_civs_fnc_setFaces;
-[_goggles] call grad_civs_fnc_setGoggles;
-[_backpacks] call grad_civs_fnc_setBackpacks;
-[_vehicles] call grad_civs_fnc_setVehicles;
+[_clothes] call grad_civs_loadout_fnc_setClothes;
+[_headgear] call grad_civs_loadout_fnc_setHeadgear;
+[_faces] call grad_civs_loadout_fnc_setFaces;
+[_goggles] call grad_civs_loadout_fnc_setGoggles;
+[_backpacks] call grad_civs_loadout_fnc_setBackpacks;
+[_vehicles] call grad_civs_voyage_fnc_setVehicles;
