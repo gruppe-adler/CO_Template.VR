@@ -59,7 +59,6 @@ class CfgFunctions
 	#include "functions\waverespawn\cfgFunctions.hpp"
 
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
-	#include "node_modules\grad-civs\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
 
 	#include "USER\userFunctions.hpp"
@@ -125,8 +124,6 @@ class Loadouts {
 //GRAD CIVS ====================================================================
 class CfgGradCivs {
 	#include "USER\civSettings.hpp"
-
-    debugCivState = 0;
 };
 
 
