@@ -24,4 +24,4 @@ GRAD_introCam_allowForJIP = false;							//Ob JIP Spieler das Intro sehen sollen
 
 GRAD_introCam_shotDefinitions = [
 
-]
+];
