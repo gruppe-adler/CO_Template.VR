@@ -9,7 +9,9 @@ if (([missionConfigFile >> "missionSettings", "bleedOutPrevention", 1] call BIS_
         params ["_newUnit", "_oldUnit"];
 
         // remove old perFrameHandler if there is one
-        private _id = missionNamespace getVariable [QGVAR(bleedoutPFH), -1];
+        // don't use QGVAR() here, because ACE script_component.hpp overrides our COMPONENT define
+        private _id = missionNamespace getVariable ["GRAD_events_bleedoutPFH", -1];
+
         if (_id > -1) then { [_id] call CBA_fnc_removePerFrameHandler; };
 
         private _isRemoteControlledUnit = false;
@@ -32,6 +34,8 @@ if (([missionConfigFile >> "missionSettings", "bleedOutPrevention", 1] call BIS_
                 _unit setVariable [VAR_BLOOD_VOL, MIN_BLOOD_VOL, true];
             };
         }, 1, _newUnit] call CBA_fnc_addPerFrameHandler;
-        missionNamespace setVariable [QGVAR(bleedoutPFH), _handle];
+
+        // don't use QGVAR() here, because ACE script_component.hpp overrides our COMPONENT define
+        missionNamespace setVariable ["GRAD_events_bleedoutPFH", _handle];
     }, true] call CBA_fnc_addPlayerEventHandler;
 };
