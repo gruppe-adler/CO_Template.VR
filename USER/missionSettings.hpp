@@ -9,4 +9,4 @@ artilleryComputer = 0;                                                          
 
 showLogo = 1;                                                                   // Adlerlogo mit Missionsnamen anzeigen (0/1) - alternativ kann hier eine Wartebedingung festgelegt werden (siehe Wiki)
 
-bleedOutPrevention = 1;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstibt man, sobald weniger als 50% Blut im Körper ist.
+bleedOutPrevention = 1;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstirbt man, sobald weniger als 50% Blut im Körper ist.
