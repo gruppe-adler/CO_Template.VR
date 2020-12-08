@@ -1,4 +1,4 @@
-GRAD_introCam_playOnStart = true;							//Ob das das intro bei Spielstart automatisch abgespielt werden soll
+GRAD_introCam_playOnStart = false;							//Ob das das intro bei Spielstart automatisch abgespielt werden soll
 GRAD_introCam_allowForJIP = false;							//Ob JIP Spieler das Intro sehen sollen
 
 /*
