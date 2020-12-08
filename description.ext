@@ -106,6 +106,10 @@ class CfgSounds {
 	#include "USER\userSounds.hpp"
 };
 
+//MUSIC =======================================================================
+class CfgMusic {
+	#include "USER\userMusic.hpp"
+};
 
 //GRAD LOADOUT =================================================================
 class Loadouts {
