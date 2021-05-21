@@ -8,9 +8,6 @@ _radios params ["_shortrange", "_longrange"];
 TFAR_DefaultRadio_Backpack_West         = _longrange;
 TFAR_DefaultRadio_Backpack_East         = _longrange;
 TFAR_DefaultRadio_Backpack_Independent  = _longrange;
-TFAR_DefaultRadio_Airborne_West         = _longrange;
-TFAR_DefaultRadio_Airborne_East         = _longrange;
-TFAR_DefaultRadio_Airborne_Independent  = _longrange;
 
 TFAR_DefaultRadio_Personal_West         = _shortrange;
 TFAR_DefaultRadio_Personal_East         = _shortrange;
