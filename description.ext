@@ -18,6 +18,8 @@ reviveMode = 0;
 
 enableDebugConsole = 1;
 
+cba_settings_hasSettingsFile = 0; // set to 1 for 1-life-mission
+
 #include "USER\missionInfo.hpp"
 #include "USER\loadouts.hpp"
 #include "USER\garbageCollector.hpp"
