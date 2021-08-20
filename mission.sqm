@@ -1,4 +1,4 @@
-version=53;
+version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -16,17 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=250;
+		nextID=258;
 	};
 	class Camera
 	{
 		pos[]={1047.2224,74.060188,4165.0522};
-		dir[]={-0.72307652,-0.51136172,-0.46449089};
-		up[]={-0.4302541,0.85934776,-0.27638617};
-		aside[]={-0.54049331,-4.763715e-007,0.84139085};
+		dir[]={-0.55082506,-0.53239965,-0.64282787};
+		up[]={-0.34643009,0.8464756,-0.40429214};
+		aside[]={-0.75938398,-4.6123023e-007,0.6506995};
 	};
 };
 binarizationWanted=0;
+sourceName="CO_Template";
 addons[]=
 {
 	"A3_Modules_F_Heli_Misc",
@@ -163,6 +164,11 @@ class AddonsMetaData
 			url="http://ace3mod.com/";
 		};
 	};
+};
+dlcs[]=
+{
+	"Mark",
+	"Jets"
 };
 randomSeed=938738;
 class ScenarioData
@@ -4100,7 +4106,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=2;
+														value=1;
 													};
 												};
 												class Item1
@@ -4505,7 +4511,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=3600;
+														value=1;
 													};
 												};
 												class Item1
@@ -5855,7 +5861,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=600;
+														value=81;
 													};
 												};
 												class Item1
@@ -5869,7 +5875,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 											};
