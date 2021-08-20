@@ -24,8 +24,8 @@ respawntimeBlu = 10;                                                            
 respawntimeOpf = 10;                                                            //Respawnzeit Opfor in Sekunden
 respawntimeInd = 10;                                                            //Respawnzeit Independent in Sekunden
 
-bleedOutPrevention = 1;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstirbt man, sobald weniger als 50% Blut im Körper ist.
+bleedOutPrevention = 0;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstirbt man, sobald weniger als 50% Blut im Körper ist.
 
 
 //MiniMissions Settings
-miniMissionsEnabled = 0;
+miniMissionsEnabled = 1;
