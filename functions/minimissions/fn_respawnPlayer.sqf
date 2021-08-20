@@ -1,8 +1,14 @@
+params ["_unit"];
 
-if (player getVariable ["ACE_isUnconscious", false]) then {
-    [player, player] call ace_medical_treatment_fnc_fullHeal;
+
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
+    [_unit, _unit] call ace_medical_treatment_fnc_fullHeal;
 };
 
-if (!alive player) then {
+if (!alive _unit && isPlayer _unit) then {
     setPlayerRespawnTime 1;
+};
+
+if (!alive _unit && !isPlayer _unit) then {
+    forceRespawn _unit;
 };
