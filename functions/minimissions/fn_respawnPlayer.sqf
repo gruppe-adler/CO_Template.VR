@@ -7,10 +7,12 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
 
 if (!alive _unit && isPlayer _unit) then {
     setPlayerRespawnTime 1;
+    diag_log "minimissions: respawning player";
 };
 
 if (!alive _unit && !isPlayer _unit) then {
     forceRespawn _unit;
+    diag_log "minimissions: respawning AI";
 };
 
-_bodybag setVariable ["grad_minimissions_playerObject", objNull, true];
+_bodybag setVariable ["grad_minimissions_unitName", "", true];
