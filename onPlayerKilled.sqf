@@ -1,7 +1,7 @@
 //WAVE RESPAWN
 
-private _waveRespawnEnabled = [missionConfigFile >> "missionSettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 1;
-private _miniMissionsEnabled = [missionConfigFile >> "missionSettings","miniMissionsEnabled",0] call BIS_fnc_returnConfigEntry) == 1;
+private _waveRespawnEnabled = ([missionConfigFile >> "missionSettings" >> "respawnSettings","waveRespawnEnabled",0] call BIS_fnc_returnConfigEntry) == 1;
+private _miniMissionsEnabled = ([missionConfigFile >> "missionSettings" >> "respawnSettings","miniMissionsEnabled",0] call BIS_fnc_returnConfigEntry) == 1;
 
 if (_waveRespawnEnabled then {
     [] call grad_waverespawn_fnc_onPlayerKilled;
