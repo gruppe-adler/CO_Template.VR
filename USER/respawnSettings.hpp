@@ -28,4 +28,4 @@ bleedOutPrevention = 0;                                                         
 
 
 //MiniMissions Settings
-miniMissionsEnabled = 1;
+miniMissionsEnabled = 0;
