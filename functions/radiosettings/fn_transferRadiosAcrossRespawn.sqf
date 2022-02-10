@@ -18,7 +18,9 @@ private _fnc_saveSWSettings = {
 private _fnc_saveLRSettings = {
     params ["_unit"];
     if (_unit != player) exitWith {};
-    player setVariable [QGVAR(lrSettings),(call TFAR_fnc_activeLrRadio) call TFAR_fnc_getLrSettings];
+    {
+        player setVariable [QGVAR(lrSettings),(call TFAR_fnc_activeLrRadio) call TFAR_fnc_getLrSettings];
+    } call CBA_fnc_directCall;
 };
 {[_x,_fnc_saveLRSettings] call CBA_fnc_addEventHandler} forEach [
     "TFAR_event_OnLRchannelSet",
@@ -34,7 +36,7 @@ private _fnc_saveLRSettings = {
     {
         params ["_unit","_radio"];
         if (_unit != player) exitWith {};
-
+      
         private _activeSw = call TFAR_fnc_activeSwRadio;
         if (_activeSw isEqualTo _radio) exitWith {
             player setVariable [QGVAR(swSettings),(call TFAR_fnc_activeSwRadio) call TFAR_fnc_getSwSettings];
@@ -42,7 +44,9 @@ private _fnc_saveLRSettings = {
 
         private _activeLr = call TFAR_fnc_activeLRRadio;
         if (_activeLr isEqualTo _radio) exitWith {
-            player setVariable [QGVAR(lrSettings),(call TFAR_fnc_activeLrRadio) call TFAR_fnc_getLrSettings];
+            {
+                player setVariable [QGVAR(lrSettings),(call TFAR_fnc_activeLrRadio) call TFAR_fnc_getLrSettings];
+            } call CBA_fnc_directCall;
         };
     }
 ] call CBA_fnc_addEventHandler;
@@ -55,7 +59,7 @@ private _fnc_saveLRSettings = {
         if (_unit != player) exitWith {};
         private _settings = player getVariable [QGVAR(swSettings),[]];
         if (count _settings > 0) then {
-            [call TFAR_fnc_activeSwRadio, _settings] call TFAR_fnc_setSwSettings;
+            [call TFAR_fnc_activeSwRadio, _settings] call TFAR_fnc_setSwSettings; 
         };
     }
 ] call CBA_fnc_addEventHandler;
@@ -66,10 +70,8 @@ private _fnc_saveLRSettings = {
     {
         params ["_unit","_loadout"];
         if (_unit != player) exitWith {};
-
         private _backpack = (_loadout param [5,[]]) param [0,""];
         if !(_backpack call TFAR_fnc_isLRRadio) exitWith {};
-
         private _settings = player getVariable [QGVAR(lrSettings),[]];
         if (count _settings > 0) then {
             [
@@ -78,8 +80,8 @@ private _fnc_saveLRSettings = {
                     backpack _unit == _backpack
                 },
                 {
-                    params ["_unit","","_settings"];
-                    [call TFAR_fnc_activeLrRadio, _settings] call TFAR_fnc_setLrSettings;
+                    params ["_unit","","_settings"];    
+                    if (canSuspend) exitWith {{[TFAR_fnc_setLrSettings, _settings]} call CBA_fnc_directCall;};
                 },
                 [_unit,_backpack,_settings],
                 5
