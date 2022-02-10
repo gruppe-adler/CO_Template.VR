@@ -8,5 +8,6 @@ class GRAD_radiosettings {
         class setDefaultRadios {};
         class setRadioSettings {};
         class setTFARSettings {postInit = 1;};
+        class transferRadiosAcrossRespawn;
     };
 };

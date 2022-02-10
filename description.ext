@@ -7,7 +7,7 @@ class Header
 
 //MISSION SETTINGS =============================================================
 respawn = 3;
-respawnDelay = 10;
+respawnDelay = 999999;
 respawnVehicleDelay = 0;
 respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
@@ -54,6 +54,7 @@ class CfgFunctions
     #include "functions\events\cfgFunctions.hpp"
     #include "functions\external\cfgFunctions.hpp"
     #include "functions\groupsettings\cfgFunctions.hpp"
+		#include "functions\minimissions\cfgFunctions.hpp"
 	#include "functions\missionSetup\cfgFunctions.hpp"
     #include "functions\radiosettings\cfgFunctions.hpp"
 	#include "functions\waverespawn\cfgFunctions.hpp"

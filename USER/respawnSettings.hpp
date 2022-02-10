@@ -1,6 +1,6 @@
 /*
 *   Legt Respawn-Einstellungen für die Mission fest.
-*   Damit Spieler sterben können, muss die "Max. Revive Time" im "ACE Revive Settings" Modul reduziert werden.
+*   Damit Spieler sterben können, muss die "Cardiac Arrest Time" in den "ACE Medical States" CBA Settings reduziert werden.
 *   Wenn Waverespawn ausgeschaltet ist, wird normaler Respawn verwendet.
 *   Alle Zeitangaben in Sekunden.
 */
@@ -23,3 +23,9 @@ waverespawntimeInd = 30;                                                        
 respawntimeBlu = 10;                                                            //Respawnzeit Blufor in Sekunden
 respawntimeOpf = 10;                                                            //Respawnzeit Opfor in Sekunden
 respawntimeInd = 10;                                                            //Respawnzeit Independent in Sekunden
+
+bleedOutPrevention = 0;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstirbt man, sobald weniger als 50% Blut im Körper ist.
+
+
+//MiniMissions Settings
+miniMissionsEnabled = 0;

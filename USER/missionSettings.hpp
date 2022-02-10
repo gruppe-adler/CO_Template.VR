@@ -8,5 +8,3 @@ sideChannel = 0;                                                                
 artilleryComputer = 0;                                                          // Artilleriecomputer (0/1) - wenn ausgeschaltet, benutzt KI Mörser nicht mehr für indirekten Beschuss
 
 showLogo = 1;                                                                   // Adlerlogo mit Missionsnamen anzeigen (0/1) - alternativ kann hier eine Wartebedingung festgelegt werden (siehe Wiki)
-
-bleedOutPrevention = 1;                                                         // Sorgt dafür, dass die Spieler nicht durch Ausbluten sterben können (0/1) - Ist diese Variable 0, verstirbt man, sobald weniger als 50% Blut im Körper ist.
