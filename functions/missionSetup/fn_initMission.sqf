@@ -10,5 +10,4 @@
 
 if (hasInterface) then {
     [] call GRAD_radiosettings_fnc_activateSettings;
-    [] call GRAD_events_fnc_addBleedoutPFH;
 };
