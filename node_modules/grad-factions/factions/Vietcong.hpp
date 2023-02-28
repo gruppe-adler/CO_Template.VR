@@ -22,10 +22,10 @@
 
 class Vietcong {
     class AllUnits {
-        uniform = "LOP_U_ISTS_Fatigue_03";
-        vest = "LOP_6sh46";
+        uniform = "UK3CB_ADE_O_U_02_C";
+        vest = "rhs_6sh46";
         backpack = "";
-        headgear = "H_Booniehat_tan";
+        headgear = "H_Booniehat_oli";
         primaryWeapon = "rhs_weap_akm";
         primaryWeaponMagazine = "rhs_30Rnd_762x39mm";
         primaryWeaponMuzzle = SUPPRESSORITEM;
@@ -247,7 +247,7 @@ class Vietcong {
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
-			headgear = "LOP_H_SLA_Beret";
+			headgear = "UK3CB_H_Civ_Beret";
             primaryWeapon = "rhs_weap_akm_gp25";
             backpack = "rhs_sidor";
             addItemsToBackpack[] = {
@@ -281,7 +281,7 @@ class Vietcong {
 
         //Team Leader
         class Soldier_TL_F: Soldier_SL_F {
-			headgear = "LOP_H_SLA_Beret";
+			headgear = "UK3CB_H_Civ_Beret";
             backpack = "rhs_sidor";
             addItemsToBackpack[] = {
                 LIST_2("rhs_mag_rdg2_white"),
@@ -295,7 +295,7 @@ class Vietcong {
     };
     class Rank {
         class LIEUTENANT {
-            headgear = "LOP_H_SLA_Beret";
+            headgear = "UK3CB_H_Civ_Beret";
         };
     };
 };

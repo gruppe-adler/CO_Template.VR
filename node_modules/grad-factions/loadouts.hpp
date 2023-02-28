@@ -17,9 +17,9 @@
 #include "factions\SWAT.hpp"
 #include "factions\Taliban.hpp"
 #include "factions\IsraeliDefenseForce.hpp"
+#include "factions\Peshmerga.hpp"
 
 
 //deprecated:
 /*#include "factions\ModerateRebels.hpp"*/
-/*#include "factions\Peshmerga.hpp"*/
 /*#include "factions\RuMedit.hpp"*/
