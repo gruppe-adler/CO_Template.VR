@@ -22,20 +22,21 @@
 
 class Peshmerga {
 	class AllUnits {
-        uniform = "LOP_U_PESH_Fatigue_01";
-        vest = "LOP_V_CarrierRig_TAN";
-        backpack = "SMA_BackPack_Tan";
-        headgear = "LOP_H_6B27M_M81";
+        uniform = "UK3CB_TKA_B_U_CombatUniform_02_WDL";
+        vest = "UK3CB_TKA_B_V_GA_HEAVY_WDL";
+        backpack = "";
+        headgear = "UK3CB_CW_US_B_LATE_H_PASGT_01_WDL";
         primaryWeapon = "rhs_weap_ak74m";
         primaryWeaponMagazine = "rhs_30Rnd_545x39_7N10_AK";
-        primaryWeaponOptics = "rhs_acc_1p29";
+        primaryWeaponOptics = "";
         primaryWeaponPointer = LLITEM;
         primaryWeaponMuzzle = SUPPRESSORITEM;
         primaryWeaponUnderbarrel = "";
 		primaryWeaponUnderbarrelMagazine = "";
         secondaryWeapon = "";
         secondaryWeaponMagazine = "";
-        handgunWeapon = "";
+        handgunWeapon = "rhs_weap_tt33";
+        handgunWeaponMagazine = "rhs_mag_762x25_8";
         binoculars = "Binocular";
         map = "ItemMap";
         compass = "ItemCompass";
@@ -48,15 +49,12 @@ class Peshmerga {
         //Rifleman
         class Soldier_F {
             addItemsToUniform[] = {
-                "ACE_Flashlight_MX991",
-                "ACE_MapTools",
-                "ACE_CableTie",
-                "ACE_epinephrine",
-                "ACE_EarPlugs",
-                LIST_8("ACE_fieldDressing"),
-                LIST_4("ACE_morphine"),
-                LIST_10("ACE_fieldDressing"),
-                LIST_2("ACE_Chemlight_White")
+                LIST_1("ACE_MapTools"),
+                LIST_1("ACE_DefusalKit"),
+                LIST_2("ACE_CableTie"),
+                LIST_1("ACE_Flashlight_MX991"),
+
+                GRAD_FACTIONS_MEDICITEMS_INF_LIST
             };
             addItemsToVest[] = {
                 "rhs_mag_rdg2_white",
@@ -68,20 +66,20 @@ class Peshmerga {
 
         //Asst. Autorifleman
         class soldier_AAR_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
-                LIST_4("rhs_100Rnd_762x54mmR_7N26")
+                LIST_8("UK3CB_RPK74_60rnd_545x39")
             };
         };
 
         //Asst. Gunner (HMG/GMG)
         class support_AMG_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
         };
 
         //Asst. Missile Specialist (AA)
         class soldier_AAA_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 LIST_2("rhs_mag_9k38_rocket")
             };
@@ -89,7 +87,7 @@ class Peshmerga {
 
         //Asst. Missile Specialist (AT)
         class soldier_AAT_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 LIST_2("rhs_rpg7_PG7VL_mag"),
                 LIST_2("rhs_rpg7_OG7V_mag")
@@ -98,25 +96,23 @@ class Peshmerga {
 
         //Autorifleman
         class soldier_AR_F: Soldier_F {
-            primaryWeapon = "rhs_weap_pkp";
-            primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_7N26";
+            primaryWeapon = "UK3CB_RPK_74N";
+            primaryWeaponMagazine = "UK3CB_RPK74_60rnd_545x39";
             primaryWeaponOptics = "rhs_acc_1p29";
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
-                LIST_3("rhs_100Rnd_762x54mmR_7N26"),
-                "rhs_acc_1p29"
+                LIST_3("UK3CB_RPK74_60rnd_545x39")
             };
         };
 
         //Combat Life Saver
         class medic_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
-            addItemsToBackpack[] = {
-                LIST_12("ACE_bloodIV"),
-                LIST_15("ACE_epinephrine"),
-                LIST_20("ACE_morphine"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_fieldDressing")
+            backpack = "UK3CB_B_Alice_K";
+            addItemsToUniform[] = {
+                LIST_1("ACE_MapTools"),
+                LIST_1("ACE_DefusalKit"),
+                LIST_2("ACE_CableTie"),
+                LIST_1("ACE_Flashlight_MX991"),
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),
@@ -124,11 +120,26 @@ class Peshmerga {
                 LIST_8("SmokeShell"),
                 LIST_8("rhs_30Rnd_545x39_7N10_AK")
             };
+            class Rank {
+                class PRIVATE {
+                    GRAD_FACTIONS_MEDICITEMS_CFR
+                };
+                class CORPORAL {
+                    GRAD_FACTIONS_MEDICITEMS_SQ
+                };
+                class SERGEANT {
+                    GRAD_FACTIONS_MEDICITEMS_PT
+                };
+                class LIEUTENANT: SERGEANT {};
+                class CAPTAIN: SERGEANT {};
+                class MAJOR: SERGEANT {};
+                class COLONEL: SERGEANT {};
+            };
         };
 
         //Explosive Specialist
         class soldier_exp_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 "ACE_Clacker",
                 "ACE_M26_Clacker",
@@ -151,13 +162,11 @@ class Peshmerga {
         };
 
         //Heavy Gunner
-        class HeavyGunner_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
-        };
+        class HeavyGunner_F: Soldier_F {};
 
         //Marksman
         class soldier_M_F: Soldier_F {
-            primaryWeapon = "rhs_weap_svdp";
+            primaryWeapon = "UK3CB_SVD_OLD";
             primaryWeaponMagazine = "rhs_10Rnd_762x54mmR_7N1";
             primaryWeaponOptics = "rhs_acc_pso1m2";
             binoculars = "ACE_Vector";
@@ -171,7 +180,7 @@ class Peshmerga {
         class soldier_AA_F: Soldier_F {
             secondaryWeapon = "rhs_weap_igla";
             secondaryWeaponMagazine = "rhs_mag_9k38_rocket";
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 "rhs_mag_9k38_rocket"
             };
@@ -181,7 +190,7 @@ class Peshmerga {
         class soldier_AT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_rpg7";
             secondaryWeaponMagazine = "rhs_rpg7_PG7VL_mag";
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 "rhs_rpg7_PG7VL_mag",
                 LIST_2("rhs_rpg7_OG7V_mag")
@@ -190,7 +199,7 @@ class Peshmerga {
 
         //Repair Specialist
         class soldier_repair_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
+            backpack = "UK3CB_B_Alice_K";
             addItemsToBackpack[] = {
                 "ToolKit",
                 "ACE_wirecutter"
@@ -199,14 +208,13 @@ class Peshmerga {
 
         //Rifleman (AT)
         class soldier_LAT_F: Soldier_F {
-            secondaryWeapon = "rhs_weap_m72a7";
+            secondaryWeapon = "rhs_weap_rpg75";
         };
 
         //Squad Leader
         class Soldier_SL_F: Soldier_F {
-            backpack = "tf_mr3000_rhs";
-            uniform = "LOP_U_IA_Fatigue_03_slv";
-            headgear = "LOP_H_6B27M_TRI";
+            backpack = "TFAR_anprc155_coyote";
+            uniform = "UK3CB_TKA_B_U_CombatUniform_Shortsleeve_02_WDL";
             binoculars = "ACE_Vector";
             addItemsToBackpack[] = {
                 LIST_2("rhs_mag_rdg2_white"),
@@ -217,14 +225,7 @@ class Peshmerga {
 
         //Team Leader
         class Soldier_TL_F: Soldier_F {
-            backpack = "SMA_BackPack_Tan";
-        };
-    };
-
-    class Rank {
-        class LIEUTENANT {
-            headgear = "LOP_H_Beret_Pesh";
-            uniform = "LOP_U_PESH_Fatigue_02";
+            backpack = "UK3CB_B_Alice_K";
         };
     };
 };

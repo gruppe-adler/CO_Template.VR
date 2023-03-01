@@ -34,7 +34,7 @@ class Loadouts {
 ```sqf
 class Loadouts {
     // players can access the customGear interface while closer than 100 to the BLUFOR respawn marker
-    customGear = "(_this select 0) distance2D (getMarkerPos "respawn_west") < 100";
+    customGear = "(_this select 0) distance2D (getMarkerPos 'respawn_west') < 100";
 };
 ```
 

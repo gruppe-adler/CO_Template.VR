@@ -17,8 +17,7 @@ private _allowedCategories = _unit getVariable [QGVAR(customGearAllowedCategorie
         {count _value > 0} &&
         {
             _ignoreCurrentLoadout ||
-            ((toLower ([_unit, _key] call FUNC(getCurrentItem))) in _value) ||
-            ((toLower ([_unit, _key, true] call FUNC(getCurrentItem))) in _value)
+            [_unit, _key, _value] call FUNC(currentItemIsAllowed)            
         }
     ) then {
         [_loadoutOptionsHash, _key, _value] call CBA_fnc_hashSet;
