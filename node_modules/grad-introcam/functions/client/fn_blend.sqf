@@ -39,7 +39,7 @@ if (_blendOut >= 0) then {
 			_titleText params ["", "_text"];
 			[_text ] spawn BIS_fnc_infoText;
 		};
-		default {};
+		default {hint "Wrong string supplied to grad-introCam";};
 	};
 
 	if (_blendIn >= 0) then {

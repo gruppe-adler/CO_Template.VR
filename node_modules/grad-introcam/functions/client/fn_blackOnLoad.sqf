@@ -1,4 +1,5 @@
 if !(hasInterface) exitWith {};
+if (didJip && {!GRAD_introCam_allowForJIP}) exitWith {};
 
 [] call compile preprocessFileLineNumbers "USER\userIntro.sqf";
 (GRAD_introCam_shotDefinitions select 0) params ["_type", "", "", "", "", "", ["_blackFade", false]];
