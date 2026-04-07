@@ -1,6 +1,6 @@
 /*
 *   Legt Respawn-Einstellungen für die Mission fest.
-*   Damit Spieler sterben können, muss die "Max. Revive Time" im "ACE Revive Settings" Modul reduziert werden.
+*   Damit Spieler sterben können, muss die "Cardiac Arrest Time" in den "ACE Medical States" CBA Settings reduziert werden.
 *   Wenn Waverespawn ausgeschaltet ist, wird normaler Respawn verwendet.
 *   Alle Zeitangaben in Sekunden.
 */
