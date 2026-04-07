@@ -6,6 +6,8 @@ if !(isServer) exitWith {};
 if (isNil "GRAD_introCam_playOnStart") then {GRAD_introCam_playOnStart = false};
 if (isNil "GRAD_introCam_allowForJIP") then {GRAD_introCam_allowForJIP = false};
 
+publicVariable "GRAD_introCam_allowForJIP";
+
 if (GRAD_introCam_shotDefinitions isEqualTo []) exitWith {};
 
 if (GRAD_introCam_playOnStart) then {
