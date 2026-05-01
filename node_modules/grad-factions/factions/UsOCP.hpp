@@ -68,8 +68,7 @@ class USOCP {
         class soldier_AAR_F: Soldier_F {
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
-                LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch"
+                LIST_3("rhsusf_200rnd_556x45_mixed_box"),
             };
         };
 
@@ -106,14 +105,14 @@ class USOCP {
         //Autorifleman
         class soldier_AR_F: Soldier_F {
             primaryWeapon = "rhs_weap_m249_pip_S";
-            primaryWeaponMagazine = "rhs_200rnd_556x45_M_SAW";
+            primaryWeaponMagazine = "rhsusf_200rnd_556x45_mixed_box";
+            primaryWeaponUnderbarrel = "rhsusf_acc_grip4_bipod";
             handgunWeapon = "";
             handgunWeaponMagazine = "";
             vest = "rhsusf_iotv_ocp_SAW";
             backpack = "rhsusf_assault_eagleaiii_ocp";
             addItemsToBackpack[] = {
-                LIST_2("rhs_200rnd_556x45_M_SAW"),
-                "rhsusf_100Rnd_556x45_soft_pouch"
+                LIST_3("rhsusf_200rnd_556x45_mixed_box"),
             };
             addItemsToVest[] = {
                 LIST_2("HandGrenade"),

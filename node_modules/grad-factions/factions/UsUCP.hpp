@@ -23,7 +23,7 @@
 class USUCP: USOCP {
     class AllUnits: AllUnits {
         uniform = "rhs_uniform_cu_ucp";
-        vest = "rhsusf_iotv_ocp_Rifleman";
+        vest = "rhsusf_iotv_ucp_Rifleman";
         backpack = "";
         headgear = "rhsusf_ach_helmet_ucp";
         primaryWeapon = "rhs_weap_m4a1_blockII_d";
@@ -76,7 +76,6 @@ class USUCP: USOCP {
         };
         class soldier_LAT_F: soldier_LAT_F {};
         class Soldier_SL_F: Soldier_SL_F {
-            backpack = "tfar_rt1523g_bwmod";
             headgear = "rhsusf_ach_helmet_headset_ucp";
             vest = "rhsusf_iotv_ucp_Squadleader";
         };
